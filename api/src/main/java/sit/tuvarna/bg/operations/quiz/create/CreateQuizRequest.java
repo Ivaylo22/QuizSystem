@@ -22,6 +22,8 @@ public class CreateQuizRequest implements ProcessorRequest {
 
     private QuizCategory category;
 
+    private Integer maxExperience;
+
     @Size(min = 10, max = 10, message = "Exactly 10 questions are required.")
     @Valid
     private List<QuestionModel> questions;
