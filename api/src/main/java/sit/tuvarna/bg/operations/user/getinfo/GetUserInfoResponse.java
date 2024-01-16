@@ -2,7 +2,7 @@ package sit.tuvarna.bg.operations.user.getinfo;
 
 import lombok.*;
 import sit.tuvarna.bg.base.ProcessorResponse;
-import sit.tuvarna.bg.model.UserModule;
+import sit.tuvarna.bg.model.UserModel;
 
 @Getter
 @Setter
@@ -11,5 +11,5 @@ import sit.tuvarna.bg.model.UserModule;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class GetUserInfoResponse implements ProcessorResponse {
 
-    private UserModule userInformation;
+    private UserModel userInformation;
 }
