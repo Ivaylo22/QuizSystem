@@ -3,6 +3,7 @@ package sit.tuvarna.bg.model;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import sit.tuvarna.bg.enums.QuestionType;
 
 import java.util.List;
 

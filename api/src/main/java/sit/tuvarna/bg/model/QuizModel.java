@@ -1,8 +1,7 @@
 package sit.tuvarna.bg.model;
 
 import lombok.*;
-
-import java.util.List;
+import sit.tuvarna.bg.enums.QuizCategory;
 
 @Getter
 @Setter

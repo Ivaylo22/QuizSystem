@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
 import sit.tuvarna.bg.base.ProcessorRequest;
-import sit.tuvarna.bg.model.QuizCategory;
+import sit.tuvarna.bg.enums.QuizCategory;
 
 @Getter
 @Setter

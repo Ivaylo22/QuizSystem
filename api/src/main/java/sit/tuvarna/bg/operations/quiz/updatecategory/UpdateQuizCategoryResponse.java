@@ -2,7 +2,7 @@ package sit.tuvarna.bg.operations.quiz.updatecategory;
 
 import lombok.*;
 import sit.tuvarna.bg.base.ProcessorResponse;
-import sit.tuvarna.bg.model.QuizCategory;
+import sit.tuvarna.bg.enums.QuizCategory;
 
 @Getter
 @Setter

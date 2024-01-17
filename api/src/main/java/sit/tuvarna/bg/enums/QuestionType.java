@@ -1,4 +1,4 @@
-package sit.tuvarna.bg.model;
+package sit.tuvarna.bg.enums;
 
 public enum QuestionType {
     TEXT,

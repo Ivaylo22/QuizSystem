@@ -6,7 +6,7 @@ import lombok.*;
 import jakarta.validation.constraints.NotBlank;
 import sit.tuvarna.bg.base.ProcessorRequest;
 import sit.tuvarna.bg.model.QuestionModel;
-import sit.tuvarna.bg.model.QuizCategory;
+import sit.tuvarna.bg.enums.QuizCategory;
 
 import java.util.List;
 

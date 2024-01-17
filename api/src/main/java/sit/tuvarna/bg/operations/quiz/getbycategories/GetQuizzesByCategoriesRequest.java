@@ -2,9 +2,7 @@ package sit.tuvarna.bg.operations.quiz.getbycategories;
 
 import lombok.*;
 import sit.tuvarna.bg.base.ProcessorRequest;
-import sit.tuvarna.bg.model.QuizCategory;
-
-import java.util.List;
+import sit.tuvarna.bg.enums.QuizCategory;
 
 @Getter
 @Setter
