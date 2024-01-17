@@ -59,7 +59,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <mainClass>sit.tuvarna.bg.QuizApplication</mainClass>
+                    <mainClass>sit.tuvarna.bg.rest.QuizApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
