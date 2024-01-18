@@ -13,8 +13,6 @@ public class UserModel {
 
     private String email;
 
-    private String password;
-
     private String avatarUrl;
 
     private Integer level;
@@ -22,4 +20,6 @@ public class UserModel {
     private Integer experience;
 
     private Integer achievementPoints;
+
+    private Boolean isArchived;
 }

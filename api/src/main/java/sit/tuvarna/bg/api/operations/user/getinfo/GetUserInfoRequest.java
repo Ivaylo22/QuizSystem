@@ -13,6 +13,6 @@ import sit.tuvarna.bg.api.base.ProcessorRequest;
 public class GetUserInfoRequest implements ProcessorRequest {
 
     @UUID
-    @NotBlank(message = "User id is required")
-    private String id;
+    @NotBlank(message = "User email is required")
+    private String email;
 }

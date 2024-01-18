@@ -11,8 +11,8 @@ import sit.tuvarna.bg.api.base.ProcessorRequest;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ChangePasswordRequest implements ProcessorRequest {
 
-    @NotBlank(message = "Old password is required.")
-    private String oldPassword;
+    @NotBlank(message = "Email is required.")
+    private String email;
 
     @NotBlank(message = "New password is required.")
     private String newPassword;

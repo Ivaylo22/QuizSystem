@@ -18,5 +18,5 @@ public class CreateAchievementRequest implements ProcessorRequest {
     private String description;
 
     @NotBlank(message = "Achievement points are required")
-    private String achievementPoints;
+    private Integer achievementPoints;
 }

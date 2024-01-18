@@ -13,6 +13,4 @@ public class RegisterResponse implements ProcessorResponse {
     private String username;
 
     private String email;
-
-    private String phoneNumber;
 }

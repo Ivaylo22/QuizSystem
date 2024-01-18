@@ -7,6 +7,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import sit.tuvarna.bg.persistence.enums.Role;
 
+import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -14,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
-@Setter(AccessLevel.PRIVATE)
+@Setter
 @Builder
 @Entity
 @Table(name = "users")
@@ -31,6 +32,9 @@ public class User implements UserDetails {
 
     @Column(nullable = false)
     private String password;
+
+    @Column
+    private Timestamp lastLoginTime;
 
     @Column(nullable = false)
     private Integer level;
