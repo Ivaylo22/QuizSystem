@@ -14,17 +14,13 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class QuestionModel {
 
-    @NotBlank(message = "Content is required.")
     private String content;
 
-    @NotNull(message = "Question type is required.")
     private QuestionType questionType;
 
     private boolean openEnded;
 
-    @NotBlank(message = "Correct answer is required.")
     private String correctAnswer;
 
-    @Singular
     private List<AnswerModel> answers;
 }

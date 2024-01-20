@@ -10,7 +10,6 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class AnswerModel {
 
-    @NotBlank(message = "Answer content is required.")
     private String content;
 
     private Boolean isCorrect;
