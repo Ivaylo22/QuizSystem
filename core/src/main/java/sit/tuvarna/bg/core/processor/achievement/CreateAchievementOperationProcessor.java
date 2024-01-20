@@ -28,9 +28,6 @@ public class CreateAchievementOperationProcessor implements CreateAchievementOpe
 
         achievementRepository.save(achievement);
 
-        return CreateAchievementResponse
-                .builder()
-                .id(String.valueOf(achievement.getId()))
-                .build();
+        return conversionService.convert(achievement, CreateAchievementResponse.class);
     }
 }
