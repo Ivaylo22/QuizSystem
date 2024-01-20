@@ -12,11 +12,9 @@ import sit.tuvarna.bg.api.base.ProcessorRequest;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class EarnAchievementRequest implements ProcessorRequest {
 
-    @UUID
-    @NotBlank(message = "User id is required")
-    private String userId;
+    @NotBlank(message = "User email is required")
+    private String userEmail;
 
-    @UUID
     @NotBlank(message = "Achievement id is required")
-    private String achievementId;
+    private Integer achievementId;
 }

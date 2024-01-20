@@ -5,5 +5,5 @@ import sit.tuvarna.bg.persistence.entity.Achievement;
 
 import java.util.UUID;
 
-public interface AchievementRepository extends JpaRepository<Achievement, UUID> {
+public interface AchievementRepository extends JpaRepository<Achievement, Integer> {
 }
