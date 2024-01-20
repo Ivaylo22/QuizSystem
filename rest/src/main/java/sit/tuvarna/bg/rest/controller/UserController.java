@@ -53,7 +53,7 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<GetUserInfoResponse> getUserInfo(
-            @RequestParam @NotBlank(message = "User id is required") String email) {
+            @RequestParam @NotBlank(message = "User email is required") String email) {
         GetUserInfoRequest request = GetUserInfoRequest
                 .builder()
                 .email(email)
