@@ -1,4 +1,4 @@
-package sit.tuvarna.bg.api.operations.user.register;
+package sit.tuvarna.bg.api.operations.user.archive;
 
 import lombok.*;
 import sit.tuvarna.bg.api.base.ProcessorResponse;
@@ -8,11 +8,7 @@ import sit.tuvarna.bg.api.base.ProcessorResponse;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class RegisterResponse implements ProcessorResponse {
-
-    private String userId;
-
-    private String username;
-
+public class ArchiveUserResponse implements ProcessorResponse {
     private String email;
+    private Boolean isArchived;
 }

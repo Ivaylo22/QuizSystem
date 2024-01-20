@@ -22,4 +22,16 @@ public class UserModel {
     private Integer achievementPoints;
 
     private Boolean isArchived;
+
+    private Integer quizzesUnderOneMinuteCount;
+
+    private Integer perfectQuizzesCount;
+
+    private Integer consecutiveQuizzesPassedCount;
+
+    private Integer consecutiveDailyQuizzesCount;
+
+    private Integer dailyQuizzesCount;
+
+    private Integer quizzesPassedCount;
 }

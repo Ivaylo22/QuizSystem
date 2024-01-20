@@ -11,6 +11,7 @@ public class UserToRegisterUserResponse implements Converter<User, RegisterRespo
     public RegisterResponse convert(User source) {
         return RegisterResponse
                 .builder()
+                .userId(String.valueOf(source.getId()))
                 .username(source.getUsername())
                 .email(source.getEmail())
                 .build();

@@ -54,6 +54,24 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private Boolean isArchived;
 
+    @Column
+    private Integer quizzesUnderOneMinuteCount;
+
+    @Column
+    private Integer perfectQuizzesCount;
+
+    @Column
+    private Integer consecutiveQuizzesPassedCount;
+
+    @Column
+    private Integer consecutiveDailyQuizzesCount;
+
+    @Column
+    private Integer dailyQuizzesCount;
+
+    @Column
+    private Integer quizzesPassedCount;
+
     @ManyToMany
     @JoinTable(
             name = "user_achievements",

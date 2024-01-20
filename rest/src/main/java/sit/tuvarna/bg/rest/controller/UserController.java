@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import sit.tuvarna.bg.api.operations.user.archive.ArchiveUserOperation;
+import sit.tuvarna.bg.api.operations.user.archive.ArchiveUserRequest;
+import sit.tuvarna.bg.api.operations.user.archive.ArchiveUserResponse;
 import sit.tuvarna.bg.api.operations.user.changepassword.ChangePasswordOperation;
 import sit.tuvarna.bg.api.operations.user.changepassword.ChangePasswordRequest;
 import sit.tuvarna.bg.api.operations.user.changepassword.ChangePasswordResponse;
@@ -31,18 +34,21 @@ public class UserController {
     private final LogoutService logout;
     private final GetUserInfoOperation getUserInfo;
     private final ChangePasswordOperation changePassword;
+    private final ArchiveUserOperation archiveUser;
 
     @Autowired
     public UserController(LoginOperation login,
                           RegisterOperation register,
                           LogoutService logout,
                           GetUserInfoOperation getUserInfo,
-                          ChangePasswordOperation changePassword) {
+                          ChangePasswordOperation changePassword,
+                          ArchiveUserOperation archiveUser) {
         this.login = login;
         this.register = register;
         this.logout = logout;
         this.getUserInfo = getUserInfo;
         this.changePassword = changePassword;
+        this.archiveUser = archiveUser;
     }
 
     @GetMapping
@@ -84,5 +90,12 @@ public class UserController {
             @RequestBody @Valid ChangePasswordRequest request
     ) {
         return new ResponseEntity<>(changePassword.process(request), HttpStatus.OK);
+    }
+
+    @PatchMapping("/archive-user")
+    public ResponseEntity<ArchiveUserResponse> archiveUser(
+            @RequestBody @Valid ArchiveUserRequest request
+    ) {
+        return new ResponseEntity<>(archiveUser.process(request), HttpStatus.OK);
     }
 }

@@ -20,6 +20,12 @@ public class UserToGetUserInfoResponse implements Converter<User, GetUserInfoRes
                 .experience(source.getExperience())
                 .achievementPoints(source.getAchievementPoints())
                 .isArchived(source.getIsArchived())
+                .quizzesUnderOneMinuteCount(source.getQuizzesUnderOneMinuteCount())
+                .perfectQuizzesCount(source.getPerfectQuizzesCount())
+                .consecutiveQuizzesPassedCount(source.getConsecutiveQuizzesPassedCount())
+                .consecutiveDailyQuizzesCount(source.getConsecutiveDailyQuizzesCount())
+                .dailyQuizzesCount(source.getDailyQuizzesCount())
+                .quizzesPassedCount(source.getQuizzesPassedCount())
                 .build();
 
         return GetUserInfoResponse

@@ -64,6 +64,12 @@ public class RegisterOperationProcessor implements RegisterOperation {
                 .avatarUrl(avatarUrl)
                 .role(role)
                 .isArchived(false)
+                .quizzesUnderOneMinuteCount(0)
+                .perfectQuizzesCount(0)
+                .consecutiveQuizzesPassedCount(0)
+                .consecutiveDailyQuizzesCount(0)
+                .dailyQuizzesCount(0)
+                .quizzesPassedCount(0)
                 .build();
 
         userRepository.save(user);
