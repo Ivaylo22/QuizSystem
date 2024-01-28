@@ -11,4 +11,6 @@ import sit.tuvarna.bg.api.base.ProcessorResponse;
 public class SolveQuizResponse implements ProcessorResponse {
 
     private Integer experienceGained;
+
+    private Boolean isPassed;
 }

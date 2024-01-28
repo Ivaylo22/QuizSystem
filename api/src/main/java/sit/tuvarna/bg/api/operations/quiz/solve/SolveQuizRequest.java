@@ -12,9 +12,8 @@ import sit.tuvarna.bg.api.base.ProcessorRequest;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class SolveQuizRequest implements ProcessorRequest {
 
-    @UUID
-    @NotBlank(message = "User id is required")
-    private String userId;
+    @NotBlank(message = "User email is required")
+    private String email;
 
     @UUID
     @NotBlank(message = "Quiz id is required")
@@ -22,7 +21,7 @@ public class SolveQuizRequest implements ProcessorRequest {
 
     private Integer correctAnswers;
 
-    private Boolean successful;
-
     private Integer secondsToSolve;
+
+    private Boolean isDaily;
 }

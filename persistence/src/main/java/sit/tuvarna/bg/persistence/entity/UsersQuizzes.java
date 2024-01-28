@@ -36,6 +36,9 @@ public class UsersQuizzes {
     @Column(nullable = false)
     private Boolean isTaken;
 
+    @Column(nullable = false)
+    private Integer experienceGained;
+
     @CreationTimestamp
     @Column(name = "solved_at", nullable = false, updatable = false)
     private LocalDateTime solvedAt;
