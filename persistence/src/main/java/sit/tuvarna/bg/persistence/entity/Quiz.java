@@ -9,7 +9,7 @@ import java.util.UUID;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
-@Setter(AccessLevel.PRIVATE)
+@Setter
 @Builder
 @Entity
 @Table(name = "quizzes")
@@ -26,4 +26,7 @@ public class Quiz {
 
     @Enumerated(EnumType.STRING)
     private QuizCategory category;
+
+    @Column(nullable = false)
+    private Boolean isActive;
 }

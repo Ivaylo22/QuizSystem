@@ -71,7 +71,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
                         .build()
         );
 
-        updateExperience(user, quiz, experienceGained);
+        updateUserExperience(user, quiz, experienceGained);
 
         List<Achievement> earnedAchievements =
                 achievementService.getNewAchievements(user, achievementRepository.findAll());
@@ -143,7 +143,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         return (int) calculatedExperience;
     }
 
-    public void updateExperience(User user, Quiz quiz, Integer newExperience) {
+    public void updateUserExperience(User user, Quiz quiz, Integer newExperience) {
         List<UsersQuizzes> usersQuizzesList = usersQuizzesRepository.getUsersQuizzesByUserAndQuiz(user, quiz);
 
         Integer maxExperience = 0;

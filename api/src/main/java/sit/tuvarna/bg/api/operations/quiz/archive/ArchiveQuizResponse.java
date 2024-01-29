@@ -10,5 +10,5 @@ import sit.tuvarna.bg.api.base.ProcessorResponse;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ArchiveQuizResponse implements ProcessorResponse {
 
-    private String isArchived;
+    private Boolean isArchived;
 }

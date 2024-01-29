@@ -35,6 +35,19 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
 
+    @ExceptionHandler(value = QuizAlreadyActiveException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<String> handleQuizAlreadyActiveException(QuizAlreadyActiveException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(value = QuizAlreadyArchivedException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<String> handleQuizAlreadyArchivedException(QuizAlreadyArchivedException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
+
     @ExceptionHandler(value = UserNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException ex) {
