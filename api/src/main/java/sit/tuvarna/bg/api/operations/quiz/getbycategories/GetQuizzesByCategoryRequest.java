@@ -9,7 +9,7 @@ import sit.tuvarna.bg.api.enums.QuizCategory;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class GetQuizzesByCategoriesRequest implements ProcessorRequest {
+public class GetQuizzesByCategoryRequest implements ProcessorRequest {
 
     private QuizCategory category;
 }

@@ -13,6 +13,4 @@ public class QuizModel {
     private String name;
 
     private QuizCategory category;
-
-    private Integer maxExperience;
 }

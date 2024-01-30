@@ -11,7 +11,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class GetQuizzesByCategoriesResponse implements ProcessorResponse {
+public class GetQuizzesByCategoryResponse implements ProcessorResponse {
 
     private List<QuizModel> quizzes;
 }
