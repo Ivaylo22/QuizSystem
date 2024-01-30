@@ -1,4 +1,4 @@
-package sit.tuvarna.bg.api.operations.quiz.getbycategories;
+package sit.tuvarna.bg.api.operations.quiz.getbycategory;
 
 import lombok.*;
 import sit.tuvarna.bg.api.base.ProcessorResponse;

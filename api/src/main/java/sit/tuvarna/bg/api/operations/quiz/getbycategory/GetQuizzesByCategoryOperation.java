@@ -1,4 +1,4 @@
-package sit.tuvarna.bg.api.operations.quiz.getbycategories;
+package sit.tuvarna.bg.api.operations.quiz.getbycategory;
 
 import sit.tuvarna.bg.api.base.Processor;
 
