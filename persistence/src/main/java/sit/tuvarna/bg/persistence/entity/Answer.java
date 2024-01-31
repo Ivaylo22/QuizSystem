@@ -22,7 +22,4 @@ public class Answer {
 
     @Column(nullable = false)
     private Boolean correct;
-
-    @ManyToOne
-    private Question question;
 }

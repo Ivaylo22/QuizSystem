@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import sit.tuvarna.bg.persistence.enums.QuestionType;
 
+import java.util.List;
 import java.util.UUID;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -27,6 +28,6 @@ public class Question {
     @Enumerated(EnumType.STRING)
     private QuestionType type;
 
-    @ManyToOne
-    private Quiz quiz;
+    @OneToMany
+    private List<Answer> answers;
 }

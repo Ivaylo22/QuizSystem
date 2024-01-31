@@ -48,6 +48,8 @@ public class GetCompletedQuizzesOperationProcessor implements GetCompletedQuizze
 
         List<QuizModel> quizModels = completedQuizzes
                 .stream()
+                .filter(Quiz::getIsActive)
+                .filter(q -> !q.getIsRequested())
                 .map(q -> conversionService.convert(q, QuizModel.class))
                 .toList();
 

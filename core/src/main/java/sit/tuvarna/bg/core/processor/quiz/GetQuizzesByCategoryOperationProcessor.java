@@ -32,6 +32,8 @@ public class GetQuizzesByCategoryOperationProcessor implements GetQuizzesByCateg
 
         List<QuizModel> quizModels = quizzes
                 .stream()
+                .filter(Quiz::getIsActive)
+                .filter(q -> !q.getIsRequested())
                 .map(q -> conversionService.convert(q, QuizModel.class))
                 .toList();
 

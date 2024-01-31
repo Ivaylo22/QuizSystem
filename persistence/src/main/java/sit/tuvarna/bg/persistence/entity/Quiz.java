@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import sit.tuvarna.bg.persistence.enums.QuizCategory;
 
+import java.util.List;
 import java.util.UUID;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -26,4 +27,13 @@ public class Quiz {
 
     @Column(nullable = false)
     private Boolean isActive;
+
+    @Column(nullable = false)
+    private Boolean isRequested;
+
+    @Column(nullable = false)
+    private String creatorEmail;
+
+    @OneToMany
+    List<Question> questions;
 }
