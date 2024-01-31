@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
     private final AnswerRepository answerRepository;
     private final ConversionService conversionService;
 
+    @Autowired
     public CreateQuizOperationProcessor(QuizRepository quizRepository,
                                         QuestionRepository questionRepository,
                                         AnswerRepository answerRepository,

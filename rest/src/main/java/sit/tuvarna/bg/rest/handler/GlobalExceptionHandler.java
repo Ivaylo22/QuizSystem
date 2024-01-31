@@ -47,6 +47,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
 
+    @ExceptionHandler(value = InvalidQuizException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<String> handleInvalidQuizException(InvalidQuizException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
 
     @ExceptionHandler(value = UserNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
@@ -74,6 +80,12 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = AchievementAlreadyEarnedException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<String> handlePasswordsDoNotMatchException(AchievementAlreadyEarnedException ex) {
+        return ResponseEntity.internalServerError().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(value = DatabaseException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<String> handleDatabaseException(DatabaseException ex) {
         return ResponseEntity.internalServerError().body(ex.getMessage());
     }
 }
