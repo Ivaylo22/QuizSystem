@@ -19,7 +19,10 @@ public class Question {
     private UUID id;
 
     @Column(nullable = false)
-    private String content;
+    private String question;
+
+    @Column
+    private String imageUrl;
 
     @Enumerated(EnumType.STRING)
     private QuestionType type;

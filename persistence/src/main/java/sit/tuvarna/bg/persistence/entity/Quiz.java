@@ -21,9 +21,6 @@ public class Quiz {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
-    private Integer maxExperience;
-
     @Enumerated(EnumType.STRING)
     private QuizCategory category;
 
