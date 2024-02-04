@@ -1,36 +1,41 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
 }
 
 .navbar-logo {
-    /* Add your logo styling here */
+  /* Add your logo styling here */
 }
 
 .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 30px;
+}
+
+.navbar-links .ul{
+    height: 100%;
+    text-align: center;
 }
 
 .navbar-links li a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
-.navbar-auth button {
+.navbar-auth .btn {
+    color: white;
     background-color: transparent;
     border: none;
-    color: white;
     cursor: pointer;
 }
 
-.navbar-auth button:hover {
+.navbar-auth .btn:hover {
     color: lightgray;
 }

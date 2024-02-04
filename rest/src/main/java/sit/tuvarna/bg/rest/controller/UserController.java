@@ -51,7 +51,7 @@ public class UserController {
         this.archiveUser = archiveUser;
     }
 
-    @GetMapping
+    @GetMapping("/info")
     public ResponseEntity<GetUserInfoResponse> getUserInfo(
             @RequestParam @NotBlank(message = "User email is required") String email) {
         GetUserInfoRequest request = GetUserInfoRequest
