@@ -17,5 +17,6 @@ public class UpdateQuizCategoryRequest implements ProcessorRequest {
     @NotBlank(message = "ID is required")
     private String id;
 
+    @NotBlank(message = "New category is required")
     private QuizCategory category;
 }

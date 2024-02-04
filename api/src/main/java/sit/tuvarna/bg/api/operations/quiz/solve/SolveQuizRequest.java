@@ -19,9 +19,12 @@ public class SolveQuizRequest implements ProcessorRequest {
     @NotBlank(message = "Quiz id is required")
     private String quizId;
 
+    @NotBlank(message = "Number of correct answers is required")
     private Integer correctAnswers;
 
+    @NotBlank(message = "Seconds to solve is required")
     private Integer secondsToSolve;
 
+    @NotBlank(message = "Is daily is required")
     private Boolean isDaily;
 }
