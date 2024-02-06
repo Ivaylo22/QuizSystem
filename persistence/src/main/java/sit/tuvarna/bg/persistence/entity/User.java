@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import sit.tuvarna.bg.persistence.enums.Role;
 
 import java.sql.Timestamp;
+import java.util.Base64;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -45,8 +46,9 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private Integer achievementPoints;
 
-    @Column(nullable = false)
-    private String avatarUrl;
+    @Lob
+    @Column(length = 1048576)
+    private byte[] avatarData;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -113,5 +115,9 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public String getUserAvatar() {
+        return Base64.getEncoder().encodeToString(avatarData);
     }
 }

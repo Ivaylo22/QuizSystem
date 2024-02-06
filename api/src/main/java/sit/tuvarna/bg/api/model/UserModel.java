@@ -13,7 +13,7 @@ public class UserModel {
 
     private String email;
 
-    private String avatarUrl;
+    private String avatar;
 
     private Integer level;
 

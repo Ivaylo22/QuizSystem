@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import sit.tuvarna.bg.persistence.enums.QuestionType;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,12 +23,17 @@ public class Question {
     @Column(nullable = false)
     private String question;
 
+    @Lob
     @Column
-    private String imageUrl;
+    private byte[] image;
 
     @Enumerated(EnumType.STRING)
     private QuestionType type;
 
     @OneToMany
     private List<Answer> answers;
+
+    public String getQuestionImage() {
+        return Base64.getEncoder().encodeToString(image);
+    }
 }

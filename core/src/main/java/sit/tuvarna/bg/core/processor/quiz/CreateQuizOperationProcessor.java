@@ -45,7 +45,7 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
                 .map(q -> {
                     Question question = Question.builder()
                             .question(q.getQuestion())
-                            .imageUrl(q.getImageUrl())
+                            .image(q.getImage())
                             .type(QuestionType.valueOf(q.getQuestionType().name()))
                             .answers(q.getAnswers()
                                     .stream()

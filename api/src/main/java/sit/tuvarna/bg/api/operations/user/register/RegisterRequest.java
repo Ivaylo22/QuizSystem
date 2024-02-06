@@ -24,5 +24,5 @@ public class RegisterRequest implements ProcessorRequest {
     @NotBlank(message = "Confirm password is required.")
     private String confirmPassword;
 
-    private String avatarUrl;
+    private byte[] avatarData;
 }

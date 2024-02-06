@@ -1,4 +1,24 @@
+
+
 body * {
     padding: 0;
     margin: 0;
+    --main-color: #FFA500;
+    --secondary-color: #794321;
+    --text-color: white;
+}
+
+.content {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.app-container {
+    background-image: url('../res/background-image.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: repeat;
+    height: 100vh;
 }

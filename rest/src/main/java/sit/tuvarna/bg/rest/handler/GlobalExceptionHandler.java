@@ -88,4 +88,10 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleDatabaseException(DatabaseException ex) {
         return ResponseEntity.internalServerError().body(ex.getMessage());
     }
+
+    @ExceptionHandler(value = DefaultAvatarImageNotFoundException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<String> handleDefaultImageNotFoundException(DefaultAvatarImageNotFoundException ex) {
+        return ResponseEntity.internalServerError().body(ex.getMessage());
+    }
 }

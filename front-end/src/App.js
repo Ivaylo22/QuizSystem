@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import NotFound from './components/NotFound';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Register from './pages/Register';
+
 import NavBar from './components/NavBar';
 
 function App() {
@@ -31,12 +33,15 @@ function App() {
 
     return (
       <Router>
-          <div>
+          <div className='app-container'>
               <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} />
-              <Routes>
-                  <Route path="/" exact element={<Home />} />
-                  <Route path="/not-found" exact element={<NotFound />} />  
-              </Routes>
+              <div className='content'>
+                <Routes>
+                    <Route path="/" exact element={<Home />} />
+                    <Route path="/register" exact element={<Register />} />
+                    <Route path="/not-found" exact element={<NotFound />} />  
+                </Routes>
+              </div>        
           </div>
       </Router>  
   );
