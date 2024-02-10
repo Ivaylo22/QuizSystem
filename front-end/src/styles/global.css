@@ -1,4 +1,9 @@
-
+body {
+    background-image: url('../res/background-image.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: repeat;
+}
 
 body * {
     padding: 0;
@@ -16,9 +21,5 @@ body * {
 }
 
 .app-container {
-    background-image: url('../res/background-image.jpg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: repeat;
     height: 100vh;
 }

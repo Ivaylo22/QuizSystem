@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Register from './pages/Register';
-
+import Login from './pages/Login';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -39,6 +39,7 @@ function App() {
                 <Routes>
                     <Route path="/" exact element={<Home />} />
                     <Route path="/register" exact element={<Register />} />
+                    <Route path="/login" exact element={<Login />} />
                     <Route path="/not-found" exact element={<NotFound />} />  
                 </Routes>
               </div>        

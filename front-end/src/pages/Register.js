@@ -1,12 +1,12 @@
 import React, { useState, useEffect} from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import { useNavigate } from "react-router-dom"
+import 'react-toastify/dist/ReactToastify.css';
 import '../styles/register.css'
 
 
 const Register = () => {
-    useEffect(() => {
-        fetchDefaultAvatarImage();
-    }, []);
-
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -14,6 +14,10 @@ const Register = () => {
         confirmPassword: '',
         avatarData: null
     });
+
+    useEffect(() => {
+        fetchDefaultAvatarImage();
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -23,13 +27,15 @@ const Register = () => {
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         const reader = new FileReader();
-
+    
         reader.onloadend = () => {
-            setFormData({ ...formData, avatarData: reader.result });
+            const arrayBuffer = reader.result;
+            const byteArray = new Uint8Array(arrayBuffer);
+            setFormData({ ...formData, avatarData: [...byteArray] });
         };
-
+    
         if (file) {
-            reader.readAsDataURL(file);
+            reader.readAsArrayBuffer(file);
         }
     };
 
@@ -46,7 +52,6 @@ const Register = () => {
                     setFormData({ ...formData, avatarData: [...byteArray] });
                 };
                 reader.readAsArrayBuffer(blob);
-                console.log(blob);
             })
             .catch(error => {
                 console.error('Error fetching default avatar image:', error);
@@ -55,6 +60,11 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (formData.password !== formData.confirmPassword) {
+            toast.error('Паролите не съвпадат');
+            return;
+        }
         
         try {
             const response = await fetch('http://localhost:8090/api/v1/user/register', {
@@ -66,9 +76,10 @@ const Register = () => {
             });
     
             if (response.ok) {
-                console.log('Registration successful!');
+                navigate("/");
             } else {
-                console.error('Registration failed:', response.statusText);
+                toast.error('Потребителското име и/или имейла са заети');
+                console.error('Потребителското име и/или имейла са заети', response.statusText);
             }
         } catch (error) {
             console.error('Error registering user:', error.message);
@@ -77,7 +88,7 @@ const Register = () => {
 
     return (
         <div className="container mt-5 pt-1 pb-2 register-container">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="w-50 mx-auto">
                 <div className="mb-3">
                     <input type="text" name="username" className="form-control" placeholder="Username" onChange={handleChange} required />
                 </div>
@@ -91,12 +102,14 @@ const Register = () => {
                     <input type="password" name="confirmPassword" className="form-control" placeholder="Confirm Password" onChange={handleChange} required />
                 </div>
                 <div className="mb-3">
+                    <label htmlFor="avatar" className="form-label">Профилна снимка:</label>
                     <input type="file" name="avatar" className="form-control" accept="image/*" onChange={handleFileChange} />
                 </div>
                 <div className="mb-2 text-center">
                     <button type="submit" className="btn btn-register">Register</button>
                 </div>          
             </form>
+            <ToastContainer />
         </div>
     );
 };

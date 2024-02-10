@@ -15,3 +15,8 @@
     background-color: var(--secondary-color);
     color: var(--text-color);
 }
+
+.form-label {
+    padding-left: 2%;
+    font-size: large;
+}

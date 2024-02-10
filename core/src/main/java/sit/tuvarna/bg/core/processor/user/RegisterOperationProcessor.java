@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import sit.tuvarna.bg.api.exception.DefaultAvatarImageNotFoundException;
 import sit.tuvarna.bg.api.exception.PasswordsDoNotMatchException;
 import sit.tuvarna.bg.api.exception.UserExistsException;
 import sit.tuvarna.bg.api.operations.user.register.RegisterOperation;
@@ -14,11 +13,6 @@ import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.enums.Role;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Objects;
 
 @Service
@@ -79,5 +73,4 @@ public class RegisterOperationProcessor implements RegisterOperation {
 
         return conversionService.convert(user, RegisterResponse.class);
     }
-
 }
