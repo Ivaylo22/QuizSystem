@@ -11,4 +11,6 @@ import sit.tuvarna.bg.api.base.ProcessorResponse;
 public class LoginResponse implements ProcessorResponse {
 
     private String token;
+
+    private String email;
 }

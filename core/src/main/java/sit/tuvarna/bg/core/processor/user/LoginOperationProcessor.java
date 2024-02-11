@@ -32,7 +32,6 @@ public class LoginOperationProcessor implements LoginOperation {
     private final UserRepository userRepository;
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
-
     private final TokenRepository tokenRepository;
 
     @Autowired
@@ -70,6 +69,7 @@ public class LoginOperationProcessor implements LoginOperation {
         return LoginResponse
                 .builder()
                 .token(token)
+                .email(user.getEmail())
                 .build();
 
     }

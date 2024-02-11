@@ -2,6 +2,7 @@ package sit.tuvarna.bg.core.converter.user;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
+import sit.tuvarna.bg.api.enums.Role;
 import sit.tuvarna.bg.api.model.UserModel;
 import sit.tuvarna.bg.api.operations.user.getinfo.GetUserInfoRequest;
 import sit.tuvarna.bg.api.operations.user.getinfo.GetUserInfoResponse;
@@ -26,6 +27,7 @@ public class UserToGetUserInfoResponse implements Converter<User, GetUserInfoRes
                 .consecutiveDailyQuizzesCount(source.getConsecutiveDailyQuizzesCount())
                 .dailyQuizzesCount(source.getDailyQuizzesCount())
                 .quizzesPassedCount(source.getQuizzesPassedCount())
+                .role(Role.valueOf(source.getRole().name()))
                 .build();
 
         return GetUserInfoResponse

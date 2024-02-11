@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom"
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/register.css'
@@ -109,7 +109,6 @@ const Register = () => {
                     <button type="submit" className="btn btn-register">Register</button>
                 </div>          
             </form>
-            <ToastContainer />
         </div>
     );
 };
