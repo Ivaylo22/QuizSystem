@@ -13,6 +13,7 @@ import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.enums.Role;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 
+import java.util.Base64;
 import java.util.Objects;
 
 @Service
@@ -44,7 +45,7 @@ public class RegisterOperationProcessor implements RegisterOperation {
                     throw new UserExistsException();
                 });
 
-        if(!Objects.equals(request.getPassword(), request.getConfirmPassword())) {
+        if (!Objects.equals(request.getPassword(), request.getConfirmPassword())) {
             throw new PasswordsDoNotMatchException();
         }
 
@@ -58,7 +59,7 @@ public class RegisterOperationProcessor implements RegisterOperation {
                 .level(1)
                 .experience(0)
                 .achievementPoints(0)
-                .avatarData(request.getAvatarData())
+                .avatar(request.getAvatarData())
                 .role(role)
                 .isArchived(false)
                 .quizzesUnderOneMinuteCount(0)

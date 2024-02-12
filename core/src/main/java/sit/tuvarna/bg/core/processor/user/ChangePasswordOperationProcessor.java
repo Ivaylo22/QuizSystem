@@ -49,7 +49,7 @@ public class ChangePasswordOperationProcessor implements ChangePasswordOperation
                 .level(user.getLevel())
                 .experience(user.getExperience())
                 .achievementPoints(user.getAchievementPoints())
-                .avatarData(user.getAvatarData())
+                .avatar(user.getAvatar())
                 .role(user.getRole())
                 .isArchived(user.getIsArchived())
                 .build();

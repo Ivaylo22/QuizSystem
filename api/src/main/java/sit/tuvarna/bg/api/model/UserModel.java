@@ -14,7 +14,7 @@ public class UserModel {
 
     private String email;
 
-    private String avatar;
+    private byte[] avatar;
 
     private Integer level;
 

@@ -48,7 +48,7 @@ public class User implements UserDetails {
 
     @Lob
     @Column(length = 1048576)
-    private byte[] avatarData;
+    private byte[] avatar;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -115,9 +115,5 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public String getUserAvatar() {
-        return Base64.getEncoder().encodeToString(avatarData);
     }
 }

@@ -3,39 +3,44 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-color);
-  padding: 10px 20px;
   color: var(--text-color);
-}
-
-.navbar-logo {
-  /* Add your logo styling here */
+  padding: 0 2%;
+  font-size: large;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
   align-items: center;
-  height: 100%;
   gap: 30px;
 }
 
-.navbar-links .ul{
-    height: 100%;
-    text-align: center;
-}
-
 .navbar-links li a {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar-auth .btn {
-    color: white;
-    background-color: transparent;
-    border: none;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    border: 2px solid transparent;
     cursor: pointer;
+    font-size: large;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-auth .btn:hover {
-    color: lightgray;
+.navbar-links li a:hover {
+    background-color: var(--main-color);
+    border: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-auth {
+  display: flex;
+  gap: 3%;
+}
+
+.navbar-logo img {
+  max-height: 60px;
+  width: auto;
 }

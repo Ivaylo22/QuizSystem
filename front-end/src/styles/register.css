@@ -3,19 +3,6 @@
     border-radius: 4px;
 }
 
-.btn-register {
-    background-color: var(--main-color);
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-register:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-}
-
 .form-label {
     padding-left: 2%;
     font-size: large;
