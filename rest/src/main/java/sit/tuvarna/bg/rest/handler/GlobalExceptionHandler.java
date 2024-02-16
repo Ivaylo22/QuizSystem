@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import sit.tuvarna.bg.api.exception.*;
 
+import java.io.IOException;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -92,6 +94,12 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = DefaultAvatarImageNotFoundException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<String> handleDefaultImageNotFoundException(DefaultAvatarImageNotFoundException ex) {
+        return ResponseEntity.internalServerError().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(value = IOException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<String> handleIOException(IOException ex) {
         return ResponseEntity.internalServerError().body(ex.getMessage());
     }
 }

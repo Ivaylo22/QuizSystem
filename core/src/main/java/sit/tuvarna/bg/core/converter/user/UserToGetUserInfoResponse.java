@@ -16,7 +16,7 @@ public class UserToGetUserInfoResponse implements Converter<User, GetUserInfoRes
                 .builder()
                 .username(source.getUsername())
                 .email(source.getEmail())
-                .avatar(source.getAvatar())
+                .avatarUrl(source.getAvatarUrl())
                 .level(source.getLevel())
                 .experience(source.getExperience())
                 .achievementPoints(source.getAchievementPoints())

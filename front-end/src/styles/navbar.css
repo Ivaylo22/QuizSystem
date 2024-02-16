@@ -6,6 +6,19 @@
   color: var(--text-color);
   padding: 0 2%;
   font-size: large;
+  height: 60px;
+}
+
+.navbar-logo, .navbar-profile {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-logo img, .user-avatar {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .navbar-links {
@@ -16,31 +29,38 @@
 }
 
 .navbar-links li a {
-    color: var(--text-color);
-    text-decoration: none;
-    border-radius: 8px;
-    background-color: var(--main-color);
-    border: 2px solid transparent;
-    cursor: pointer;
-    font-size: large;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: large;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-links li a:hover {
-    background-color: var(--main-color);
-    border: 2px solid var(--secondary-color);
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--main-color);
+  border: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-auth {
   display: flex;
   gap: 3%;
+  align-items: center;
 }
 
-.navbar-logo img {
-  max-height: 60px;
-  width: auto;
+.navbar-profile div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  max-width: 50px;
+  max-height: 50px;
 }

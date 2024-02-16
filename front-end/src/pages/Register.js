@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,76 +11,77 @@ const Register = () => {
         email: '',
         password: '',
         confirmPassword: '',
-        avatarData: []
+        avatar: null
     });
-
-    const fetchDefaultAvatarImage = useCallback(() => {
-        const defaultAvatarUrl = '../res/default-profile-picture.png';
-        fetch(defaultAvatarUrl)
-            .then(response => response.blob())
-            .then(blob => {
-                const reader = new FileReader();
-                reader.onload = function () {
-                    const arrayBuffer = reader.result;
-                    const byteArray = new Uint8Array(arrayBuffer);
-                    setFormData(formData => ({ ...formData, avatarData: Array.from(byteArray) }));
-                };
-                reader.readAsArrayBuffer(blob);
-            })
-            .catch(error => {
-                console.error('Error fetching default avatar image:', error);
-            });
-    }, []);
-
-    useEffect(() => {
-        fetchDefaultAvatarImage();
-    }, [fetchDefaultAvatarImage]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(formData => ({ ...formData, [name]: value }));
+        setFormData({ ...formData, [name]: value });
     };
 
     const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (event) {
-                const arrayBuffer = event.target.result;
-                const byteArray = new Uint8Array(arrayBuffer);
-                setFormData(formData => ({ ...formData, avatarData: Array.from(byteArray) }));
-            };
-            reader.readAsArrayBuffer(file);
+        setFormData({ ...formData, avatar: e.target.files[0] });
+    };
+
+    const uploadAvatar = async (email, file) => {
+        const uploadFormData = new FormData();
+        uploadFormData.append('file', file);
+        uploadFormData.append('userEmail', email);
+
+        const response = await fetch('http://localhost:8090/api/v1/upload-image', {
+            method: 'POST',
+            body: uploadFormData,
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to upload avatar.');
         }
+
+        return await response.text(); // Assuming the response text is the URL of the uploaded image
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (formData.password !== formData.confirmPassword) {
-            toast.error('Паролите не съвпадат');
+            toast.error('Passwords do not match');
             return;
         }
 
+        // Exclude the avatar from the registration data
+        const { avatar, ...registrationData } = formData;
+
         try {
-            const response = await fetch('http://localhost:8090/api/v1/user/register', {
+            // Step 1: Register the user
+            const registrationResponse = await fetch('http://localhost:8090/api/v1/user/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(registrationData),
             });
 
-            if (response.ok) {
-                toast.success('Успешна регистрация');
+            if (registrationResponse.ok) {
+                // Step 2: If the user is successfully registered and an avatar is selected, upload the avatar.
+                if (formData.avatar) {
+                    try {
+                        await uploadAvatar(formData.email, formData.avatar);
+                    } catch (error) {
+                        console.error('Avatar upload failed:', error);
+                        toast.error('Avatar upload failed');
+                        // Consider how to handle avatar upload failure - rollback user registration or proceed?
+                    }
+                }
+
+                toast.success('Successful registration');
                 navigate('/');
             } else {
-                toast.error('Грешка при регистриране');
-                console.error('User is already existing', response.statusText);
+                const errorText = await registrationResponse.text();
+                toast.error(`Registration error: ${errorText}`);
             }
         } catch (error) {
-            console.error('Error registering user:', error.message);
-            toast.error('Грешка при регистрация');
+            console.error('Error during registration:', error);
+            toast.error(`Registration error: ${error.message}`);
         }
     };
 

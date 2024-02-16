@@ -46,9 +46,7 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private Integer achievementPoints;
 
-    @Lob
-    @Column(length = 1048576)
-    private byte[] avatar;
+    private String avatarUrl;
 
     @Enumerated(EnumType.STRING)
     private Role role;

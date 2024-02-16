@@ -54,10 +54,10 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
             </ul>
             <div className="navbar-auth">
                 {isLoggedIn ? (
-                    <div>
-                        <img src={`data:image/jpeg;base64,${userInformation.avatar}`} alt="Profile" className="user-avatar" />
-                        <button className='btn'onClick={onLogout}>Logout</button>
-                    </div>
+                    <div className="navbar-profile">
+                    <img src={userInformation.avatarUrl || quizLogo} alt="Profile" className="user-avatar" />
+                    <button className='btn' onClick={onLogout}>Logout</button>
+                </div>
                     
                 ) : (
                     <>

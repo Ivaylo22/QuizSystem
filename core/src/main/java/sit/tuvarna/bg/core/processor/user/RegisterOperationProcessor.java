@@ -1,6 +1,7 @@
 package sit.tuvarna.bg.core.processor.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import sit.tuvarna.bg.api.exception.UserExistsException;
 import sit.tuvarna.bg.api.operations.user.register.RegisterOperation;
 import sit.tuvarna.bg.api.operations.user.register.RegisterRequest;
 import sit.tuvarna.bg.api.operations.user.register.RegisterResponse;
+import sit.tuvarna.bg.core.processor.external.StorageService;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.enums.Role;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
@@ -18,6 +20,9 @@ import java.util.Objects;
 
 @Service
 public class RegisterOperationProcessor implements RegisterOperation {
+
+    @Value("${default-image}")
+    private String defaultImageUrl;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final ConversionService conversionService;
@@ -59,9 +64,9 @@ public class RegisterOperationProcessor implements RegisterOperation {
                 .level(1)
                 .experience(0)
                 .achievementPoints(0)
-                .avatar(request.getAvatarData())
                 .role(role)
                 .isArchived(false)
+                .avatarUrl(defaultImageUrl)
                 .quizzesUnderOneMinuteCount(0)
                 .perfectQuizzesCount(0)
                 .consecutiveQuizzesPassedCount(0)
