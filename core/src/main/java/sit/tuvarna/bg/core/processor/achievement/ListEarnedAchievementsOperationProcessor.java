@@ -27,7 +27,7 @@ public class ListEarnedAchievementsOperationProcessor implements ListEarnedAchie
 
     @Override
     public ListEarnedAchievementsResponse process(ListEarnedAchievementsRequest request) {
-        User user = userRepository.findByEmail(request.getUserEmail())
+        User user = userRepository.findByEmailIncludingAchievements(request.getUserEmail())
                 .orElseThrow(UserNotFoundException::new);
 
         List<Achievement> achievements = user.getAchievements();

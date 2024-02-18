@@ -24,6 +24,8 @@ import sit.tuvarna.bg.api.operations.user.login.LoginResponse;
 import sit.tuvarna.bg.api.operations.user.register.RegisterOperation;
 import sit.tuvarna.bg.api.operations.user.register.RegisterRequest;
 import sit.tuvarna.bg.api.operations.user.register.RegisterResponse;
+import sit.tuvarna.bg.core.externalservices.XPProgress;
+import sit.tuvarna.bg.core.externalservices.XPProgressService;
 import sit.tuvarna.bg.core.processor.user.LogoutService;
 
 @RestController
@@ -36,19 +38,23 @@ public class UserController {
     private final ChangePasswordOperation changePassword;
     private final ArchiveUserOperation archiveUser;
 
+    private final XPProgressService progressService;
+
     @Autowired
     public UserController(LoginOperation login,
                           RegisterOperation register,
                           LogoutService logout,
                           GetUserInfoOperation getUserInfo,
                           ChangePasswordOperation changePassword,
-                          ArchiveUserOperation archiveUser) {
+                          ArchiveUserOperation archiveUser,
+                          XPProgressService progressService) {
         this.login = login;
         this.register = register;
         this.logout = logout;
         this.getUserInfo = getUserInfo;
         this.changePassword = changePassword;
         this.archiveUser = archiveUser;
+        this.progressService = progressService;
     }
 
     @GetMapping("/info")
@@ -59,6 +65,12 @@ public class UserController {
                 .email(email)
                 .build();
         return new ResponseEntity<>(getUserInfo.process(request), HttpStatus.OK);
+    }
+
+    @GetMapping("/xp-info")
+    public ResponseEntity<XPProgress> getXPProgress(@RequestParam int totalXp) {
+        XPProgress xpProgress = progressService.calculateXPProgress(totalXp);
+        return ResponseEntity.ok(xpProgress);
     }
 
     @PostMapping("/register")
