@@ -1,0 +1,38 @@
+.achievements-container {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 90vh;
+    padding-bottom: 20px;
+}
+
+.achievement-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.earned {
+    color: #000;
+    background-color: #cff4fc;
+}
+
+.unearned {
+    color: #777;
+    background-color: #f8f9fa;
+    filter: grayscale(100%);
+}
+
+.achievements-container::-webkit-scrollbar {
+    display: none;
+}
+
+.achievements-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
