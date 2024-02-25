@@ -62,13 +62,12 @@ const Register = () => {
             });
 
             if (registrationResponse.ok) {
-                // Step 2: If the user is successfully registered and an avatar is selected, upload the avatar.
                 if (formData.avatar) {
                     try {
                         await uploadAvatar(formData.email, formData.avatar);
                     } catch (error) {
                         console.error('Avatar upload failed:', error);
-                        toast.error('Avatar upload failed');
+                        console.log('Avatar upload failed');
                         // Consider how to handle avatar upload failure - rollback user registration or proceed?
                     }
                 }
@@ -77,11 +76,11 @@ const Register = () => {
                 navigate('/');
             } else {
                 const errorText = await registrationResponse.text();
-                toast.error(`Registration error: ${errorText}`);
+                console.log(`Registration error: ${errorText}`);
             }
         } catch (error) {
             console.error('Error during registration:', error);
-            toast.error(`Registration error: ${error.message}`);
+            console.log(`Registration error: ${error.message}`);
         }
     };
 

@@ -9,11 +9,12 @@ import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizResponse;
 import sit.tuvarna.bg.persistence.entity.Answer;
+import sit.tuvarna.bg.persistence.entity.Category;
 import sit.tuvarna.bg.persistence.entity.Question;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.enums.QuestionType;
-import sit.tuvarna.bg.persistence.enums.QuizCategory;
 import sit.tuvarna.bg.persistence.repository.AnswerRepository;
+import sit.tuvarna.bg.persistence.repository.CategoryRepository;
 import sit.tuvarna.bg.persistence.repository.QuestionRepository;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
@@ -25,16 +26,19 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
     private final QuestionRepository questionRepository;
     private final AnswerRepository answerRepository;
     private final ConversionService conversionService;
+    private final CategoryRepository categoryRepository;
 
     @Autowired
     public CreateQuizOperationProcessor(QuizRepository quizRepository,
                                         QuestionRepository questionRepository,
                                         AnswerRepository answerRepository,
-                                        ConversionService conversionService) {
+                                        ConversionService conversionService,
+                                        CategoryRepository categoryRepository) {
         this.quizRepository = quizRepository;
         this.questionRepository = questionRepository;
         this.answerRepository = answerRepository;
         this.conversionService = conversionService;
+        this.categoryRepository = categoryRepository;
     }
 
     @Override
@@ -71,9 +75,15 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
                 })
                 .toList();
 
+        Category savedCategory = categoryRepository.findByCategory(request.getCategory())
+                .orElseGet(() ->
+                        categoryRepository.save(Category.builder()
+                                .category(request.getCategory())
+                                .build()));
+
         Quiz quiz = Quiz.builder()
                 .title(request.getTitle())
-                .category(QuizCategory.valueOf(request.getCategory().name()))
+                .category(savedCategory)
                 .isActive(true)
                 .isRequested(true)
                 .questions(questionList)

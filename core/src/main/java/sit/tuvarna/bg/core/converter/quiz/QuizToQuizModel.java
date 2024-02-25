@@ -2,7 +2,6 @@ package sit.tuvarna.bg.core.converter.quiz;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import sit.tuvarna.bg.api.enums.QuizCategory;
 import sit.tuvarna.bg.api.model.QuizModel;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 
@@ -13,7 +12,7 @@ public class QuizToQuizModel implements Converter<Quiz, QuizModel> {
         return QuizModel
                 .builder()
                 .name(source.getTitle())
-                .category(QuizCategory.valueOf(source.getCategory().name()))
+                .category(source.getCategory().getCategory())
                 .build();
     }
 }

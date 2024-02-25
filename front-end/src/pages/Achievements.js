@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Achievement from '../components/Achievement'
-import "../styles/achievements.css"; // Assume you have corresponding CSS
+import "../styles/achievements.css";
 
 const Achievements = ({ token, email }) => {
     const [allAchievements, setAllAchievements] = useState([]);

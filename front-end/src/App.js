@@ -8,6 +8,8 @@ import Login from './pages/Login';
 import NavBar from './components/NavBar';
 import Profile from './pages/Profile';
 import Achievements from './pages/Achievements';
+import Statistics from './pages/Statistics';
+import CreateQuiz from './pages/CreateQuiz';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -79,6 +81,17 @@ useEffect(() => {
                         <Achievements 
                             token={token}
                             email={email}
+                        />}
+                      />
+                      <Route path='/stats' exact element={
+                          <Statistics
+                              userInformation={userInformation}
+                          />}
+                      />
+                      <Route path='/create-quiz' exact element={
+                          <CreateQuiz
+                              email={email}
+                              token={token}
                         />}
                       />
                       <Route path="/login" exact element={

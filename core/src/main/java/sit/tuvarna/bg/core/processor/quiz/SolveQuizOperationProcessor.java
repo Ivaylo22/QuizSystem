@@ -18,7 +18,12 @@ import sit.tuvarna.bg.persistence.repository.QuizRepository;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 import sit.tuvarna.bg.persistence.repository.UsersQuizzesRepository;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Service
@@ -100,9 +105,20 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
             user.setConsecutiveQuizzesPassedCount(0);
         }
 
-        if (request.getIsDaily() && request.getCorrectAnswers() >= 8) {
-            user.setConsecutiveDailyQuizzesCount(user.getConsecutiveDailyQuizzesCount() + 1);
+        if (request.getIsDaily() && request.getCorrectAnswers() >= 8 && !Objects.equals(user.getLastDailyQuizId(), request.getQuizId())) {
+            LocalDate lastDailyQuizDate = user.getLastDailyQuizTime() != null
+                    ? user.getLastDailyQuizTime().toLocalDateTime().toLocalDate()
+                    : null;
+            LocalDate today = LocalDate.now();
+
+            if (lastDailyQuizDate != null && ChronoUnit.DAYS.between(lastDailyQuizDate, today) == 1) {
+                user.setConsecutiveDailyQuizzesCount(user.getConsecutiveDailyQuizzesCount() + 1);
+            } else {
+                user.setConsecutiveDailyQuizzesCount(1);
+            }
             user.setDailyQuizzesCount(user.getDailyQuizzesCount() + 1);
+            user.setLastDailyQuizTime(Timestamp.valueOf(LocalDateTime.now()));
+            user.setLastDailyQuizId(request.getQuizId());
         }
 
         if (request.getCorrectAnswers() > 8) {

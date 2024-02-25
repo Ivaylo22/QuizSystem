@@ -8,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import sit.tuvarna.bg.persistence.enums.Role;
 
 import java.sql.Timestamp;
-import java.util.Base64;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -71,6 +70,12 @@ public class User implements UserDetails {
 
     @Column
     private Integer quizzesPassedCount;
+
+    @Column
+    private Timestamp lastDailyQuizTime;
+
+    @Column
+    private String lastDailyQuizId;
 
     @ManyToMany
     @JoinTable(

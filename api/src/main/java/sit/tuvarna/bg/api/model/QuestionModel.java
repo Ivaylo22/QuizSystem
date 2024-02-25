@@ -14,7 +14,7 @@ public class QuestionModel {
 
     private String question;
 
-    private byte[] image;
+    private String image;
 
     private QuestionType questionType;
 

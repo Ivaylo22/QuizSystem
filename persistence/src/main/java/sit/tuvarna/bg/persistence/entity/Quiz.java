@@ -2,7 +2,6 @@ package sit.tuvarna.bg.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import sit.tuvarna.bg.persistence.enums.QuizCategory;
 
 import java.util.List;
 import java.util.UUID;
@@ -22,9 +21,6 @@ public class Quiz {
     @Column(nullable = false)
     private String title;
 
-    @Enumerated(EnumType.STRING)
-    private QuizCategory category;
-
     @Column(nullable = false)
     private Boolean isActive;
 
@@ -36,4 +32,7 @@ public class Quiz {
 
     @OneToMany
     List<Question> questions;
+
+    @ManyToOne
+    Category category;
 }

@@ -4,7 +4,6 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
 import sit.tuvarna.bg.api.base.ProcessorRequest;
-import sit.tuvarna.bg.api.enums.QuizCategory;
 
 @Getter
 @Setter
@@ -18,5 +17,5 @@ public class UpdateQuizCategoryRequest implements ProcessorRequest {
     private String id;
 
     @NotBlank(message = "New category is required")
-    private QuizCategory category;
+    private String category;
 }
