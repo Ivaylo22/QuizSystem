@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import sit.tuvarna.bg.api.exception.UserNotFoundException;
 import sit.tuvarna.bg.core.processor.external.StorageService;
 
 import java.io.IOException;

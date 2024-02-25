@@ -1,12 +1,10 @@
 package sit.tuvarna.bg.core.processor.user;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.PasswordsDoNotMatchException;
-import sit.tuvarna.bg.api.exception.UserExistsException;
 import sit.tuvarna.bg.api.exception.UserNotFoundException;
 import sit.tuvarna.bg.api.operations.user.changepassword.ChangePasswordOperation;
 import sit.tuvarna.bg.api.operations.user.changepassword.ChangePasswordRequest;

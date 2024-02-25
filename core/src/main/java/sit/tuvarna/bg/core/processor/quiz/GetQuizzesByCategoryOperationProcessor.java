@@ -1,7 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.CategoryNotFoundException;
@@ -11,7 +10,6 @@ import sit.tuvarna.bg.api.operations.quiz.getbycategory.GetQuizzesByCategoryRequ
 import sit.tuvarna.bg.api.operations.quiz.getbycategory.GetQuizzesByCategoryResponse;
 import sit.tuvarna.bg.persistence.entity.Category;
 import sit.tuvarna.bg.persistence.entity.Quiz;
-import sit.tuvarna.bg.persistence.enums.QuizCategory;
 import sit.tuvarna.bg.persistence.repository.CategoryRepository;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 

@@ -39,44 +39,63 @@ public class AchievementService {
 
     private boolean userMeetsCriteria(User user, Achievement achievement) {
         switch (achievement.getName()) {
-            case "Fast":
+            case "Fast" -> {
                 return user.getQuizzesUnderOneMinuteCount() >= 1;
-            case "Faster":
+            }
+            case "Faster" -> {
                 return user.getQuizzesUnderOneMinuteCount() >= 5;
-            case "The Fastest":
+            }
+            case "The Fastest" -> {
                 return user.getQuizzesUnderOneMinuteCount() >= 10;
-            case "Top Scorer: 1x10":
+            }
+            case "Top Scorer: 1x10" -> {
                 return user.getPerfectQuizzesCount() >= 1;
-            case "Top Scorer: 5x10":
+            }
+            case "Top Scorer: 5x10" -> {
                 return user.getPerfectQuizzesCount() >= 5;
-            case "Top Scorer: 10x10":
+            }
+            case "Top Scorer: 10x10" -> {
                 return user.getPerfectQuizzesCount() >= 10;
-            case "Consistent: 3x80%":
+            }
+            case "Consistent: 3x80%" -> {
                 return user.getConsecutiveQuizzesPassedCount() >= 3;
-            case "Consistent: 5x80%":
+            }
+            case "Consistent: 5x80%" -> {
                 return user.getConsecutiveQuizzesPassedCount() >= 5;
-            case "Consistent: 10x80%":
+            }
+            case "Consistent: 10x80%" -> {
                 return user.getConsecutiveQuizzesPassedCount() >= 10;
-            case "Diverse: 3 Categories":
+            }
+            case "Diverse: 3 Categories" -> {
                 return usersQuizzesRepository.countDistinctQuizCategoriesByUser(user) >= 3;
-            case "Diverse: 5 Categories":
+            }
+            case "Diverse: 5 Categories" -> {
                 return usersQuizzesRepository.countDistinctQuizCategoriesByUser(user) >= 5;
-            case "Diverse: 10 Categories":
+            }
+            case "Diverse: 10 Categories" -> {
                 return usersQuizzesRepository.countDistinctQuizCategoriesByUser(user) >= 10;
-            case "Persistent: 3 Daily":
+            }
+            case "Persistent: 3 Daily" -> {
                 return user.getConsecutiveDailyQuizzesCount() >= 3;
-            case "Persistent: 5 Daily":
+            }
+            case "Persistent: 5 Daily" -> {
                 return user.getConsecutiveDailyQuizzesCount() >= 5;
-            case "Persistent: 10 Daily":
+            }
+            case "Persistent: 10 Daily" -> {
                 return user.getConsecutiveDailyQuizzesCount() >= 10;
-            case "Enthusiast: 10":
+            }
+            case "Enthusiast: 10" -> {
                 return user.getQuizzesPassedCount() >= 10;
-            case "Enthusiast: 25":
+            }
+            case "Enthusiast: 25" -> {
                 return user.getQuizzesPassedCount() >= 25;
-            case "Enthusiast: 50":
+            }
+            case "Enthusiast: 50" -> {
                 return user.getQuizzesPassedCount() >= 50;
-            default:
+            }
+            default -> {
                 return false;
+            }
         }
     }
 }

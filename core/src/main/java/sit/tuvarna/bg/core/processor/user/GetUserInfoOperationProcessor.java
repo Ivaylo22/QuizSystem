@@ -1,18 +1,14 @@
 package sit.tuvarna.bg.core.processor.user;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
-import sit.tuvarna.bg.api.exception.UserExistsException;
 import sit.tuvarna.bg.api.exception.UserNotFoundException;
 import sit.tuvarna.bg.api.operations.user.getinfo.GetUserInfoOperation;
 import sit.tuvarna.bg.api.operations.user.getinfo.GetUserInfoRequest;
 import sit.tuvarna.bg.api.operations.user.getinfo.GetUserInfoResponse;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
-
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor

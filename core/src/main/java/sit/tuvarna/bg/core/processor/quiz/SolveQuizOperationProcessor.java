@@ -1,7 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;

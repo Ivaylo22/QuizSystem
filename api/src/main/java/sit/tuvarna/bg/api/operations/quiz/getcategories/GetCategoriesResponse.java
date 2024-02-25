@@ -2,7 +2,6 @@ package sit.tuvarna.bg.api.operations.quiz.getcategories;
 
 import lombok.*;
 import sit.tuvarna.bg.api.base.ProcessorResponse;
-import sit.tuvarna.bg.api.model.QuizModel;
 
 import java.util.List;
 

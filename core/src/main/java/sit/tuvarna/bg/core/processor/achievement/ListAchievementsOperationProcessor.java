@@ -1,7 +1,6 @@
 package sit.tuvarna.bg.core.processor.achievement;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.model.AchievementModel;
@@ -12,7 +11,6 @@ import sit.tuvarna.bg.persistence.entity.Achievement;
 import sit.tuvarna.bg.persistence.repository.AchievementRepository;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

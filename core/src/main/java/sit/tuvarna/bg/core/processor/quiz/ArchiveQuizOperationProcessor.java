@@ -1,12 +1,9 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sit.tuvarna.bg.api.exception.QuizAlreadyActiveException;
 import sit.tuvarna.bg.api.exception.QuizAlreadyArchivedException;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;
-import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizResponse;
 import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizResponse;
@@ -26,7 +23,7 @@ public class ArchiveQuizOperationProcessor implements ArchiveQuizOperation {
         Quiz quiz = quizRepository.findById(UUID.fromString(request.getId()))
                 .orElseThrow(QuizNotFoundException::new);
 
-        if(!quiz.getIsActive()) {
+        if (!quiz.getIsActive()) {
             throw new QuizAlreadyArchivedException();
         }
 

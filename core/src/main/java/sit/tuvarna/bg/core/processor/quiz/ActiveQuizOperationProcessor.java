@@ -1,7 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.QuizAlreadyActiveException;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;
@@ -11,7 +10,6 @@ import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizResponse;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
