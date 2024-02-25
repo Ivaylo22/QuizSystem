@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.QuizAlreadyActiveException;
@@ -14,13 +15,9 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class ActiveQuizOperationProcessor implements ActiveQuizOperation {
     private final QuizRepository quizRepository;
-
-    @Autowired
-    public ActiveQuizOperationProcessor(QuizRepository quizRepository) {
-        this.quizRepository = quizRepository;
-    }
 
     @Override
     public ActiveQuizResponse process(ActiveQuizRequest request) {

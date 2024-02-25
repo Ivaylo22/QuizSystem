@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.user;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -14,16 +15,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class ArchiveUserOperationProcessor implements ArchiveUserOperation {
     private final UserRepository userRepository;
     private final ConversionService conversionService;
-
-    @Autowired
-    public ArchiveUserOperationProcessor(UserRepository userRepository,
-                                         ConversionService conversionService) {
-        this.userRepository = userRepository;
-        this.conversionService = conversionService;
-    }
 
     @Override
     public ArchiveUserResponse process(ArchiveUserRequest request) {

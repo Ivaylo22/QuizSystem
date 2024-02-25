@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.user;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.convert.ConversionService;
@@ -17,6 +18,7 @@ import sit.tuvarna.bg.persistence.repository.UserRepository;
 import java.util.Objects;
 
 @Service
+@RequiredArgsConstructor
 public class RegisterOperationProcessor implements RegisterOperation {
 
     @Value("${default-image}")
@@ -24,15 +26,6 @@ public class RegisterOperationProcessor implements RegisterOperation {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final ConversionService conversionService;
-
-    @Autowired
-    public RegisterOperationProcessor(UserRepository userRepository,
-                                      PasswordEncoder passwordEncoder,
-                                      ConversionService conversionService) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
-        this.conversionService = conversionService;
-    }
 
     @Override
     public RegisterResponse process(RegisterRequest request) {

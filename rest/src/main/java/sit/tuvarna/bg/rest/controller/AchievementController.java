@@ -2,6 +2,7 @@ package sit.tuvarna.bg.rest.controller;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,20 +18,13 @@ import sit.tuvarna.bg.api.operations.achievement.listearned.ListEarnedAchievemen
 import sit.tuvarna.bg.api.operations.achievement.listearned.ListEarnedAchievementsResponse;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping(path = "/api/v1/achievement")
 public class AchievementController {
     private final CreateAchievementOperation createAchievement;
     private final ListAchievementsOperation listAchievement;
     private final ListEarnedAchievementsOperation listEarnedAchievements;
 
-    @Autowired
-    public AchievementController(CreateAchievementOperation createAchievement,
-                                 ListAchievementsOperation listAchievement,
-                                 ListEarnedAchievementsOperation listEarnedAchievements) {
-        this.createAchievement = createAchievement;
-        this.listAchievement = listAchievement;
-        this.listEarnedAchievements = listEarnedAchievements;
-    }
 
     @GetMapping("/list")
     public ResponseEntity<ListAchievementsResponse> listAchievements() {

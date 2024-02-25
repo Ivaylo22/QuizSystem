@@ -1,6 +1,7 @@
 package sit.tuvarna.bg.core.processor.user;
 
 import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -28,22 +29,12 @@ import java.util.Optional;
 import java.util.Timer;
 
 @Service
+@RequiredArgsConstructor
 public class LoginOperationProcessor implements LoginOperation {
     private final UserRepository userRepository;
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
     private final TokenRepository tokenRepository;
-
-    @Autowired
-    public LoginOperationProcessor(UserRepository userRepository,
-                                   AuthenticationManager authenticationManager,
-                                   JwtService jwtService,
-                                   TokenRepository tokenRepository) {
-        this.userRepository = userRepository;
-        this.authenticationManager = authenticationManager;
-        this.jwtService = jwtService;
-        this.tokenRepository = tokenRepository;
-    }
 
     @Override
     public LoginResponse process(LoginRequest request) {

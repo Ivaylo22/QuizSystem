@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.achievement;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -14,17 +15,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ListAchievementsOperationProcessor implements ListAchievementsOperation {
 
     private final AchievementRepository achievementRepository;
     private final ConversionService conversionService;
 
-    @Autowired
-    public ListAchievementsOperationProcessor(AchievementRepository achievementRepository,
-                                              ConversionService conversionService) {
-        this.achievementRepository = achievementRepository;
-        this.conversionService = conversionService;
-    }
 
     @Override
     public ListAchievementsResponse process(ListAchievementsRequest request) {

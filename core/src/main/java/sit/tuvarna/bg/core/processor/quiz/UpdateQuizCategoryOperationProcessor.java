@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;
@@ -14,16 +15,11 @@ import sit.tuvarna.bg.persistence.repository.QuizRepository;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class UpdateQuizCategoryOperationProcessor implements UpdateQuizCategoryOperation {
 
     private final QuizRepository quizRepository;
     private final CategoryRepository categoryRepository;
-    @Autowired
-    public UpdateQuizCategoryOperationProcessor(QuizRepository quizRepository,
-                                                CategoryRepository categoryRepository) {
-        this.quizRepository = quizRepository;
-        this.categoryRepository = categoryRepository;
-    }
 
     @Override
     public UpdateQuizCategoryResponse process(UpdateQuizCategoryRequest request) {

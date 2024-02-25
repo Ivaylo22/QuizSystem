@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.achievement;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.persistence.entity.Achievement;
 import sit.tuvarna.bg.persistence.entity.User;
@@ -10,16 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class AchievementService {
 
     private final UsersQuizzesRepository usersQuizzesRepository;
     private final UserRepository userRepository;
 
-    public AchievementService(UsersQuizzesRepository usersQuizzesRepository,
-                              UserRepository userRepository) {
-        this.usersQuizzesRepository = usersQuizzesRepository;
-        this.userRepository = userRepository;
-    }
+
 
     public List<Achievement> getNewAchievements(User user, List<Achievement> achievements) {
         List<Achievement> earnedAchievements = new ArrayList<>();

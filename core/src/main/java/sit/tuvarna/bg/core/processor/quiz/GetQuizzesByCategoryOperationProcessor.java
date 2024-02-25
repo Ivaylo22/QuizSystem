@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -17,19 +18,11 @@ import sit.tuvarna.bg.persistence.repository.QuizRepository;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class GetQuizzesByCategoryOperationProcessor implements GetQuizzesByCategoryOperation {
     private final QuizRepository quizRepository;
     private final ConversionService conversionService;
     private final CategoryRepository categoryRepository;
-
-    @Autowired
-    public GetQuizzesByCategoryOperationProcessor(QuizRepository quizRepository,
-                                                  ConversionService conversionService,
-                                                  CategoryRepository categoryRepository) {
-        this.quizRepository = quizRepository;
-        this.conversionService = conversionService;
-        this.categoryRepository = categoryRepository;
-    }
 
     @Override
     public GetQuizzesByCategoryResponse process(GetQuizzesByCategoryRequest request) {

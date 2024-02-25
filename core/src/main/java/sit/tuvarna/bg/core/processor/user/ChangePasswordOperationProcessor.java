@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.user;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,19 +17,11 @@ import sit.tuvarna.bg.persistence.repository.UserRepository;
 import java.util.Objects;
 
 @Service
+@RequiredArgsConstructor
 public class ChangePasswordOperationProcessor implements ChangePasswordOperation {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final ConversionService conversionService;
-
-    @Autowired
-    public ChangePasswordOperationProcessor(UserRepository userRepository,
-                                            PasswordEncoder passwordEncoder,
-                                            ConversionService conversionService) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
-        this.conversionService = conversionService;
-    }
 
     @Override
     public ChangePasswordResponse process(ChangePasswordRequest request) {

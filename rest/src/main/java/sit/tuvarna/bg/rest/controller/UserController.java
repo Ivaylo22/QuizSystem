@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,7 @@ import sit.tuvarna.bg.core.externalservices.XPProgressService;
 import sit.tuvarna.bg.core.processor.user.LogoutService;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping(path = "/api/v1/user")
 public class UserController {
     private final LoginOperation login;
@@ -40,22 +42,6 @@ public class UserController {
 
     private final XPProgressService progressService;
 
-    @Autowired
-    public UserController(LoginOperation login,
-                          RegisterOperation register,
-                          LogoutService logout,
-                          GetUserInfoOperation getUserInfo,
-                          ChangePasswordOperation changePassword,
-                          ArchiveUserOperation archiveUser,
-                          XPProgressService progressService) {
-        this.login = login;
-        this.register = register;
-        this.logout = logout;
-        this.getUserInfo = getUserInfo;
-        this.changePassword = changePassword;
-        this.archiveUser = archiveUser;
-        this.progressService = progressService;
-    }
 
     @GetMapping("/info")
     public ResponseEntity<GetUserInfoResponse> getUserInfo(

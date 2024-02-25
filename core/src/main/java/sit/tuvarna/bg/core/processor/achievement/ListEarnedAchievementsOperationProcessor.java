@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.achievement;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.UserNotFoundException;
@@ -14,16 +15,11 @@ import sit.tuvarna.bg.persistence.repository.UserRepository;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ListEarnedAchievementsOperationProcessor implements ListEarnedAchievementsOperation {
 
     private final UserRepository userRepository;
     private final ConversionService conversionService;
-
-    public ListEarnedAchievementsOperationProcessor(UserRepository userRepository,
-                                                    ConversionService conversionService) {
-        this.userRepository = userRepository;
-        this.conversionService = conversionService;
-    }
 
     @Override
     public ListEarnedAchievementsResponse process(ListEarnedAchievementsRequest request) {

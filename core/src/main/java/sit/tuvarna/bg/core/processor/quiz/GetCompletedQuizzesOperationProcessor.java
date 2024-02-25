@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -18,20 +19,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class GetCompletedQuizzesOperationProcessor implements GetCompletedQuizzesOperation {
 
     private final UsersQuizzesRepository usersQuizzesRepository;
     private final UserRepository userRepository;
     private final ConversionService conversionService;
-
-    @Autowired
-    public GetCompletedQuizzesOperationProcessor(UsersQuizzesRepository usersQuizzesRepository,
-                                                 UserRepository userRepository,
-                                                 ConversionService conversionService) {
-        this.usersQuizzesRepository = usersQuizzesRepository;
-        this.userRepository = userRepository;
-        this.conversionService = conversionService;
-    }
 
     @Override
     public GetCompletedQuizzesResponse process(GetCompletedQuizzesRequest request) {

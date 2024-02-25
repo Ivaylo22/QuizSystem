@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.achievement;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -15,20 +16,13 @@ import sit.tuvarna.bg.persistence.repository.AchievementRepository;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 
 @Service
+@RequiredArgsConstructor
 public class EarnAchievementOperationProcessor implements EarnAchievementOperation {
 
     private final UserRepository userRepository;
     private final AchievementRepository achievementRepository;
     private final ConversionService conversionService;
 
-    @Autowired
-    public EarnAchievementOperationProcessor(UserRepository userRepository,
-                                             AchievementRepository achievementRepository,
-                                             ConversionService conversionService) {
-        this.userRepository = userRepository;
-        this.achievementRepository = achievementRepository;
-        this.conversionService = conversionService;
-    }
 
     @Override
     public EarnAchievementResponse process(EarnAchievementRequest request) {

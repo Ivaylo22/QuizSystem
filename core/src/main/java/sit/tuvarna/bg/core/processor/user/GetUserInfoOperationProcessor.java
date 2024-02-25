@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.user;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -14,17 +15,10 @@ import sit.tuvarna.bg.persistence.repository.UserRepository;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class GetUserInfoOperationProcessor implements GetUserInfoOperation {
     private final UserRepository userRepository;
     private final ConversionService conversionService;
-
-    @Autowired
-    public GetUserInfoOperationProcessor(UserRepository userRepository,
-                                         ConversionService conversionService) {
-        this.userRepository = userRepository;
-        this.conversionService = conversionService;
-    }
-
 
     @Override
     public GetUserInfoResponse process(GetUserInfoRequest request) {

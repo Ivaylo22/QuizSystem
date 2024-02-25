@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.rest.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,14 +13,12 @@ import sit.tuvarna.bg.core.processor.external.StorageService;
 import java.io.IOException;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping(path = "/api/v1/")
 public class FileUploadController {
 
     private final StorageService storageService;
 
-    public FileUploadController(StorageService storageService) {
-        this.storageService = storageService;
-    }
 
     @PostMapping("/upload-image")
     public ResponseEntity<?> uploadAvatar(@RequestParam("file") MultipartFile file,

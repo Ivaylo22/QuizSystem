@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class SolveQuizOperationProcessor implements SolveQuizOperation {
 
     @Value("${secondsForFastSolve}")
@@ -39,19 +41,6 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
     private final UsersQuizzesRepository usersQuizzesRepository;
 
     private final AchievementService achievementService;
-
-    @Autowired
-    public SolveQuizOperationProcessor(QuizRepository quizRepository,
-                                       UserRepository userRepository,
-                                       AchievementRepository achievementRepository,
-                                       UsersQuizzesRepository usersQuizzesRepository,
-                                       AchievementService achievementService) {
-        this.quizRepository = quizRepository;
-        this.userRepository = userRepository;
-        this.achievementRepository = achievementRepository;
-        this.usersQuizzesRepository = usersQuizzesRepository;
-        this.achievementService = achievementService;
-    }
 
     @Override
     public SolveQuizResponse process(SolveQuizRequest request) {

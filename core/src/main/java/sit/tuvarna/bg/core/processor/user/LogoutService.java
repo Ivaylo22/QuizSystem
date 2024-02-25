@@ -2,6 +2,7 @@ package sit.tuvarna.bg.core.processor.user;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -11,14 +12,10 @@ import sit.tuvarna.bg.persistence.entity.Token;
 import sit.tuvarna.bg.persistence.repository.TokenRepository;
 
 @Service
+@RequiredArgsConstructor
 public class LogoutService implements LogoutHandler {
 
     private final TokenRepository tokenRepository;
-
-    @Autowired
-    public LogoutService(TokenRepository tokenRepository) {
-        this.tokenRepository = tokenRepository;
-    }
 
     @Override
     public void logout(
