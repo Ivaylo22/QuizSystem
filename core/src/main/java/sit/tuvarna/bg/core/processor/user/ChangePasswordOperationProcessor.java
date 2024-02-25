@@ -43,7 +43,6 @@ public class ChangePasswordOperationProcessor implements ChangePasswordOperation
 
         User changedUser = User
                 .builder()
-                .username(user.getUsername())
                 .email(user.getEmail())
                 .password(passwordEncoder.encode(request.getNewPassword()))
                 .level(user.getLevel())

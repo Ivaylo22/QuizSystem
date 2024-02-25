@@ -10,8 +10,6 @@ import sit.tuvarna.bg.api.enums.Role;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserModel {
 
-    private String username;
-
     private String email;
 
     private String avatarUrl;

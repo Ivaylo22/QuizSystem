@@ -13,8 +13,6 @@ public interface UserRepository extends JpaRepository<User, UUID> {
 
     Optional<User> findByEmail(String email);
 
-    Optional<User> findByUsername(String username);
-
     @Query(value = "SELECT u FROM User u LEFT JOIN FETCH u.achievements WHERE u.email = :email")
     Optional<User> findByEmailIncludingAchievements(String email);
 }

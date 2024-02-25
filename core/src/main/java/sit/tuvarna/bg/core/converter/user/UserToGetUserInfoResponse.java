@@ -14,7 +14,6 @@ public class UserToGetUserInfoResponse implements Converter<User, GetUserInfoRes
     public GetUserInfoResponse convert(User source) {
         UserModel model = UserModel
                 .builder()
-                .username(source.getUsername())
                 .email(source.getEmail())
                 .avatarUrl(source.getAvatarUrl())
                 .level(source.getLevel())

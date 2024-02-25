@@ -10,12 +10,10 @@ import sit.tuvarna.bg.api.exception.UserExistsException;
 import sit.tuvarna.bg.api.operations.user.register.RegisterOperation;
 import sit.tuvarna.bg.api.operations.user.register.RegisterRequest;
 import sit.tuvarna.bg.api.operations.user.register.RegisterResponse;
-import sit.tuvarna.bg.core.processor.external.StorageService;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.enums.Role;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 
-import java.util.Base64;
 import java.util.Objects;
 
 @Service
@@ -44,12 +42,6 @@ public class RegisterOperationProcessor implements RegisterOperation {
                     throw new UserExistsException();
                 });
 
-        userRepository
-                .findByUsername(request.getUsername())
-                .ifPresent(e -> {
-                    throw new UserExistsException();
-                });
-
         if (!Objects.equals(request.getPassword(), request.getConfirmPassword())) {
             throw new PasswordsDoNotMatchException();
         }
@@ -58,7 +50,6 @@ public class RegisterOperationProcessor implements RegisterOperation {
 
         User user = User
                 .builder()
-                .username(request.getUsername())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .level(1)

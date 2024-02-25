@@ -7,7 +7,6 @@ import '../styles/register.css';
 const Register = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        username: '',
         email: '',
         password: '',
         confirmPassword: '',
@@ -37,22 +36,20 @@ const Register = () => {
             throw new Error('Failed to upload avatar.');
         }
 
-        return await response.text(); // Assuming the response text is the URL of the uploaded image
+        return await response.text();
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (formData.password !== formData.confirmPassword) {
-            toast.error('Passwords do not match');
+            toast.error('Паролите не съвпадат');
             return;
         }
 
-        // Exclude the avatar from the registration data
         const { avatar, ...registrationData } = formData;
 
         try {
-            // Step 1: Register the user
             const registrationResponse = await fetch('http://localhost:8090/api/v1/user/register', {
                 method: 'POST',
                 headers: {
@@ -68,11 +65,10 @@ const Register = () => {
                     } catch (error) {
                         console.error('Avatar upload failed:', error);
                         console.log('Avatar upload failed');
-                        // Consider how to handle avatar upload failure - rollback user registration or proceed?
                     }
                 }
 
-                toast.success('Successful registration');
+                toast.success('Успешна регистрация');
                 navigate('/');
             } else {
                 const errorText = await registrationResponse.text();
@@ -87,10 +83,6 @@ const Register = () => {
     return (
         <div className="container pt-5 pb-2 register-container">
             <form onSubmit={handleSubmit} className="w-50 mx-auto">
-                <div className="mb-3">
-                    <label htmlFor="username" className="form-label">Потребителско име:</label>
-                    <input type="text" name="username" className="form-control" placeholder="Потребителско име" onChange={handleChange} required />
-                </div>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Имейл:</label>
                     <input type="email" name="email" className="form-control" placeholder="Имейл" onChange={handleChange} required />
