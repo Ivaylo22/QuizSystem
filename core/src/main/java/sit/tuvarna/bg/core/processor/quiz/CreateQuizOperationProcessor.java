@@ -44,6 +44,7 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
                                     .map(a -> {
                                         Answer answer = conversionService.convert(a, Answer.class);
                                         try {
+                                            assert answer != null;
                                             answerRepository.save(answer);
                                         }
                                         catch (Exception e) {
@@ -82,6 +83,10 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
             Quiz savedQuiz = quizRepository.save(quiz);
             return CreateQuizResponse.builder()
                     .id(String.valueOf(savedQuiz.getId()))
+                    .questionIds(savedQuiz.getQuestions()
+                            .stream()
+                            .map(q -> String.valueOf(q.getId()))
+                            .toList())
                     .build();
         } catch (Exception e) {
             throw new DatabaseException();

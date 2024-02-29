@@ -18,7 +18,7 @@ const Profile = ({ userInformation }) => {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
                 },
-            });
+                });
                 const data = await response.json();
                 setXpProgress({
                     level: data.level,

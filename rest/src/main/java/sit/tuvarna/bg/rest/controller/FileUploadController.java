@@ -23,7 +23,19 @@ public class FileUploadController {
     public ResponseEntity<?> uploadAvatar(@RequestParam("file") MultipartFile file,
                                           @RequestParam("userEmail") String userEmail) {
         try {
-            String presignedUrl = storageService.uploadFile(file, userEmail);
+            String presignedUrl = storageService.uploadUserAvatar(file, userEmail);
+
+            return ResponseEntity.ok().body(presignedUrl);
+        } catch (IOException e) {
+            return ResponseEntity.internalServerError().body("Failed to upload avatar due to an IO error.");
+        }
+    }
+
+    @PostMapping("/upload-question-image")
+    public ResponseEntity<?> uploadQuestionImage(@RequestParam("file") MultipartFile file,
+                                                 @RequestParam("questionId") String questionId) {
+        try {
+            String presignedUrl = storageService.uploadQuestionImage(file, questionId);
 
             return ResponseEntity.ok().body(presignedUrl);
         } catch (IOException e) {

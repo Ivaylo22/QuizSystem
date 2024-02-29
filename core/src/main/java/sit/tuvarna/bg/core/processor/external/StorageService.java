@@ -11,8 +11,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import sit.tuvarna.bg.api.exception.QuestionNotFoundException;
 import sit.tuvarna.bg.api.exception.UserNotFoundException;
+import sit.tuvarna.bg.persistence.entity.Question;
 import sit.tuvarna.bg.persistence.entity.User;
+import sit.tuvarna.bg.persistence.repository.QuestionRepository;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 
 import java.io.IOException;
@@ -35,6 +38,8 @@ public class StorageService {
 
     private final UserRepository userRepository;
 
+    private final QuestionRepository questionRepository;
+
     @PostConstruct
     private void initializeAmazon() {
         BasicAWSCredentials awsCreds = new BasicAWSCredentials(accessKey, secretAccessKey);
@@ -44,7 +49,30 @@ public class StorageService {
                 .build();
     }
 
-    public String uploadFile(MultipartFile file, String userEmail) throws IOException {
+    public String uploadUserAvatar(MultipartFile file, String userEmail) throws IOException {
+        String fileKey = getFileKey(file);
+
+        User user = userRepository.findByEmail(userEmail)
+                .orElseThrow(UserNotFoundException::new);
+        user.setAvatarUrl(s3Client.getUrl(bucketName, fileKey).toString());
+        userRepository.save(user);
+
+        return s3Client.getUrl(bucketName, fileKey).toString();
+    }
+
+    public String uploadQuestionImage(MultipartFile file, String questionId) throws IOException {
+        String fileKey = getFileKey(file);
+
+        Question question = questionRepository.findById(UUID.fromString(questionId))
+                .orElseThrow(QuestionNotFoundException::new);
+
+        question.setImage(s3Client.getUrl(bucketName, fileKey).toString());
+        questionRepository.save(question);
+
+        return s3Client.getUrl(bucketName, fileKey).toString();
+    }
+
+    private String getFileKey(MultipartFile file) throws IOException {
         String fileKey = UUID.randomUUID().toString();
 
         String contentType = file.getContentType() != null ? file.getContentType() : "application/octet-stream";
@@ -55,15 +83,6 @@ public class StorageService {
 
         s3Client.putObject(new PutObjectRequest(bucketName, fileKey, file.getInputStream(), metadata));
 
-        User user = userRepository.findByEmail(userEmail)
-                .orElseThrow(UserNotFoundException::new);
-        user.setAvatarUrl(s3Client.getUrl(bucketName, fileKey).toString());
-        userRepository.save(user);
-
-        return s3Client.getUrl(bucketName, fileKey).toString();
-    }
-
-    public String getObjectUrl(String bucketName, String objectKey) {
-        return "https://" + bucketName + ".s3.amazonaws.com/" + objectKey;
+        return fileKey;
     }
 }

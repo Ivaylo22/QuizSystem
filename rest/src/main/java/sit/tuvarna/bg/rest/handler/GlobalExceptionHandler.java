@@ -58,25 +58,31 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = UserNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException ex) {
+    public ResponseEntity<String> handleUserNotFoundException() {
         return ResponseEntity.notFound().build();
     }
 
     @ExceptionHandler(value = QuizNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<String> handleQuizNotFoundException(QuizNotFoundException ex) {
+    public ResponseEntity<String> handleQuizNotFoundException() {
         return ResponseEntity.notFound().build();
     }
 
     @ExceptionHandler(value = AchievementNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<String> handleAchievementNotFoundException(AchievementNotFoundException ex) {
+    public ResponseEntity<String> handleAchievementNotFoundException() {
         return ResponseEntity.notFound().build();
     }
 
     @ExceptionHandler(value = CategoryNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<String> handleCategoryNotFoundException(CategoryNotFoundException ex) {
+    public ResponseEntity<String> handleCategoryNotFoundException() {
+        return ResponseEntity.notFound().build();
+    }
+
+    @ExceptionHandler(value = QuestionNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<String> handleQuestionNotFoundException() {
         return ResponseEntity.notFound().build();
     }
 
