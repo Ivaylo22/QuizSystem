@@ -79,7 +79,7 @@ useEffect(() => {
           }
       } catch (error) {
           console.error('Error logging in:', error);
-          toast.error('Login error');
+          toast.error('Възникна грешка. Моля опитайте по-късно');
       }
   };
 
