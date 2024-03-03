@@ -21,4 +21,6 @@ public interface UsersQuizzesRepository extends JpaRepository<UsersQuizzes, UUID
     Integer countDistinctQuizCategoriesByUser(User user);
 
     List<UsersQuizzes> getUsersQuizzesByUserAndQuiz(User user, Quiz quiz);
+
+    List<UsersQuizzes> getUsersQuizzesByQuiz(Quiz quiz);
 }

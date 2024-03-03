@@ -73,7 +73,35 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
             user.getAchievements().addAll(earnedAchievements);
             userRepository.save(user);
         }
-        return SolveQuizResponse.builder().build();
+
+        updateQuizStatistics(quiz);
+
+        return SolveQuizResponse.builder()
+                .isPassed(request.getCorrectAnswers() >= 8)
+                .experienceGained(experienceGained)
+                .build();
+    }
+
+    private void updateQuizStatistics(Quiz quiz) {
+        List<UsersQuizzes> usersQuizzes = usersQuizzesRepository.getUsersQuizzesByQuiz(quiz);
+
+        if (usersQuizzes != null && !usersQuizzes.isEmpty()) {
+            double totalSeconds = usersQuizzes.stream()
+                    .mapToDouble(UsersQuizzes::getSecondsToSolve)
+                    .sum();
+
+            double totalCorrectAnswers = usersQuizzes.stream()
+                    .mapToDouble(UsersQuizzes::getCorrectAnswers)
+                    .sum();
+
+            Double averageSeconds = totalSeconds / usersQuizzes.size();
+            Double averageScore = totalCorrectAnswers / usersQuizzes.size();
+
+            quiz.setAverageTimeNeeded(averageSeconds);
+            quiz.setAverageCorrectAnswers(averageScore);
+
+            quizRepository.save(quiz);
+        }
     }
 
     private void updateUserInfo(User user, SolveQuizRequest request) {
@@ -121,7 +149,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         Integer correctAnswers = request.getCorrectAnswers();
         Integer secondsToSolve = request.getSecondsToSolve();
 
-        double timeCoefficient = 0.0;
+        double timeCoefficient;
 
         if (secondsToSolve < 60)
             timeCoefficient = 1.0;

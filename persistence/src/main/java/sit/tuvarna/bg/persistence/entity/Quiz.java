@@ -30,6 +30,10 @@ public class Quiz {
     @Column(nullable = false)
     private String creatorEmail;
 
+    private Double averageCorrectAnswers;
+
+    private Double averageTimeNeeded;
+
     @OneToMany
     List<Question> questions;
 
