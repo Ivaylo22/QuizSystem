@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -10,6 +10,8 @@ import Profile from './pages/Profile';
 import Achievements from './pages/Achievements';
 import Statistics from './pages/Statistics';
 import CreateQuiz from './pages/CreateQuiz';
+import RequestedQuizzes from './pages/RequestedQuizzes';
+import RequestedQuizInfo from './pages/RequestedQuizInfo';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -69,37 +71,31 @@ useEffect(() => {
                   setIsAdmin={setIsAdmin}
                   userInformation={userInformation}/>
                 <div className='content'>
-                  <Routes>
-                      <Route path="/" exact element={<Home />} />
-                      <Route path="/register" exact element={<Register />} />
-                      <Route path='/profile' exact element={
-                        <Profile 
-                            userInformation={userInformation}
-                        />}
-                      />
-                      <Route path='/achievements' exact element={
-                        <Achievements 
-                            token={token}
-                            email={email}
-                        />}
-                      />
-                      <Route path='/stats' exact element={
-                          <Statistics
-                              userInformation={userInformation}
-                          />}
-                      />
-                      <Route path='/create-quiz' exact element={
-                          <CreateQuiz
-                              email={email}
-                              token={token}
-                        />}
-                      />
-                      <Route path="/login" exact element={
-                          <Login 
-                              setIsLoggedIn={setIsLoggedIn} 
-                              setIsAdmin={setIsAdmin}
-                              setUserInformation={setUserInformation}/>} 
-                            />
+                    <Routes>
+                        <Route path="/" exact element={<Home/>}/>
+                        <Route path="/register" exact element={<Register/>}/>
+                        <Route path='/profile' exact element={
+                            <Profile userInformation={userInformation}/>}
+                        />
+                        <Route path='/achievements' exact element={
+                            <Achievements token={token} email={email}/>}
+                        />
+                        <Route path='/stats' exact element={
+                            <Statistics userInformation={userInformation}/>}
+                        />
+                        <Route path='/create-quiz' exact element={
+                            <CreateQuiz email={email} token={token}/>}
+                        />
+                        <Route path="/login" exact element={
+                            <Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                                   setUserInformation={setUserInformation}/>}
+                        />
+                        <Route path="/requested" exact element={
+                            isAdmin ? <RequestedQuizzes token={token}/> : <Navigate replace to="/not-found"/>
+                        }/>
+                        <Route path="/requested/:quizId" element={
+                            isAdmin ? <RequestedQuizInfo token={token}/> : <Navigate replace to="/not-found"/>
+                        }/>
                       <Route path="/not-found" exact element={<NotFound />} />  
                   </Routes>
                 </div>        

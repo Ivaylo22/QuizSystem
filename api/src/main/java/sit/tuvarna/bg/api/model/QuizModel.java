@@ -6,18 +6,22 @@ import lombok.*;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class QuizModel {
+
+    private String quizId;
 
     private String name;
 
     private String category;
 
-    private Double averageTime;
+    private Integer averageSecondsNeeded;
 
     private Double averageCorrectAnswers;
 
     private Boolean haveBeenCompleted;
 
     private Boolean haveBeenPassed;
+
+    private String userEmail;
 }

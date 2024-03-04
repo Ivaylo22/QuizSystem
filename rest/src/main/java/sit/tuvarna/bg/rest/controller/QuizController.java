@@ -15,6 +15,9 @@ import sit.tuvarna.bg.api.operations.quiz.getallforuser.GetAllQuizzesForUserResp
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesResponse;
+import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesOperation;
+import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesRequest;
+import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -24,6 +27,7 @@ public class QuizController {
     private final GetCategoriesOperation getCategories;
     private final CreateQuizOperation createQuiz;
     private final GetAllQuizzesForUserOperation getAllForUser;
+    private final GetRequestedQuizzesOperation getRequestedQuizzes;
 
     @GetMapping("/categories")
     public ResponseEntity<GetCategoriesResponse> getCategories() {
@@ -38,6 +42,12 @@ public class QuizController {
         GetAllQuizzesForUserRequest request = GetAllQuizzesForUserRequest.builder()
                 .userEmail(email).build();
         return new ResponseEntity<>(getAllForUser.process(request), HttpStatus.OK);
+    }
+
+    @GetMapping("/get-requested")
+    public ResponseEntity<GetRequestedQuizzesResponse> getRequested() {
+        GetRequestedQuizzesRequest request = GetRequestedQuizzesRequest.builder().build();
+        return new ResponseEntity<>(getRequestedQuizzes.process(request), HttpStatus.OK);
     }
 
     @PostMapping("/create")

@@ -7,5 +7,7 @@ import sit.tuvarna.bg.api.base.ProcessorRequest;
 @Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class GetRequestedQuizzesRequest implements ProcessorRequest {
+    private String userEmail;
 }

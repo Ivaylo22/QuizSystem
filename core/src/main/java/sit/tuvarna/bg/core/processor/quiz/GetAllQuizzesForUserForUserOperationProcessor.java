@@ -46,7 +46,7 @@ public class GetAllQuizzesForUserForUserOperationProcessor implements GetAllQuiz
                 QuizModel quizModel = QuizModel.builder()
                         .name(quiz.getTitle())
                         .category(quiz.getCategory().getCategory())
-                        .averageTime(quiz.getAverageTimeNeeded())
+                        .averageSecondsNeeded(quiz.getAverageSecondsNeeded())
                         .averageCorrectAnswers(quiz.getAverageCorrectAnswers())
                         .haveBeenCompleted(haveBeenCompleted)
                         .haveBeenPassed(haveBeenPassed)

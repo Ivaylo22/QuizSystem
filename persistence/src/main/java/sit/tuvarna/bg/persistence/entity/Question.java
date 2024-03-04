@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import sit.tuvarna.bg.persistence.enums.QuestionType;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,6 +28,10 @@ public class Question {
     @Enumerated(EnumType.STRING)
     private QuestionType type;
 
-    @OneToMany
-    private List<Answer> answers;
+    @ManyToOne
+    @JoinColumn(name = "quiz_id")
+    private Quiz quiz;
+
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Answer> answers = new ArrayList<>();
 }

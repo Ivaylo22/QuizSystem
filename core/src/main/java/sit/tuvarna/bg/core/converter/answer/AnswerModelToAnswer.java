@@ -11,7 +11,7 @@ public class AnswerModelToAnswer implements Converter<AnswerModel, Answer> {
     public Answer convert(AnswerModel source) {
         return Answer.builder()
                 .content(source.getContent())
-                .correct(source.getIsCorrect())
+                .isCorrect(source.getIsCorrect())
                 .build();
     }
 }

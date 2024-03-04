@@ -21,5 +21,9 @@ public class Answer {
     private String content;
 
     @Column(nullable = false)
-    private Boolean correct;
+    private Boolean isCorrect;
+
+    @ManyToOne
+    @JoinColumn(name = "question_id")
+    private Question question;
 }

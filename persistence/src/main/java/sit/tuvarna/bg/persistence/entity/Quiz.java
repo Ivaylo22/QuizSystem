@@ -3,6 +3,7 @@ package sit.tuvarna.bg.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -30,12 +31,12 @@ public class Quiz {
     @Column(nullable = false)
     private String creatorEmail;
 
-    private Double averageCorrectAnswers;
+    private Double averageCorrectAnswers = 0.0;
 
-    private Double averageTimeNeeded;
+    private Integer averageSecondsNeeded = 0;
 
-    @OneToMany
-    List<Question> questions;
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Question> questions = new ArrayList<>();
 
     @ManyToOne
     Category category;

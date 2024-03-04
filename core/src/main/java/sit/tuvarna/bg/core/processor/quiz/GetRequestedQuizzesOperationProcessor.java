@@ -1,7 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.model.QuizModel;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesOperation;
@@ -16,17 +15,22 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GetRequestedQuizzesOperationProcessor implements GetRequestedQuizzesOperation {
     private final QuizRepository quizRepository;
-    private final ConversionService conversionService;
 
     @Override
     public GetRequestedQuizzesResponse process(GetRequestedQuizzesRequest request) {
         List<Quiz> quizzes = quizRepository.findAllByIsRequestedIsTrue();
 
+        List<QuizModel> quizModels = quizzes.stream()
+                .map(q -> QuizModel.builder()
+                        .quizId(String.valueOf(q.getId()))
+                        .name(q.getTitle())
+                        .category(q.getCategory().getCategory())
+                        .userEmail(q.getCreatorEmail())
+                        .build())
+                .toList();
+
         return GetRequestedQuizzesResponse.builder()
-                .quizzes(quizzes
-                        .stream()
-                        .map(q -> conversionService.convert(q, QuizModel.class))
-                        .toList())
+                .quizzes(quizModels)
                 .build();
     }
 }

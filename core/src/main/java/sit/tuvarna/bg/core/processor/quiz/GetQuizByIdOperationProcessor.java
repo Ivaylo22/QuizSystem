@@ -3,7 +3,6 @@ package sit.tuvarna.bg.core.processor.quiz;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
-import sit.tuvarna.bg.api.exception.InvalidQuizException;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;
 import sit.tuvarna.bg.api.model.QuizModel;
 import sit.tuvarna.bg.api.operations.quiz.getbyid.GetQuizByIdOperation;
@@ -25,9 +24,6 @@ public class GetQuizByIdOperationProcessor implements GetQuizByIdOperation {
         Quiz quiz = quizRepository.findById(UUID.fromString(request.getQuizId()))
                 .orElseThrow(QuizNotFoundException::new);
 
-        if(!quiz.getIsActive() || quiz.getIsRequested()) {
-            throw new InvalidQuizException();
-        }
 
         return GetQuizByIdResponse.builder()
                 .quizModel(conversionService.convert(quiz, QuizModel.class))

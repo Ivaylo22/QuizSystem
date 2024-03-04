@@ -94,10 +94,10 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
                     .mapToDouble(UsersQuizzes::getCorrectAnswers)
                     .sum();
 
-            Double averageSeconds = totalSeconds / usersQuizzes.size();
+            Integer averageSeconds = (int) Math.ceil(totalSeconds / usersQuizzes.size());
             Double averageScore = totalCorrectAnswers / usersQuizzes.size();
 
-            quiz.setAverageTimeNeeded(averageSeconds);
+            quiz.setAverageSecondsNeeded(averageSeconds);
             quiz.setAverageCorrectAnswers(averageScore);
 
             quizRepository.save(quiz);

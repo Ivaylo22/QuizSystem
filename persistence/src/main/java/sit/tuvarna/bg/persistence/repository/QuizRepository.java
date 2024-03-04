@@ -4,7 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import sit.tuvarna.bg.persistence.entity.Category;
 import sit.tuvarna.bg.persistence.entity.Quiz;
-import sit.tuvarna.bg.persistence.enums.QuizCategory;
 
 import java.util.List;
 import java.util.UUID;
