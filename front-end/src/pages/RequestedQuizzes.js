@@ -21,7 +21,6 @@ const RequestedQuizzes = ({token}) => {
                 }
 
                 const data = await response.json();
-                console.log(data);
                 setQuizzes(data.quizzes);
             } catch (error) {
                 console.error('Failed to fetch quizzes:', error);
