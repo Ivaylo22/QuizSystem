@@ -2,7 +2,6 @@ package sit.tuvarna.bg.core.processor.quiz;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.enums.QuestionType;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;
