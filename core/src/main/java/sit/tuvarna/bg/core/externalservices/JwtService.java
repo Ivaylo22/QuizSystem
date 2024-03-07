@@ -61,7 +61,6 @@ public class JwtService {
     private boolean isTokenExpired(String jwtToken) {
         return extractExpiration(jwtToken).before(new Date());
     }
-    //test
 
     public boolean isTokenRevoked(String jwtToken) {
         return tokenRepository.findByToken(jwtToken)
