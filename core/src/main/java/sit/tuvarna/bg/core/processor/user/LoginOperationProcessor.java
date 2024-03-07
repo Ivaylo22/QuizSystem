@@ -1,12 +1,9 @@
 package sit.tuvarna.bg.core.processor.user;
 
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import sit.tuvarna.bg.api.exception.UserNotFoundException;
 import sit.tuvarna.bg.api.operations.user.login.LoginOperation;
 import sit.tuvarna.bg.api.operations.user.login.LoginRequest;
@@ -47,10 +44,6 @@ public class LoginOperationProcessor implements LoginOperation {
         saveToken(user, token);
         updateLastLogonTime(user);
 
-        ServletRequestAttributes httpRequest = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-        HttpSession session = httpRequest.getRequest().getSession();
-        session.setAttribute("user", user.getId());
-
         return LoginResponse
                 .builder()
                 .token(token)
@@ -87,5 +80,4 @@ public class LoginOperationProcessor implements LoginOperation {
         user.setLastLoginTime(Timestamp.from(Instant.now()));
         userRepository.save(user);
     }
-
 }

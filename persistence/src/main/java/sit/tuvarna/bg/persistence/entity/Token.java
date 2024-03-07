@@ -6,11 +6,10 @@ import sit.tuvarna.bg.persistence.enums.TokenType;
 
 import java.util.UUID;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "tokens")
 public class Token {
