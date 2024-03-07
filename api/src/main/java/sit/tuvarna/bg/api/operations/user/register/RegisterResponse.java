@@ -12,7 +12,5 @@ public class RegisterResponse implements ProcessorResponse {
 
     private String userId;
 
-    private String username;
-
     private String email;
 }

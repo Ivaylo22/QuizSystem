@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.user;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.convert.ConversionService;
@@ -27,6 +28,7 @@ public class RegisterOperationProcessor implements RegisterOperation {
     private final ConversionService conversionService;
 
     @Override
+    @Transactional
     public RegisterResponse process(RegisterRequest request) {
         userRepository
                 .findByEmail(request.getEmail())
