@@ -7,6 +7,7 @@ import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesOperat
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesResponse;
 import sit.tuvarna.bg.persistence.entity.Quiz;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
 import java.util.List;
@@ -18,7 +19,9 @@ public class GetRequestedQuizzesOperationProcessor implements GetRequestedQuizze
 
     @Override
     public GetRequestedQuizzesResponse process(GetRequestedQuizzesRequest request) {
-        List<Quiz> quizzes = quizRepository.findAllByIsRequestedIsTrue();
+        List<Quiz> quizzes = quizRepository.findAll().stream()
+                .filter(q -> q.getStatus() == QuizStatus.REQUESTED)
+                .toList();
 
         List<QuizModel> quizModels = quizzes.stream()
                 .map(q -> QuizModel.builder()

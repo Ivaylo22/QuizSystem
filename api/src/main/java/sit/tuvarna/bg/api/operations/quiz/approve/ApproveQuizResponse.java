@@ -9,5 +9,5 @@ import sit.tuvarna.bg.api.base.ProcessorResponse;
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ApproveQuizResponse implements ProcessorResponse {
-    private Boolean isRequired;
+    private String status;
 }

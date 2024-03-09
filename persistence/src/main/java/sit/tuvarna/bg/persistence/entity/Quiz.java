@@ -2,6 +2,7 @@ package sit.tuvarna.bg.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,10 +24,7 @@ public class Quiz {
     private String title;
 
     @Column(nullable = false)
-    private Boolean isActive;
-
-    @Column(nullable = false)
-    private Boolean isRequested;
+    private QuizStatus status;
 
     @Column(nullable = false)
     private String creatorEmail;

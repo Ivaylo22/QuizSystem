@@ -11,6 +11,7 @@ import sit.tuvarna.bg.api.operations.quiz.getunfinished.GetUnfinishedQuizzesResp
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.entity.UsersQuizzes;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 import sit.tuvarna.bg.persistence.repository.UsersQuizzesRepository;
@@ -44,8 +45,7 @@ public class GetUnfinishedQuizzesOperationProcessor implements GetUnfinishedQuiz
                 .toList();
 
         List<QuizModel> quizModels = notTakenQuizzes.stream()
-                .filter(Quiz::getIsActive)
-                .filter(q -> !q.getIsRequested())
+                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
                 .map(q -> conversionService.convert(q, QuizModel.class))
                 .toList();
 

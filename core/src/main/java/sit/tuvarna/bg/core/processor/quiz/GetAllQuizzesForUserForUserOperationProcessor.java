@@ -10,6 +10,7 @@ import sit.tuvarna.bg.api.operations.quiz.getallforuser.GetAllQuizzesForUserResp
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.entity.UsersQuizzes;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 import sit.tuvarna.bg.persistence.repository.UsersQuizzesRepository;
@@ -29,8 +30,7 @@ public class GetAllQuizzesForUserForUserOperationProcessor implements GetAllQuiz
     public GetAllQuizzesForUserResponse process(GetAllQuizzesForUserRequest request) {
         List<Quiz> quizzes = quizRepository.findAll()
                 .stream()
-                .filter(Quiz::getIsActive)
-                .filter(q -> !q.getIsRequested())
+                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
                 .toList();
         User user = userRepository.findByEmail(request.getUserEmail())
                 .orElseThrow(UserNotFoundException::new);

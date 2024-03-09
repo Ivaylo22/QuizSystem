@@ -8,6 +8,7 @@ import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizResponse;
 import sit.tuvarna.bg.persistence.entity.Quiz;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
 import java.util.UUID;
@@ -23,16 +24,16 @@ public class ArchiveQuizOperationProcessor implements ArchiveQuizOperation {
         Quiz quiz = quizRepository.findById(UUID.fromString(request.getId()))
                 .orElseThrow(QuizNotFoundException::new);
 
-        if (!quiz.getIsActive()) {
+        if (quiz.getStatus() == QuizStatus.ARCHIVED) {
             throw new QuizAlreadyArchivedException();
         }
 
-        quiz.setIsActive(false);
+        quiz.setStatus(QuizStatus.ARCHIVED);
         quizRepository.save(quiz);
 
         return ArchiveQuizResponse
                 .builder()
-                .isArchived(quiz.getIsActive())
+                .status(quiz.getStatus().name())
                 .build();
     }
 }

@@ -8,6 +8,7 @@ import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizResponse;
 import sit.tuvarna.bg.persistence.entity.Quiz;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
 import java.util.UUID;
@@ -22,16 +23,16 @@ public class ActiveQuizOperationProcessor implements ActiveQuizOperation {
         Quiz quiz = quizRepository.findById(UUID.fromString(request.getId()))
                 .orElseThrow(QuizNotFoundException::new);
 
-        if(quiz.getIsActive()) {
+        if (quiz.getStatus() == QuizStatus.ACTIVE) {
             throw new QuizAlreadyActiveException();
         }
 
-        quiz.setIsActive(true);
+        quiz.setStatus(QuizStatus.ACTIVE);
         quizRepository.save(quiz);
 
         return ActiveQuizResponse
                 .builder()
-                .isArchived(quiz.getIsActive())
+                .status(quiz.getStatus().name())
                 .build();
     }
 }

@@ -10,6 +10,7 @@ import sit.tuvarna.bg.api.operations.quiz.getbycategory.GetQuizzesByCategoryRequ
 import sit.tuvarna.bg.api.operations.quiz.getbycategory.GetQuizzesByCategoryResponse;
 import sit.tuvarna.bg.persistence.entity.Category;
 import sit.tuvarna.bg.persistence.entity.Quiz;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.CategoryRepository;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
@@ -32,8 +33,7 @@ public class GetQuizzesByCategoryOperationProcessor implements GetQuizzesByCateg
 
         List<QuizModel> quizModels = quizzes
                 .stream()
-                .filter(Quiz::getIsActive)
-                .filter(q -> !q.getIsRequested())
+                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
                 .map(q -> conversionService.convert(q, QuizModel.class))
                 .toList();
 

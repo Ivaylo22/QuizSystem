@@ -7,7 +7,7 @@ const RequestedQuizInfo = ({token}) => {
     const {quizId} = useParams();
     const navigate = useNavigate();
     const [quiz, setQuiz] = useState(null);
-    console.log(quizId)
+    console.log(quiz)
 
     useEffect(() => {
         const fetchQuizInfo = async () => {

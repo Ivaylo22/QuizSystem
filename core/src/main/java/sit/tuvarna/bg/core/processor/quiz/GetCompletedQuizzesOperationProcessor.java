@@ -11,6 +11,7 @@ import sit.tuvarna.bg.api.operations.quiz.getcompleted.GetCompletedQuizzesRespon
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.entity.UsersQuizzes;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 import sit.tuvarna.bg.persistence.repository.UsersQuizzesRepository;
 
@@ -39,8 +40,7 @@ public class GetCompletedQuizzesOperationProcessor implements GetCompletedQuizze
 
         List<QuizModel> quizModels = completedQuizzes
                 .stream()
-                .filter(Quiz::getIsActive)
-                .filter(q -> !q.getIsRequested())
+                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
                 .map(q -> conversionService.convert(q, QuizModel.class))
                 .toList();
 

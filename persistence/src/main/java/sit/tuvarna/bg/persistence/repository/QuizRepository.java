@@ -11,6 +11,4 @@ import java.util.UUID;
 @Repository
 public interface QuizRepository extends JpaRepository<Quiz, UUID> {
     List<Quiz> findAllByCategory(Category category);
-
-    List<Quiz> findAllByIsRequestedIsTrue();
 }

@@ -13,6 +13,7 @@ import sit.tuvarna.bg.persistence.entity.Category;
 import sit.tuvarna.bg.persistence.entity.Question;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.enums.QuestionType;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.CategoryRepository;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
@@ -30,15 +31,17 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
     @Transactional
     public CreateQuizResponse process(CreateQuizRequest request) {
         Category category = categoryRepository.findByCategory(request.getCategory())
-                .orElseGet(() -> Category.builder()
-                        .category(request.getCategory())
-                        .build());
+                .orElseGet(() -> {
+                    Category newCategory = Category.builder()
+                            .category(request.getCategory())
+                            .build();
+                    return categoryRepository.save(newCategory);
+                });
 
         Quiz quiz = Quiz.builder()
                 .title(request.getTitle())
                 .category(category)
-                .isActive(true)
-                .isRequested(true)
+                .status(QuizStatus.REQUESTED)
                 .creatorEmail(request.getUserEmail())
                 .build();
 
@@ -53,6 +56,8 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
             List<Answer> answers = new ArrayList<>();
             q.getAnswers().forEach(a -> {
                 Answer answer = conversionService.convert(a, Answer.class);
+                assert answer != null;
+                answer.setQuestion(question);
                 answers.add(answer);
             });
 

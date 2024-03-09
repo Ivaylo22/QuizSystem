@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -12,6 +12,7 @@ import Statistics from './pages/Statistics';
 import CreateQuiz from './pages/CreateQuiz';
 import RequestedQuizzes from './pages/RequestedQuizzes';
 import RequestedQuizInfo from './pages/RequestedQuizInfo';
+import AdminRoute from './AdminRoute';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -40,11 +41,13 @@ function App() {
                 setIsLoggedIn(true);
                 setIsAdmin(isAdmin);
                 setUserInformation(userInformation);
+                localStorage.setItem('isAdmin', isAdmin); // Store admin status in local storage
             } else {
                 setIsLoggedIn(false);
                 setIsAdmin(false);
                 localStorage.removeItem('token');
                 localStorage.removeItem('email');
+                localStorage.removeItem('isAdmin'); // Ensure to remove admin status as well
             }
         } catch (error) {
             console.error('Error fetching user info:', error);
@@ -52,56 +55,43 @@ function App() {
             setIsAdmin(false);
             localStorage.removeItem('token');
             localStorage.removeItem('email');
+            localStorage.removeItem('isAdmin'); // Ensure to remove admin status as well
         }
     }, []);
 
-useEffect(() => {
-    if (token && email) {
-        checkUserStatus(email, token);
-    }
-}, [checkUserStatus, token, email]);
+    useEffect(() => {
+        const storedIsAdmin = localStorage.getItem('isAdmin') === 'true'; // Get the stored admin status
+        setIsAdmin(storedIsAdmin); // Set isAdmin based on stored value
+
+        if (token && email) {
+            checkUserStatus(email, token);
+        }
+    }, [checkUserStatus, token, email]);
 
     return (
         <Router>
             <div className='app-container'>
-                <NavBar 
-                  isLoggedIn={isLoggedIn} 
-                  isAdmin={isAdmin}
-                  setIsLoggedIn={setIsLoggedIn}
-                  setIsAdmin={setIsAdmin}
-                  userInformation={userInformation}/>
+                <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                        userInformation={userInformation}/>
                 <div className='content'>
                     <Routes>
-                        <Route path="/" exact element={<Home/>}/>
-                        <Route path="/register" exact element={<Register/>}/>
-                        <Route path='/profile' exact element={
-                            <Profile userInformation={userInformation}/>}
-                        />
-                        <Route path='/achievements' exact element={
-                            <Achievements token={token} email={email}/>}
-                        />
-                        <Route path='/stats' exact element={
-                            <Statistics userInformation={userInformation}/>}
-                        />
-                        <Route path='/create-quiz' exact element={
-                            <CreateQuiz email={email} token={token}/>}
-                        />
-                        <Route path="/login" exact element={
-                            <Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                                   setUserInformation={setUserInformation}/>}
-                        />
-                        <Route path="/requested" exact element={
-                            isAdmin ? <RequestedQuizzes token={token}/> : <Navigate replace to="/not-found"/>
-                        }/>
-                        <Route path="/requested/:quizId" element={
-                            isAdmin ? <RequestedQuizInfo token={token}/> : <Navigate replace to="/not-found"/>
-                        }/>
-                      <Route path="/not-found" exact element={<NotFound />} />  
-                  </Routes>
-                </div>        
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/register" element={<Register/>}/>
+                        <Route path="/profile" element={<Profile userInformation={userInformation}/>}/>
+                        <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
+                        <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
+                        <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
+                        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                                                             setUserInformation={setUserInformation}/>}/>
+                        <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token}/></AdminRoute>}/>
+                        <Route path="/requested/:quizId"
+                               element={<AdminRoute><RequestedQuizInfo token={token}/></AdminRoute>}/>
+                        <Route path="/not-found" element={<NotFound/>}/>
+                    </Routes>
+                </div>
             </div>
-            <ToastContainer />
-        </Router>  
+            <ToastContainer/>
+        </Router>
     );
 }
 
