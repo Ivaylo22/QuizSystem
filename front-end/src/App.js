@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {jwtDecode} from 'jwt-decode';
 import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -21,7 +22,33 @@ function App() {
     const [isAdmin, setIsAdmin] = useState(false);
     const [userInformation, setUserInformation] = useState({});
 
+    const isTokenExpired = (token) => {
+        try {
+            const decoded = jwtDecode(token);
+            const currentTime = Date.now() / 1000;
+            return decoded.exp < currentTime;
+        } catch (error) {
+            console.error('Token decoding error:', error);
+            return true;
+        }
+    };
+
+    const logoutUser = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('email');
+        localStorage.removeItem('isAdmin');
+        setIsLoggedIn(false);
+        setIsAdmin(false);
+    };
+
     const checkUserStatus = useCallback(async (email, token) => {
+
+        if (token && isTokenExpired(token)) {
+            logoutUser();
+            alert('Моля презаредете страницата и се впишете отново');
+            return;
+        }
+
         if (!token) {
             setIsLoggedIn(false);
             setIsAdmin(false);
@@ -41,13 +68,13 @@ function App() {
                 setIsLoggedIn(true);
                 setIsAdmin(isAdmin);
                 setUserInformation(userInformation);
-                localStorage.setItem('isAdmin', isAdmin); // Store admin status in local storage
+                localStorage.setItem('isAdmin', isAdmin);
             } else {
                 setIsLoggedIn(false);
                 setIsAdmin(false);
                 localStorage.removeItem('token');
                 localStorage.removeItem('email');
-                localStorage.removeItem('isAdmin'); // Ensure to remove admin status as well
+                localStorage.removeItem('isAdmin');
             }
         } catch (error) {
             console.error('Error fetching user info:', error);
@@ -55,13 +82,13 @@ function App() {
             setIsAdmin(false);
             localStorage.removeItem('token');
             localStorage.removeItem('email');
-            localStorage.removeItem('isAdmin'); // Ensure to remove admin status as well
+            localStorage.removeItem('isAdmin');
         }
     }, []);
 
     useEffect(() => {
-        const storedIsAdmin = localStorage.getItem('isAdmin') === 'true'; // Get the stored admin status
-        setIsAdmin(storedIsAdmin); // Set isAdmin based on stored value
+        const storedIsAdmin = localStorage.getItem('isAdmin') === 'true';
+        setIsAdmin(storedIsAdmin);
 
         if (token && email) {
             checkUserStatus(email, token);

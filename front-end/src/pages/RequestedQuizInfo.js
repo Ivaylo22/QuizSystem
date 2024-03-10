@@ -64,7 +64,30 @@ const RequestedQuizInfo = ({token}) => {
 
             await response.json();
             toast.success('Куизът е одобрен!');
-            navigate('/');
+            navigate('/requested');
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+    const declineQuiz = async () => {
+        try {
+            const response = await fetch(`http://localhost:8090/api/v1/quiz/decline`, {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({id: quizId}),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to decli e quiz');
+            }
+
+            await response.json();
+            toast.success('Куизът е отхвърлен!');
+            navigate('/requested');
         } catch (error) {
             console.error('Error:', error);
         }
@@ -101,7 +124,7 @@ const RequestedQuizInfo = ({token}) => {
                 </div>
             ))}
             <div className="quiz-actions text-center">
-                <button className="btn-decline">Отхвърли</button>
+                <button onClick={declineQuiz} className="btn-decline">Отхвърли</button>
                 <button onClick={approveQuiz} className="btn-approve me-2"> Одобри</button>
             </div>
         </div>
