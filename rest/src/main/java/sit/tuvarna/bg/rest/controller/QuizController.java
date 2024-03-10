@@ -12,6 +12,9 @@ import sit.tuvarna.bg.api.operations.quiz.approve.ApproveQuizResponse;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizResponse;
+import sit.tuvarna.bg.api.operations.quiz.decline.DeclineQuizOperation;
+import sit.tuvarna.bg.api.operations.quiz.decline.DeclineQuizRequest;
+import sit.tuvarna.bg.api.operations.quiz.decline.DeclineQuizResponse;
 import sit.tuvarna.bg.api.operations.quiz.getallforuser.GetAllQuizzesForUserOperation;
 import sit.tuvarna.bg.api.operations.quiz.getallforuser.GetAllQuizzesForUserRequest;
 import sit.tuvarna.bg.api.operations.quiz.getallforuser.GetAllQuizzesForUserResponse;
@@ -36,6 +39,7 @@ public class QuizController {
     private final GetRequestedQuizzesOperation getRequestedQuizzes;
     private final GetQuizByIdOperation getQuizById;
     private final ApproveQuizOperation approveQuiz;
+    private final DeclineQuizOperation declineQuiz;
 
     @GetMapping("/categories")
     public ResponseEntity<GetCategoriesResponse> getCategories() {
@@ -78,5 +82,12 @@ public class QuizController {
             @RequestBody @Valid ApproveQuizRequest request
     ) {
         return new ResponseEntity<>(approveQuiz.process(request), HttpStatus.OK);
+    }
+
+    @PatchMapping("/decline")
+    public ResponseEntity<DeclineQuizResponse> declineQuiz(
+            @RequestBody @Valid DeclineQuizRequest request
+    ) {
+        return new ResponseEntity<>(declineQuiz.process(request), HttpStatus.OK);
     }
 }
