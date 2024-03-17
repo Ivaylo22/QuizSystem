@@ -37,6 +37,9 @@ public class UsersQuizzes {
     private Boolean isTaken;
 
     @Column(nullable = false)
+    private Boolean isPassed;
+
+    @Column(nullable = false)
     private Integer experienceGained;
 
     @CreationTimestamp

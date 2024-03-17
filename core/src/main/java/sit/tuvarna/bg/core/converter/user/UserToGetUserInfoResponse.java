@@ -4,7 +4,6 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import sit.tuvarna.bg.api.enums.Role;
 import sit.tuvarna.bg.api.model.UserModel;
-import sit.tuvarna.bg.api.operations.user.getinfo.GetUserInfoRequest;
 import sit.tuvarna.bg.api.operations.user.getinfo.GetUserInfoResponse;
 import sit.tuvarna.bg.persistence.entity.User;
 
@@ -20,7 +19,7 @@ public class UserToGetUserInfoResponse implements Converter<User, GetUserInfoRes
                 .experience(source.getExperience())
                 .achievementPoints(source.getAchievementPoints())
                 .isArchived(source.getIsArchived())
-                .quizzesUnderOneMinuteCount(source.getQuizzesUnderOneMinuteCount())
+                .quizzesUnderOneMinuteCount(source.getFastQuizzesCount())
                 .perfectQuizzesCount(source.getPerfectQuizzesCount())
                 .consecutiveQuizzesPassedCount(source.getConsecutiveQuizzesPassedCount())
                 .consecutiveDailyQuizzesCount(source.getConsecutiveDailyQuizzesCount())

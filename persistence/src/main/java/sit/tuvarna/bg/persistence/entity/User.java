@@ -34,13 +34,13 @@ public class User implements UserDetails {
     private Timestamp lastLoginTime;
 
     @Column(nullable = false)
-    private Integer level;
+    private Integer level = 1;
 
     @Column(nullable = false)
-    private Integer experience;
+    private Integer experience = 0;
 
     @Column(nullable = false)
-    private Integer achievementPoints;
+    private Integer achievementPoints = 0;
 
     private String avatarUrl;
 
@@ -51,22 +51,22 @@ public class User implements UserDetails {
     private Boolean isArchived;
 
     @Column
-    private Integer quizzesUnderOneMinuteCount;
+    private Integer fastQuizzesCount = 0;
 
     @Column
-    private Integer perfectQuizzesCount;
+    private Integer perfectQuizzesCount = 0;
 
     @Column
-    private Integer consecutiveQuizzesPassedCount;
+    private Integer consecutiveQuizzesPassedCount = 0;
 
     @Column
-    private Integer consecutiveDailyQuizzesCount;
+    private Integer consecutiveDailyQuizzesCount = 0;
 
     @Column
-    private Integer dailyQuizzesCount;
+    private Integer dailyQuizzesCount = 0;
 
     @Column
-    private Integer quizzesPassedCount;
+    private Integer quizzesPassedCount = 0;
 
     @Column
     private Timestamp lastDailyQuizTime;

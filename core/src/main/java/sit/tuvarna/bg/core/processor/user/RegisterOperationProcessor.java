@@ -52,7 +52,7 @@ public class RegisterOperationProcessor implements RegisterOperation {
                 .role(role)
                 .isArchived(false)
                 .avatarUrl(defaultImageUrl)
-                .quizzesUnderOneMinuteCount(0)
+                .fastQuizzesCount(0)
                 .perfectQuizzesCount(0)
                 .consecutiveQuizzesPassedCount(0)
                 .consecutiveDailyQuizzesCount(0)

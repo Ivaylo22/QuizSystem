@@ -15,6 +15,8 @@ public class QuizModel {
 
     private String category;
 
+    private Integer questionsCount;
+
     private Integer averageSecondsNeeded;
 
     private Double averageCorrectAnswers;
@@ -24,4 +26,10 @@ public class QuizModel {
     private Boolean haveBeenPassed;
 
     private String userEmail;
+
+    private Integer personalBestTime;
+
+    private Integer personalBestCorrectAnswers;
+
+    private Integer personalBestXpGained;
 }

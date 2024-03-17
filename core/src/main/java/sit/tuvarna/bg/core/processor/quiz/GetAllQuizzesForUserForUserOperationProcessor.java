@@ -17,6 +17,7 @@ import sit.tuvarna.bg.persistence.repository.UsersQuizzesRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -43,13 +44,21 @@ public class GetAllQuizzesForUserForUserOperationProcessor implements GetAllQuiz
                 boolean haveBeenCompleted = !userQuizzes.isEmpty();
                 boolean haveBeenPassed = userQuizzes.stream().anyMatch(uq -> uq.getCorrectAnswers() >= 8);
 
+                Optional<Integer> maxCorrectAnswers = usersQuizzesRepository.findMaxCorrectAnswersByUserAndQuiz(user, quiz);
+                Optional<Integer> bestTime = usersQuizzesRepository.findBestTimeByUserAndQuiz(user, quiz);
+                Optional<Integer> maxExperienceGained = usersQuizzesRepository.findMaxExperienceGainedByUserAndQuiz(user, quiz);
+
                 QuizModel quizModel = QuizModel.builder()
+                        .quizId(String.valueOf(quiz.getId()))
                         .name(quiz.getTitle())
                         .category(quiz.getCategory().getCategory())
                         .averageSecondsNeeded(quiz.getAverageSecondsNeeded())
                         .averageCorrectAnswers(quiz.getAverageCorrectAnswers())
                         .haveBeenCompleted(haveBeenCompleted)
                         .haveBeenPassed(haveBeenPassed)
+                        .personalBestCorrectAnswers(maxCorrectAnswers.orElse(null))
+                        .personalBestTime(bestTime.orElse(null))
+                        .personalBestXpGained(maxExperienceGained.orElse(null))
                         .build();
 
                 quizModels.add(quizModel);

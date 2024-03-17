@@ -26,6 +26,6 @@ public class CreateQuizRequest implements ProcessorRequest {
     private String userEmail;
 
     @Valid
-    @Size(min = 10, max = 10, message = "Exactly 10 questions are required.")
+    @Size(min = 5, message = "Minimum 5 questions.")
     private List<QuestionModel> questions;
 }

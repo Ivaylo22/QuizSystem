@@ -14,6 +14,7 @@ import CreateQuiz from './pages/CreateQuiz';
 import RequestedQuizzes from './pages/RequestedQuizzes';
 import RequestedQuizInfo from './pages/RequestedQuizInfo';
 import AdminRoute from './AdminRoute';
+import AllQuizzes from './pages/AllQuizzes';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -103,13 +104,18 @@ function App() {
                 <div className='content'>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
+
                         <Route path="/register" element={<Register/>}/>
+                        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                                                             setUserInformation={setUserInformation}/>}/>
+
                         <Route path="/profile" element={<Profile userInformation={userInformation}/>}/>
                         <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
                         <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
+
                         <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
-                        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                                                             setUserInformation={setUserInformation}/>}/>
+                        <Route path="/quizzes" element={<AllQuizzes email={email} token={token}/>}/>
+
                         <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token}/></AdminRoute>}/>
                         <Route path="/requested/:quizId"
                                element={<AdminRoute><RequestedQuizInfo token={token}/></AdminRoute>}/>

@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.persistence.entity.Achievement;
 import sit.tuvarna.bg.persistence.entity.User;
+import sit.tuvarna.bg.persistence.repository.AchievementRepository;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 import sit.tuvarna.bg.persistence.repository.UsersQuizzesRepository;
 
@@ -15,23 +16,23 @@ import java.util.List;
 public class AchievementService {
 
     private final UsersQuizzesRepository usersQuizzesRepository;
+    private final AchievementRepository achievementRepository;
     private final UserRepository userRepository;
 
-
-
-    public List<Achievement> getNewAchievements(User user, List<Achievement> achievements) {
+    public List<Achievement> updateUserAchievements(User user) {
+        List<Achievement> allAchievements = achievementRepository.findAll();
         List<Achievement> earnedAchievements = new ArrayList<>();
 
-        for (Achievement achievement : achievements) {
-            if (user.getAchievements().contains(achievement)) {
-                continue;
-            }
-
-            if (userMeetsCriteria(user, achievement)) {
+        for (Achievement achievement : allAchievements) {
+            if (!user.getAchievements().contains(achievement) && userMeetsCriteria(user, achievement)) {
                 earnedAchievements.add(achievement);
+                user.getAchievements().add(achievement);
                 user.setAchievementPoints(user.getAchievementPoints() + achievement.getPoints());
-                userRepository.save(user);
             }
+        }
+
+        if (!earnedAchievements.isEmpty()) {
+            userRepository.save(user);
         }
 
         return earnedAchievements;
@@ -39,58 +40,58 @@ public class AchievementService {
 
     private boolean userMeetsCriteria(User user, Achievement achievement) {
         switch (achievement.getName()) {
-            case "Fast" -> {
-                return user.getQuizzesUnderOneMinuteCount() >= 1;
+            case "Бърз" -> {
+                return user.getFastQuizzesCount() >= 1;
             }
-            case "Faster" -> {
-                return user.getQuizzesUnderOneMinuteCount() >= 5;
+            case "Скоростен" -> {
+                return user.getFastQuizzesCount() >= 5;
             }
-            case "The Fastest" -> {
-                return user.getQuizzesUnderOneMinuteCount() >= 10;
+            case "Светкавичен" -> {
+                return user.getFastQuizzesCount() >= 10;
             }
-            case "Top Scorer: 1x10" -> {
+            case "Перфектен" -> {
                 return user.getPerfectQuizzesCount() >= 1;
             }
-            case "Top Scorer: 5x10" -> {
+            case "Неповторим" -> {
                 return user.getPerfectQuizzesCount() >= 5;
             }
-            case "Top Scorer: 10x10" -> {
+            case "Брилянтен" -> {
                 return user.getPerfectQuizzesCount() >= 10;
             }
-            case "Consistent: 3x80%" -> {
+            case "Постоянен" -> {
                 return user.getConsecutiveQuizzesPassedCount() >= 3;
             }
-            case "Consistent: 5x80%" -> {
+            case "Неуморен" -> {
                 return user.getConsecutiveQuizzesPassedCount() >= 5;
             }
-            case "Consistent: 10x80%" -> {
+            case "Съвършен" -> {
                 return user.getConsecutiveQuizzesPassedCount() >= 10;
             }
-            case "Diverse: 3 Categories" -> {
+            case "Разнообразен" -> {
                 return usersQuizzesRepository.countDistinctQuizCategoriesByUser(user) >= 3;
             }
-            case "Diverse: 5 Categories" -> {
+            case "По-разнообразен" -> {
                 return usersQuizzesRepository.countDistinctQuizCategoriesByUser(user) >= 5;
             }
-            case "Diverse: 10 Categories" -> {
+            case "Най-разнообразен" -> {
                 return usersQuizzesRepository.countDistinctQuizCategoriesByUser(user) >= 10;
             }
-            case "Persistent: 3 Daily" -> {
+            case "Упоритост: 3 дни поред" -> {
                 return user.getConsecutiveDailyQuizzesCount() >= 3;
             }
-            case "Persistent: 5 Daily" -> {
+            case "Упоритост: 5 дни поред" -> {
                 return user.getConsecutiveDailyQuizzesCount() >= 5;
             }
-            case "Persistent: 10 Daily" -> {
+            case "Упоритост: 10 дни поред" -> {
                 return user.getConsecutiveDailyQuizzesCount() >= 10;
             }
-            case "Enthusiast: 10" -> {
+            case "Ентусиаст" -> {
                 return user.getQuizzesPassedCount() >= 10;
             }
-            case "Enthusiast: 25" -> {
+            case "Професионалист" -> {
                 return user.getQuizzesPassedCount() >= 25;
             }
-            case "Enthusiast: 50" -> {
+            case "Шампион" -> {
                 return user.getQuizzesPassedCount() >= 50;
             }
             default -> {
