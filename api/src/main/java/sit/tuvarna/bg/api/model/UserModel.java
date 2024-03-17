@@ -3,6 +3,8 @@ package sit.tuvarna.bg.api.model;
 import lombok.*;
 import sit.tuvarna.bg.api.enums.Role;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Builder
@@ -35,4 +37,6 @@ public class UserModel {
     private Integer quizzesPassedCount;
 
     private Role role;
+
+    private LocalDateTime createdAt;
 }

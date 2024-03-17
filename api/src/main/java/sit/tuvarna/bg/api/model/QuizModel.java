@@ -2,6 +2,8 @@ package sit.tuvarna.bg.api.model;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Builder
@@ -32,4 +34,6 @@ public class QuizModel {
     private Integer personalBestCorrectAnswers;
 
     private Integer personalBestXpGained;
+
+    private LocalDateTime createdAt;
 }

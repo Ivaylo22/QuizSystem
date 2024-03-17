@@ -2,12 +2,14 @@ package sit.tuvarna.bg.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import sit.tuvarna.bg.persistence.enums.Role;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
@@ -73,6 +75,10 @@ public class User implements UserDetails {
 
     @Column
     private String lastDailyQuizId;
+
+    @CreationTimestamp
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime createdAt;
 
     @ManyToMany
     @JoinTable(
