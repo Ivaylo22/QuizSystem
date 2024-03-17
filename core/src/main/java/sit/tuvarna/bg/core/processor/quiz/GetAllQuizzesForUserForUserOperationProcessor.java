@@ -59,6 +59,8 @@ public class GetAllQuizzesForUserForUserOperationProcessor implements GetAllQuiz
                         .personalBestCorrectAnswers(maxCorrectAnswers.orElse(null))
                         .personalBestTime(bestTime.orElse(null))
                         .personalBestXpGained(maxExperienceGained.orElse(null))
+                        .questionsCount(quiz.getQuestions().size())
+                        .createdAt(quiz.getCreatedAt())
                         .build();
 
                 quizModels.add(quizModel);

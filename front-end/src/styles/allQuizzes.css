@@ -1,0 +1,7 @@
+.all-quizzes-container .quiz-header {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    height: 100%;
+}

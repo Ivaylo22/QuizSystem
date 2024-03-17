@@ -21,8 +21,8 @@ body * {
 }
 
 .content {
-    width: 60%; 
-    max-width: 800px;
+    width: 80%;
+    max-width: 2000px;
     height: 100vh;
     padding: 0;
     margin: 0 auto;
