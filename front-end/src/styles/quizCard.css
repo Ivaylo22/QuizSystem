@@ -1,0 +1,23 @@
+.quiz-card {
+    border-bottom: 1px solid #eaeaea;
+    line-height: 2;
+}
+
+.quiz-item {
+    padding: .5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.status-passed {
+    border-left: 5px solid #28a745;
+}
+
+.status-completed {
+    border-left: 5px solid #ffc107;
+}
+
+.status-not-taken {
+    border-left: 5px solid #dc3545;
+}
