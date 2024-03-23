@@ -1,3 +1,28 @@
 .solve-quiz-container {
-    -ms-overflow-style: none;
+    overflow-y: auto;
+    max-height: 90vh;
+    position: relative;
+    height: auto;
+}
+
+.timer-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    font-size: 1.5rem;
+    z-index: 1100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import "../styles/solveQuiz.css";
 
 const SolveQuiz = ({ token }) => {
     const { quizId } = useParams();
@@ -89,9 +90,15 @@ const SolveQuiz = ({ token }) => {
     }
     return (
         <div className="container solve-quiz-container">
-            <h2 className="mb-4">
-                {quiz.title} - <FontAwesomeIcon icon={faClock} /> {Math.floor(timer / 60)}:{timer % 60 < 10 ? `0${timer % 60}` : timer % 60}
-            </h2>
+            <div className="timer-sticky">
+                <div className="quiz-header">
+                    <h2>{quiz.title}</h2>
+                </div>
+                <div className='timer'>
+                    <FontAwesomeIcon icon={faClock} className='mr-5'/>
+                    <span>{`${Math.floor(timer / 60)}:${timer % 60 < 10 ? `0${timer % 60}` : timer % 60}`}</span>
+                </div>
+            </div>
             {quiz.questions.map((question, qIndex) => (
                 <div key={qIndex} className="question-container mb-4 p-3">
                     <h4 className="question-title mb-2">Въпрос {qIndex + 1}</h4>
@@ -104,6 +111,7 @@ const SolveQuiz = ({ token }) => {
                             <div key={aIndex} className="form-check">
                                 <input className="form-check-input" type={question.questionType === 'SINGLE_ANSWER' ? 'radio' : 'checkbox'}
                                     name={`question-${qIndex}`} id={`answer-${qIndex}-${aIndex}`}
+                                       value={answer.content}
                                     onChange={() => handleAnswerChange(qIndex, answer.content, question.questionType !== 'SINGLE_ANSWER')} />
                                 <label className="form-check-label" htmlFor={`answer-${qIndex}-${aIndex}`}>
                                     {answer.content}
@@ -111,6 +119,7 @@ const SolveQuiz = ({ token }) => {
                             </div>
                         )) : (
                             <textarea className="form-control" rows="3"
+                                      value={userAnswers[qIndex]}
                                 onChange={(e) => handleOpenAnswerChange(qIndex, e.target.value)}
                                 placeholder="Вашият отговор..."></textarea>
                         )}

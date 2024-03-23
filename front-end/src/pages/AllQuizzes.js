@@ -50,7 +50,7 @@ const AllQuizzes = ({ email, token }) => {
     };
 
     const handleStartQuiz = (quizId) => {
-        navigate(`/start-quiz/${quizId}`);
+        navigate(`/solve-quiz/${quizId}`);
     };
 
     return (

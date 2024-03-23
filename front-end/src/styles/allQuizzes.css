@@ -27,7 +27,7 @@
     max-width: 500px;
     padding: 20px;
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -80%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
