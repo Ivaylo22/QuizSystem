@@ -80,12 +80,12 @@ public class User implements UserDetails {
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @ManyToMany
     @JoinTable(
             name = "user_achievements",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "achievement_id")
     )
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Achievement> achievements;
 
     @Override

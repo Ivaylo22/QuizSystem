@@ -16,6 +16,7 @@ import RequestedQuizInfo from './pages/RequestedQuizInfo';
 import AdminRoute from './AdminRoute';
 import AllQuizzes from './pages/AllQuizzes';
 import SolveQuiz from './pages/SolveQuiz';
+import QuizResults from './pages/QuizResults';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -117,6 +118,7 @@ function App() {
                         <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
                         <Route path="/quizzes" element={<AllQuizzes email={email} token={token}/>}/>
                         <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token}/>}/>
+                        <Route path="/quiz-results/:quizId" element={<QuizResults token={token}/>}/>
 
                         <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token}/></AdminRoute>}/>
                         <Route path="/requested/:quizId"

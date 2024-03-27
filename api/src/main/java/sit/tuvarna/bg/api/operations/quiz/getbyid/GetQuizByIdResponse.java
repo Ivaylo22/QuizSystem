@@ -19,5 +19,7 @@ public class GetQuizByIdResponse implements ProcessorResponse {
 
     private String userEmail;
 
+    private Boolean isDaily;
+
     private List<QuestionModel> questions;
 }

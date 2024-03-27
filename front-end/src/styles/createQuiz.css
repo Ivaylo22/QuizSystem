@@ -6,6 +6,7 @@
     background-color: #fff;
     max-height: 90vh;
     overflow-y: auto;
+    width: 100%;
 }
 
 .quiz-form {
@@ -129,10 +130,6 @@
 .form-label {
     display: block;
     margin-bottom: 5px;
-}
-
-.create-quiz-container {
-    -ms-overflow-style: none;
 }
 
 button:focus {

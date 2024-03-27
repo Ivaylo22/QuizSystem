@@ -95,7 +95,7 @@ useEffect(() => {
                   <input type="password" name="password" className="form-control" placeholder="Парола" value={formData.password} onChange={handleChange} required />
               </div>
               <div className="mb-2 text-center">
-                  <button type="submit" className="btn">Вписване</button>
+                  <button type="submit" className="btn auth">Вписване</button>
               </div>
           </form>
       </div>

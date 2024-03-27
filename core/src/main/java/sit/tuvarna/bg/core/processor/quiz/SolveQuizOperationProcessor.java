@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.core.processor.quiz;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;
@@ -8,6 +9,7 @@ import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizResponse;
 import sit.tuvarna.bg.core.processor.achievement.AchievementService;
+import sit.tuvarna.bg.persistence.entity.Achievement;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.entity.UsersQuizzes;
@@ -33,6 +35,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
     private static final int SECONDS_PER_QUESTION_FAST = 20;
 
     @Override
+    @Transactional
     public SolveQuizResponse process(SolveQuizRequest request) {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(UserNotFoundException::new);
@@ -49,7 +52,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         achievementService.updateUserAchievements(user);
 
         return SolveQuizResponse.builder()
-                .isPassed(request.getCorrectAnswers() >= 8)
+                .isPassed(usersQuizzes.getExperienceGained() > 80)
                 .experienceGained(usersQuizzes.getExperienceGained())
                 .build();
     }

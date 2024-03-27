@@ -41,12 +41,12 @@ public class GetAllQuizzesForUserForUserOperationProcessor implements GetAllQuiz
             for (Quiz quiz : quizzes) {
                 List<UsersQuizzes> userQuizzes = usersQuizzesRepository.getUsersQuizzesByUserAndQuiz(user, quiz);
 
-                boolean haveBeenCompleted = !userQuizzes.isEmpty();
-                boolean haveBeenPassed = userQuizzes.stream().anyMatch(uq -> uq.getCorrectAnswers() >= 8);
-
                 Optional<Integer> maxCorrectAnswers = usersQuizzesRepository.findMaxCorrectAnswersByUserAndQuiz(user, quiz);
                 Optional<Integer> bestTime = usersQuizzesRepository.findBestTimeByUserAndQuiz(user, quiz);
                 Optional<Integer> maxExperienceGained = usersQuizzesRepository.findMaxExperienceGainedByUserAndQuiz(user, quiz);
+
+                boolean haveBeenCompleted = !userQuizzes.isEmpty();
+                boolean haveBeenPassed = userQuizzes.stream().anyMatch(uq -> uq.getExperienceGained() > 80);
 
                 QuizModel quizModel = QuizModel.builder()
                         .quizId(String.valueOf(quiz.getId()))

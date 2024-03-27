@@ -76,8 +76,9 @@ const AllQuizzes = ({ email, token }) => {
                         <p className='mt-2'>Категория: {selectedQuiz.category}</p>
                         <p>Въпроси: {selectedQuiz.questionsCount}</p>
                         <p className='mt-2'>Средно време: {selectedQuiz.averageSecondsNeeded ?? 0}</p>
-                        <p>Среден резултат: {selectedQuiz.averageCorrectAnswers ?? 0}</p>
-                        <p className='mt-2'>Мой най-добър резултат: {selectedQuiz.personalBestCorrectAnswers ?? 0}</p>
+                        <p>Среден резултат: {selectedQuiz.averageCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
+                        <p className='mt-2'>Мой най-добър
+                            резултат: {selectedQuiz.personalBestCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
                         <p>Мое най-бързо време: {selectedQuiz.personalBestTime ?? 0}</p>
                         <p>Мой опит: {selectedQuiz.personalBestXpGained ?? 0}/100</p>
 

@@ -79,8 +79,8 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                     </div>
                 ) : (
                     <>
-                        <NavLink to="/register" className="btn">Регистация</NavLink>
-                        <NavLink to="/login" className="btn">Вписване</NavLink>
+                        <NavLink to="/register" className="btn auth">Регистация</NavLink>
+                        <NavLink to="/login" className="btn auth">Вписване</NavLink>
                     </>
                 )}
             </div>

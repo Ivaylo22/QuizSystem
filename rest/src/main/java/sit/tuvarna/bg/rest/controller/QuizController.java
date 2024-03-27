@@ -27,6 +27,9 @@ import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesResponse;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesResponse;
+import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizOperation;
+import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizRequest;
+import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -40,6 +43,7 @@ public class QuizController {
     private final GetQuizByIdOperation getQuizById;
     private final ApproveQuizOperation approveQuiz;
     private final DeclineQuizOperation declineQuiz;
+    private final SolveQuizOperation solve;
 
     @GetMapping("/categories")
     public ResponseEntity<GetCategoriesResponse> getCategories() {
@@ -75,6 +79,13 @@ public class QuizController {
             @RequestBody @Valid CreateQuizRequest request
     ) {
         return new ResponseEntity<>(createQuiz.process(request), HttpStatus.OK);
+    }
+
+    @PostMapping("/solve")
+    public ResponseEntity<SolveQuizResponse> solve(
+            @RequestBody @Valid SolveQuizRequest request
+    ) {
+        return new ResponseEntity<>(solve.process(request), HttpStatus.OK);
     }
 
     @PatchMapping("/approve")

@@ -43,6 +43,7 @@ public class CreateQuizOperationProcessor implements CreateQuizOperation {
                 .category(category)
                 .status(QuizStatus.REQUESTED)
                 .creatorEmail(request.getUserEmail())
+                .isDaily(false)
                 .build();
 
         List<Question> questions = new ArrayList<>();

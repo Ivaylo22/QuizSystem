@@ -31,6 +31,9 @@ public class Quiz {
     @Column(nullable = false)
     private String creatorEmail;
 
+    @Column(nullable = false)
+    private Boolean isDaily = false;
+
     private Double averageCorrectAnswers = 0.0;
 
     private Integer averageSecondsNeeded = 0;

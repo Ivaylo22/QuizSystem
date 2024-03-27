@@ -12,6 +12,8 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class QuestionModel {
 
+    private String id;
+
     private String question;
 
     private String image;

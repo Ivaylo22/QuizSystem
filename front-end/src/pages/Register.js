@@ -100,7 +100,7 @@ const Register = () => {
                     <input type="file" name="avatar" className="form-control" accept="image/*" onChange={handleFileChange} />
                 </div>
                 <div className="mb-2 text-center">
-                    <button type="submit" className="btn btn-register">Регистрирай се</button>
+                    <button type="submit" className="btn auth">Регистрирай се</button>
                 </div>
             </form>
         </div>

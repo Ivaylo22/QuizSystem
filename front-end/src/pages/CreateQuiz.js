@@ -8,7 +8,6 @@ const CreateQuiz = ({ email, token }) => {
     const [isOtherCategory, setIsOtherCategory] = useState(false);
     const [otherCategory, setOtherCategory] = useState('');
     const [problematicQuestions, setProblematicQuestions] = useState([]);
-    const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
     const navigate = useNavigate();
     const hasNavigated = useRef(false);
 

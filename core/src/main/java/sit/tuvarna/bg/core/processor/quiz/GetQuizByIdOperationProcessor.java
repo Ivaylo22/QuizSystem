@@ -29,6 +29,7 @@ public class GetQuizByIdOperationProcessor implements GetQuizByIdOperation {
 
         List<QuestionModel> questionModels = quiz.getQuestions().stream().map(question ->
                 QuestionModel.builder()
+                        .id(String.valueOf(question.getId()))
                         .question(question.getQuestion())
                         .image(question.getImage())
                         .questionType(QuestionType.valueOf(question.getType().name()))
@@ -46,6 +47,7 @@ public class GetQuizByIdOperationProcessor implements GetQuizByIdOperation {
                 .category(quiz.getCategory().getCategory())
                 .userEmail(quiz.getCreatorEmail())
                 .questions(questionModels)
+                .isDaily(quiz.getIsDaily())
                 .build();
     }
 }

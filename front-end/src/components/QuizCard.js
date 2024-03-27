@@ -14,7 +14,7 @@ const QuizCard = ({ quiz, onClick }) => {
             <div className="col-2 quiz-item text-start">{quiz.category}</div>
             <div className="col-1 quiz-item">{quiz.questionsCount}</div>
             <div className="col-1 quiz-item">{quiz.averageSecondsNeeded ?? noDataText} сек.</div>
-            <div className="col-1 quiz-item">{quiz.averageCorrectAnswers ?? noDataText}</div>
+            <div className="col-1 quiz-item">{quiz.averageCorrectAnswers ?? noDataText}/{quiz.questionsCount}</div>
             <div className="col-1 quiz-item">{quiz.personalBestXpGained ?? noDataText}/100</div>
             <div className="col-2 quiz-item">{statusText}</div>
         </div>
