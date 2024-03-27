@@ -1,0 +1,36 @@
+.user-correct {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.user-incorrect {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.correct-answer-display {
+    border: 2px solid green;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.answer-option {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.question-correct {
+    border: 2px solid green;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}

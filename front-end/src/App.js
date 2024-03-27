@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {jwtDecode} from 'jwt-decode';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -99,36 +99,36 @@ function App() {
     }, [checkUserStatus, token, email]);
 
     return (
-        <Router>
-            <div className='app-container'>
-                <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                        userInformation={userInformation}/>
-                <div className='content'>
-                    <Routes>
-                        <Route path="/" element={<Home/>}/>
+            <Router>
+                <div className='app-container'>
+                    <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                        userInformation={userInformation} />
+                    <div className='content'>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
 
-                        <Route path="/register" element={<Register/>}/>
-                        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                                                             setUserInformation={setUserInformation}/>}/>
+                            <Route path="/register" element={<Register />} />
+                            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                                setUserInformation={setUserInformation} />} />
 
-                        <Route path="/profile" element={<Profile userInformation={userInformation}/>}/>
-                        <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
-                        <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
+                            <Route path="/profile" element={<Profile userInformation={userInformation} />} />
+                            <Route path="/achievements" element={<Achievements token={token} email={email} />} />
+                            <Route path="/stats" element={<Statistics userInformation={userInformation} />} />
 
-                        <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
-                        <Route path="/quizzes" element={<AllQuizzes email={email} token={token}/>}/>
-                        <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token}/>}/>
-                        <Route path="/quiz-results/:quizId" element={<QuizResults token={token}/>}/>
+                            <Route path="/create-quiz" element={<CreateQuiz email={email} token={token} />} />
+                            <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
+                            <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
+                            <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
 
-                        <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token}/></AdminRoute>}/>
-                        <Route path="/requested/:quizId"
-                               element={<AdminRoute><RequestedQuizInfo token={token}/></AdminRoute>}/>
-                        <Route path="/not-found" element={<NotFound/>}/>
-                    </Routes>
+                            <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token} /></AdminRoute>} />
+                            <Route path="/requested/:quizId"
+                                element={<AdminRoute><RequestedQuizInfo token={token} /></AdminRoute>} />
+                            <Route path="/not-found" element={<NotFound />} />
+                        </Routes>
+                    </div>
                 </div>
-            </div>
-            <ToastContainer/>
-        </Router>
+                <ToastContainer />
+            </Router>
     );
 }
 
