@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
 import "../styles/solveQuiz.css";
+import {useLoading} from '../context/LoadingContext';
 
 const SolveQuiz = ({email, token}) => {
     const { quizId } = useParams();
@@ -12,9 +13,11 @@ const SolveQuiz = ({email, token}) => {
     const [userAnswers, setUserAnswers] = useState({});
     const [startTime] = useState(new Date().getTime());
     const [elapsedTime, setElapsedTime] = useState(0);
+    const {setLoading} = useLoading();
 
     useEffect(() => {
         const fetchQuiz = async () => {
+            setLoading(true);
             try {
                 const response = await fetch(`http://localhost:8090/api/v1/quiz/get-by-id?quizId=${quizId}`, {
                     method: 'GET',
@@ -39,10 +42,11 @@ const SolveQuiz = ({email, token}) => {
                 console.error('Error:', error);
                 toast.error('Неуспешно зареждане на куиз.');
             }
+            setTimeout(() => setLoading(false), 500);
         };
 
         fetchQuiz();
-    }, [quizId, token]);
+    }, [quizId, token, setLoading]);
 
     useEffect(() => {
         const timerId = setInterval(() => {

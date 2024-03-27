@@ -6,8 +6,6 @@ const QuizResults = () => {
     const {state} = useLocation();
     const {quiz, userAnswers, result} = state;
 
-    console.log(quiz);
-
     const isOpenAnswerCorrect = (questionId, userAnswer) => {
         const correctAnswers = quiz.questions.find(q => q.id === questionId).answers.filter(a => a.isCorrect).map(a => a.content);
         return correctAnswers.includes(userAnswer[0]);

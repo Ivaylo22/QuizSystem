@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Achievement from '../components/Achievement'
 import "../styles/achievements.css";
+import {useLoading} from '../context/LoadingContext';
 
 const Achievements = ({ token, email }) => {
     const [allAchievements, setAllAchievements] = useState([]);
     const [earnedAchievements, setEarnedAchievements] = useState([]);
+    const {setLoading} = useLoading();
 
     const fetchAllAchievements = useCallback(async () => {
         const response = await fetch('http://localhost:8090/api/v1/achievement/list', {
@@ -27,9 +29,12 @@ const Achievements = ({ token, email }) => {
     }, [email, token]);
 
     useEffect(() => {
+        setLoading(true);
         fetchAllAchievements();
         fetchEarnedAchievements();
-    }, [fetchAllAchievements, fetchEarnedAchievements]);
+        setLoading(false);
+
+    }, [fetchAllAchievements, fetchEarnedAchievements, setLoading]);
 
     return (
         <div className="achievements-container">

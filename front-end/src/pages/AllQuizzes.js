@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QuizCard from '../components/QuizCard';
 import '../styles/allQuizzes.css';
+import {useLoading} from '../context/LoadingContext';
 
 const AllQuizzes = ({ email, token }) => {
     const [quizzes, setQuizzes] = useState([]);
     const [selectedQuiz, setSelectedQuiz] = useState(null);
+    const {setLoading} = useLoading();
     const navigate = useNavigate();
 
     useEffect(() => {
         const fetchQuizzes = async () => {
+            setLoading(true);
             try {
                 const response = await fetch(`http://localhost:8090/api/v1/quiz/get-all-for-user?email=${encodeURIComponent(email)}`, {
                     method: 'GET',
@@ -26,10 +29,11 @@ const AllQuizzes = ({ email, token }) => {
             } catch (error) {
                 console.error('Error:', error);
             }
+            setTimeout(() => setLoading(false), 500);
         };
 
         fetchQuizzes();
-    }, [email, token]);
+    }, [email, token, setLoading]);
 
     useEffect(() => {
         const handleKeyDown = (e) => {

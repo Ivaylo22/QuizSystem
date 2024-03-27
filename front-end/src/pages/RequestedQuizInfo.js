@@ -2,14 +2,17 @@ import React, {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import "../styles/requestedQuizInfo.css";
+import {useLoading} from '../context/LoadingContext';
 
 const RequestedQuizInfo = ({token}) => {
     const {quizId} = useParams();
     const navigate = useNavigate();
     const [quiz, setQuiz] = useState(null);
 
+    const {setLoading} = useLoading();
     useEffect(() => {
         const fetchQuizInfo = async () => {
+            setLoading(true);
             try {
                 const response = await fetch(`http://localhost:8090/api/v1/quiz/get-by-id?quizId=${quizId}`, {
                     method: 'GET',
@@ -28,10 +31,11 @@ const RequestedQuizInfo = ({token}) => {
             } catch (error) {
                 console.error('Error:', error);
             }
+            setTimeout(() => setLoading(false), 500);
         };
 
         fetchQuizInfo();
-    }, [quizId, token]);
+    }, [quizId, token, setLoading]);
 
     const translateQuestionType = (questionType) => {
         switch (questionType) {

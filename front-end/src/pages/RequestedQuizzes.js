@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {toast} from 'react-toastify';
 import RequestedQuiz from '../components/RequestedQuiz';
+import {useLoading} from '../context/LoadingContext';
 
 const RequestedQuizzes = ({token}) => {
     const [quizzes, setQuizzes] = useState([]);
+    const {setLoading} = useLoading();
 
     useEffect(() => {
         const fetchQuizzes = async () => {
+            setLoading(true);
             try {
                 const response = await fetch(`http://localhost:8090/api/v1/quiz/get-requested`, {
                     method: 'GET',
@@ -26,10 +29,11 @@ const RequestedQuizzes = ({token}) => {
                 console.error('Failed to fetch quizzes:', error);
                 toast.error('Неуспешно зареждане на куизове.');
             }
+            setTimeout(() => setLoading(false), 500);
         };
 
         fetchQuizzes();
-    }, [token]);
+    }, [token, setLoading]);
 
     return (
         <div>

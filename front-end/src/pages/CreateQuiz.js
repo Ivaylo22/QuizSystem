@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import "../styles/createQuiz.css";
+import {useLoading} from '../context/LoadingContext';
 
 const CreateQuiz = ({ email, token }) => {
     const [categories, setCategories] = useState([]);
@@ -10,8 +11,10 @@ const CreateQuiz = ({ email, token }) => {
     const [problematicQuestions, setProblematicQuestions] = useState([]);
     const navigate = useNavigate();
     const hasNavigated = useRef(false);
+    const {setLoading} = useLoading();
 
     const fetchCategories = useCallback(async () => {
+        setLoading(true);
         try {
             const response = await fetch(`http://localhost:8090/api/v1/quiz/categories`, {
                 method: 'GET',
@@ -25,7 +28,9 @@ const CreateQuiz = ({ email, token }) => {
         } catch (error) {
             console.error('Failed to fetch categories:', error);
         }
-    }, [token]);
+        setTimeout(() => setLoading(false), 500);
+
+    }, [token, setLoading]);
 
     useEffect(() => {
         if (!token && !hasNavigated.current) {

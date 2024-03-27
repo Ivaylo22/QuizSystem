@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/profile.css";
 import { toast } from 'react-toastify';
+import {useLoading} from '../context/LoadingContext';
 
 const Profile = () => {
     const [userInformation, setUserInformation] = useState(null);
@@ -9,12 +10,12 @@ const Profile = () => {
         xpTowardsNextLevel: 0,
         xpRequirementForNextLevel: 0,
     });
+    const {setLoading} = useLoading();
 
     const token = localStorage.getItem('token');
     const email = localStorage.getItem('email');
 
     useEffect(() => {
-        // Define fetchXpProgress inside useEffect to not depend on it as a dependency
         const fetchXpProgress = async (totalXp) => {
             try {
                 const xpResponse = await fetch(`http://localhost:8090/api/v1/user/xp-info?totalXp=${totalXp}`, {
@@ -37,6 +38,7 @@ const Profile = () => {
         };
 
         const fetchUserInfo = async () => {
+            setLoading(true);
             try {
                 const userInfoResponse = await fetch(`http://localhost:8090/api/v1/user/info?email=${encodeURIComponent(email)}`, {
                     method: 'GET',
@@ -50,7 +52,6 @@ const Profile = () => {
                 const userInfoData = await userInfoResponse.json();
                 setUserInformation(userInfoData);
 
-                // Check for experience directly from userInfoData instead of userInfoData.userInformation
                 if (userInfoData.userInformation.experience !== undefined) {
                     fetchXpProgress(userInfoData.userInformation.experience);
                 }
@@ -58,12 +59,13 @@ const Profile = () => {
                 console.error("Error fetching user info:", error);
                 toast.error('Failed to fetch user info.');
             }
+            setTimeout(() => setLoading(false), 500);
         };
 
         if (email && token) {
             fetchUserInfo();
         }
-    }, [email, token]); // Removed fetchXpProgress from dependencies since it's defined within useEffect
+    }, [email, token, setLoading]); 
 
     const xpPercentage = xpProgress.xpTowardsNextLevel < xpProgress.xpRequirementForNextLevel
         ? (xpProgress.xpTowardsNextLevel / xpProgress.xpRequirementForNextLevel) * 100

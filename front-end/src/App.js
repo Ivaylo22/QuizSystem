@@ -17,6 +17,8 @@ import AdminRoute from './AdminRoute';
 import AllQuizzes from './pages/AllQuizzes';
 import SolveQuiz from './pages/SolveQuiz';
 import QuizResults from './pages/QuizResults';
+import {useLoading} from './context/LoadingContext';
+import Loader from './components/Loader';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -24,6 +26,7 @@ function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
     const [userInformation, setUserInformation] = useState({});
+    const {loading, setLoading} = useLoading();
 
     const isTokenExpired = (token) => {
         try {
@@ -45,6 +48,7 @@ function App() {
     };
 
     const checkUserStatus = useCallback(async (email, token) => {
+        setLoading(true);
 
         if (token && isTokenExpired(token)) {
             logoutUser();
@@ -87,7 +91,8 @@ function App() {
             localStorage.removeItem('email');
             localStorage.removeItem('isAdmin');
         }
-    }, []);
+        setTimeout(() => setLoading(false), 1000);
+    }, [setLoading]);
 
     useEffect(() => {
         const storedIsAdmin = localStorage.getItem('isAdmin') === 'true';
@@ -100,6 +105,7 @@ function App() {
 
     return (
             <Router>
+                <Loader loading={loading}/>
                 <div className='app-container'>
                     <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
                         userInformation={userInformation} />
