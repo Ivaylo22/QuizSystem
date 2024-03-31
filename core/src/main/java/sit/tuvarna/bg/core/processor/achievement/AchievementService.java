@@ -19,7 +19,7 @@ public class AchievementService {
     private final AchievementRepository achievementRepository;
     private final UserRepository userRepository;
 
-    public List<Achievement> updateUserAchievements(User user) {
+    public void updateUserAchievements(User user) {
         List<Achievement> allAchievements = achievementRepository.findAll();
         List<Achievement> earnedAchievements = new ArrayList<>();
 
@@ -34,8 +34,6 @@ public class AchievementService {
         if (!earnedAchievements.isEmpty()) {
             userRepository.save(user);
         }
-
-        return earnedAchievements;
     }
 
     private boolean userMeetsCriteria(User user, Achievement achievement) {

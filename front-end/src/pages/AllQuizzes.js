@@ -79,11 +79,11 @@ const AllQuizzes = ({ email, token }) => {
                         <h3 className='text-center'>{selectedQuiz.name}</h3>
                         <p className='mt-2'>Категория: {selectedQuiz.category}</p>
                         <p>Въпроси: {selectedQuiz.questionsCount}</p>
-                        <p className='mt-2'>Средно време: {selectedQuiz.averageSecondsNeeded ?? 0}</p>
+                        <p className='mt-2'>Средно време: {selectedQuiz.averageSecondsNeeded ? `${Math.floor(selectedQuiz.averageSecondsNeeded / 60)}:${String(selectedQuiz.averageSecondsNeeded % 60).padStart(2, '0')} мин.` : 0}</p>
                         <p>Среден резултат: {selectedQuiz.averageCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
                         <p className='mt-2'>Мой най-добър
                             резултат: {selectedQuiz.personalBestCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
-                        <p>Мое най-бързо време: {selectedQuiz.personalBestTime ?? 0}</p>
+                            <p>Мое най-бързо време: {selectedQuiz.personalBestTime ? `${Math.floor(selectedQuiz.personalBestTime / 60)}:${String(selectedQuiz.personalBestTime % 60).padStart(2, '0')} мин.` : 0}</p>
                         <p>Мой опит: {selectedQuiz.personalBestXpGained ?? 0}/100</p>
 
                         <p className='mt-2 text-center'>При натискане на бутона "Започни" ще започне да тече вашето време</p>

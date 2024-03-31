@@ -8,6 +8,7 @@ import sit.tuvarna.bg.api.exception.UserNotFoundException;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizResponse;
+import sit.tuvarna.bg.core.externalservices.XPProgress;
 import sit.tuvarna.bg.core.processor.achievement.AchievementService;
 import sit.tuvarna.bg.persistence.entity.Achievement;
 import sit.tuvarna.bg.persistence.entity.Quiz;
@@ -45,9 +46,9 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         int totalQuestions = quiz.getQuestions().size();
         checkIfDailyQuiz(user, quiz, request.getIsDaily());
 
-        UsersQuizzes usersQuizzes = saveUserQuizResult(user, quiz, request);
-        updateUserExperience(user, usersQuizzes.getExperienceGained());
         updateUserInfo(user, request, totalQuestions);
+        UsersQuizzes usersQuizzes = saveUserQuizResult(user, quiz, request);
+        updateUserExperience(user, usersQuizzes);
         updateQuizStatistics(quiz);
         achievementService.updateUserAchievements(user);
 
@@ -93,22 +94,39 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
     }
 
     private void updateUserInfo(User user, SolveQuizRequest request, int totalQuestions) {
-        int secondsToSolvePerQuestion = request.getSecondsToSolve() / totalQuestions;
+        Quiz quiz = quizRepository.findById(UUID.fromString(request.getQuizId()))
+                .orElseThrow(QuizNotFoundException::new);
+        List<UsersQuizzes> previousAttempts = usersQuizzesRepository.getUsersQuizzesByUserAndQuiz(user, quiz);
 
-        if (secondsToSolvePerQuestion < SECONDS_PER_QUESTION_FAST) {
+        boolean hasPreviousFastAttempt = previousAttempts.stream().anyMatch(attempt ->
+                attempt.getSecondsToSolve() / attempt.getQuiz().getQuestions().size() < SECONDS_PER_QUESTION_FAST);
+
+        boolean hasPreviousPerfectAttempt = previousAttempts.stream().anyMatch(attempt ->
+                attempt.getCorrectAnswers().equals(attempt.getQuiz().getQuestions().size()));
+
+        boolean hasPreviousPassedAttempt = previousAttempts.stream().anyMatch(UsersQuizzes::getIsPassed);
+
+        int secondsToSolvePerQuestion = request.getSecondsToSolve() / totalQuestions;
+        boolean isCurrentAttemptFast = secondsToSolvePerQuestion < SECONDS_PER_QUESTION_FAST;
+        boolean isCurrentAttemptPerfect = request.getCorrectAnswers() == totalQuestions;
+        boolean isCurrentAttemptPassed = request.getCorrectAnswers() >= (totalQuestions * 0.8);
+
+        if (isCurrentAttemptFast && !hasPreviousFastAttempt) {
             user.setFastQuizzesCount(user.getFastQuizzesCount() + 1);
         }
 
-        if (request.getCorrectAnswers() == totalQuestions) {
+        if (isCurrentAttemptPerfect && !hasPreviousPerfectAttempt) {
             user.setPerfectQuizzesCount(user.getPerfectQuizzesCount() + 1);
         }
 
-        boolean isPassed = request.getCorrectAnswers() >= (totalQuestions * 0.8);
-        if (isPassed) {
+        if (isCurrentAttemptPassed && !hasPreviousPassedAttempt) {
             user.setQuizzesPassedCount(user.getQuizzesPassedCount() + 1);
             user.setConsecutiveQuizzesPassedCount(user.getConsecutiveQuizzesPassedCount() + 1);
-        } else {
-            user.setConsecutiveQuizzesPassedCount(0); // Reset consecutive pass count on failure
+        } else if (!isCurrentAttemptPassed && quiz.getIsDaily()) {
+            user.setConsecutiveDailyQuizzesCount(0);
+            user.setConsecutiveQuizzesPassedCount(0);
+        } else if (!isCurrentAttemptPassed) {
+            user.setConsecutiveQuizzesPassedCount(0);
         }
 
         userRepository.save(user);
@@ -128,8 +146,22 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         return (int) Math.round(calculatedExperience);
     }
 
-    private void updateUserExperience(User user, Integer experienceGained) {
-        user.setExperience(user.getExperience() + experienceGained);
+    private void updateUserExperience(User user, UsersQuizzes userQuiz) {
+        List<UsersQuizzes> allUsersQuizzes = usersQuizzesRepository
+                .getUsersQuizzesByUserAndQuiz(userQuiz.getUser(), userQuiz.getQuiz());
+
+        int highestExperience = allUsersQuizzes.stream()
+                .filter(uq -> !uq.getId().equals(userQuiz.getId())) // Exclude the current attempt
+                .mapToInt(UsersQuizzes::getExperienceGained)
+                .max()
+                .orElse(0);
+
+        int experienceToAdd = userQuiz.getExperienceGained() - highestExperience;
+        user.setExperience(user.getExperience() + experienceToAdd);
+
+        XPProgress xpProgress = new XPProgress(user.getExperience());
+
+        user.setLevel(xpProgress.getLevel());
         userRepository.save(user);
     }
 
