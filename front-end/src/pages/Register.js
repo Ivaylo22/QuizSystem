@@ -69,7 +69,7 @@ const Register = () => {
                 }
 
                 toast.success('Успешна регистрация');
-                navigate('/');
+                navigate('/login');
             } else {
                 const errorText = await registrationResponse.text();
                 console.log(`Registration error: ${errorText}`);

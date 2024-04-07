@@ -82,3 +82,58 @@
 .btn:hover {
     opacity: 0.9;
 }
+
+.category-filter, .filters {
+    margin-bottom: 20px;
+}
+
+.filters select, .filters button {
+    width: 100%;
+}
+
+.dialog-buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-cancel, .btn-start {
+    flex-basis: 48%;
+}
+
+.btn-asc {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-asc:hover {
+    background-color: var(--main-color);
+}
+
+.btn-asc:focus, .btn-asc:active, .btn-asc.active {
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+    box-shadow: none !important;
+}
+
+.btn-desc {
+    color: white;
+    background-color: var(--secondary-color);
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-desc:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-desc:focus, .btn-desc:active, .btn-desc.active {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: none !important;
+    color: white !important;
+}

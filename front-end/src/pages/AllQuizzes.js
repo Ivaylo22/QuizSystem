@@ -8,6 +8,9 @@ const AllQuizzes = ({ email, token }) => {
     const [quizzes, setQuizzes] = useState([]);
     const [selectedQuiz, setSelectedQuiz] = useState(null);
     const {setLoading} = useLoading();
+    const [filterBy, setFilterBy] = useState('createdAt');
+    const [order, setOrder] = useState('asc');
+    const [selectedCategory, setSelectedCategory] = useState('Всички');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -57,8 +60,76 @@ const AllQuizzes = ({ email, token }) => {
         navigate(`/solve-quiz/${quizId}`);
     };
 
+    const sortQuizzes = () => {
+        let sortedQuizzes = quizzes.filter(quiz => selectedCategory === 'Всички' || quiz.category === selectedCategory);
+        sortedQuizzes.sort((a, b) => {
+            let valA, valB;
+            switch (filterBy) {
+                case 'createdAt':
+                    valA = new Date(a.createdAt);
+                    valB = new Date(b.createdAt);
+                    break;
+                case 'averageCorrectAnswers':
+                    valA = a.averageCorrectAnswers;
+                    valB = b.averageCorrectAnswers;
+                    break;
+                case 'averageSecondsNeeded':
+                    valA = a.averageSecondsNeeded;
+                    valB = b.averageSecondsNeeded;
+                    break;
+                case 'personalBestXpGained':
+                    valA = a.personalBestXpGained;
+                    valB = b.personalBestXpGained;
+                    break;
+                case 'questionsCount':
+                    valA = a.questionsCount;
+                    valB = b.questionsCount;
+                    break;
+                default:
+                    return 0;
+            }
+
+            if (order === 'asc') {
+                return valA > valB ? 1 : -1;
+            } else {
+                return valA < valB ? 1 : -1;
+            }
+        });
+        return sortedQuizzes;
+    };
+
+    const categories = ['Всички', ...new Set(quizzes.map(quiz => quiz.category))];
+
+    console.log(quizzes);
     return (
         <div className="container all-quizzes-container align-items-center">
+            <div className="container mt-4 mx-auto">
+                <div className="row mb-3">
+                    <div className="col-md-4">
+                        <select className="form-control" value={selectedCategory}
+                                onChange={(e) => setSelectedCategory(e.target.value)}>
+                            {categories.map(category => (
+                                <option key={category} value={category}>{category}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="col-md-4">
+                        <select className="form-control" value={filterBy} onChange={(e) => setFilterBy(e.target.value)}>
+                            <option value="personalBestXpGained">Мой опит</option>
+                            <option value="createdAt">Дата на създаване</option>
+                            <option value="averageCorrectAnswers">Среден резултат</option>
+                            <option value="averageSecondsNeeded">Средено време</option>
+                            <option value="questionsCount">Брой въпроси</option>
+                        </select>
+                    </div>
+                    <div className="col-md-4 d-flex align-items-start pt-1">
+                        <button className={`btn ${order === 'asc' ? 'btn-asc' : 'btn-desc'}`}
+                                onClick={() => setOrder(order === 'asc' ? 'desc' : 'asc')}>
+                            {order === 'asc' ? 'Възходящ' : 'Низходящ'}
+                        </button>
+                    </div>
+                </div>
+            </div>
             <div className="row quiz-header pt-2">
                 <div className="col-4 header">Име</div>
                 <div className="col-2 header">Категория</div>
@@ -68,9 +139,9 @@ const AllQuizzes = ({ email, token }) => {
                 <div className="col-1 header">Мой опит</div>
                 <div className="col-2 header">Статус</div>
             </div>
-            {quizzes.map(quiz => (
+            {sortQuizzes().map(quiz => (
                 <div className="all-quiz-card" key={quiz.quizId}>
-                    <QuizCard quiz={quiz}  onClick={() => setSelectedQuiz(quiz)} />
+                    <QuizCard quiz={quiz} onClick={() => setSelectedQuiz(quiz)}/>
                 </div>
             ))}
             {selectedQuiz && (
@@ -83,7 +154,8 @@ const AllQuizzes = ({ email, token }) => {
                         <p>Среден резултат: {selectedQuiz.averageCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
                         <p className='mt-2'>Мой най-добър
                             резултат: {selectedQuiz.personalBestCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
-                            <p>Мое най-бързо време: {selectedQuiz.personalBestTime ? `${Math.floor(selectedQuiz.personalBestTime / 60)}:${String(selectedQuiz.personalBestTime % 60).padStart(2, '0')} мин.` : 0}</p>
+                        <p>Мое най-бързо
+                            време: {selectedQuiz.personalBestTime ? `${Math.floor(selectedQuiz.personalBestTime / 60)}:${String(selectedQuiz.personalBestTime % 60).padStart(2, '0')} мин.` : 0}</p>
                         <p>Мой опит: {selectedQuiz.personalBestXpGained ?? 0}/100</p>
 
                         <p className='mt-2 text-center'>При натискане на бутона "Започни" ще започне да тече вашето време</p>
