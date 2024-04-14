@@ -3,11 +3,13 @@ package sit.tuvarna.bg.core.processor.quiz;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import sit.tuvarna.bg.api.enums.NotificationType;
 import sit.tuvarna.bg.api.exception.QuizNotFoundException;
 import sit.tuvarna.bg.api.exception.UserNotFoundException;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizResponse;
+import sit.tuvarna.bg.core.externalservices.NotificationService;
 import sit.tuvarna.bg.core.externalservices.XPProgress;
 import sit.tuvarna.bg.core.processor.achievement.AchievementService;
 import sit.tuvarna.bg.persistence.entity.Achievement;
@@ -32,6 +34,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
     private final UserRepository userRepository;
     private final UsersQuizzesRepository usersQuizzesRepository;
     private final AchievementService achievementService;
+    private final NotificationService notificationService;
 
     private static final int SECONDS_PER_QUESTION_FAST = 20;
 
@@ -161,6 +164,9 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
 
         XPProgress xpProgress = new XPProgress(user.getExperience());
 
+        if (user.getLevel() != xpProgress.getLevel()) {
+            notificationService.createAndSendNotification(user.getEmail(), NotificationType.LEVEL_UP, xpProgress.getLevel());
+        }
         user.setLevel(xpProgress.getLevel());
         userRepository.save(user);
     }

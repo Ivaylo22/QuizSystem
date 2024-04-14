@@ -2,9 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import quizLogo from '../res/logo.png';
+import WebSocketService from '../services/WebSocketService';
 import "../styles/navbar.css";
 
 const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformation }) => {
+    const [notifications, setNotifications] = useState([]);
     const navigate = useNavigate();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
@@ -23,6 +25,49 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [dropdownRef]);
+
+    // Fetch stored notifications
+    const fetchNotifications = async () => {
+        try {
+            const token = localStorage.getItem('token');
+            const email = localStorage.getItem('email');
+            const response = await fetch(`http://localhost:8090/api/notifications/${encodeURIComponent(email)}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+            if (response.ok) {
+                const data = await response.json();
+                setNotifications(data);
+            } else {
+                throw new Error('Failed to fetch notifications');
+            }
+        } catch (error) {
+            console.error('Failed to fetch notifications:', error);
+        }
+    };
+
+    useEffect(() => {
+        const onError = (error) => {
+            console.error("WebSocket Error: ", error);
+        };
+
+        if (!WebSocketService.isConnectionActive()) {
+            WebSocketService.connect(notification => {
+                setNotifications(prev => [...prev, notification]);
+            }, onError);
+        }
+
+        if (isLoggedIn) {
+            fetchNotifications();
+        }
+
+        return () => {
+            WebSocketService.disconnect();
+        };
+    }, [isLoggedIn]); // Depend on isLoggedIn to re-fetch when the user logs in
 
     const onLogout = async () => {
         const token = localStorage.getItem('token');
@@ -56,6 +101,9 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
 
     return (
         <nav className="navbar">
+            <div className="connection-status">
+                {WebSocketService.isConnectionActive() ? "Connected" : "Disconnected"}
+            </div>
             <div className="navbar-logo">
                 <img src={quizLogo} alt='Logo' />
             </div>
@@ -76,6 +124,11 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                                 <button className='dropdown-item' onClick={onLogout}>Отписване</button>
                             </div>
                         )}
+                        <div className="notification-area">
+                            {notifications.map((notif, index) => (
+                                <div key={index} className="notification">{notif.message}</div>
+                            ))}
+                        </div>
                     </div>
                 ) : (
                     <>

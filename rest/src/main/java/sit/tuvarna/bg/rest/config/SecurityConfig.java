@@ -41,6 +41,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         auth -> auth
                                 .requestMatchers(
+                                        "/ws/**",
+                                        "/topic/**",
                                         "/api/v1/upload-image",
                                         "/api/v1/user/register",
                                         "/api/v1/user/login",
@@ -53,7 +55,8 @@ public class SecurityConfig {
                                         "/configuration/security",
                                         "/swagger-ui/**",
                                         "/webjars/**",
-                                        "/swagger-ui.html"
+                                        "/swagger-ui.html",
+                                        "/api/notifications/**"
                                 )
                                 .permitAll()
                                 .requestMatchers("/api/v1/get-requested")
