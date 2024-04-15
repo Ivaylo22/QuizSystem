@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Achievement from '../components/Achievement'
 import "../styles/achievements.css";
-import {useLoading} from '../context/LoadingContext';
+import { useLoading } from '../context/LoadingContext';
 
 const Achievements = ({ token, email }) => {
     const [allAchievements, setAllAchievements] = useState([]);
     const [earnedAchievements, setEarnedAchievements] = useState([]);
-    const {setLoading} = useLoading();
+    const { setLoading } = useLoading();
 
     const fetchAllAchievements = useCallback(async () => {
         const response = await fetch('http://localhost:8090/api/v1/achievement/list', {
@@ -14,9 +14,14 @@ const Achievements = ({ token, email }) => {
         });
         if (response.ok) {
             const data = await response.json();
-            setAllAchievements(data.achievements);
+            const achievementsWithOrder = data.achievements.map(achievement => ({
+                ...achievement,
+                isEarned: earnedAchievements.some(earned => earned.id === achievement.id)
+            }));
+            achievementsWithOrder.sort((a, b) => (b.isEarned - a.isEarned));
+            setAllAchievements(achievementsWithOrder);
         }
-    }, [token]);
+    }, [token, earnedAchievements]);
 
     const fetchEarnedAchievements = useCallback(async () => {
         const response = await fetch(`http://localhost:8090/api/v1/achievement/list-earned?email=${encodeURIComponent(email)}`, {
@@ -36,6 +41,11 @@ const Achievements = ({ token, email }) => {
 
     }, [fetchAllAchievements, fetchEarnedAchievements, setLoading]);
 
+    useEffect(() => {
+        console.log("All Achievements:", allAchievements);
+        console.log("Earned Achievements:", earnedAchievements);
+    }, [allAchievements, earnedAchievements]);
+
     return (
         <div className="achievements-container">
             {allAchievements.map((achievement) => (
@@ -44,7 +54,7 @@ const Achievements = ({ token, email }) => {
                     name={achievement.name}
                     description={achievement.description}
                     points={achievement.achievementPoints}
-                    isEarned={earnedAchievements.some((earned) => earned.id === achievement.id)}
+                    isEarned={earnedAchievements.some(earned => earned.id === achievement.id)}
                 />
             ))}
         </div>

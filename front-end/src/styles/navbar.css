@@ -177,3 +177,14 @@
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.notification-dot {
+  position: absolute;
+  top: 20px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white; /* To make it stand out against any background */
+}

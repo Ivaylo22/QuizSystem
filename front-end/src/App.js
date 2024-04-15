@@ -17,7 +17,7 @@ import AdminRoute from './AdminRoute';
 import AllQuizzes from './pages/AllQuizzes';
 import SolveQuiz from './pages/SolveQuiz';
 import QuizResults from './pages/QuizResults';
-import {useLoading} from './context/LoadingContext';
+import { useLoading } from './context/LoadingContext';
 import Loader from './components/Loader';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
     const [userInformation, setUserInformation] = useState({});
-    const {loading, setLoading} = useLoading();
+    const { loading, setLoading } = useLoading();
 
     const isTokenExpired = (token) => {
         try {
@@ -100,41 +100,48 @@ function App() {
 
         if (token && email) {
             checkUserStatus(email, token);
+        } else {
+            setIsLoggedIn(false);
+            setIsAdmin(false);
         }
     }, [checkUserStatus, token, email]);
 
     return (
-            <Router>
-                <Loader loading={loading}/>
-                <div className='app-container'>
-                    <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                        userInformation={userInformation} />
-                    <div className='content'>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
+        <Router>
+            <Loader loading={loading} />
+            <div className='app-container'>
+                <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                    userInformation={userInformation} />
+                <div className='content'>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
 
-                            <Route path="/register" element={<Register />} />
-                            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                                setUserInformation={setUserInformation} />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
+                            setUserInformation={setUserInformation} />} />
 
-                            <Route path="/profile" element={<Profile userInformation={userInformation} />} />
-                            <Route path="/achievements" element={<Achievements token={token} email={email} />} />
-                            <Route path="/stats" element={<Statistics userInformation={userInformation} />} />
+                        <Route path="/profile" element={<Profile userInformation={userInformation} />} />
+                        <Route path="/achievements" element={<Achievements token={token} email={email} />} />
+                        <Route path="/stats" element={<Statistics userInformation={userInformation} />} />
 
-                            <Route path="/create-quiz" element={<CreateQuiz email={email} token={token} />} />
-                            <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
-                            <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
-                            <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
+                        <Route path="/create-quiz" element={<CreateQuiz email={email} token={token} />} />
+                        <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
+                        <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
+                        <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
 
-                            <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token} /></AdminRoute>} />
-                            <Route path="/requested/:quizId"
-                                element={<AdminRoute><RequestedQuizInfo token={token} /></AdminRoute>} />
-                            <Route path="/not-found" element={<NotFound />} />
-                        </Routes>
-                    </div>
+                        <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token} /></AdminRoute>} />
+                        <Route path="/requested/:quizId"
+                            element={<AdminRoute><RequestedQuizInfo token={token} /></AdminRoute>} />
+                        <Route path="/not-found" element={<NotFound />} />
+                    </Routes>
                 </div>
-                <ToastContainer />
-            </Router>
+            </div>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={true}
+                pauseOnHover={false} />
+        </Router>
     );
 }
 

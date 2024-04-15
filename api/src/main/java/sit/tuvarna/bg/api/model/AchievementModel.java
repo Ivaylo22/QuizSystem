@@ -9,6 +9,8 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class AchievementModel {
 
+    private String id;
+
     private String name;
 
     private String description;

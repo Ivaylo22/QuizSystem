@@ -100,7 +100,6 @@ const AllQuizzes = ({ email, token }) => {
 
     const categories = ['Всички', ...new Set(quizzes.map(quiz => quiz.category))];
 
-    console.log(quizzes);
     return (
         <div className="container all-quizzes-container align-items-center">
             <div className="container mt-4 mx-auto">

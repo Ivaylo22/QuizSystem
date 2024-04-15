@@ -11,6 +11,7 @@ public class AchievementToAchievementModel implements Converter<Achievement, Ach
     public AchievementModel convert(Achievement source) {
         return AchievementModel
                 .builder()
+                .id(source.getId().toString())
                 .name(source.getName())
                 .description(source.getDescription())
                 .achievementPoints(source.getPoints())
