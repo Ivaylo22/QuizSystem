@@ -50,11 +50,72 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-.navbar-profile div {
+.navbar-auth {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.notification-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-bell {
+    font-size: 24px;
+    color: var(--secondary-color);
+    padding-top: 10%;
+    margin-right: 10px;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item.read {
+    background-color: #f0f0f0;
+}
+
+.notification-item.unread {
+    background-color: #fff;
+}
+
+.notification-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+.notification-action {
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+
+.notification-action:hover {
+    text-decoration: underline;
 }
 
 .user-avatar,
