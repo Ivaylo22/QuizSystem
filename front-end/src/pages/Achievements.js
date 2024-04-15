@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import Achievement from '../components/Achievement'
+import Achievement from '../components/Achievement';
 import "../styles/achievements.css";
 import { useLoading } from '../context/LoadingContext';
 
@@ -8,21 +8,6 @@ const Achievements = ({ token, email }) => {
     const [earnedAchievements, setEarnedAchievements] = useState([]);
     const { setLoading } = useLoading();
 
-    const fetchAllAchievements = useCallback(async () => {
-        const response = await fetch('http://localhost:8090/api/v1/achievement/list', {
-            headers: { 'Authorization': `Bearer ${token}` },
-        });
-        if (response.ok) {
-            const data = await response.json();
-            const achievementsWithOrder = data.achievements.map(achievement => ({
-                ...achievement,
-                isEarned: earnedAchievements.some(earned => earned.id === achievement.id)
-            }));
-            achievementsWithOrder.sort((a, b) => (b.isEarned - a.isEarned));
-            setAllAchievements(achievementsWithOrder);
-        }
-    }, [token, earnedAchievements]);
-
     const fetchEarnedAchievements = useCallback(async () => {
         const response = await fetch(`http://localhost:8090/api/v1/achievement/list-earned?email=${encodeURIComponent(email)}`, {
             headers: { 'Authorization': `Bearer ${token}` },
@@ -30,21 +15,35 @@ const Achievements = ({ token, email }) => {
         if (response.ok) {
             const data = await response.json();
             setEarnedAchievements(data.achievements);
+            return data.achievements;
         }
+        return [];
     }, [email, token]);
 
-    useEffect(() => {
-        setLoading(true);
-        fetchAllAchievements();
-        fetchEarnedAchievements();
-        setLoading(false);
+    const fetchAllAchievements = useCallback(async (earned) => {
+        const response = await fetch('http://localhost:8090/api/v1/achievement/list', {
+            headers: { 'Authorization': `Bearer ${token}` },
+        });
+        if (response.ok) {
+            const data = await response.json();
+            const achievementsWithOrder = data.achievements.map(achievement => ({
+                ...achievement,
+                isEarned: earned.some(earned => earned.id === achievement.id)
+            }));
+            achievementsWithOrder.sort((a, b) => (b.isEarned - a.isEarned));
+            setAllAchievements(achievementsWithOrder);
+        }
+    }, [token]);
 
-    }, [fetchAllAchievements, fetchEarnedAchievements, setLoading]);
-
     useEffect(() => {
-        console.log("All Achievements:", allAchievements);
-        console.log("Earned Achievements:", earnedAchievements);
-    }, [allAchievements, earnedAchievements]);
+        const fetchData = async () => {
+            setLoading(true);
+            const earned = await fetchEarnedAchievements();
+            await fetchAllAchievements(earned);
+            setLoading(false);
+        };
+        fetchData();
+    }, [fetchAllAchievements, fetchEarnedAchievements, setLoading, token, email]);
 
     return (
         <div className="achievements-container">
