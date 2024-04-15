@@ -28,24 +28,30 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
         }
 
         document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
     useEffect(() => {
         if (!WebSocketService.isConnectionActive()) {
-            WebSocketService.connect(notification => {
-                setNotifications(prev => [...prev, notification]);
-            });
+            WebSocketService.connect(
+                notification => setNotifications(prev => [...prev, notification]),
+                error => console.error(error)
+            );
         }
 
         if (isLoggedIn) {
             fetchNotifications();
         }
 
+        const intervalId = setInterval(() => {
+            if (isLoggedIn) {
+                fetchNotifications();
+            }
+        }, 5000); // Fetch notifications every 5 seconds
+
         return () => {
             WebSocketService.disconnect();
+            clearInterval(intervalId);
         };
     }, [isLoggedIn]);
 
@@ -77,7 +83,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                 'Authorization': `Bearer ${token}`,
             },
         });
-        setNotifications(notifications.map(notif => notif.id === id ? { ...notif, read: true } : notif));
+        setNotifications(prev => prev.map(notif => notif.id === id ? { ...notif, read: true } : notif));
     };
 
     const deleteNotification = async (id) => {
@@ -88,7 +94,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                 'Authorization': `Bearer ${token}`,
             },
         });
-        setNotifications(notifications.filter(notif => notif.id !== id));
+        setNotifications(prev => prev.filter(notif => notif.id !== id));
     };
 
     const onLogout = async () => {
@@ -150,7 +156,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                             )}
                         </div>
                         <div className="navbar-profile" onClick={toggleDropdown}>
-                            <img src={userInformation.avatarUrl || quizLogo} alt="Profile" className="user-avatar" />
+                            <img src={userInformation.avatarUrl} alt="Profile" className="user-avatar" />
                             {isDropdownOpen && (
                                 <div ref={dropdownRef} className="navbar-dropdown">
                                     <button className='dropdown-item' onClick={() => navigate('/profile')}>Моят профил</button>

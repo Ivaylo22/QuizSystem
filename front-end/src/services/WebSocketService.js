@@ -14,8 +14,9 @@ const WebSocketService = (() => {
                 isConnected = true;
                 console.log('Connected to WebSocket server.');
                 client.subscribe('/user/topic/notifications', message => {
-                    console.log('Notification received:', message.body);
-                    onConnectCallback(JSON.parse(message.body));
+                    const notification = JSON.parse(message.body);
+                    console.log('New notification received:', notification);
+                    onConnectCallback(notification);
                 });
             },
             onStompError: (frame) => {
@@ -38,7 +39,7 @@ const WebSocketService = (() => {
     };
 
     const disconnect = () => {
-        if (client !== null) {
+        if (client) {
             client.deactivate();
             isConnected = false;
             console.log("Disconnected from WebSocket server.");
