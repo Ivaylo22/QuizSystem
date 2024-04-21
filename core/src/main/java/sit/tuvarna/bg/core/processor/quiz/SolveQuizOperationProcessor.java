@@ -12,7 +12,6 @@ import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizResponse;
 import sit.tuvarna.bg.core.externalservices.NotificationService;
 import sit.tuvarna.bg.core.externalservices.XPProgress;
 import sit.tuvarna.bg.core.processor.achievement.AchievementService;
-import sit.tuvarna.bg.persistence.entity.Achievement;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.entity.UsersQuizzes;
@@ -165,7 +164,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         XPProgress xpProgress = new XPProgress(user.getExperience());
 
         if (user.getLevel() != xpProgress.getLevel()) {
-            notificationService.createAndSendNotification(user.getEmail(), NotificationType.LEVEL_UP, xpProgress.getLevel());
+            notificationService.sendNotificationToUser(NotificationType.LEVEL_UP, xpProgress.getLevel(), user.getEmail());
         }
         user.setLevel(xpProgress.getLevel());
         userRepository.save(user);

@@ -32,7 +32,7 @@ const AllQuizzes = ({ email, token }) => {
             } catch (error) {
                 console.error('Error:', error);
             }
-            setTimeout(() => setLoading(false), 500);
+            setLoading(false);
         };
 
         fetchQuizzes();

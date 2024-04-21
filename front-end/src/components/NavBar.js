@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import quizLogo from '../res/logo.png';
-import WebSocketService from '../services/WebSocketService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
+import {Client} from '@stomp/stompjs';
 import "../styles/navbar.css";
 
 const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformation }) => {
@@ -13,9 +13,10 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
     const notificationRef = useRef(null);
+    const stompClient = useRef(null);
 
-    const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
     const toggleNotifications = () => setShowNotifications(!showNotifications);
+    const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -32,48 +33,74 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
     }, []);
 
     useEffect(() => {
-        if (!WebSocketService.isConnectionActive()) {
-            WebSocketService.connect(
-                notification => setNotifications(prev => [...prev, notification]),
-                error => console.error(error)
-            );
-        }
+        const connectWebSocket = () => {
+            const token = localStorage.getItem('token');
 
+            stompClient.current = new Client({
+                brokerURL: 'ws://localhost:8090/ws/websocket',
+                connectHeaders: {
+                    Authorization: 'Bearer ' + token
+                },
+                debug: function (str) {
+                    console.log('STOMP: ' + str);
+                },
+                reconnectDelay: 5000,
+                heartbeatIncoming: 4000,
+                heartbeatOutgoing: 4000,
+            });
+
+            stompClient.current.onConnect = (frame) => {
+                stompClient.current.subscribe('/topic/notifications', (message) => {
+                    const notification = JSON.parse(message.body);
+                    setNotifications(prevNotifications => [...prevNotifications, notification]);
+                    console.log('Received general notification:', notification);
+                });
+
+                stompClient.current.subscribe(`/user/queue/personal-notifications`, (message) => {
+                    const notification = JSON.parse(message.body);
+                    setNotifications(prevNotifications => [...prevNotifications, notification]);
+                    console.log('Received personal notification:', notification);
+                });
+            };
+
+            stompClient.current.activate();
+        };
+    
         if (isLoggedIn) {
-            fetchNotifications();
+            connectWebSocket();
         }
-
-        const intervalId = setInterval(() => {
-            if (isLoggedIn) {
-                fetchNotifications();
-            }
-        }, 5000); // Fetch notifications every 5 seconds
 
         return () => {
-            WebSocketService.disconnect();
-            clearInterval(intervalId);
+            if (stompClient.current) {
+                stompClient.current.deactivate();
+            }
         };
     }, [isLoggedIn]);
 
-    const fetchNotifications = async () => {
-        try {
-            const token = localStorage.getItem('token');
-            const email = localStorage.getItem('email');
-            const response = await fetch(`http://localhost:8090/api/notifications/${encodeURIComponent(email)}`, {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                },
-            });
-            if (response.ok) {
-                const data = await response.json();
-                setNotifications(data);
+    useEffect(() => {
+        const fetchNotifications = async () => {
+            if (!isLoggedIn) return;
+            try {
+                const token = localStorage.getItem('token');
+                const email = localStorage.getItem('email');
+                const response = await fetch(`http://localhost:8090/api/notifications/${encodeURIComponent(email)}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    },
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    setNotifications(data);
+                }
+            } catch (error) {
+                console.error('Failed to fetch notifications:', error);
             }
-        } catch (error) {
-            console.error('Failed to fetch notifications:', error);
-        }
-    };
+        };
+
+        fetchNotifications();
+    }, [isLoggedIn, userInformation.email]);
 
     const markAsRead = async (id) => {
         const token = localStorage.getItem('token');
@@ -100,22 +127,18 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
     const onLogout = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://localhost:8090/api/v1/user/logout', {
+            await fetch('http://localhost:8090/api/v1/user/logout', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
                 },
             });
-            if (response.ok) {
-                localStorage.removeItem('token');
-                localStorage.removeItem('email');
-                setIsLoggedIn(false);
-                setIsAdmin(false);
-                navigate('/login');
-            } else {
-                console.log('Couldn\'t logout');
-            }
+            localStorage.removeItem('token');
+            localStorage.removeItem('email');
+            setIsLoggedIn(false);
+            setIsAdmin(false);
+            navigate('/login');
         } catch (error) {
             console.error('Logout error:', error);
         }
@@ -126,7 +149,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src={quizLogo} alt='Logo' />
+                <img src={quizLogo} alt="Logo"/>
             </div>
             <ul className="navbar-links">
                 <li><NavLink to="/quizzes" className="btn">Решавай куизове</NavLink></li>
@@ -141,17 +164,22 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                             {hasUnread && <span className="notification-dot"></span>}
                             {showNotifications && (
                                 <div ref={notificationRef} className="notification-dropdown">
-                                    {notifications.length > 0 ? notifications.map((notification, index) => (
+                                    {notifications.map((notification, index) => (
                                         <div key={index} className={`notification-item ${notification.read ? "read" : "unread"}`}>
                                             {notification.message}
                                             <div className="notification-actions">
                                                 {!notification.read && (
-                                                    <span className="notification-action" onClick={() => markAsRead(notification.id)}>Прочети</span>
+                                                    <button className="notification-action"
+                                                            onClick={() => markAsRead(notification.id)}>Прочети</button>
                                                 )}
-                                                <span className="notification-action" onClick={() => deleteNotification(notification.id)}>Изтрий</span>
+                                                <button className="notification-action"
+                                                        onClick={() => deleteNotification(notification.id)}>Изтрий
+                                                </button>
                                             </div>
                                         </div>
-                                    )) : <div className="notification-item">Няма съобщения</div>}
+                                    ))}
+                                    {notifications.length === 0 &&
+                                        <div className="notification-item">Няма съобщения</div>}
                                 </div>
                             )}
                         </div>

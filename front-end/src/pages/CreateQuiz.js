@@ -28,7 +28,7 @@ const CreateQuiz = ({ email, token }) => {
         } catch (error) {
             console.error('Failed to fetch categories:', error);
         }
-        setTimeout(() => setLoading(false), 500);
+        setLoading(false);
 
     }, [token, setLoading]);
 

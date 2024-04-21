@@ -59,7 +59,7 @@ const Profile = () => {
                 console.error("Error fetching user info:", error);
                 toast.error('Failed to fetch user info.');
             }
-            setTimeout(() => setLoading(false), 500);
+            setLoading(false);
         };
 
         if (email && token) {

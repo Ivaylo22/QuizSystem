@@ -1,58 +1,33 @@
-import SockJS from 'sockjs-client';
 import { Client } from '@stomp/stompjs';
 
-const WebSocketService = (() => {
-    let client = null;
-    let isConnected = false;
+function connect() {
+    const stompClient = new Client({
+        brokerURL: 'http://localhost:8090/ws',
+        connectHeaders: {
+            // headers if needed (e.g., authentication token)
+        },
+        debug: function (str) {
+            console.log('STOMP: ' + str);
+        },
+        reconnectDelay: 5000,
+        heartbeatIncoming: 4000,
+        heartbeatOutgoing: 4000,
+    });
 
-    const connect = (onConnectCallback, onErrorCallback) => {
-        const socket = new SockJS('http://localhost:8090/ws');
-        client = new Client({
-            webSocketFactory: () => socket,
-            reconnectDelay: 5000,
-            onConnect: () => {
-                isConnected = true;
-                console.log('Connected to WebSocket server.');
-                client.subscribe('/user/topic/notifications', message => {
-                    const notification = JSON.parse(message.body);
-                    console.log('New notification received:', notification);
-                    onConnectCallback(notification);
-                });
-            },
-            onStompError: (frame) => {
-                console.error('Broker reported error: ' + frame.headers['message']);
-                console.error('Additional details: ' + frame.body);
-                onErrorCallback(frame.headers['message']);
-            },
-            onWebSocketError: (evt) => {
-                isConnected = false;
-                console.error('WebSocket connection error:', evt);
-                onErrorCallback('WebSocket connection error');
-            },
-            onWebSocketClose: () => {
-                isConnected = false;
-                console.log('WebSocket connection closed');
-            }
+    stompClient.onConnect = function (frame) {
+        stompClient.subscribe('/user/queue/notifications', function (message) {
+            const notification = JSON.parse(message.body);
+            console.log('Received notification:', notification);
         });
-
-        client.activate();
     };
 
-    const disconnect = () => {
-        if (client) {
-            client.deactivate();
-            isConnected = false;
-            console.log("Disconnected from WebSocket server.");
-        }
+    stompClient.onStompError = function (frame) {
+        console.error('Broker reported error: ' + frame.headers['message']);
+        console.error('Additional details: ' + frame.body);
     };
 
-    const isConnectionActive = () => isConnected;
+    stompClient.activate();
+}
 
-    return {
-        connect,
-        disconnect,
-        isConnectionActive
-    };
-})();
-
-export default WebSocketService;
+// Call connect when the component mounts or in appropriate lifecycle method
+connect();
