@@ -32,6 +32,10 @@ public class Question {
     @JoinColumn(name = "quiz_id")
     private Quiz quiz;
 
+    @ManyToOne
+    @JoinColumn(name = "section_id")
+    private Section section;
+
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Answer> answers = new ArrayList<>();
 }
