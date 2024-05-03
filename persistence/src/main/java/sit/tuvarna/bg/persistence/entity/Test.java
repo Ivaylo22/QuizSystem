@@ -3,6 +3,7 @@ package sit.tuvarna.bg.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import sit.tuvarna.bg.persistence.enums.TestStatus;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -27,8 +28,6 @@ public class Test {
 
     private Boolean mixedQuestions = false;
 
-    private Boolean shareAfterSolving = false;
-
     @Column(nullable = false)
     private String creatorEmail;
 
@@ -39,6 +38,9 @@ public class Test {
     private LocalDateTime startHour;
 
     private LocalDateTime endHour;
+
+    @Column(nullable = false)
+    private TestStatus status;
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)

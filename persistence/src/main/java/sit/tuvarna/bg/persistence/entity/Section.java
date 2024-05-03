@@ -21,7 +21,9 @@ public class Section {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    private Integer questionsCount;
+    private Integer totalQuestionsCount;
+
+    private Integer usedQuestionsCount;
 
     @ManyToOne
     @JoinColumn(name = "test_id")
