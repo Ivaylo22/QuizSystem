@@ -16,6 +16,8 @@ import RequestedQuizInfo from './pages/RequestedQuizInfo';
 import AdminRoute from './AdminRoute';
 import AllQuizzes from './pages/AllQuizzes';
 import SolveQuiz from './pages/SolveQuiz';
+import CreateChoice from './pages/CreateChoice';
+import CreateTest from './pages/CreateTest';
 import QuizResults from './pages/QuizResults';
 import { useLoading } from './context/LoadingContext';
 import Loader from './components/Loader';
@@ -124,7 +126,9 @@ function App() {
                         <Route path="/achievements" element={<Achievements token={token} email={email} />} />
                         <Route path="/stats" element={<Statistics userInformation={userInformation} />} />
 
+                        <Route path="/create" element={<CreateChoice/>}/>
                         <Route path="/create-quiz" element={<CreateQuiz email={email} token={token} />} />
+                        <Route path="/create-test" element={<CreateTest email={email} token={token}/>}/>
                         <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
                         <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
                         <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
