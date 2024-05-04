@@ -1,0 +1,6 @@
+.create-test-container {
+    overflow-y: auto;
+    max-height: 93vh;
+    width: 100%;
+    padding: 20px;
+}
