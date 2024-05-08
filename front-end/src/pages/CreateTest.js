@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
 import '../styles/createTest.css';
 
@@ -12,7 +12,6 @@ const CreateTest = () => {
     useEffect(() => {
         const handleDragOver = (event) => {
             if (!containerRef.current) return;
-
             const {clientY} = event;
             const {top, height} = containerRef.current.getBoundingClientRect();
             const threshold = 100;
@@ -28,15 +27,11 @@ const CreateTest = () => {
             }
         };
 
-        // Attach the event listener
         const currentContainer = containerRef.current;
         currentContainer.addEventListener('dragover', handleDragOver);
 
-        // Cleanup function to remove the event listener
         return () => {
-            if (currentContainer) {
-                currentContainer.removeEventListener('dragover', handleDragOver);
-            }
+            currentContainer.removeEventListener('dragover', handleDragOver);
         };
     }, []);
 
@@ -54,9 +49,10 @@ const CreateTest = () => {
     const addQuestion = (sectionId) => {
         const newQuestion = {
             id: `question-${sectionId}-${Math.random()}`,
-            content: '',
-            answers: [],
-            questionType: 'SINGLE_ANSWER'
+            question: '',
+            questionType: 'SINGLE_ANSWER',
+            answers: [{content: '', isCorrect: false}],
+            image: null
         };
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
@@ -65,6 +61,92 @@ const CreateTest = () => {
             return section;
         });
         setTest(prevTest => ({...prevTest, sections: updatedSections}));
+    };
+
+    const handleFileChange = (sectionId, questionId, event) => {
+        const file = event.target.files[0];
+        const updatedSections = test.sections.map(section => {
+            if (section.id === sectionId) {
+                return {
+                    ...section,
+                    questions: section.questions.map(question => {
+                        if (question.id === questionId) {
+                            return {...question, image: URL.createObjectURL(file)};
+                        }
+                        return question;
+                    })
+                };
+            }
+            return section;
+        });
+        setTest({sections: updatedSections});
+    };
+
+    const removeImage = (sectionId, questionId) => {
+        const updatedSections = test.sections.map(section => {
+            if (section.id === sectionId) {
+                return {
+                    ...section,
+                    questions: section.questions.map(question => {
+                        if (question.id === questionId) {
+                            return {...question, image: null};
+                        }
+                        return question;
+                    })
+                };
+            }
+            return section;
+        });
+        setTest({sections: updatedSections});
+    };
+
+    const removeQuestion = (sectionId, questionId) => {
+        const updatedSections = test.sections.map(section => {
+            if (section.id === sectionId) {
+                return {
+                    ...section,
+                    questions: section.questions.filter(question => question.id !== questionId)
+                };
+            }
+            return section;
+        });
+        setTest({sections: updatedSections});
+    };
+
+    const handleChange = (sectionId, questionId, answerId, type, value) => {
+        const updatedSections = test.sections.map(section => {
+            if (section.id === sectionId) {
+                return {
+                    ...section,
+                    questions: section.questions.map(question => {
+                        if (question.id === questionId) {
+                            if (type === 'question') {
+                                question.question = value;
+                            } else if (type === 'answer') {
+                                question.answers[answerId].content = value;
+                            } else if (type === 'toggleCorrect') {
+                                if (question.questionType === 'SINGLE_ANSWER') {
+                                    question.answers.forEach((answer, idx) => {
+                                        answer.isCorrect = idx === answerId;
+                                    });
+                                } else {
+                                    question.answers[answerId].isCorrect = !question.answers[answerId].isCorrect;
+                                }
+                            } else if (type === 'questionType') {
+                                question.questionType = value;
+                                if (value === 'OPEN') {
+                                    question.answers = [{content: '', isCorrect: true}];
+                                }
+                            }
+                            return {...question};
+                        }
+                        return question;
+                    })
+                };
+            }
+            return section;
+        });
+        setTest({sections: updatedSections});
     };
 
     const addAnswer = (sectionId, questionId) => {
@@ -90,7 +172,7 @@ const CreateTest = () => {
         setTest(prevTest => ({...prevTest, sections: updatedSections}));
     };
 
-    const handleAnswerChange = (sectionId, questionId, answerId, newValue) => {
+    const removeAnswer = (sectionId, questionId, answerId) => {
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
                 return {
@@ -99,12 +181,7 @@ const CreateTest = () => {
                         if (question.id === questionId) {
                             return {
                                 ...question,
-                                answers: question.answers.map(answer => {
-                                    if (answer.id === answerId) {
-                                        return {...answer, content: newValue};
-                                    }
-                                    return answer;
-                                })
+                                answers: question.answers.filter((_, idx) => idx !== answerId)
                             };
                         }
                         return question;
@@ -113,7 +190,7 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({...test, sections: updatedSections});
+        setTest({sections: updatedSections});
     };
 
     const onDragEnd = (result) => {
@@ -139,23 +216,19 @@ const CreateTest = () => {
                 }
                 return section;
             });
-            setTest({...test, sections: newSections});
+            setTest({sections: newSections});
         }
     };
 
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div ref={containerRef} className="create-test-container">
-                <h1>Create Test</h1>
-                <button onClick={addSection} className="btn btn-primary add-section-btn">Add Section</button>
+                <button onClick={addSection} className="btn btn-primary add-section-btn">Добави секция</button>
                 {test.sections.map((section, sIndex) => (
                     <Droppable key={section.id} droppableId={section.id}>
                         {(provided) => (
                             <div ref={provided.innerRef} {...provided.droppableProps} className="section-container">
-                                <h2>Section {sIndex + 1}</h2>
-                                <button onClick={() => addQuestion(section.id)}
-                                        className="btn btn-success add-question-btn">Add Question
-                                </button>
+                                <h2>Секция {sIndex + 1}</h2>
                                 {section.questions.map((question, qIndex) => (
                                     <Draggable key={question.id} draggableId={question.id} index={qIndex}>
                                         {(provided, snapshot) => (
@@ -171,21 +244,79 @@ const CreateTest = () => {
                                                     cursor: snapshot.isDragging ? 'grabbing' : 'grab'
                                                 }}
                                             >
-                                                <h3>Question {qIndex + 1}</h3>
-                                                <button onClick={() => addAnswer(section.id, question.id)}
-                                                        className="btn btn-info add-answer-btn">Add Answer
-                                                </button>
+                                                <h3>Въпрос {qIndex + 1}</h3>
+                                                <input
+                                                    type="file"
+                                                    id={`file-input-${section.id}-${question.id}`}
+                                                    name="questionImage"
+                                                    className="form-control-file"
+                                                    onChange={(e) => handleFileChange(section.id, question.id, e)}
+                                                    accept="image/*"
+                                                />
+                                                {question.image && (
+                                                    <div>
+                                                        <img src={question.image} alt="Question"
+                                                             style={{maxWidth: '100%', height: 'auto'}}/>
+                                                        <button
+                                                            type="button"
+                                                            className="btn btn-danger mt-2"
+                                                            onClick={() => removeImage(section.id, question.id)}
+                                                        >
+                                                            Премахни снимка
+                                                        </button>
+                                                    </div>
+                                                )}
+                                                <select className="form-control"
+                                                        value={question.questionType}
+                                                        onChange={(e) => handleChange(section.id, question.id, null, 'questionType', e.target.value)}
+                                                >
+                                                    <option value="SINGLE_ANSWER">Един верен отговор</option>
+                                                    <option value="MULTIPLE_ANSWER">Няколко верни отговори</option>
+                                                    <option value="OPEN">Отворен отговор</option>
+                                                </select>
+                                                <textarea className="form-control"
+                                                          value={question.question}
+                                                          onChange={(e) => handleChange(section.id, question.id, null, 'question', e.target.value)}
+                                                          placeholder="Въведи въпрос"
+                                                />
                                                 {question.answers.map((answer, aIndex) => (
                                                     <div key={answer.id} className="answer-container">
-                                                        Answer: <input type="text" value={answer.content}
-                                                                       className="form-control"
-                                                                       onChange={(e) => handleAnswerChange(section.id, question.id, answer.id, e.target.value)}/>
+                                                        <button
+                                                            type="button"
+                                                            className={`mark-correct-btn ${answer.isCorrect ? 'correct' : ''}`}
+                                                            onClick={() => handleChange(section.id, question.id, aIndex, 'toggleCorrect')}
+                                                        ></button>
+                                                        <input
+                                                            type="text"
+                                                            className="answer-input"
+                                                            placeholder="Въведи отговор"
+                                                            value={answer.content}
+                                                            onChange={(e) => handleChange(section.id, question.id, aIndex, 'answer', e.target.value)}
+                                                        />
+                                                        <button
+                                                            type="button"
+                                                            className="remove-answer-btn"
+                                                            onClick={() => removeAnswer(section.id, question.id, aIndex)}
+                                                        ></button>
                                                     </div>
                                                 ))}
+                                                <button onClick={() => addAnswer(section.id, question.id)}
+                                                        className="btn btn-info add-answer-btn">Добави отговор
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    className="btn btn-danger remove-question-btn"
+                                                    onClick={() => removeQuestion(section.id, question.id)}
+                                                >
+                                                    Премахни въпрос
+                                                </button>
                                             </div>
                                         )}
                                     </Draggable>
                                 ))}
+                                <button onClick={() => addQuestion(section.id)}
+                                        className="btn btn-success add-question-btn">Добави въпрос
+                                </button>
                                 {provided.placeholder}
                             </div>
                         )}

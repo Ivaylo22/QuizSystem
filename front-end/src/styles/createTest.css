@@ -4,3 +4,27 @@
     width: 100%;
     padding: 20px;
 }
+
+.add-answer-btn,
+.add-question-btn {
+    background-color: #008CBA;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.remove-question-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+.add-answer-btn {
+    margin-top: 1%;
+}
+
+.add-question-btn:hover,
+.add-answer-btn:hover {
+    background-color: #008CBA;
+    color: white;
+}
