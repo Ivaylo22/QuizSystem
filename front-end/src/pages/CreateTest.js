@@ -35,10 +35,22 @@ const CreateTest = () => {
         };
     }, []);
 
+    const handleCountChange = (sectionId, newCount) => {
+        const updatedSections = test.sections.map(section => {
+            if (section.id === sectionId) {
+                return {...section, usedQuestionsCount: Math.min(newCount, section.totalQuestionsCount)};
+            }
+            return section;
+        });
+        setTest({sections: updatedSections});
+    };
+
     const addSection = () => {
         const newSection = {
             id: `section-${test.sections.length + 1}`,
-            questions: []
+            questions: [],
+            totalQuestionsCount: 0,
+            usedQuestionsCount: 0
         };
         setTest(prevTest => ({
             ...prevTest,
@@ -47,20 +59,35 @@ const CreateTest = () => {
     };
 
     const addQuestion = (sectionId) => {
-        const newQuestion = {
-            id: `question-${sectionId}-${Math.random()}`,
-            question: '',
-            questionType: 'SINGLE_ANSWER',
-            answers: [{content: '', isCorrect: false}],
-            image: null
-        };
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
-                return {...section, questions: [...section.questions, newQuestion]};
+                const newQuestion = {
+                    id: `question-${sectionId}-${Math.random()}`,
+                    question: '',
+                    questionType: 'SINGLE_ANSWER',
+                    answers: [{content: '', isCorrect: false}],
+                    image: null
+                };
+                return {
+                    ...section,
+                    questions: [...section.questions, newQuestion],
+                    totalQuestionsCount: section.questions.length + 1
+                };
             }
             return section;
         });
-        setTest(prevTest => ({...prevTest, sections: updatedSections}));
+        setTest({sections: updatedSections});
+    };
+
+    const removeQuestion = (sectionId, questionId) => {
+        const updatedSections = test.sections.map(section => {
+            if (section.id === sectionId) {
+                const filteredQuestions = section.questions.filter(question => question.id !== questionId);
+                return {...section, questions: filteredQuestions, totalQuestionsCount: filteredQuestions.length};
+            }
+            return section;
+        });
+        setTest({sections: updatedSections});
     };
 
     const handleFileChange = (sectionId, questionId, event) => {
@@ -93,19 +120,6 @@ const CreateTest = () => {
                         }
                         return question;
                     })
-                };
-            }
-            return section;
-        });
-        setTest({sections: updatedSections});
-    };
-
-    const removeQuestion = (sectionId, questionId) => {
-        const updatedSections = test.sections.map(section => {
-            if (section.id === sectionId) {
-                return {
-                    ...section,
-                    questions: section.questions.filter(question => question.id !== questionId)
                 };
             }
             return section;
@@ -229,6 +243,16 @@ const CreateTest = () => {
                         {(provided) => (
                             <div ref={provided.innerRef} {...provided.droppableProps} className="section-container">
                                 <h2>Секция {sIndex + 1}</h2>
+                                <div className="section-counts">
+                                    <input
+                                        type="number"
+                                        min="0"
+                                        value={section.usedQuestionsCount}
+                                        onChange={(e) => handleCountChange(section.id, parseInt(e.target.value))}
+                                        className="count-input"
+                                    />
+                                    <span> от {section.totalQuestionsCount}</span>
+                                </div>
                                 {section.questions.map((question, qIndex) => (
                                     <Draggable key={question.id} draggableId={question.id} index={qIndex}>
                                         {(provided, snapshot) => (

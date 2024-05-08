@@ -4,13 +4,13 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestOperation;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestRequest;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestResponse;
+import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsOperation;
+import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsRequest;
+import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,6 +18,13 @@ import sit.tuvarna.bg.api.operations.test.create.CreateTestResponse;
 public class TestController {
 
     private final CreateTestOperation createTest;
+    private final GetSubjectsOperation getSubjects;
+
+    @GetMapping("/subjects")
+    public ResponseEntity<GetSubjectsResponse> getSubjects() {
+        GetSubjectsRequest request = GetSubjectsRequest.builder().build();
+        return new ResponseEntity<>(getSubjects.process(request), HttpStatus.OK);
+    }
 
     @PostMapping("/create")
     public ResponseEntity<CreateTestResponse> createTest(@RequestBody @Valid CreateTestRequest request) {

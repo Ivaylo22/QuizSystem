@@ -30,5 +30,4 @@ public class CreateTestRequest implements ProcessorRequest {
 
     @Valid
     private List<SectionModel> sections;
-
 }
