@@ -1,13 +1,56 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect, useCallback} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {toast} from 'react-toastify';
 import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
 import '../styles/createTest.css';
+import {useLoading} from '../context/LoadingContext';
+import {v4 as uuidv4} from 'uuid';
 
 const CreateTest = () => {
+    const token = localStorage.getItem('token');
+    const email = localStorage.getItem('email');
     const [test, setTest] = useState({
+        title: '',
+        grade: '',
+        subject: '',
         sections: []
     });
+    const [subjects, setSubjects] = useState([]);
+    const {setLoading} = useLoading();
+    const navigate = useNavigate();
+    const hasNavigated = useRef(false);
 
     const containerRef = useRef(null);
+
+    const fetchSubjects = useCallback(async () => {
+        setLoading(true);
+        try {
+            const response = await fetch(`http://localhost:8090/api/v1/test/subjects`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+            const data = await response.json();
+            setSubjects(data.subjects);
+        } catch (error) {
+            console.error('Failed to fetch subjects:', error);
+        }
+        setLoading(false);
+
+    }, [token, setLoading]);
+
+    useEffect(() => {
+        if (!token && !hasNavigated.current) {
+            toast.error(`Създаването на куизове е само за вписани потребители`);
+            navigate('/login');
+            hasNavigated.current = true;
+        }
+        if (token) {
+            fetchSubjects();
+        }
+    }, [token, navigate, fetchSubjects]);
 
     useEffect(() => {
         const handleDragOver = (event) => {
@@ -38,7 +81,10 @@ const CreateTest = () => {
     const handleCountChange = (sectionId, newCount) => {
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
-                return {...section, usedQuestionsCount: Math.min(newCount, section.totalQuestionsCount)};
+                return {
+                    ...section,
+                    usedQuestionsCount: newCount || 0
+                };
             }
             return section;
         });
@@ -47,8 +93,14 @@ const CreateTest = () => {
 
     const addSection = () => {
         const newSection = {
-            id: `section-${test.sections.length + 1}`,
-            questions: [],
+            id: `section-${uuidv4()}`,
+            questions: [{
+                id: uuidv4(),
+                question: '',
+                questionType: 'SINGLE_ANSWER',
+                answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
+                image: null
+            }],
             totalQuestionsCount: 0,
             usedQuestionsCount: 0
         };
@@ -62,10 +114,10 @@ const CreateTest = () => {
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
                 const newQuestion = {
-                    id: `question-${sectionId}-${Math.random()}`,
+                    id: uuidv4(),
                     question: '',
                     questionType: 'SINGLE_ANSWER',
-                    answers: [{content: '', isCorrect: false}],
+                    answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
                     image: null
                 };
                 return {
@@ -163,6 +215,14 @@ const CreateTest = () => {
         setTest({sections: updatedSections});
     };
 
+    const handleTestChange = (e) => {
+        const {name, value} = e.target;
+        setTest(prevTest => ({
+            ...prevTest,
+            [name]: value
+        }));
+    };
+
     const addAnswer = (sectionId, questionId) => {
         const newAnswer = {
             id: `answer-${questionId}-${Math.random()}`,
@@ -237,9 +297,37 @@ const CreateTest = () => {
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div ref={containerRef} className="create-test-container">
+                <input
+                    type="text"
+                    name="title"
+                    value={test.title}
+                    onChange={handleTestChange}
+                    placeholder="Enter test title"
+                    className="form-control"
+                />
+                <select
+                    name="grade"
+                    value={test.grade}
+                    onChange={handleTestChange}
+                    className="form-control"
+                >
+                    {[...Array(12).keys()].map(grade => (
+                        <option key={grade + 1} value={grade + 1}>{grade + 1}</option>
+                    ))}
+                </select>
+                <select
+                    name="subject"
+                    value={test.subject}
+                    onChange={handleTestChange}
+                    className="form-control"
+                >
+                    {subjects.map(subject => (
+                        <option key={subject} value={subject}>{subject}</option>
+                    ))}
+                </select>
                 <button onClick={addSection} className="btn btn-primary add-section-btn">Добави секция</button>
                 {test.sections.map((section, sIndex) => (
-                    <Droppable key={section.id} droppableId={section.id}>
+                    <Droppable key={uuidv4()} droppableId={section.id}>
                         {(provided) => (
                             <div ref={provided.innerRef} {...provided.droppableProps} className="section-container">
                                 <h2>Секция {sIndex + 1}</h2>
@@ -247,22 +335,22 @@ const CreateTest = () => {
                                     <input
                                         type="number"
                                         min="0"
-                                        value={section.usedQuestionsCount}
+                                        value={section.usedQuestionsCount || 0}
                                         onChange={(e) => handleCountChange(section.id, parseInt(e.target.value))}
                                         className="count-input"
                                     />
                                     <span> от {section.totalQuestionsCount}</span>
                                 </div>
                                 {section.questions.map((question, qIndex) => (
-                                    <Draggable key={question.id} draggableId={question.id} index={qIndex}>
+                                    <Draggable key={uuidv4()} draggableId={question.id} index={qIndex}>
                                         {(provided, snapshot) => (
                                             <div
+                                                key={question.id}
                                                 ref={provided.innerRef}
                                                 {...provided.draggableProps}
                                                 {...provided.dragHandleProps}
                                                 className="question-container"
                                                 style={{
-                                                    ...provided.draggableProps.style,
                                                     backgroundColor: snapshot.isDragging ? '#f4f4f4' : 'white',
                                                     boxShadow: snapshot.isDragging ? '0 0 10px rgba(0,0,0,0.2)' : 'none',
                                                     cursor: snapshot.isDragging ? 'grabbing' : 'grab'
@@ -304,7 +392,7 @@ const CreateTest = () => {
                                                           placeholder="Въведи въпрос"
                                                 />
                                                 {question.answers.map((answer, aIndex) => (
-                                                    <div key={answer.id} className="answer-container">
+                                                    <div key={uuidv4()} className="answer-container">
                                                         <button
                                                             type="button"
                                                             className={`mark-correct-btn ${answer.isCorrect ? 'correct' : ''}`}
@@ -338,6 +426,7 @@ const CreateTest = () => {
                                         )}
                                     </Draggable>
                                 ))}
+                                {React.cloneElement(provided.placeholder, {key: 'placeholder'})}
                                 <button onClick={() => addQuestion(section.id)}
                                         className="btn btn-success add-question-btn">Добави въпрос
                                 </button>

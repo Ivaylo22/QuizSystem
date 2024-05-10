@@ -15,6 +15,9 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class CreateTestRequest implements ProcessorRequest {
 
+    @NotBlank(message = "Title is required.")
+    private String title;
+
     @NotBlank(message = "Grade is required.")
     private Integer grade;
 

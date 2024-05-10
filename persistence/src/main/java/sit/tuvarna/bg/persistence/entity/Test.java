@@ -24,6 +24,9 @@ public class Test {
     private UUID id;
 
     @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
     private Integer grade;
 
     private Boolean mixedQuestions = false;

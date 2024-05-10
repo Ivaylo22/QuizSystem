@@ -36,6 +36,7 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                     return subjectRepository.save(newSubject);
                 });
         Test test = Test.builder()
+                .title(request.getTitle())
                 .grade(request.getGrade())
                 .subject(subject)
                 .status(TestStatus.PRIVATE)
