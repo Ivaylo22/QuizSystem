@@ -101,7 +101,7 @@ const CreateTest = () => {
                 answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
                 image: null
             }],
-            totalQuestionsCount: 0,
+            totalQuestionsCount: 1,
             usedQuestionsCount: 0
         };
         setTest(prevTest => ({
@@ -128,7 +128,7 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({sections: updatedSections});
+        setTest(prevTest => ({...prevTest, sections: updatedSections}));
     };
 
     const removeQuestion = (sectionId, questionId) => {
@@ -139,7 +139,7 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({sections: updatedSections});
+        setTest(prevTest => ({...prevTest, sections: updatedSections}));
     };
 
     const handleFileChange = (sectionId, questionId, event) => {
@@ -186,25 +186,26 @@ const CreateTest = () => {
                     ...section,
                     questions: section.questions.map(question => {
                         if (question.id === questionId) {
+                            const newQuestion = {...question};
                             if (type === 'question') {
-                                question.question = value;
-                            } else if (type === 'answer') {
-                                question.answers[answerId].content = value;
-                            } else if (type === 'toggleCorrect') {
+                                newQuestion.question = value || '';
+                            } else if (type === 'answer' && answerId !== null) {
+                                newQuestion.answers[answerId].content = value || '';
+                            } else if (type === 'toggleCorrect' && answerId !== null) {
                                 if (question.questionType === 'SINGLE_ANSWER') {
-                                    question.answers.forEach((answer, idx) => {
+                                    newQuestion.answers.forEach((answer, idx) => {
                                         answer.isCorrect = idx === answerId;
                                     });
                                 } else {
-                                    question.answers[answerId].isCorrect = !question.answers[answerId].isCorrect;
+                                    newQuestion.answers[answerId].isCorrect = !newQuestion.answers[answerId].isCorrect;
                                 }
                             } else if (type === 'questionType') {
-                                question.questionType = value;
+                                newQuestion.questionType = value;
                                 if (value === 'OPEN') {
-                                    question.answers = [{content: '', isCorrect: true}];
+                                    newQuestion.answers = [{content: '', isCorrect: true}];
                                 }
                             }
-                            return {...question};
+                            return newQuestion;
                         }
                         return question;
                     })
@@ -274,23 +275,43 @@ const CreateTest = () => {
             return;
         }
 
-        if (source.droppableId !== destination.droppableId) {
-            const sourceSection = test.sections.find(section => section.id === source.droppableId);
-            const destSection = test.sections.find(section => section.id === destination.droppableId);
-            const sourceQuestions = [...sourceSection.questions];
-            const [removed] = sourceQuestions.splice(source.index, 1);
-            const destinationQuestions = [...destSection.questions];
-            destinationQuestions.splice(destination.index, 0, removed);
+        const sourceIndex = source.index;
+        const destIndex = destination.index;
+        const sourceId = source.droppableId;
+        const destId = destination.droppableId;
 
-            const newSections = test.sections.map(section => {
-                if (section.id === source.droppableId) {
-                    return {...section, questions: sourceQuestions};
-                } else if (section.id === destination.droppableId) {
-                    return {...section, questions: destinationQuestions};
+        if (sourceId === destId) {
+            const section = test.sections.find(s => s.id === sourceId);
+            const newQuestions = Array.from(section.questions);
+            const [removed] = newQuestions.splice(sourceIndex, 1);
+            newQuestions.splice(destIndex, 0, removed);
+
+            const newSections = test.sections.map(s => {
+                if (s.id === section.id) {
+                    return {...s, questions: newQuestions};
                 }
-                return section;
+                return s;
             });
-            setTest({sections: newSections});
+
+            setTest(prevTest => ({...prevTest, sections: newSections}));
+        } else {
+            const sourceSection = test.sections.find(s => s.id === sourceId);
+            const destSection = test.sections.find(s => s.id === destId);
+            const sourceQuestions = Array.from(sourceSection.questions);
+            const destQuestions = Array.from(destSection.questions);
+            const [removed] = sourceQuestions.splice(sourceIndex, 1);
+            destQuestions.splice(destIndex, 0, removed);
+
+            const newSections = test.sections.map(s => {
+                if (s.id === sourceSection.id) {
+                    return {...s, questions: sourceQuestions, totalQuestionsCount: sourceQuestions.length};
+                } else if (s.id === destSection.id) {
+                    return {...s, questions: destQuestions, totalQuestionsCount: destQuestions.length};
+                }
+                return s;
+            });
+
+            setTest(prevTest => ({...prevTest, sections: newSections}));
         }
     };
 
@@ -303,7 +324,7 @@ const CreateTest = () => {
                     value={test.title}
                     onChange={handleTestChange}
                     placeholder="Enter test title"
-                    className="form-control"
+                    className="form-control title-input"
                 />
                 <select
                     name="grade"
@@ -325,7 +346,11 @@ const CreateTest = () => {
                         <option key={subject} value={subject}>{subject}</option>
                     ))}
                 </select>
-                <button onClick={addSection} className="btn btn-primary add-section-btn">Добави секция</button>
+                <div className="sticky-container">
+                    <button onClick={addSection} className="btn btn-primary add-section-btn sticky-button">Добави
+                        секция
+                    </button>
+                </div>
                 {test.sections.map((section, sIndex) => (
                     <Droppable key={uuidv4()} droppableId={section.id}>
                         {(provided) => (
@@ -351,6 +376,7 @@ const CreateTest = () => {
                                                 {...provided.dragHandleProps}
                                                 className="question-container"
                                                 style={{
+                                                    ...provided.draggableProps.style,
                                                     backgroundColor: snapshot.isDragging ? '#f4f4f4' : 'white',
                                                     boxShadow: snapshot.isDragging ? '0 0 10px rgba(0,0,0,0.2)' : 'none',
                                                     cursor: snapshot.isDragging ? 'grabbing' : 'grab'
@@ -366,9 +392,17 @@ const CreateTest = () => {
                                                     accept="image/*"
                                                 />
                                                 {question.image && (
-                                                    <div>
-                                                        <img src={question.image} alt="Question"
-                                                             style={{maxWidth: '100%', height: 'auto'}}/>
+                                                    <div className="image-container" style={{textAlign: 'center'}}>
+                                                        <img
+                                                            src={question.image}
+                                                            alt="Question"
+                                                            style={{
+                                                                maxWidth: '200px',
+                                                                height: 'auto',
+                                                                display: 'block',
+                                                                margin: '0 auto'
+                                                            }}
+                                                        />
                                                         <button
                                                             type="button"
                                                             className="btn btn-danger mt-2"
@@ -387,7 +421,7 @@ const CreateTest = () => {
                                                     <option value="OPEN">Отворен отговор</option>
                                                 </select>
                                                 <textarea className="form-control"
-                                                          value={question.question}
+                                                          value={question.question || ''}
                                                           onChange={(e) => handleChange(section.id, question.id, null, 'question', e.target.value)}
                                                           placeholder="Въведи въпрос"
                                                 />
@@ -402,7 +436,7 @@ const CreateTest = () => {
                                                             type="text"
                                                             className="answer-input"
                                                             placeholder="Въведи отговор"
-                                                            value={answer.content}
+                                                            value={answer.content || ''}
                                                             onChange={(e) => handleChange(section.id, question.id, aIndex, 'answer', e.target.value)}
                                                         />
                                                         <button

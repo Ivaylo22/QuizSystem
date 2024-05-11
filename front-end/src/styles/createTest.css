@@ -2,7 +2,7 @@
     overflow-y: auto;
     max-height: 93vh;
     width: 100%;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .add-answer-btn,
@@ -27,4 +27,24 @@
 .add-answer-btn:hover {
     background-color: #008CBA;
     color: white;
+}
+
+.sticky-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.sticky-button {
+    margin: 0 auto;
+    display: block;
+}
+
+.title-input {
+    margin-top: 20px;
 }
