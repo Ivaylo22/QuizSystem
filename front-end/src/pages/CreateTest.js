@@ -93,15 +93,18 @@ const CreateTest = () => {
     const handleCountChange = (sectionId, newCount) => {
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
+                const validatedCount = Math.min(newCount, section.totalQuestionsCount);
+    
                 return {
                     ...section,
-                    usedQuestionsCount: newCount || 0
+                    usedQuestionsCount: validatedCount >= 0 ? validatedCount : 0
                 };
             }
             return section;
         });
         setTest({sections: updatedSections});
     };
+
 
     const addSection = () => {
         const newSection = {
@@ -114,7 +117,7 @@ const CreateTest = () => {
                 image: null
             }],
             totalQuestionsCount: 1,
-            usedQuestionsCount: 0
+            usedQuestionsCount: 1
         };
         setTest(prevTest => ({
             ...prevTest,
@@ -135,7 +138,8 @@ const CreateTest = () => {
                 return {
                     ...section,
                     questions: [...section.questions, newQuestion],
-                    totalQuestionsCount: section.questions.length + 1
+                    totalQuestionsCount: section.questions.length + 1,
+                    usedQuestionsCount: section.usedQuestionsCount + 1
                 };
             }
             return section;
@@ -147,7 +151,12 @@ const CreateTest = () => {
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
                 const filteredQuestions = section.questions.filter(question => question.id !== questionId);
-                return {...section, questions: filteredQuestions, totalQuestionsCount: filteredQuestions.length};
+                return {
+                    ...section,
+                    questions: filteredQuestions,
+                    totalQuestionsCount: filteredQuestions.length,
+                    usedQuestionsCount: section.usedQuestionsCount - 1
+                };
             }
             return section;
         });
@@ -228,14 +237,6 @@ const CreateTest = () => {
         setTest({sections: updatedSections});
     };
 
-    const handleTestChange = (e) => {
-        const {name, value} = e.target;
-        setTest(prevTest => ({
-            ...prevTest,
-            [name]: value
-        }));
-    };
-
     const addAnswer = (sectionId, questionId) => {
         const newAnswer = {
             id: `answer-${questionId}-${Math.random()}`,
@@ -282,7 +283,7 @@ const CreateTest = () => {
 
     const onDragEnd = (result) => {
         const {source, destination} = result;
-
+    
         if (!destination) {
             return;
         }
@@ -316,9 +317,19 @@ const CreateTest = () => {
 
             const newSections = test.sections.map(s => {
                 if (s.id === sourceSection.id) {
-                    return {...s, questions: sourceQuestions, totalQuestionsCount: sourceQuestions.length};
+                    return {
+                        ...s,
+                        questions: sourceQuestions,
+                        totalQuestionsCount: sourceQuestions.length,
+                        usedQuestionsCount: s.usedQuestionsCount - 1
+                    };
                 } else if (s.id === destSection.id) {
-                    return {...s, questions: destQuestions, totalQuestionsCount: destQuestions.length};
+                    return {
+                        ...s,
+                        questions: destQuestions,
+                        totalQuestionsCount: destQuestions.length,
+                        usedQuestionsCount: s.usedQuestionsCount + 1
+                    };
                 }
                 return s;
             });
@@ -330,18 +341,6 @@ const CreateTest = () => {
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div ref={containerRef} className="create-test-container">
-                <input type="text" name="title" value={test.title} onChange={handleTestChange}
-                       placeholder="Заглавие на теста" className="form-control title-input"/>
-                <select name="grade" value={test.grade} onChange={handleTestChange} className="form-control">
-                    {[...Array(12).keys()].map(grade => (
-                        <option key={grade + 1} value={grade + 1}>{grade + 1}</option>
-                    ))}
-                </select>
-                <select name="subject" value={test.subject} onChange={handleTestChange} className="form-control">
-                    {subjects.map(subject => (
-                        <option key={subject} value={subject}>{subject}</option>
-                    ))}
-                </select>
                 <div className="sticky-container">
                     <button onClick={addSection} className="btn btn-primary add-section-btn">Добави секция</button>
                     <button onClick={toggleSettingsDialog} className="btn settings-button">
@@ -407,6 +406,7 @@ const CreateTest = () => {
                                             min="0"
                                             max={section.totalQuestionsCount}
                                             onChange={(e) => handleCountChange(section.id, parseInt(e.target.value))}
+                                            value={section.usedQuestionsCount || ""}
                                             className="count-input"
                                         />
                                         <span> от {section.totalQuestionsCount}</span>
