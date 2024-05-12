@@ -34,13 +34,9 @@ public class Test {
     @Column(nullable = false)
     private String creatorEmail;
 
-    private Boolean hasKey;
-
     private String accessKey;
 
-    private LocalDateTime startHour;
-
-    private LocalDateTime endHour;
+    private Long secondsToSolve = 3600L;
 
     @Column(nullable = false)
     private TestStatus status;

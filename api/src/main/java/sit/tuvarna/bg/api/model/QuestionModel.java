@@ -18,6 +18,8 @@ public class QuestionModel {
 
     private String image;
 
+    private Integer maximumPoints;
+
     private QuestionType questionType;
 
     private List<AnswerModel> answers;

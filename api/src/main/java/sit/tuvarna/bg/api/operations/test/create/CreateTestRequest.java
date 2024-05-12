@@ -27,10 +27,10 @@ public class CreateTestRequest implements ProcessorRequest {
     @NotBlank(message = "Creator email is required.")
     private String creatorEmail;
 
-    private Boolean hasKey;
-
     private Boolean hasMixedQuestions;
 
     @Valid
     private List<SectionModel> sections;
+
+    private Integer secondsToSolve;
 }

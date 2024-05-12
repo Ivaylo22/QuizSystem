@@ -42,7 +42,6 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                 .status(TestStatus.PRIVATE)
                 .creatorEmail(request.getCreatorEmail())
                 .mixedQuestions(request.getHasMixedQuestions())
-                .hasKey(request.getHasKey())
                 .build();
 
         List<Section> sections = new ArrayList<>();
@@ -60,6 +59,7 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                         .image(questionModel.getImage())
                         .type(QuestionType.valueOf(questionModel.getQuestionType().name()))
                         .section(section)
+                        .maximumPoints(questionModel.getMaximumPoints())
                         .build();
 
                 List<Answer> answers = new ArrayList<>();

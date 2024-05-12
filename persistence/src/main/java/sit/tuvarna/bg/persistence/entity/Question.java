@@ -25,6 +25,8 @@ public class Question {
 
     private String image;
 
+    private Integer maximumPoints;
+
     @Enumerated(EnumType.STRING)
     private QuestionType type;
 

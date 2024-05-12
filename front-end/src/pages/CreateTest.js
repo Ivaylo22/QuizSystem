@@ -19,8 +19,20 @@ const CreateTest = () => {
     const {setLoading} = useLoading();
     const navigate = useNavigate();
     const hasNavigated = useRef(false);
-
     const containerRef = useRef(null);
+    const [collapsedSections, setCollapsedSections] = useState({});
+    const [showSettings, setShowSettings] = useState(false);
+
+    const toggleSettingsDialog = () => {
+        setShowSettings(!showSettings);
+    };
+
+    const toggleCollapse = (sectionId) => {
+        setCollapsedSections(prev => ({
+            ...prev,
+            [sectionId]: !prev[sectionId]
+        }));
+    };
 
     const fetchSubjects = useCallback(async () => {
         setLoading(true);
@@ -318,153 +330,191 @@ const CreateTest = () => {
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div ref={containerRef} className="create-test-container">
-                <input
-                    type="text"
-                    name="title"
-                    value={test.title}
-                    onChange={handleTestChange}
-                    placeholder="Enter test title"
-                    className="form-control title-input"
-                />
-                <select
-                    name="grade"
-                    value={test.grade}
-                    onChange={handleTestChange}
-                    className="form-control"
-                >
+                <input type="text" name="title" value={test.title} onChange={handleTestChange}
+                       placeholder="Заглавие на теста" className="form-control title-input"/>
+                <select name="grade" value={test.grade} onChange={handleTestChange} className="form-control">
                     {[...Array(12).keys()].map(grade => (
                         <option key={grade + 1} value={grade + 1}>{grade + 1}</option>
                     ))}
                 </select>
-                <select
-                    name="subject"
-                    value={test.subject}
-                    onChange={handleTestChange}
-                    className="form-control"
-                >
+                <select name="subject" value={test.subject} onChange={handleTestChange} className="form-control">
                     {subjects.map(subject => (
                         <option key={subject} value={subject}>{subject}</option>
                     ))}
                 </select>
                 <div className="sticky-container">
-                    <button onClick={addSection} className="btn btn-primary add-section-btn sticky-button">Добави
-                        секция
+                    <button onClick={addSection} className="btn btn-primary add-section-btn">Добави секция</button>
+                    <button onClick={toggleSettingsDialog} className="btn settings-button">
+                        <i className="fas fa-cog settings-icon"></i>
                     </button>
                 </div>
+                {showSettings && (
+                    <div className="dialog-overlay" onClick={toggleSettingsDialog}>
+                        <dialog open className="settings-dialog" onClick={e => e.stopPropagation()}>
+                            <h3>Настройки на теста</h3>
+                            <label htmlFor="title">Заглавие на теста</label>
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                value={test.title}
+                                onChange={(e) => setTest({...test, title: e.target.value})}
+                                className="form-control"
+                            />
+                            <label htmlFor="grade">Клас</label>
+                            <select
+                                id="grade"
+                                name="grade"
+                                value={test.grade}
+                                onChange={(e) => setTest({...test, grade: e.target.value})}
+                                className="form-control"
+                            >
+                                {[...Array(12).keys()].map(grade => (
+                                    <option key={grade + 1} value={grade + 1}>{grade + 1}</option>
+                                ))}
+                            </select>
+                            <label htmlFor="subject">Предмет</label>
+                            <select
+                                id="subject"
+                                name="subject"
+                                value={test.subject}
+                                onChange={(e) => setTest({...test, subject: e.target.value})}
+                                className="form-control"
+                            >
+                                {subjects.map(subject => (
+                                    <option key={subject} value={subject}>{subject}</option>
+                                ))}
+                            </select>
+                            <div className="dialog-buttons-container">
+                                <button className="btn btn-secondary" onClick={toggleSettingsDialog}>Затвори</button>
+                            </div>
+                        </dialog>
+                    </div>
+                )}
                 {test.sections.map((section, sIndex) => (
-                    <Droppable key={uuidv4()} droppableId={section.id}>
+                    <Droppable key={section.id} droppableId={section.id}>
                         {(provided) => (
                             <div ref={provided.innerRef} {...provided.droppableProps} className="section-container">
-                                <h2>Секция {sIndex + 1}</h2>
-                                <div className="section-counts">
-                                    <input
-                                        type="number"
-                                        min="0"
-                                        value={section.usedQuestionsCount || 0}
-                                        onChange={(e) => handleCountChange(section.id, parseInt(e.target.value))}
-                                        className="count-input"
-                                    />
-                                    <span> от {section.totalQuestionsCount}</span>
+                                <div className="section-header">
+                                    <h2 onClick={() => toggleCollapse(section.id)}>
+                                        Секция {sIndex + 1} <span
+                                        className={`toggle-icon ${collapsedSections[section.id] ? 'collapsed' : ''}`}>&#9660;</span>
+                                    </h2>
+                                    <div className="section-counts">
+                                        <span>Колко въпроси да се използват:</span>
+                                        <input
+                                            type="number"
+                                            min="0"
+                                            max={section.totalQuestionsCount}
+                                            onChange={(e) => handleCountChange(section.id, parseInt(e.target.value))}
+                                            className="count-input"
+                                        />
+                                        <span> от {section.totalQuestionsCount}</span>
+                                    </div>
                                 </div>
-                                {section.questions.map((question, qIndex) => (
-                                    <Draggable key={uuidv4()} draggableId={question.id} index={qIndex}>
-                                        {(provided, snapshot) => (
-                                            <div
-                                                key={question.id}
-                                                ref={provided.innerRef}
-                                                {...provided.draggableProps}
-                                                {...provided.dragHandleProps}
-                                                className="question-container"
-                                                style={{
-                                                    ...provided.draggableProps.style,
-                                                    backgroundColor: snapshot.isDragging ? '#f4f4f4' : 'white',
-                                                    boxShadow: snapshot.isDragging ? '0 0 10px rgba(0,0,0,0.2)' : 'none',
-                                                    cursor: snapshot.isDragging ? 'grabbing' : 'grab'
-                                                }}
-                                            >
-                                                <h3>Въпрос {qIndex + 1}</h3>
-                                                <input
-                                                    type="file"
-                                                    id={`file-input-${section.id}-${question.id}`}
-                                                    name="questionImage"
-                                                    className="form-control-file"
-                                                    onChange={(e) => handleFileChange(section.id, question.id, e)}
-                                                    accept="image/*"
-                                                />
-                                                {question.image && (
-                                                    <div className="image-container" style={{textAlign: 'center'}}>
-                                                        <img
-                                                            src={question.image}
-                                                            alt="Question"
-                                                            style={{
-                                                                maxWidth: '200px',
-                                                                height: 'auto',
-                                                                display: 'block',
-                                                                margin: '0 auto'
-                                                            }}
+                                {!collapsedSections[section.id] && (
+                                    <div>
+                                        {section.questions.map((question, qIndex) => (
+                                            <Draggable key={question.id} draggableId={question.id} index={qIndex}>
+                                                {(provided, snapshot) => (
+                                                    <div
+                                                        ref={provided.innerRef}
+                                                        {...provided.draggableProps}
+                                                        {...provided.dragHandleProps}
+                                                        className="question-container"
+                                                        style={{
+                                                            ...provided.draggableProps.style,
+                                                            backgroundColor: snapshot.isDragging ? '#f4f4f4' : 'white',
+                                                            boxShadow: snapshot.isDragging ? '0 0 10px rgba(0,0,0,0.2)' : 'none',
+                                                            cursor: snapshot.isDragging ? 'grabbing' : 'grab'
+                                                        }}
+                                                    >
+                                                        <h3>Въпрос {qIndex + 1}</h3>
+                                                        <input
+                                                            type="file"
+                                                            id={`file-input-${section.id}-${question.id}`}
+                                                            name="questionImage"
+                                                            className="form-control-file"
+                                                            onChange={(e) => handleFileChange(section.id, question.id, e)}
+                                                            accept="image/*"
                                                         />
+                                                        {question.image && (
+                                                            <div className="image-container"
+                                                                 style={{textAlign: 'center'}}>
+                                                                <img
+                                                                    src={question.image}
+                                                                    alt="Question"
+                                                                    style={{
+                                                                        maxWidth: '200px',
+                                                                        height: 'auto',
+                                                                        display: 'block',
+                                                                        margin: '0 auto'
+                                                                    }}
+                                                                />
+                                                                <button
+                                                                    type="button"
+                                                                    className="btn btn-danger mt-2"
+                                                                    onClick={() => removeImage(section.id, question.id)}
+                                                                >
+                                                                    Премахни снимка
+                                                                </button>
+                                                            </div>
+                                                        )}
+                                                        <select className="form-control"
+                                                                value={question.questionType}
+                                                                onChange={(e) => handleChange(section.id, question.id, null, 'questionType', e.target.value)}
+                                                        >
+                                                            <option value="SINGLE_ANSWER">Един верен отговор</option>
+                                                            <option value="MULTIPLE_ANSWER">Няколко верни отговори
+                                                            </option>
+                                                            <option value="OPEN">Отворен отговор</option>
+                                                        </select>
+                                                        <textarea className="form-control"
+                                                                  value={question.question || ''}
+                                                                  onChange={(e) => handleChange(section.id, question.id, null, 'question', e.target.value)}
+                                                                  placeholder="Въведи въпрос"
+                                                        />
+                                                        {question.answers.map((answer, aIndex) => (
+                                                            <div key={uuidv4()} className="answer-container">
+                                                                <button
+                                                                    type="button"
+                                                                    className={`mark-correct-btn ${answer.isCorrect ? 'correct' : ''}`}
+                                                                    onClick={() => handleChange(section.id, question.id, aIndex, 'toggleCorrect')}
+                                                                ></button>
+                                                                <input
+                                                                    type="text"
+                                                                    className="answer-input"
+                                                                    placeholder="Въведи отговор"
+                                                                    value={answer.content || ''}
+                                                                    onChange={(e) => handleChange(section.id, question.id, aIndex, 'answer', e.target.value)}
+                                                                />
+                                                                <button
+                                                                    type="button"
+                                                                    className="remove-answer-btn"
+                                                                    onClick={() => removeAnswer(section.id, question.id, aIndex)}
+                                                                ></button>
+                                                            </div>
+                                                        ))}
+                                                        <button onClick={() => addAnswer(section.id, question.id)}
+                                                                className="btn btn-info add-answer-btn">Добави отговор
+                                                        </button>
                                                         <button
                                                             type="button"
-                                                            className="btn btn-danger mt-2"
-                                                            onClick={() => removeImage(section.id, question.id)}
+                                                            className="btn btn-danger remove-question-btn"
+                                                            onClick={() => removeQuestion(section.id, question.id)}
                                                         >
-                                                            Премахни снимка
+                                                            Премахни въпрос
                                                         </button>
                                                     </div>
                                                 )}
-                                                <select className="form-control"
-                                                        value={question.questionType}
-                                                        onChange={(e) => handleChange(section.id, question.id, null, 'questionType', e.target.value)}
-                                                >
-                                                    <option value="SINGLE_ANSWER">Един верен отговор</option>
-                                                    <option value="MULTIPLE_ANSWER">Няколко верни отговори</option>
-                                                    <option value="OPEN">Отворен отговор</option>
-                                                </select>
-                                                <textarea className="form-control"
-                                                          value={question.question || ''}
-                                                          onChange={(e) => handleChange(section.id, question.id, null, 'question', e.target.value)}
-                                                          placeholder="Въведи въпрос"
-                                                />
-                                                {question.answers.map((answer, aIndex) => (
-                                                    <div key={uuidv4()} className="answer-container">
-                                                        <button
-                                                            type="button"
-                                                            className={`mark-correct-btn ${answer.isCorrect ? 'correct' : ''}`}
-                                                            onClick={() => handleChange(section.id, question.id, aIndex, 'toggleCorrect')}
-                                                        ></button>
-                                                        <input
-                                                            type="text"
-                                                            className="answer-input"
-                                                            placeholder="Въведи отговор"
-                                                            value={answer.content || ''}
-                                                            onChange={(e) => handleChange(section.id, question.id, aIndex, 'answer', e.target.value)}
-                                                        />
-                                                        <button
-                                                            type="button"
-                                                            className="remove-answer-btn"
-                                                            onClick={() => removeAnswer(section.id, question.id, aIndex)}
-                                                        ></button>
-                                                    </div>
-                                                ))}
-                                                <button onClick={() => addAnswer(section.id, question.id)}
-                                                        className="btn btn-info add-answer-btn">Добави отговор
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    className="btn btn-danger remove-question-btn"
-                                                    onClick={() => removeQuestion(section.id, question.id)}
-                                                >
-                                                    Премахни въпрос
-                                                </button>
-                                            </div>
-                                        )}
-                                    </Draggable>
-                                ))}
-                                {React.cloneElement(provided.placeholder, {key: 'placeholder'})}
-                                <button onClick={() => addQuestion(section.id)}
-                                        className="btn btn-success add-question-btn">Добави въпрос
-                                </button>
-                                {provided.placeholder}
+                                            </Draggable>
+                                        ))}
+                                        <button onClick={() => addQuestion(section.id)}
+                                                className="btn btn-success add-question-btn">Добави въпрос
+                                        </button>
+                                        {React.cloneElement(provided.placeholder, {key: 'placeholder'})}
+                                    </div>
+                                )}
                             </div>
                         )}
                     </Droppable>
