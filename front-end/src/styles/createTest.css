@@ -11,12 +11,14 @@
     color: white;
     display: block;
     margin: 0 auto;
+    width: 150px;
 }
 
 .remove-question-btn {
     display: block;
     margin: 0 auto;
     margin-top: 1%;
+    width: 150px;
 }
 
 .add-answer-btn {
@@ -164,4 +166,17 @@
 
 .form-check-label {
     margin-top: 2%;
+}
+
+.submit-test {
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 150px;
+    display: block;
+}
+
+.remove-img {
+    width: 160px;
+    margin-bottom: 10px;
 }

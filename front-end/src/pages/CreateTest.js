@@ -11,13 +11,14 @@ const CreateTest = () => {
     const email = localStorage.getItem('email');
     const [test, setTest] = useState({
         title: '',
-        grade: '',
-        subject: '',
+        grade: 1,
+        subject: "Английски език",
         hasMixedQuestions: false,
         minutesToSolve: 40,
         status: 'PRIVATE',
         scoringFormula: 'formula1',
-        sections: []
+        sections: [],
+        creatorEmail: email
     });
     const [subjects, setSubjects] = useState([]);
     const {setLoading} = useLoading();
@@ -26,6 +27,10 @@ const CreateTest = () => {
     const containerRef = useRef(null);
     const [collapsedSections, setCollapsedSections] = useState({});
     const [showSettings, setShowSettings] = useState(false);
+    const [problematicIssues, setProblematicIssues] = useState({
+        sections: [],
+        questions: new Map()
+    });
 
     const toggleSettingsDialog = () => {
         setShowSettings(!showSettings);
@@ -139,16 +144,17 @@ const CreateTest = () => {
     };
 
     const addQuestion = (sectionId) => {
+        const newQuestion = {
+            id: uuidv4(),
+            question: '',
+            questionType: 'SINGLE_ANSWER',
+            answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
+            image: null,
+            maximumPoints: 2
+        };
+
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
-                const newQuestion = {
-                    id: uuidv4(),
-                    question: '',
-                    questionType: 'SINGLE_ANSWER',
-                    answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
-                    image: null,
-                    maximumPoints: 2
-                };
                 return {
                     ...section,
                     questions: [...section.questions, newQuestion],
@@ -255,7 +261,6 @@ const CreateTest = () => {
 
     const addAnswer = (sectionId, questionId) => {
         const newAnswer = {
-            id: `answer-${questionId}-${Math.random()}`,
             content: '',
             isCorrect: false
         };
@@ -354,6 +359,147 @@ const CreateTest = () => {
         }
     };
 
+    const validateTest = () => {
+        let valid = true;
+        const newProblematicSections = [];
+        const newProblematicQuestions = new Map();
+
+        // Basic test validations
+        if (!test.title.trim()) {
+            toast.error('Моля, въведете заглавие на теста.');
+            valid = false;
+        }
+        if (!test.grade) {
+            toast.error('Моля, изберете клас.');
+            valid = false;
+        }
+        if (!test.subject) {
+            toast.error('Моля, изберете предмет.');
+            valid = false;
+        }
+        if (test.sections.length === 0) {
+            toast.error('Моля, добавете поне една секция.');
+            valid = false;
+        }
+
+        // Section and question level validations
+        test.sections.forEach((section, sIndex) => {
+            let sectionHasError = false;
+            let problematicQuestions = [];
+
+            if (section.questions.length === 0) {
+                sectionHasError = true;
+                toast.error(`Секция ${sIndex + 1} не съдържа въпроси.`);
+            }
+
+            section.questions.forEach((question, qIndex) => {
+                let questionHasError = false;
+
+                if (!question.question.trim() || question.maximumPoints <= 0) {
+                    questionHasError = true;
+                }
+
+                if (question.questionType !== 'OPEN') {
+                    const hasCorrectAnswer = question.answers.some(answer => answer.isCorrect);
+                    if (!hasCorrectAnswer) {
+                        questionHasError = true;
+                        toast.error(`Въпрос ${qIndex + 1} в секция ${sIndex + 1} няма правилен отговор.`);
+                    }
+                }
+
+                if (questionHasError) {
+                    problematicQuestions.push(qIndex);
+                    sectionHasError = true;
+                }
+            });
+
+            if (problematicQuestions.length > 0) {
+                newProblematicQuestions.set(sIndex, problematicQuestions);
+            }
+
+            if (sectionHasError) {
+                newProblematicSections.push(sIndex);
+            }
+        });
+
+        setProblematicIssues({
+            sections: newProblematicSections,
+            questions: newProblematicQuestions
+        });
+
+        return valid && newProblematicSections.length === 0;
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!validateTest()) {
+            return;
+        }
+
+        const testToSubmit = {
+            ...test,
+            sections: test.sections.map(section => ({
+                ...section,
+                questions: section.questions.map(({image, ...rest}) => rest)
+            }))
+        };
+
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/test/create', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify(testToSubmit),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to create test.');
+            }
+
+            const data = await response.json();
+
+            const uploadPromises = test.sections.flatMap(section =>
+                section.questions.map(async (question) => {
+                    if (question.image) {
+                        return uploadFile(question.image, data.questionIds[question.id]);
+                    }
+                })
+            );
+
+            await Promise.all(uploadPromises);
+
+            toast.success('Успешно създаден тест.');
+            navigate('/');
+        } catch (error) {
+            console.error('Error during test creation:', error);
+            toast.error('Проблем при създаването на теста.');
+        }
+    };
+
+    const uploadFile = async (file, questionId) => {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('questionId', questionId);
+
+        const response = await fetch('http://localhost:8090/api/v1/upload-question-image', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            },
+            body: formData,
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to upload image.');
+        }
+
+        const imageUrl = await response.text();
+        return imageUrl;
+    };
+
     console.log(test);
 
 
@@ -442,7 +588,8 @@ const CreateTest = () => {
                 {test.sections.map((section, sIndex) => (
                     <Droppable key={section.id} droppableId={section.id}>
                         {(provided) => (
-                            <div ref={provided.innerRef} {...provided.droppableProps} className="section-container">
+                            <div ref={provided.innerRef} {...provided.droppableProps}
+                                 className={`section-container ${problematicIssues.sections.includes(sIndex) ? 'border-danger' : ''}`}>
                                 <div className="section-header">
                                     <h3 onClick={() => toggleCollapse(section.id)}>
                                         Секция {sIndex + 1} <span
@@ -477,7 +624,7 @@ const CreateTest = () => {
                                                         ref={provided.innerRef}
                                                         {...provided.draggableProps}
                                                         {...provided.dragHandleProps}
-                                                        className="question-container"
+                                                        className={`question-container ${problematicIssues.questions.get(sIndex)?.includes(qIndex) ? 'border-danger' : ''}`}
                                                         style={{
                                                             ...provided.draggableProps.style,
                                                             backgroundColor: snapshot.isDragging ? '#f4f4f4' : 'white',
@@ -521,7 +668,7 @@ const CreateTest = () => {
                                                                 />
                                                                 <button
                                                                     type="button"
-                                                                    className="btn btn-danger mt-2"
+                                                                    className="btn btn-danger mt-2 remove-img"
                                                                     onClick={() => removeImage(section.id, question.id)}
                                                                 >
                                                                     Премахни снимка
@@ -543,7 +690,7 @@ const CreateTest = () => {
                                                                   placeholder="Въведи въпрос"
                                                         />
                                                         {question.answers.map((answer, aIndex) => (
-                                                            <div key={uuidv4()} className="answer-container">
+                                                            <div key={answer.id} className="answer-container">
                                                                 <button
                                                                     type="button"
                                                                     className={`mark-correct-btn ${answer.isCorrect ? 'correct' : ''}`}
@@ -587,6 +734,9 @@ const CreateTest = () => {
                         )}
                     </Droppable>
                 ))}
+                <button onClick={handleSubmit} className="btn btn-success submit-test">
+                    Създай тест
+                </button>
             </div>
         </DragDropContext>
     );
