@@ -69,10 +69,22 @@
     align-items: center;
     justify-content: space-around;
     padding: 1%;
-
 }
 
-.section-header h2 {
+.remove-section-btn {
+    font-size: 20px;
+    color: #dc3545;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.remove-section-btn:hover {
+    opacity: 0.8;
+    color: #dc3545;
+}
+
+.section-header h3 {
     margin: 0;
     flex-grow: 1;
 }
@@ -129,4 +141,25 @@
     margin-top: 13%;
     height: 35px;
     text-align: center;
+}
+
+.settings-dialog .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.settings-dialog .form-control, .settings-dialog {
+    padding: 6px 12px;
+}
+
+.settings-dialog .form-check-input {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.form-check-input {
+    height: 25px;
+}
+
+.form-check-label {
+    margin-top: 2%;
 }

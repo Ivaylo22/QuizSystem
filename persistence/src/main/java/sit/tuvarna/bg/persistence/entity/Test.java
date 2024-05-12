@@ -36,7 +36,7 @@ public class Test {
 
     private String accessKey;
 
-    private Long secondsToSolve = 3600L;
+    private Integer minutesToSolve = 40;
 
     @Column(nullable = false)
     private TestStatus status;

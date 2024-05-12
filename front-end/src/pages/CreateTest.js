@@ -13,6 +13,9 @@ const CreateTest = () => {
         title: '',
         grade: '',
         subject: '',
+        hasMixedQuestions: false,
+        minutesToSolve: 40,
+        status: 'PRIVATE',
         sections: []
     });
     const [subjects, setSubjects] = useState([]);
@@ -114,6 +117,7 @@ const CreateTest = () => {
                 question: '',
                 questionType: 'SINGLE_ANSWER',
                 answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
+                maximumPoints: 2,
                 image: null
             }],
             totalQuestionsCount: 1,
@@ -122,6 +126,14 @@ const CreateTest = () => {
         setTest(prevTest => ({
             ...prevTest,
             sections: [...prevTest.sections, newSection]
+        }));
+    };
+
+    const removeSection = (sectionId) => {
+        const updatedSections = test.sections.filter(section => section.id !== sectionId);
+        setTest(prevTest => ({
+            ...prevTest,
+            sections: updatedSections
         }));
     };
 
@@ -180,7 +192,7 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({sections: updatedSections});
+        setTest({...test, sections: updatedSections});
     };
 
     const removeImage = (sectionId, questionId) => {
@@ -198,7 +210,7 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({sections: updatedSections});
+        setTest({...test, sections: updatedSections});
     };
 
     const handleChange = (sectionId, questionId, answerId, type, value) => {
@@ -239,7 +251,6 @@ const CreateTest = () => {
         });
         setTest({...test, sections: updatedSections});
     };
-
 
     const addAnswer = (sectionId, questionId) => {
         const newAnswer = {
@@ -358,41 +369,60 @@ const CreateTest = () => {
                     <div className="dialog-overlay" onClick={toggleSettingsDialog}>
                         <dialog open className="settings-dialog" onClick={e => e.stopPropagation()}>
                             <h3>Настройки на теста</h3>
-                            <label htmlFor="title">Заглавие на теста</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={test.title}
-                                onChange={(e) => setTest({...test, title: e.target.value})}
-                                className="form-control"
-                            />
-                            <label htmlFor="grade">Клас</label>
-                            <select
-                                id="grade"
-                                name="grade"
-                                value={test.grade}
-                                onChange={(e) => setTest({...test, grade: e.target.value})}
-                                className="form-control"
-                            >
-                                {[...Array(12).keys()].map(grade => (
-                                    <option key={grade + 1} value={grade + 1}>{grade + 1}</option>
-                                ))}
-                            </select>
-                            <label htmlFor="subject">Предмет</label>
-                            <select
-                                id="subject"
-                                name="subject"
-                                value={test.subject}
-                                onChange={(e) => setTest({...test, subject: e.target.value})}
-                                className="form-control"
-                            >
-                                {subjects.map(subject => (
-                                    <option key={subject} value={subject}>{subject}</option>
-                                ))}
-                            </select>
-                            <div className="dialog-buttons-container">
-                                <button className="btn btn-secondary" onClick={toggleSettingsDialog}>Затвори</button>
+                            <div className="form-group">
+                                <label htmlFor="title">Заглавие:</label>
+                                <input type="text" id="title" name="title" value={test.title}
+                                       onChange={(e) => setTest({...test, title: e.target.value})}
+                                       className="form-control"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="grade">Клас:</label>
+                                <select id="grade" name="grade" value={test.grade}
+                                        onChange={(e) => setTest({...test, grade: e.target.value})}
+                                        className="form-control">
+                                    {[...Array(12).keys()].map(grade => (
+                                        <option key={grade + 1} value={grade + 1}>{grade + 1}</option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="subject">Предмет:</label>
+                                <select id="subject" name="subject" value={test.subject}
+                                        onChange={(e) => setTest({...test, subject: e.target.value})}
+                                        className="form-control">
+                                    {subjects.map(subject => (
+                                        <option key={subject} value={subject}>{subject}</option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="secondsToSolve">Минути за решаване:</label>
+                                <input type="number" id="minutesToSolve" min="0" value={test.minutesToSolve}
+                                       onChange={(e) => setTest({
+                                           ...test,
+                                           minutesToSolve: parseInt(e.target.value) || 0
+                                       })}
+                                       className="form-control"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="status">Вид тест:</label>
+                                <select id="status" value={test.status}
+                                        onChange={(e) => setTest({...test, status: e.target.value})}
+                                        className="form-control">
+                                    <option value="PRIVATE">Частен</option>
+                                    <option value="PUBLIC">Публичен</option>
+                                </select>
+                            </div>
+                            <div className="form-group form-check">
+                                <label className="form-check-label" htmlFor="mixedQuestions">Разбъркване на
+                                    въпросите</label>
+                                <input type="checkbox" id="mixedQuestions" checked={test.hasMixedQuestions}
+                                       onChange={(e) => setTest({...test, hasMixedQuestions: e.target.checked})}
+                                       className="form-check-input mixed-questions-check"/>
+                            </div>
+                            <div className="dialog-buttons-container mx-auto">
+                                <button className="btn btn-primary mx-auto" onClick={toggleSettingsDialog}>Затвори
+                                </button>
                             </div>
                         </dialog>
                     </div>
@@ -402,12 +432,12 @@ const CreateTest = () => {
                         {(provided) => (
                             <div ref={provided.innerRef} {...provided.droppableProps} className="section-container">
                                 <div className="section-header">
-                                    <h2 onClick={() => toggleCollapse(section.id)}>
+                                    <h3 onClick={() => toggleCollapse(section.id)}>
                                         Секция {sIndex + 1} <span
                                         className={`toggle-icon ${collapsedSections[section.id] ? 'collapsed' : ''}`}>&#9660;</span>
-                                    </h2>
+                                    </h3>
                                     <div className="section-counts">
-                                        <span>Колко въпроси да се използват:</span>
+                                        <span>Използвани въпроси в секция:</span>
                                         <input
                                             type="number"
                                             min="0"
@@ -418,6 +448,13 @@ const CreateTest = () => {
                                         />
                                         <span> от {section.totalQuestionsCount}</span>
                                     </div>
+                                    <button
+                                        onClick={() => removeSection(section.id)}
+                                        className="btn remove-section-btn"
+                                        aria-label="Remove section"
+                                    >
+                                        <i className="fas fa-times"></i>
+                                    </button>
                                 </div>
                                 {!collapsedSections[section.id] && (
                                     <div>
@@ -437,7 +474,7 @@ const CreateTest = () => {
                                                         }}
                                                     >
                                                         <div className="question-header">
-                                                            <h3>Въпрос {qIndex + 1}</h3>
+                                                            <h4>Въпрос {qIndex + 1}</h4>
                                                             <div className="points-input">
                                                                 <label>Точки:</label>
                                                                 <input

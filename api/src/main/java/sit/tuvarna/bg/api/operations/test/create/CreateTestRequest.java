@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import sit.tuvarna.bg.api.base.ProcessorRequest;
+import sit.tuvarna.bg.api.enums.TestStatus;
 import sit.tuvarna.bg.api.model.SectionModel;
 
 import java.util.List;
@@ -32,5 +33,7 @@ public class CreateTestRequest implements ProcessorRequest {
     @Valid
     private List<SectionModel> sections;
 
-    private Integer secondsToSolve;
+    private Integer minutesToSolve;
+
+    private TestStatus status;
 }
