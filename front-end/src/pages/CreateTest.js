@@ -94,7 +94,7 @@ const CreateTest = () => {
         const updatedSections = test.sections.map(section => {
             if (section.id === sectionId) {
                 const validatedCount = Math.min(newCount, section.totalQuestionsCount);
-    
+
                 return {
                     ...section,
                     usedQuestionsCount: validatedCount >= 0 ? validatedCount : 0
@@ -133,7 +133,8 @@ const CreateTest = () => {
                     question: '',
                     questionType: 'SINGLE_ANSWER',
                     answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
-                    image: null
+                    image: null,
+                    maximumPoints: 2
                 };
                 return {
                     ...section,
@@ -225,6 +226,8 @@ const CreateTest = () => {
                                 if (value === 'OPEN') {
                                     newQuestion.answers = [{content: '', isCorrect: true}];
                                 }
+                            } else if (type === 'maximumPoints') {
+                                newQuestion.maximumPoints = value;
                             }
                             return newQuestion;
                         }
@@ -234,8 +237,9 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({sections: updatedSections});
+        setTest({...test, sections: updatedSections});
     };
+
 
     const addAnswer = (sectionId, questionId) => {
         const newAnswer = {
@@ -283,7 +287,7 @@ const CreateTest = () => {
 
     const onDragEnd = (result) => {
         const {source, destination} = result;
-    
+
         if (!destination) {
             return;
         }
@@ -337,6 +341,9 @@ const CreateTest = () => {
             setTest(prevTest => ({...prevTest, sections: newSections}));
         }
     };
+
+    console.log(test);
+
 
     return (
         <DragDropContext onDragEnd={onDragEnd}>
@@ -429,7 +436,19 @@ const CreateTest = () => {
                                                             cursor: snapshot.isDragging ? 'grabbing' : 'grab'
                                                         }}
                                                     >
-                                                        <h3>Въпрос {qIndex + 1}</h3>
+                                                        <div className="question-header">
+                                                            <h3>Въпрос {qIndex + 1}</h3>
+                                                            <div className="points-input">
+                                                                <label>Точки:</label>
+                                                                <input
+                                                                    type="number"
+                                                                    min="0"
+                                                                    value={question.maximumPoints || ''}
+                                                                    onChange={(e) => handleChange(section.id, question.id, null, 'maximumPoints', parseInt(e.target.value))}
+                                                                    className="form-control points-control"
+                                                                />
+                                                            </div>
+                                                        </div>
                                                         <input
                                                             type="file"
                                                             id={`file-input-${section.id}-${question.id}`}
