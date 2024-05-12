@@ -48,6 +48,8 @@ public class Test {
     @OneToMany(mappedBy = "test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Section> sections = new ArrayList<>();
 
+    private String scoringFormula = "formula1";
+
     @ManyToOne
     Subject subject;
 }

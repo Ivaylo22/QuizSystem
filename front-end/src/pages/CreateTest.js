@@ -16,6 +16,7 @@ const CreateTest = () => {
         hasMixedQuestions: false,
         minutesToSolve: 40,
         status: 'PRIVATE',
+        scoringFormula: 'formula1',
         sections: []
     });
     const [subjects, setSubjects] = useState([]);
@@ -413,6 +414,17 @@ const CreateTest = () => {
                                     <option value="PUBLIC">Публичен</option>
                                 </select>
                             </div>
+                            <label htmlFor="scoringFormula">Формула за оценяване:</label>
+                            <select
+                                id="scoringFormula"
+                                value={test.scoringFormula}
+                                onChange={(e) => setTest({...test, scoringFormula: e.target.value})}
+                                className="form-control"
+                            >
+                                <option value="formula1">2 + (получени точки / всички точки) * 4</option>
+                                <option value="formula2">(получени точки / всички точки) * 6</option>
+                                <option value="formula3">1 + (получени точки / всички точки) * 5</option>
+                            </select>
                             <div className="form-group form-check">
                                 <label className="form-check-label" htmlFor="mixedQuestions">Разбъркване на
                                     въпросите</label>

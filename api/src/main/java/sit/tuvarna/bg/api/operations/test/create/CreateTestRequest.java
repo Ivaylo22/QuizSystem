@@ -36,4 +36,6 @@ public class CreateTestRequest implements ProcessorRequest {
     private Integer minutesToSolve;
 
     private TestStatus status;
+
+    private String scoringFormula;
 }

@@ -43,6 +43,7 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                 .creatorEmail(request.getCreatorEmail())
                 .mixedQuestions(request.getHasMixedQuestions())
                 .minutesToSolve(request.getMinutesToSolve())
+                .scoringFormula(request.getScoringFormula())
                 .build();
 
         List<Section> sections = new ArrayList<>();
