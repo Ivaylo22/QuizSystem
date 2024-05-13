@@ -26,3 +26,66 @@
     align-items: center;
     gap: 5px;
 }
+
+.form-check-label {
+    display: block;
+    margin-bottom: 12px;
+    cursor: pointer;
+    padding-left: 35px;
+    position: relative;
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 20px; /* Adjust line height to align text nicely */
+}
+
+.form-check-input {
+    margin-top: 0.3em;
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+/* Enhancing the focus state to make it clearer */
+.form-check-input:focus + .form-check-label::before {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    background-color: #f8f9fa; /* Slight background color for focus */
+}
+
+.form-check-input[type="checkbox"] + .form-check-label::before,
+.form-check-input[type="radio"] + .form-check-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #f8f9fa;
+    border: 2px solid #d1d3e2;
+}
+
+.form-check-input[type="radio"] + .form-check-label::before {
+    border-radius: 50%;
+}
+
+.form-check-input[type="checkbox"]:checked + .form-check-label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 8px;
+    height: 14px;
+    border: solid #4e73df;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.form-check-input[type="radio"]:checked + .form-check-label::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #4e73df;
+    border-radius: 50%;
+}

@@ -206,3 +206,8 @@ button:focus {
 .remove-answer-btn::before {
     content: '✖';
 }
+
+.remove-img {
+    width: 160px;
+    margin-bottom: 10px;
+}

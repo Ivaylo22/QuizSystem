@@ -49,13 +49,26 @@ const CreateQuiz = ({ email, token }) => {
             question: '',
             questionType: 'SINGLE_ANSWER',
             answers: [{ content: '', isCorrect: false }],
-            image: null
+            image: null,
+            imageFile: null
         })),
     });
 
     const handleFileChange = (questionIndex, event) => {
-        const newQuestions = [...quiz.questions];
-        newQuestions[questionIndex].image = event.target.files[0];
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const newQuestions = quiz.questions.map((question, index) => {
+            if (index === questionIndex) {
+                return {
+                    ...question,
+                    image: URL.createObjectURL(file),
+                    imageFile: file
+                };
+            }
+            return question;
+        });
+
         setQuiz({ ...quiz, questions: newQuestions });
     };
 
@@ -76,7 +89,6 @@ const CreateQuiz = ({ email, token }) => {
         }
 
         const imageUrl = await response.text();
-
         return imageUrl;
     };
 
@@ -147,17 +159,20 @@ const CreateQuiz = ({ email, token }) => {
         setQuiz({ ...quiz, questions: updatedQuestions });
     };
 
-    const handleRemoveFile = (qIndex) => {
-        setQuiz((prevQuiz) => {
-            const updatedQuestions = [...prevQuiz.questions];
-            updatedQuestions[qIndex] = {
-                ...updatedQuestions[qIndex],
-                image: null
-            };
-            return { ...prevQuiz, questions: updatedQuestions };
+    const handleRemoveImage = (questionIndex) => {
+        const newQuestions = quiz.questions.map((question, index) => {
+            if (index === questionIndex) {
+                URL.revokeObjectURL(question.image);
+                return {
+                    ...question,
+                    image: null,
+                    imageFile: null
+                };
+            }
+            return question;
         });
 
-        document.getElementById(`questionImage${qIndex}`).value = '';
+        setQuiz({...quiz, questions: newQuestions});
     };
 
     const addQuestion = () => {
@@ -231,6 +246,7 @@ const CreateQuiz = ({ email, token }) => {
         if (!validateQuiz()) {
             return;
         }
+        console.log("ASD");
 
         try {
             const questionsWithoutImages = quiz.questions.map(({ image, ...rest }) => rest);
@@ -248,7 +264,7 @@ const CreateQuiz = ({ email, token }) => {
 
             const uploadPromises = quiz.questions.map((question, index) => {
                 if (question.image) {
-                    return uploadFile(question.image, questionIds[index]);
+                    return uploadFile(question.imageFile, questionIds[index]);
                 }
                 return Promise.resolve();
             });
@@ -286,20 +302,23 @@ const CreateQuiz = ({ email, token }) => {
                             <label htmlFor={`questionImage${qIndex}`} className="form-label">Снимка към въпроса:</label>
                             <input
                                 type="file"
-                                id={`questionImage${qIndex}`}
-                                name="questionImage"
                                 className="form-control-file"
                                 onChange={(e) => handleFileChange(qIndex, e)}
                                 accept="image/*"
                             />
                             {quiz.questions[qIndex].image && (
-                                <button
-                                    type="button"
-                                    className="remove-answer-btn mt-2 ml-5"
-                                    onClick={() => handleRemoveFile(qIndex)}
-                                >
-                                    Премахване на снимка
-                                </button>
+                                <div className="image-container">
+                                    <img src={quiz.questions[qIndex].image} alt="Preview" style={{
+                                        maxWidth: '200px',
+                                        height: 'auto',
+                                        display: 'block',
+                                        margin: '0 auto'
+                                    }}/>
+                                    <button type="button"
+                                            className="btn btn-danger mt-2 remove-img"
+                                            onClick={() => handleRemoveImage(qIndex)}>Премахни снимка
+                                    </button>
+                                </div>
                             )}
                         </div>
                         <select className="question-type-select" value={question.questionType} onChange={(e) => handleChange(e, qIndex, 'questionType')}>
