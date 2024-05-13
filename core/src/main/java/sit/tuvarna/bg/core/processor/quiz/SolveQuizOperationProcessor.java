@@ -152,14 +152,20 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         List<UsersQuizzes> allUsersQuizzes = usersQuizzesRepository
                 .getUsersQuizzesByUserAndQuiz(userQuiz.getUser(), userQuiz.getQuiz());
 
-        int highestExperience = allUsersQuizzes.stream()
-                .filter(uq -> !uq.getId().equals(userQuiz.getId())) // Exclude the current attempt
+        int highestPreviousExperience = allUsersQuizzes.stream()
+                .filter(uq -> !uq.getId().equals(userQuiz.getId()))
                 .mapToInt(UsersQuizzes::getExperienceGained)
                 .max()
                 .orElse(0);
 
-        int experienceToAdd = userQuiz.getExperienceGained() - highestExperience;
-        user.setExperience(user.getExperience() + experienceToAdd);
+        int experienceToAdd = 0;
+        if (userQuiz.getExperienceGained() > highestPreviousExperience) {
+            experienceToAdd = userQuiz.getExperienceGained() - highestPreviousExperience;
+        }
+
+        if (experienceToAdd > 0) {
+            user.setExperience(user.getExperience() + experienceToAdd);
+        }
 
         XPProgress xpProgress = new XPProgress(user.getExperience());
 
