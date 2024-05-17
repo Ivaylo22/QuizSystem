@@ -152,7 +152,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                 <img src={quizLogo} alt="Logo"/>
             </div>
             <ul className="navbar-links">
-                <li><NavLink to="/quizzes" className="btn">Решавай куизове</NavLink></li>
+                <li><NavLink to="/solve" className="btn">Решавай</NavLink></li>
                 <li><NavLink to="/create" className="btn">Създай</NavLink></li>
                 {isAdmin && <li><NavLink to="/requested" className="btn">Заявени куизове</NavLink></li>}
             </ul>

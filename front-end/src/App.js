@@ -18,6 +18,7 @@ import AllQuizzes from './pages/AllQuizzes';
 import SolveQuiz from './pages/SolveQuiz';
 import CreateChoice from './pages/CreateChoice';
 import CreateTest from './pages/CreateTest';
+import SolveChoice from './pages/SolveChoice';
 import QuizResults from './pages/QuizResults';
 import { useLoading } from './context/LoadingContext';
 import Loader from './components/Loader';
@@ -129,6 +130,8 @@ function App() {
                         <Route path="/create" element={<CreateChoice/>}/>
                         <Route path="/create-quiz" element={<CreateQuiz email={email} token={token} />} />
                         <Route path="/create-test" element={<CreateTest email={email} token={token}/>}/>
+
+                        <Route path="/solve" element={<SolveChoice/>}/>
                         <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
                         <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
                         <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
