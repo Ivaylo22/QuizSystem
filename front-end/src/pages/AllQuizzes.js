@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import QuizCard from '../components/QuizCard';
 import '../styles/allQuizzes.css';
 import {useLoading} from '../context/LoadingContext';
 
@@ -69,14 +68,6 @@ const AllQuizzes = ({ email, token }) => {
                     valA = new Date(a.createdAt);
                     valB = new Date(b.createdAt);
                     break;
-                case 'averageCorrectAnswers':
-                    valA = a.averageCorrectAnswers;
-                    valB = b.averageCorrectAnswers;
-                    break;
-                case 'averageSecondsNeeded':
-                    valA = a.averageSecondsNeeded;
-                    valB = b.averageSecondsNeeded;
-                    break;
                 case 'personalBestXpGained':
                     valA = a.personalBestXpGained;
                     valB = b.personalBestXpGained;
@@ -102,9 +93,9 @@ const AllQuizzes = ({ email, token }) => {
 
     return (
         <div className="container all-quizzes-container align-items-center">
-            <div className="container mt-4 mx-auto">
+            <div className="filters-container mt-4 mx-auto">
                 <div className="row mb-3">
-                    <div className="col-md-4">
+                    <div className="col-md-6">
                         <select className="form-control" value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}>
                             {categories.map(category => (
@@ -112,16 +103,12 @@ const AllQuizzes = ({ email, token }) => {
                             ))}
                         </select>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6 d-flex align-items-start pt-1">
                         <select className="form-control" value={filterBy} onChange={(e) => setFilterBy(e.target.value)}>
-                            <option value="personalBestXpGained">Мой опит</option>
                             <option value="createdAt">Дата на създаване</option>
-                            <option value="averageCorrectAnswers">Среден резултат</option>
-                            <option value="averageSecondsNeeded">Средено време</option>
+                            <option value="personalBestXpGained">Мой опит</option>
                             <option value="questionsCount">Брой въпроси</option>
                         </select>
-                    </div>
-                    <div className="col-md-4 d-flex align-items-start pt-1">
                         <button className={`btn ${order === 'asc' ? 'btn-asc' : 'btn-desc'}`}
                                 onClick={() => setOrder(order === 'asc' ? 'desc' : 'asc')}>
                             {order === 'asc' ? 'Възходящ' : 'Низходящ'}
@@ -129,32 +116,40 @@ const AllQuizzes = ({ email, token }) => {
                     </div>
                 </div>
             </div>
-            <div className="row quiz-header pt-2">
-                <div className="col-4 header">Име</div>
-                <div className="col-2 header">Категория</div>
-                <div className="col-1 header">Въпроси</div>
-                <div className="col-1 header">Средно време</div>
-                <div className="col-1 header">Среден резултат</div>
-                <div className="col-1 header">Мой опит</div>
-                <div className="col-2 header">Статус</div>
+            <div className="quiz-list-header">
+                <div className="header-item">Име</div>
+                <div className="header-item">Категория</div>
+                <div className="header-item">Въпроси</div>
+                <div className="header-item">Мой опит</div>
             </div>
-            {sortQuizzes().map(quiz => (
-                <div className="all-quiz-card" key={quiz.quizId}>
-                    <QuizCard quiz={quiz} onClick={() => setSelectedQuiz(quiz)}/>
-                </div>
-            ))}
+            {sortQuizzes().map(quiz => {
+                const statusClass = quiz.haveBeenPassed ? 'status-passed' :
+                    quiz.haveBeenCompleted ? 'status-completed' : 'status-not-taken';
+
+                return (
+                    <div
+                        className={`quiz-card ${statusClass}`}
+                        key={quiz.quizId}
+                        onClick={() => setSelectedQuiz(quiz)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && setSelectedQuiz(quiz)}
+                    >
+                        <div className="quiz-card-content">
+                            <div className="quiz-detail">{quiz.name}</div>
+                            <div className="quiz-detail">{quiz.category}</div>
+                            <div className="quiz-detail">{quiz.questionsCount}</div>
+                            <div className="quiz-detail">{quiz.personalBestXpGained ?? 0}/100</div>
+                        </div>
+                    </div>
+                );
+            })}
             {selectedQuiz && (
                 <div className="dialog-overlay" onClick={handleCloseModal}>
                     <dialog open className="quiz-dialog" onClick={e => e.stopPropagation()}>
                         <h3 className='text-center'>{selectedQuiz.name}</h3>
                         <p className='mt-2'>Категория: {selectedQuiz.category}</p>
                         <p>Въпроси: {selectedQuiz.questionsCount}</p>
-                        <p className='mt-2'>Средно време: {selectedQuiz.averageSecondsNeeded ? `${Math.floor(selectedQuiz.averageSecondsNeeded / 60)}:${String(selectedQuiz.averageSecondsNeeded % 60).padStart(2, '0')} мин.` : 0}</p>
-                        <p>Среден резултат: {selectedQuiz.averageCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
-                        <p className='mt-2'>Мой най-добър
-                            резултат: {selectedQuiz.personalBestCorrectAnswers ?? 0}/{selectedQuiz.questionsCount}</p>
-                        <p>Мое най-бързо
-                            време: {selectedQuiz.personalBestTime ? `${Math.floor(selectedQuiz.personalBestTime / 60)}:${String(selectedQuiz.personalBestTime % 60).padStart(2, '0')} мин.` : 0}</p>
                         <p>Мой опит: {selectedQuiz.personalBestXpGained ?? 0}/100</p>
 
                         <p className='mt-2 text-center'>При натискане на бутона "Започни" ще започне да тече вашето време</p>

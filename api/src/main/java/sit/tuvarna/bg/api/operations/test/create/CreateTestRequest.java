@@ -19,7 +19,6 @@ public class CreateTestRequest implements ProcessorRequest {
     @NotBlank(message = "Title is required.")
     private String title;
 
-    @NotBlank(message = "Grade is required.")
     private Integer grade;
 
     @NotBlank(message = "Subject is required.")

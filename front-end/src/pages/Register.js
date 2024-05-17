@@ -72,6 +72,7 @@ const Register = () => {
                 navigate('/login');
             } else {
                 const errorText = await registrationResponse.text();
+                toast.error('Потребител с този имейл вече съществува');
                 console.log(`Registration error: ${errorText}`);
             }
         } catch (error) {

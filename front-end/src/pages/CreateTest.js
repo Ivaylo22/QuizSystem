@@ -15,7 +15,7 @@ const CreateTest = () => {
         subject: "Английски език",
         hasMixedQuestions: false,
         minutesToSolve: 40,
-        status: 'PRIVATE',
+        status: 'PUBLIC',
         scoringFormula: 'formula1',
         sections: [],
         creatorEmail: email
@@ -54,12 +54,13 @@ const CreateTest = () => {
                 },
             });
             const data = await response.json();
-            setSubjects(data.subjects);
+
+            const uniqueSubjects = Array.from(new Set(data.subjects));
+            setSubjects(uniqueSubjects);
         } catch (error) {
             console.error('Failed to fetch subjects:', error);
         }
         setLoading(false);
-
     }, [token, setLoading]);
 
     useEffect(() => {
@@ -122,7 +123,7 @@ const CreateTest = () => {
                 id: uuidv4(),
                 question: '',
                 questionType: 'SINGLE_ANSWER',
-                answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
+                answers: [{id: uuidv4(), content: '', isCorrect: true}, {id: uuidv4(), content: '', isCorrect: false}],
                 maximumPoints: 2,
                 image: null
             }],
@@ -148,7 +149,7 @@ const CreateTest = () => {
             id: uuidv4(),
             question: '',
             questionType: 'SINGLE_ANSWER',
-            answers: [{content: '', isCorrect: true}, {content: '', isCorrect: false}],
+            answers: [{id: uuidv4(), content: '', isCorrect: true}, {id: uuidv4(), content: '', isCorrect: false}],
             image: null,
             maximumPoints: 2
         };
@@ -243,7 +244,7 @@ const CreateTest = () => {
                             } else if (type === 'questionType') {
                                 newQuestion.questionType = value;
                                 if (value === 'OPEN') {
-                                    newQuestion.answers = [{content: '', isCorrect: true}];
+                                    newQuestion.answers = [{id: uuidv4(), content: '', isCorrect: true}];
                                 }
                             } else if (type === 'maximumPoints') {
                                 newQuestion.maximumPoints = value;
@@ -261,6 +262,7 @@ const CreateTest = () => {
 
     const addAnswer = (sectionId, questionId) => {
         const newAnswer = {
+            id: uuidv4(),
             content: '',
             isCorrect: false
         };
@@ -500,9 +502,6 @@ const CreateTest = () => {
         return imageUrl;
     };
 
-    console.log(test);
-
-
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div ref={containerRef} className="create-test-container">
@@ -537,8 +536,8 @@ const CreateTest = () => {
                                 <select id="subject" name="subject" value={test.subject}
                                         onChange={(e) => setTest({...test, subject: e.target.value})}
                                         className="form-control">
-                                    {subjects.map(subject => (
-                                        <option key={subject} value={subject}>{subject}</option>
+                                    {subjects.map((subject, index) => (
+                                        <option key={`${subject}-${index}`} value={subject}>{subject}</option>
                                     ))}
                                 </select>
                             </div>
@@ -727,7 +726,7 @@ const CreateTest = () => {
                                         <button onClick={() => addQuestion(section.id)}
                                                 className="btn btn-success add-question-btn">Добави въпрос
                                         </button>
-                                        {React.cloneElement(provided.placeholder, {key: 'placeholder'})}
+                                        {provided.placeholder}
                                     </div>
                                 )}
                             </div>

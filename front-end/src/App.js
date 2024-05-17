@@ -22,6 +22,7 @@ import SolveChoice from './pages/SolveChoice';
 import QuizResults from './pages/QuizResults';
 import { useLoading } from './context/LoadingContext';
 import Loader from './components/Loader';
+import AllTests from './pages/AllTests.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -133,6 +134,8 @@ function App() {
 
                         <Route path="/solve" element={<SolveChoice/>}/>
                         <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
+                        <Route path="/tests" element={<AllTests/>}/>
+
                         <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
                         <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
 
