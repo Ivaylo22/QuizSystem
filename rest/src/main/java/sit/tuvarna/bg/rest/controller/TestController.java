@@ -1,6 +1,7 @@
 package sit.tuvarna.bg.rest.controller;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,8 +29,8 @@ public class TestController {
     private final GetPublicTestsOperation getPublicTests;
     private final GetTestByIdOperation getTest;
 
-    @GetMapping("/{testId}")
-    public ResponseEntity<GetTestByIdResponse> getTestById(@PathVariable String testId) {
+    @GetMapping("/get-by-id")
+    public ResponseEntity<GetTestByIdResponse> getTestById(@RequestParam @NotBlank(message = "TestId is required") String testId) {
         GetTestByIdRequest request = GetTestByIdRequest.builder()
                 .testId(testId)
                 .build();

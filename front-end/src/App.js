@@ -20,6 +20,7 @@ import CreateChoice from './pages/CreateChoice';
 import CreateTest from './pages/CreateTest';
 import SolveChoice from './pages/SolveChoice';
 import QuizResults from './pages/QuizResults';
+import SolveTest from './pages/SolveTest.js';
 import { useLoading } from './context/LoadingContext';
 import Loader from './components/Loader';
 import AllTests from './pages/AllTests.js';
@@ -136,6 +137,7 @@ function App() {
                         <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
                         <Route path="/tests" element={<AllTests/>}/>
 
+                        <Route path="/solve-test/:testId" element={<SolveTest/>}/>
                         <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
                         <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
 

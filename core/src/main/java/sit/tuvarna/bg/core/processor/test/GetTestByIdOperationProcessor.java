@@ -14,6 +14,7 @@ import sit.tuvarna.bg.persistence.entity.Answer;
 import sit.tuvarna.bg.persistence.entity.Question;
 import sit.tuvarna.bg.persistence.entity.Section;
 import sit.tuvarna.bg.persistence.entity.Test;
+import sit.tuvarna.bg.persistence.repository.SectionRepository;
 import sit.tuvarna.bg.persistence.repository.TestRepository;
 
 import java.util.UUID;
@@ -23,11 +24,15 @@ import java.util.UUID;
 public class GetTestByIdOperationProcessor implements GetTestByIdOperation {
 
     private final TestRepository testRepository;
-
+    private final SectionRepository sectionRepository;
     @Override
     public GetTestByIdResponse process(GetTestByIdRequest request) {
-        Test test = testRepository.findById(UUID.fromString(request.getTestId()))
+        Test test = testRepository.findByIdBasic(UUID.fromString(request.getTestId()))
                 .orElseThrow(TestNotFoundException::new);
+
+//        List<Section> sections = sectionRepository.findSectionsWithDetails(UUID.fromString(request.getTestId()));
+//        test.setSections(sections);
+
         return toResponse(test);
     }
 

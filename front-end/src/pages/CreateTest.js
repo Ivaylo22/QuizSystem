@@ -12,7 +12,7 @@ const CreateTest = () => {
     const [test, setTest] = useState({
         title: '',
         grade: 1,
-        subject: "Английски език",
+        subject: 'Английски език',
         hasMixedQuestions: false,
         minutesToSolve: 40,
         status: 'PUBLIC',
@@ -65,7 +65,7 @@ const CreateTest = () => {
 
     useEffect(() => {
         if (!token && !hasNavigated.current) {
-            toast.error(`Създаването на куизове е само за вписани потребители`);
+            toast.error(`Създаването на тестове е само за вписани потребители`);
             navigate('/login');
             hasNavigated.current = true;
         }
@@ -114,7 +114,6 @@ const CreateTest = () => {
         });
         setTest({sections: updatedSections});
     };
-
 
     const addSection = () => {
         const newSection = {
@@ -192,7 +191,7 @@ const CreateTest = () => {
                     ...section,
                     questions: section.questions.map(question => {
                         if (question.id === questionId) {
-                            return {...question, image: URL.createObjectURL(file)};
+                            return {...question, image: file};
                         }
                         return question;
                     })
@@ -463,10 +462,18 @@ const CreateTest = () => {
 
             const data = await response.json();
 
+            if (!data.questionIdMap) {
+                throw new Error('No questionIdMap returned in the response');
+            }
+    
             const uploadPromises = test.sections.flatMap(section =>
                 section.questions.map(async (question) => {
                     if (question.image) {
-                        return uploadFile(question.image, data.questionIds[question.id]);
+                        const newQuestionId = data.questionIdMap[question.id];
+                        if (!newQuestionId) {
+                            throw new Error(`No questionId found for question with id ${question.id}`);
+                        }
+                        await uploadFile(question.image, newQuestionId);
                     }
                 })
             );
@@ -480,6 +487,7 @@ const CreateTest = () => {
             toast.error('Проблем при създаването на теста.');
         }
     };
+
 
     const uploadFile = async (file, questionId) => {
         const formData = new FormData();
@@ -542,7 +550,7 @@ const CreateTest = () => {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="secondsToSolve">Минути за решаване:</label>
+                                <label htmlFor="minutesToSolve">Минути за решаване:</label>
                                 <input type="number" id="minutesToSolve" min="0" value={test.minutesToSolve}
                                        onChange={(e) => setTest({
                                            ...test,
@@ -559,28 +567,22 @@ const CreateTest = () => {
                                     <option value="PUBLIC">Публичен</option>
                                 </select>
                             </div>
-                            <label htmlFor="scoringFormula">Формула за оценяване:</label>
-                            <select
-                                id="scoringFormula"
-                                value={test.scoringFormula}
-                                onChange={(e) => setTest({...test, scoringFormula: e.target.value})}
-                                className="form-control"
-                            >
-                                <option value="formula1">2 + (получени точки / всички точки) * 4</option>
-                                <option value="formula2">(получени точки / всички точки) * 6</option>
-                                <option value="formula3">1 + (получени точки / всички точки) * 5</option>
-                            </select>
+                            <div className="form-group">
+                                <label htmlFor="scoringFormula">Формула за оценяване:</label>
+                                <select id="scoringFormula" value={test.scoringFormula}
+                                        onChange={(e) => setTest({...test, scoringFormula: e.target.value})}
+                                        className="form-control">
+                                    <option value="formula1">2 + (получени точки / всички точки) * 4</option>
+                                    <option value="formula2">(получени точки / всички точки) * 6</option>
+                                    <option value="formula3">1 + (получени точки / всички точки) * 5</option>
+                                </select>
+                            </div>
                             <div className="form-group form-check">
-                                <input
-                                    type="checkbox"
-                                    id="mixedQuestions"
-                                    checked={test.hasMixedQuestions}
-                                    onChange={(e) => setTest({...test, hasMixedQuestions: e.target.checked})}
-                                    className="form-check-input"
-                                />
-                                <label className="form-check-label" htmlFor="mixedQuestions">
-                                    Разбъркване на въпросите
-                                </label>
+                                <input type="checkbox" id="mixedQuestions" checked={test.hasMixedQuestions}
+                                       onChange={(e) => setTest({...test, hasMixedQuestions: e.target.checked})}
+                                       className="form-check-input"/>
+                                <label className="form-check-label" htmlFor="mixedQuestions">Разбъркване на
+                                    въпросите</label>
                             </div>
                             <div className="dialog-buttons-container mx-auto">
                                 <button className="btn btn-primary mx-auto" onClick={toggleSettingsDialog}>Затвори
@@ -601,21 +603,15 @@ const CreateTest = () => {
                                     </h3>
                                     <div className="section-counts">
                                         <span>Използвани въпроси в секция:</span>
-                                        <input
-                                            type="number"
-                                            min="0"
-                                            max={section.totalQuestionsCount}
-                                            onChange={(e) => handleCountChange(section.id, parseInt(e.target.value))}
-                                            value={section.usedQuestionsCount || ""}
-                                            className="count-input"
-                                        />
+                                        <input type="number" min="0" max={section.totalQuestionsCount}
+                                               onChange={(e) => handleCountChange(section.id, parseInt(e.target.value))}
+                                               value={section.usedQuestionsCount || ""}
+                                               className="count-input"/>
                                         <span> от {section.totalQuestionsCount}</span>
                                     </div>
-                                    <button
-                                        onClick={() => removeSection(section.id)}
-                                        className="btn remove-section-btn"
-                                        aria-label="Remove section"
-                                    >
+                                    <button onClick={() => removeSection(section.id)}
+                                            className="btn remove-section-btn"
+                                            aria-label="Remove section">
                                         <i className="fas fa-times"></i>
                                     </button>
                                 </div>
@@ -625,104 +621,79 @@ const CreateTest = () => {
                                             <Draggable key={question.id} draggableId={question.id} index={qIndex}>
                                                 {(provided, snapshot) => (
                                                     <div
-                                                        ref={provided.innerRef}
-                                                        {...provided.draggableProps}
-                                                        {...provided.dragHandleProps}
+                                                        ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}
                                                         className={`question-container ${problematicIssues.questions.get(sIndex)?.includes(qIndex) ? 'border-danger' : ''}`}
                                                         style={{
                                                             ...provided.draggableProps.style,
                                                             backgroundColor: snapshot.isDragging ? '#f4f4f4' : 'white',
                                                             boxShadow: snapshot.isDragging ? '0 0 10px rgba(0,0,0,0.2)' : 'none',
                                                             cursor: snapshot.isDragging ? 'grabbing' : 'grab'
-                                                        }}
-                                                    >
+                                                        }}>
                                                         <div className="question-header">
                                                             <h4>Въпрос {qIndex + 1}</h4>
                                                             <div className="points-input">
                                                                 <label>Точки:</label>
-                                                                <input
-                                                                    type="number"
-                                                                    min="0"
-                                                                    value={question.maximumPoints || ''}
-                                                                    onChange={(e) => handleChange(section.id, question.id, null, 'maximumPoints', parseInt(e.target.value))}
-                                                                    className="form-control points-control"
-                                                                />
+                                                                <input type="number" min="0"
+                                                                       value={question.maximumPoints || ''}
+                                                                       onChange={(e) => handleChange(section.id, question.id, null, 'maximumPoints', parseInt(e.target.value))}
+                                                                       className="form-control points-control"/>
                                                             </div>
                                                         </div>
-                                                        <input
-                                                            type="file"
-                                                            id={`file-input-${section.id}-${question.id}`}
-                                                            name="questionImage"
-                                                            className="form-control-file"
-                                                            onChange={(e) => handleFileChange(section.id, question.id, e)}
-                                                            accept="image/*"
-                                                        />
+                                                        <input type="file"
+                                                               id={`file-input-${section.id}-${question.id}`}
+                                                               name="questionImage"
+                                                               className="form-control-file"
+                                                               onChange={(e) => handleFileChange(section.id, question.id, e)}
+                                                               accept="image/*"/>
                                                         {question.image && (
                                                             <div className="image-container"
                                                                  style={{textAlign: 'center'}}>
-                                                                <img
-                                                                    src={question.image}
-                                                                    alt="Question"
-                                                                    style={{
-                                                                        maxWidth: '200px',
-                                                                        height: 'auto',
-                                                                        display: 'block',
-                                                                        margin: '0 auto'
-                                                                    }}
-                                                                />
-                                                                <button
-                                                                    type="button"
-                                                                    className="btn btn-danger mt-2 remove-img"
-                                                                    onClick={() => removeImage(section.id, question.id)}
-                                                                >
-                                                                    Премахни снимка
+                                                                <img src={URL.createObjectURL(question.image)}
+                                                                     alt="Question"
+                                                                     style={{
+                                                                         maxWidth: '200px',
+                                                                         height: 'auto',
+                                                                         display: 'block',
+                                                                         margin: '0 auto'
+                                                                     }}/>
+                                                                <button type="button"
+                                                                        className="btn btn-danger mt-2 remove-img"
+                                                                        onClick={() => removeImage(section.id, question.id)}>Премахни
+                                                                    снимка
                                                                 </button>
                                                             </div>
                                                         )}
-                                                        <select className="form-control"
-                                                                value={question.questionType}
-                                                                onChange={(e) => handleChange(section.id, question.id, null, 'questionType', e.target.value)}
-                                                        >
+                                                        <select className="form-control" value={question.questionType}
+                                                                onChange={(e) => handleChange(section.id, question.id, null, 'questionType', e.target.value)}>
                                                             <option value="SINGLE_ANSWER">Един верен отговор</option>
-                                                            <option value="MULTIPLE_ANSWER">Няколко верни отговори
+                                                            <option value="MULTIPLE_ANSWER">Няколко верни отговора
                                                             </option>
                                                             <option value="OPEN">Отворен отговор</option>
                                                         </select>
                                                         <textarea className="form-control"
                                                                   value={question.question || ''}
                                                                   onChange={(e) => handleChange(section.id, question.id, null, 'question', e.target.value)}
-                                                                  placeholder="Въведи въпрос"
-                                                        />
+                                                                  placeholder="Въведи въпрос"/>
                                                         {question.answers.map((answer, aIndex) => (
                                                             <div key={answer.id} className="answer-container">
-                                                                <button
-                                                                    type="button"
-                                                                    className={`mark-correct-btn ${answer.isCorrect ? 'correct' : ''}`}
-                                                                    onClick={() => handleChange(section.id, question.id, aIndex, 'toggleCorrect')}
-                                                                ></button>
-                                                                <input
-                                                                    type="text"
-                                                                    className="answer-input"
-                                                                    placeholder="Въведи отговор"
-                                                                    value={answer.content || ''}
-                                                                    onChange={(e) => handleChange(section.id, question.id, aIndex, 'answer', e.target.value)}
-                                                                />
-                                                                <button
-                                                                    type="button"
-                                                                    className="remove-answer-btn"
-                                                                    onClick={() => removeAnswer(section.id, question.id, aIndex)}
-                                                                ></button>
+                                                                <button type="button"
+                                                                        className={`mark-correct-btn ${answer.isCorrect ? 'correct' : ''}`}
+                                                                        onClick={() => handleChange(section.id, question.id, aIndex, 'toggleCorrect')}></button>
+                                                                <input type="text" className="answer-input"
+                                                                       placeholder="Въведи отговор"
+                                                                       value={answer.content || ''}
+                                                                       onChange={(e) => handleChange(section.id, question.id, aIndex, 'answer', e.target.value)}/>
+                                                                <button type="button" className="remove-answer-btn"
+                                                                        onClick={() => removeAnswer(section.id, question.id, aIndex)}></button>
                                                             </div>
                                                         ))}
                                                         <button onClick={() => addAnswer(section.id, question.id)}
                                                                 className="btn btn-info add-answer-btn">Добави отговор
                                                         </button>
-                                                        <button
-                                                            type="button"
-                                                            className="btn btn-danger remove-question-btn"
-                                                            onClick={() => removeQuestion(section.id, question.id)}
-                                                        >
-                                                            Премахни въпрос
+                                                        <button type="button"
+                                                                className="btn btn-danger remove-question-btn"
+                                                                onClick={() => removeQuestion(section.id, question.id)}>Премахни
+                                                            въпрос
                                                         </button>
                                                     </div>
                                                 )}
@@ -738,9 +709,7 @@ const CreateTest = () => {
                         )}
                     </Droppable>
                 ))}
-                <button onClick={handleSubmit} className="btn btn-success submit-test">
-                    Създай тест
-                </button>
+                <button onClick={handleSubmit} className="btn btn-success submit-test">Създай тест</button>
             </div>
         </DragDropContext>
     );
