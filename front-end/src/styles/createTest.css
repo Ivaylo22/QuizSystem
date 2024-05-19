@@ -43,7 +43,6 @@
     display: flex;
     justify-content: center;
     gap: 70%;
-
 }
 
 .sticky-button {
@@ -155,18 +154,34 @@
     padding: 6px 12px;
 }
 
-.settings-dialog .form-check-input {
-    width: 25px;
-    margin-right: 10px;
+.form-group.form-check {
+    display: flex;
+    align-items: center;
 }
 
 .form-check-input {
-    height: 25px;
+    display: none; /* Hide the default checkbox */
 }
 
 .form-check-label {
-    margin-top: 2%;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
 }
+
+.form-check-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
 
 .submit-test {
     margin: 0 auto;

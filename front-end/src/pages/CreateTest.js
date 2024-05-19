@@ -571,11 +571,16 @@ const CreateTest = () => {
                                 <option value="formula3">1 + (получени точки / всички точки) * 5</option>
                             </select>
                             <div className="form-group form-check">
-                                <label className="form-check-label" htmlFor="mixedQuestions">Разбъркване на
-                                    въпросите</label>
-                                <input type="checkbox" id="mixedQuestions" checked={test.hasMixedQuestions}
-                                       onChange={(e) => setTest({...test, hasMixedQuestions: e.target.checked})}
-                                       className="form-check-input mixed-questions-check"/>
+                                <input
+                                    type="checkbox"
+                                    id="mixedQuestions"
+                                    checked={test.hasMixedQuestions}
+                                    onChange={(e) => setTest({...test, hasMixedQuestions: e.target.checked})}
+                                    className="form-check-input"
+                                />
+                                <label className="form-check-label" htmlFor="mixedQuestions">
+                                    Разбъркване на въпросите
+                                </label>
                             </div>
                             <div className="dialog-buttons-container mx-auto">
                                 <button className="btn btn-primary mx-auto" onClick={toggleSettingsDialog}>Затвори
