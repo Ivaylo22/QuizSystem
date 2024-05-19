@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestOperation;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestRequest;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestResponse;
+import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdOperation;
+import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdRequest;
+import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdResponse;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsOperation;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsRequest;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsResponse;
@@ -23,6 +26,15 @@ public class TestController {
     private final CreateTestOperation createTest;
     private final GetSubjectsOperation getSubjects;
     private final GetPublicTestsOperation getPublicTests;
+    private final GetTestByIdOperation getTest;
+
+    @GetMapping("/{testId}")
+    public ResponseEntity<GetTestByIdResponse> getTestById(@PathVariable String testId) {
+        GetTestByIdRequest request = GetTestByIdRequest.builder()
+                .testId(testId)
+                .build();
+        return new ResponseEntity<>(getTest.process(request), HttpStatus.OK);
+    }
 
     @GetMapping("/subjects")
     public ResponseEntity<GetSubjectsResponse> getSubjects() {
