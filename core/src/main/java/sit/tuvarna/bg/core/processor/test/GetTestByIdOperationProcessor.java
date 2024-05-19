@@ -2,8 +2,6 @@ package sit.tuvarna.bg.core.processor.test;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import sit.tuvarna.bg.api.base.ProcessorRequest;
-import sit.tuvarna.bg.api.base.ProcessorResponse;
 import sit.tuvarna.bg.api.enums.QuestionType;
 import sit.tuvarna.bg.api.exception.TestNotFoundException;
 import sit.tuvarna.bg.api.model.AnswerModel;
