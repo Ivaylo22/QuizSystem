@@ -68,6 +68,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.notFound().build();
     }
 
+    @ExceptionHandler(value = TestNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<String> handleTestNotFoundException() {
+        return ResponseEntity.notFound().build();
+    }
+
     @ExceptionHandler(value = AchievementNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<String> handleAchievementNotFoundException() {
