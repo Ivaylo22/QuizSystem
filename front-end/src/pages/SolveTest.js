@@ -109,6 +109,52 @@ const SolveTest = () => {
         }
     }, [answers, testId]);
 
+    const handleSubmit = useCallback(async (e) => {
+        if (e) e.preventDefault();
+        setLoading(true);
+
+        const questionAttempts = Object.entries(answers).map(([questionId, answerArray]) => ({
+            question: {id: questionId},
+            answers: Array.isArray(answerArray) ? answerArray : [answerArray],
+            pointsAwarded: null
+        }));
+
+        const submission = {
+            email,
+            testId,
+            questionAttempts,
+            attemptTime: new Date().toISOString(),
+            totalPoints: null,
+            finalScore: null,
+        };
+
+        console.log(submission)
+
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/test/solve', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify(submission),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to submit test.');
+            }
+
+            toast.success('Тестът е предаден успешно.');
+            sessionStorage.removeItem(`test-${testId}`);
+            sessionStorage.removeItem(`startTime-${testId}`);
+            navigate('/');
+        } catch (error) {
+            console.error('Error during test submission:', error);
+            toast.error('Грешка при предаването.');
+        }
+        setLoading(false);
+    }, [answers, email, navigate, setLoading, testId, token]);
+
     useEffect(() => {
         if (remainingTime > 0) {
             const timer = setInterval(() => {
@@ -124,7 +170,7 @@ const SolveTest = () => {
 
             return () => clearInterval(timer);
         }
-    }, [remainingTime]);
+    }, [remainingTime, handleSubmit]);
 
     const handleAnswerChange = (questionId, answer, isMultiple) => {
         setAnswers(prevAnswers => {
@@ -150,50 +196,6 @@ const SolveTest = () => {
             ...prevAnswers,
             [questionId]: answerText,
         }));
-    };
-
-    const handleSubmit = async (e) => {
-        if (e) e.preventDefault();
-        setLoading(true);
-
-        const questionAttempts = Object.entries(answers).map(([questionId, answerArray]) => ({
-            question: {id: questionId},
-            answers: Array.isArray(answerArray) ? answerArray : [answerArray],
-            pointsAwarded: null
-        }));
-
-        const submission = {
-            email,
-            testId,
-            questionAttempts,
-            attemptTime: new Date().toISOString(),
-            totalPoints: null,
-            finalScore: null,
-        };
-
-        try {
-            const response = await fetch('http://localhost:8090/api/v1/test/solve', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
-                },
-                body: JSON.stringify(submission),
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to submit test.');
-            }
-
-            toast.success('Test submitted successfully.');
-            sessionStorage.removeItem(`test-${testId}`);
-            sessionStorage.removeItem(`startTime-${testId}`);
-            navigate('/');
-        } catch (error) {
-            console.error('Error during test submission:', error);
-            toast.error('Failed to submit test.');
-        }
-        setLoading(false);
     };
 
     if (!test) {
@@ -253,7 +255,7 @@ const SolveTest = () => {
                     </div>
                 ))}
                 <div className="submit-test-container text-center mb-4">
-                    <button type="submit" className="btn btn-primary">Submit Test</button>
+                    <button type="submit" className="btn btn-primary">Предай</button>
                 </div>
             </form>
         </div>
