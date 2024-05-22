@@ -25,5 +25,7 @@ public class GetTestByIdResponse implements ProcessorResponse {
 
     private Integer minutesToSolve;
 
+    private Boolean mixedQuestions;
+
     private List<SectionModel> sections;
 }

@@ -1,44 +1,48 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import {useLoading} from '../context/LoadingContext';
-import '../styles/solveTest.css';
-
-const randomizeQuestions = (sections, mixedQuestions) => {
-    return sections.map(section => {
-        let questions = [...section.questions];
-        if (section.usedQuestionsCount < section.totalQuestionsCount) {
-            questions = getRandomQuestions(questions, section.usedQuestionsCount);
-        }
-        if (mixedQuestions) {
-            questions = shuffleArray(questions);
-        }
-        return {...section, questions};
-    });
-};
-
-const getRandomQuestions = (questions, count) => {
-    const shuffled = shuffleArray(questions);
-    return shuffled.slice(0, count);
-};
-
-const shuffleArray = (array) => {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-};
+import "../styles/solveTest.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SolveTest = () => {
     const {testId} = useParams();
     const [test, setTest] = useState(null);
-    const [sections, setSections] = useState([]);
-    const token = localStorage.getItem('token');
+    const [questions, setQuestions] = useState([]);
+    const [answers, setAnswers] = useState({});
+    const navigate = useNavigate();
     const {setLoading} = useLoading();
 
-    const fetchTestData = useCallback(async () => {
+    const token = localStorage.getItem("token");
+    const email = localStorage.getItem("email");
+
+    const shuffleArray = (array) => {
+        let shuffledArray = array.slice();
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+        return shuffledArray;
+    };
+
+    const buildQuestions = useCallback((sections, mixed) => {
+        let allQuestions = [];
+        sections.forEach(section => {
+            let mixedQuestions = section.questions;
+            if (section.usedQuestionsCount < section.totalQuestionsCount) {
+                mixedQuestions = shuffleArray(mixedQuestions).slice(0, section.usedQuestionsCount);
+            }
+            allQuestions = allQuestions.concat(mixedQuestions);
+        });
+
+        if (mixed) {
+            allQuestions = shuffleArray(allQuestions);
+        }
+
+        return allQuestions;
+    }, []);
+
+    const fetchTest = useCallback(async () => {
         setLoading(true);
         try {
             const response = await fetch(`http://localhost:8090/api/v1/test/get-by-id?testId=${testId}`, {
@@ -48,52 +52,118 @@ const SolveTest = () => {
                     'Content-Type': 'application/json',
                 },
             });
-
-            if (!response.ok) {
-                throw new Error('Failed to fetch test data');
-            }
-
             const data = await response.json();
             setTest(data);
-            setSections(randomizeQuestions(data.sections, data.mixedQuestions));
+
+            const savedTest = sessionStorage.getItem(`test-${testId}`);
+            if (!savedTest) {
+                const allQuestions = buildQuestions(data.sections, data.mixedQuestions);
+                setQuestions(allQuestions);
+
+                const initialAnswers = allQuestions.reduce((acc, question) => {
+                    acc[question.id] = question.questionType === 'OPEN' ? '' : [];
+                    return acc;
+                }, {});
+
+                sessionStorage.setItem(`test-${testId}`, JSON.stringify({
+                    questions: allQuestions,
+                    answers: initialAnswers
+                }));
+                setAnswers(initialAnswers);
+            } else {
+                const parsedSavedTest = JSON.parse(savedTest);
+                setQuestions(parsedSavedTest.questions);
+                setAnswers(parsedSavedTest.answers);
+            }
         } catch (error) {
-            console.error('Error fetching test data:', error);
+            console.error('Failed to fetch test:', error);
+            toast.error('Failed to fetch test.');
         }
-        setTimeout(() => setLoading(false), 500);
-    }, [testId, token, setLoading]);
+        setLoading(false);
+    }, [testId, token, setLoading, buildQuestions]);
 
     useEffect(() => {
-        fetchTestData();
-    }, [fetchTestData]);
+        fetchTest();
+    }, [fetchTest]);
 
-    const handleAnswerChange = (sectionId, questionId, answerIndex, value) => {
-        setSections(sections.map(section => {
-            if (section.id === sectionId) {
-                return {
-                    ...section,
-                    questions: section.questions.map(question => {
-                        if (question.id === questionId) {
-                            return {
-                                ...question,
-                                answers: question.answers.map((answer, index) => {
-                                    if (index === answerIndex) {
-                                        return {...answer, content: value};
-                                    }
-                                    return answer;
-                                })
-                            };
-                        }
-                        return question;
-                    })
-                };
+    useEffect(() => {
+        if (Object.keys(answers).length > 0) {
+            const savedTest = JSON.parse(sessionStorage.getItem(`test-${testId}`));
+            if (savedTest) {
+                savedTest.answers = answers;
+                sessionStorage.setItem(`test-${testId}`, JSON.stringify(savedTest));
             }
-            return section;
+            console.log("Saved answers to session storage:", answers); // Debugging line
+        }
+    }, [answers, testId]);
+
+    const handleAnswerChange = (questionId, answer, isMultiple) => {
+        setAnswers(prevAnswers => {
+            const updatedAnswers = {...prevAnswers};
+
+            if (isMultiple) {
+                const currentAnswers = updatedAnswers[questionId] || [];
+                const answerIndex = currentAnswers.indexOf(answer);
+                if (answerIndex > -1) {
+                    updatedAnswers[questionId] = currentAnswers.filter(a => a !== answer);
+                } else {
+                    updatedAnswers[questionId] = [...currentAnswers, answer];
+                }
+            } else {
+                updatedAnswers[questionId] = [answer];
+            }
+            return updatedAnswers;
+        });
+    };
+
+    const handleOpenAnswerChange = (questionId, answerText) => {
+        setAnswers(prevAnswers => ({
+            ...prevAnswers,
+            [questionId]: answerText,
         }));
     };
 
-    const handleSubmit = async () => {
-        // Implement submission logic here
-        toast.success('Test submitted successfully!');
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const questionAttempts = Object.entries(answers).map(([questionId, answerArray]) => ({
+            question: {id: questionId},
+            answers: Array.isArray(answerArray) ? answerArray : [answerArray],
+            pointsAwarded: null
+        }));
+
+        const submission = {
+            email,
+            testId,
+            questionAttempts,
+            attemptTime: new Date().toISOString(),
+            totalPoints: null,
+            finalScore: null,
+        };
+
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/test/solve', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify(submission),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to submit test.');
+            }
+
+            toast.success('Test submitted successfully.');
+            sessionStorage.removeItem(`test-${testId}`);
+            navigate('/');
+        } catch (error) {
+            console.error('Error during test submission:', error);
+            toast.error('Failed to submit test.');
+        }
+        setLoading(false);
     };
 
     if (!test) {
@@ -101,34 +171,47 @@ const SolveTest = () => {
     }
 
     return (
-        <div className="solve-test-container">
-            <h1>{test.title}</h1>
-            {sections.map((section, index) => (
-                <div key={section.id} className="section">
-                    <h2>Section {index + 1}</h2>
-                    {section.questions.map((question, qIndex) => (
-                        <div key={question.id} className="question">
-                            <h3>Question {qIndex + 1}</h3>
-                            <p>{question.question}</p>
-                            {question.image && <img src={question.image} alt="question"/>}
-                            <div className="answers">
-                                {question.answers.map((answer, aIndex) => (
-                                    <div key={aIndex} className="answer">
-                                        <input
-                                            type={question.questionType === 'MULTIPLE_ANSWER' ? 'checkbox' : 'radio'}
-                                            name={`question-${question.id}`}
-                                            value={answer.content}
-                                            onChange={(e) => handleAnswerChange(section.id, question.id, aIndex, e.target.value)}
-                                        />
-                                        <label>{answer.content}</label>
-                                    </div>
-                                ))}
+        <div className="solve-test-container container">
+            <h2 className="my-4">{test.title}</h2>
+            <form onSubmit={handleSubmit}>
+                {questions.map((question, qIndex) => (
+                    <div key={question.id} className="question-container mb-4 p-3">
+                        <h4 className="question-title mb-2">{question.question}</h4>
+                        {question.image && (
+                            <img src={question.image} alt={`Question ${qIndex + 1}`} className="img-fluid mb-2"/>
+                        )}
+                        {question.questionType !== 'OPEN' ? question.answers.map((answer, aIndex) => (
+                            <div key={aIndex} className="form-check">
+                                <input
+                                    className="form-check-input"
+                                    type={question.questionType === 'SINGLE_ANSWER' ? 'radio' : 'checkbox'}
+                                    name={`question-${question.id}`}
+                                    id={`answer-${question.id}-${aIndex}`}
+                                    value={answer.content}
+                                    checked={answers[question.id]?.includes(answer.content) || false}
+                                    onChange={(e) => {
+                                        handleAnswerChange(question.id, answer.content, question.questionType === 'MULTIPLE_ANSWER');
+                                    }}
+                                />
+                                <label className="form-check-label" htmlFor={`answer-${question.id}-${aIndex}`}>
+                                    {answer.content}
+                                </label>
                             </div>
-                        </div>
-                    ))}
+                        )) : (
+                            <textarea
+                                className="form-control"
+                                rows="3"
+                                value={answers[question.id] || ''}
+                                onChange={e => handleOpenAnswerChange(question.id, e.target.value)}
+                                placeholder="Your answer..."
+                            ></textarea>
+                        )}
+                    </div>
+                ))}
+                <div className="submit-test-container text-center mb-4">
+                    <button type="submit" className="btn btn-primary">Submit Test</button>
                 </div>
-            ))}
-            <button onClick={handleSubmit} className="submit-test">Submit Test</button>
+            </form>
         </div>
     );
 };

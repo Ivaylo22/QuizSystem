@@ -112,7 +112,7 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({sections: updatedSections});
+        setTest(prevTest => ({...prevTest, sections: updatedSections}));
     };
 
     const addSection = () => {
@@ -509,6 +509,8 @@ const CreateTest = () => {
         const imageUrl = await response.text();
         return imageUrl;
     };
+
+    console.log(test);
 
     return (
         <DragDropContext onDragEnd={onDragEnd}>

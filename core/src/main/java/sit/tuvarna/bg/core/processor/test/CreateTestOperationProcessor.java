@@ -55,7 +55,7 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                 .scoringFormula(request.getScoringFormula())
                 .build();
 
-        test = testRepository.save(test); // Save the test first to get its ID
+        test = testRepository.save(test);
 
         List<Section> sections = new ArrayList<>();
         Map<String, UUID> questionIdMap = new HashMap<>();
@@ -67,7 +67,7 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                     .test(test)
                     .build();
 
-            section = sectionRepository.save(section); // Save the section to get its ID
+            section = sectionRepository.save(section);
 
             List<Question> questions = new ArrayList<>();
             for (QuestionModel questionModel : sectionModel.getQuestions()) {
@@ -89,8 +89,8 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                     answers.add(answer);
                 }
                 question.setAnswers(answers);
-                question = questionRepository.save(question); // Save the question to get its ID
-                questionIdMap.put(questionModel.getId(), question.getId()); // Map original question ID to the newly generated one
+                question = questionRepository.save(question);
+                questionIdMap.put(questionModel.getId(), question.getId());
                 questions.add(question);
             }
             section.setQuestions(questions);
@@ -100,7 +100,7 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
         test.setSections(sections);
 
         try {
-            test = testRepository.save(test); // Save the test with sections and questions
+            test = testRepository.save(test);
 
             return CreateTestResponse.builder()
                     .id(test.getId().toString())
