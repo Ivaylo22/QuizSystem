@@ -2,6 +2,8 @@ import React, {useState, useEffect, useCallback} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import {useLoading} from '../context/LoadingContext';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faClock} from '@fortawesome/free-solid-svg-icons';
 import "../styles/solveTest.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,6 +12,7 @@ const SolveTest = () => {
     const [test, setTest] = useState(null);
     const [questions, setQuestions] = useState([]);
     const [answers, setAnswers] = useState({});
+    const [remainingTime, setRemainingTime] = useState(0);
     const navigate = useNavigate();
     const {setLoading} = useLoading();
 
@@ -55,7 +58,7 @@ const SolveTest = () => {
             const data = await response.json();
             setTest(data);
 
-            const savedTest = sessionStorage.getItem(`test-${testId}`);
+            let savedTest = sessionStorage.getItem(`test-${testId}`);
             if (!savedTest) {
                 const allQuestions = buildQuestions(data.sections, data.mixedQuestions);
                 setQuestions(allQuestions);
@@ -70,10 +73,20 @@ const SolveTest = () => {
                     answers: initialAnswers
                 }));
                 setAnswers(initialAnswers);
+
+                const startTime = new Date().getTime();
+                sessionStorage.setItem(`startTime-${testId}`, startTime);
+                setRemainingTime(data.minutesToSolve * 60);
             } else {
                 const parsedSavedTest = JSON.parse(savedTest);
                 setQuestions(parsedSavedTest.questions);
                 setAnswers(parsedSavedTest.answers);
+
+                const startTime = parseInt(sessionStorage.getItem(`startTime-${testId}`), 10);
+                const currentTime = new Date().getTime();
+                const elapsedTime = Math.floor((currentTime - startTime) / 1000);
+                const remaining = data.minutesToSolve * 60 - elapsedTime;
+                setRemainingTime(remaining > 0 ? remaining : 0);
             }
         } catch (error) {
             console.error('Failed to fetch test:', error);
@@ -93,9 +106,25 @@ const SolveTest = () => {
                 savedTest.answers = answers;
                 sessionStorage.setItem(`test-${testId}`, JSON.stringify(savedTest));
             }
-            console.log("Saved answers to session storage:", answers); // Debugging line
         }
     }, [answers, testId]);
+
+    useEffect(() => {
+        if (remainingTime > 0) {
+            const timer = setInterval(() => {
+                setRemainingTime(prevTime => {
+                    const newTime = prevTime - 1;
+                    if (newTime <= 0) {
+                        clearInterval(timer);
+                        handleSubmit();  // Automatically submit when time is up
+                    }
+                    return newTime;
+                });
+            }, 1000);
+
+            return () => clearInterval(timer);
+        }
+    }, [remainingTime]);
 
     const handleAnswerChange = (questionId, answer, isMultiple) => {
         setAnswers(prevAnswers => {
@@ -124,7 +153,7 @@ const SolveTest = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        if (e) e.preventDefault();
         setLoading(true);
 
         const questionAttempts = Object.entries(answers).map(([questionId, answerArray]) => ({
@@ -158,6 +187,7 @@ const SolveTest = () => {
 
             toast.success('Test submitted successfully.');
             sessionStorage.removeItem(`test-${testId}`);
+            sessionStorage.removeItem(`startTime-${testId}`);
             navigate('/');
         } catch (error) {
             console.error('Error during test submission:', error);
@@ -170,9 +200,23 @@ const SolveTest = () => {
         return <div>Loading...</div>;
     }
 
+    const formatTime = (time) => {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
+
     return (
         <div className="solve-test-container container">
-            <h2 className="my-4">{test.title}</h2>
+            <div className="timer-sticky">
+                <div className="quiz-header">
+                    <h2>{test.title}</h2>
+                </div>
+                <div className='timer'>
+                    <FontAwesomeIcon icon={faClock} className='mr-5'/>
+                    <span>{formatTime(remainingTime)}</span>
+                </div>
+            </div>
             <form onSubmit={handleSubmit}>
                 {questions.map((question, qIndex) => (
                     <div key={question.id} className="question-container mb-4 p-3">
