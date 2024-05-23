@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestOperation;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestRequest;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestResponse;
+import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyOperation;
+import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyRequest;
+import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyResponse;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdOperation;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdRequest;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdResponse;
@@ -36,6 +39,7 @@ public class TestController {
     private final GetTestByIdOperation getTest;
     private final SolveTestOperation solveTest;
     private final GetMyTestsOperation getMyTests;
+    private final GenerateKeyOperation generateKey;
 
     @GetMapping("/get-mine")
     public ResponseEntity<GetMyTestsResponse> getMyTests(@RequestParam @NotBlank(message = "Email is required") String userEmail) {
@@ -73,5 +77,11 @@ public class TestController {
     @PostMapping("/solve")
     public ResponseEntity<SolveTestResponse> solveTest(@RequestBody @Valid SolveTestRequest request) {
         return new ResponseEntity<>(solveTest.process(request), HttpStatus.OK);
+    }
+
+    @PostMapping("/generage-key")
+    public ResponseEntity<GenerateKeyResponse> solveTest(@RequestParam @NotBlank(message = "TestId is required") String testId) {
+        GenerateKeyRequest request = GenerateKeyRequest.builder().testId(testId).build();
+        return new ResponseEntity<>(generateKey.process(request), HttpStatus.OK);
     }
 }
