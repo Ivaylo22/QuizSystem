@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestOperation;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestRequest;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestResponse;
+import sit.tuvarna.bg.api.operations.test.deletekey.DeleteKeyOperation;
+import sit.tuvarna.bg.api.operations.test.deletekey.DeleteKeyRequest;
+import sit.tuvarna.bg.api.operations.test.deletekey.DeleteKeyResponse;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyOperation;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyRequest;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyResponse;
@@ -40,6 +43,7 @@ public class TestController {
     private final SolveTestOperation solveTest;
     private final GetMyTestsOperation getMyTests;
     private final GenerateKeyOperation generateKey;
+    private final DeleteKeyOperation deleteKey;
 
     @GetMapping("/get-mine")
     public ResponseEntity<GetMyTestsResponse> getMyTests(@RequestParam @NotBlank(message = "Email is required") String userEmail) {
@@ -79,9 +83,14 @@ public class TestController {
         return new ResponseEntity<>(solveTest.process(request), HttpStatus.OK);
     }
 
-    @PostMapping("/generage-key")
-    public ResponseEntity<GenerateKeyResponse> solveTest(@RequestParam @NotBlank(message = "TestId is required") String testId) {
-        GenerateKeyRequest request = GenerateKeyRequest.builder().testId(testId).build();
+    @PostMapping("/generate-key")
+    public ResponseEntity<GenerateKeyResponse> generateKey(@RequestBody @Valid GenerateKeyRequest request) {
         return new ResponseEntity<>(generateKey.process(request), HttpStatus.OK);
+    }
+
+
+    @PostMapping("/delete-key")
+    public ResponseEntity<DeleteKeyResponse> deleteKey(@RequestBody @Valid DeleteKeyRequest request) {
+        return new ResponseEntity<>(deleteKey.process(request), HttpStatus.OK);
     }
 }

@@ -20,4 +20,5 @@ public class TestModel {
     private LocalDateTime createdAt;
     private Integer attemptsCount;
     private TestStatus status;
+    private String accessKey;
 }

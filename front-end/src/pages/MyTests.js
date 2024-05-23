@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import '../styles/myTests.css';
 import {useLoading} from '../context/LoadingContext';
+import {toast} from 'react-toastify';
 
 const MyTests = () => {
     const [tests, setTests] = useState([]);
@@ -48,7 +49,7 @@ const MyTests = () => {
     const handleGenerateAccessKey = async (testId) => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:8090/api/v1/test/generate-access-key', {
+            const response = await fetch('http://localhost:8090/api/v1/test/generate-key', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -60,10 +61,39 @@ const MyTests = () => {
                 throw new Error('Failed to generate access key.');
             }
             const data = await response.json();
-            alert(`Access Key: ${data.accessKey}`);
+            setTests(prevTests => prevTests.map(test => test.id === testId ? {
+                ...test,
+                accessKey: data.accessKey
+            } : test));
+            toast.success(`Код за достъп ${data.accessKey}`);
+            handleCloseModal(); // Close the dialog
         } catch (error) {
             console.error('Error generating access key:', error);
-            alert('Failed to generate access key.');
+            toast.error('Грешка при създаване на ключ. Моля опитайте по-късно');
+        }
+        setLoading(false);
+    };
+
+    const handleDeleteAccessKey = async (testId) => {
+        setLoading(true);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/test/delete-key', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({testId}),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to delete access key.');
+            }
+            setTests(prevTests => prevTests.map(test => test.id === testId ? {...test, accessKey: null} : test));
+            toast.success('Успешно премахнат код за достъп');
+            handleCloseModal(); // Close the dialog
+        } catch (error) {
+            console.error('Error deleting access key:', error);
+            toast.error('Грешка при изтриване на ключ Моля опитайте по-късно.');
         }
         setLoading(false);
     };
@@ -115,6 +145,9 @@ const MyTests = () => {
                         <p>Статус: {transformStatus(selectedTest.status)}</p>
                         <p>Брой Опити: {selectedTest.attemptsCount}</p>
                         <p>Дата на Създаване: {new Date(selectedTest.createdAt).toLocaleDateString()}</p>
+                        {selectedTest.accessKey && (
+                            <p>Код за достъп: {selectedTest.accessKey}</p>
+                        )}
                         <div className="dialog-buttons-container">
                             <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
                             {selectedTest.status === 'PUBLIC' ? (
@@ -123,9 +156,15 @@ const MyTests = () => {
                                     Резултати</button>
                             ) : (
                                 <>
-                                    <button className='btn-start'
-                                            onClick={() => handleGenerateAccessKey(selectedTest.id)}>Генерирай Достъп
-                                    </button>
+                                    {selectedTest.accessKey ? (
+                                        <button className='btn-start'
+                                                onClick={() => handleDeleteAccessKey(selectedTest.id)}>Изтрий
+                                            Достъп</button>
+                                    ) : (
+                                        <button className='btn-start'
+                                                onClick={() => handleGenerateAccessKey(selectedTest.id)}>Генерирай
+                                            Достъп</button>
+                                    )}
                                     <button className='btn-view' onClick={() => handleViewAttempts(selectedTest.id)}>Виж
                                         Опити
                                     </button>

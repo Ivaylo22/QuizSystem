@@ -33,6 +33,7 @@ public class GetMyTestsOperationProcessor implements GetMyTestsOperation {
                         .attemptsCount(usersTestsRepository.findAllByTest(t).size())
                         .createdAt(t.getCreatedAt())
                         .status(TestStatus.valueOf(t.getStatus().name()))
+                        .accessKey(t.getAccessKey())
                         .build())
                 .toList();
 
