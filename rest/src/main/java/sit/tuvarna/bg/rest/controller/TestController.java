@@ -18,6 +18,9 @@ import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsResponse;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsOperation;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsRequest;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsResponse;
+import sit.tuvarna.bg.api.operations.test.solve.SolveTestOperation;
+import sit.tuvarna.bg.api.operations.test.solve.SolveTestRequest;
+import sit.tuvarna.bg.api.operations.test.solve.SolveTestResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -28,6 +31,7 @@ public class TestController {
     private final GetSubjectsOperation getSubjects;
     private final GetPublicTestsOperation getPublicTests;
     private final GetTestByIdOperation getTest;
+    private final SolveTestOperation solveTest;
 
     @GetMapping("/get-by-id")
     public ResponseEntity<GetTestByIdResponse> getTestById(@RequestParam @NotBlank(message = "TestId is required") String testId) {
@@ -52,5 +56,10 @@ public class TestController {
     @PostMapping("/create")
     public ResponseEntity<CreateTestResponse> createTest(@RequestBody @Valid CreateTestRequest request) {
         return new ResponseEntity<>(createTest.process(request), HttpStatus.CREATED);
+    }
+
+    @PostMapping("/solve")
+    public ResponseEntity<SolveTestResponse> solveTest(@RequestBody @Valid SolveTestRequest request) {
+        return new ResponseEntity<>(solveTest.process(request), HttpStatus.OK);
     }
 }

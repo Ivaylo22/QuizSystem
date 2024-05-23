@@ -113,22 +113,43 @@ const SolveTest = () => {
         if (e) e.preventDefault();
         setLoading(true);
 
-        const questionAttempts = Object.entries(answers).map(([questionId, answerArray]) => ({
-            question: {id: questionId},
-            answers: Array.isArray(answerArray) ? answerArray : [answerArray],
-            pointsAwarded: null
-        }));
+        let totalPoints = 0;
 
+        const questionAttempts = Object.entries(answers).map(([questionId, answerArray]) => {
+            const question = questions.find(q => q.id === questionId);
+            let pointsAwarded = 0;
+
+            if (question.questionType === 'OPEN') {
+                const correctAnswer = question.answers.find(a => a.isCorrect).content;
+                if (answerArray === correctAnswer) { // Ensure correct comparison
+                    pointsAwarded = question.maximumPoints;
+                }
+            } else {
+                const correctAnswers = question.answers.filter(a => a.isCorrect).map(a => a.content);
+                if (correctAnswers.length === answerArray.length && correctAnswers.every(ans => answerArray.includes(ans))) {
+                    pointsAwarded = question.maximumPoints;
+                }
+            }
+
+            totalPoints += pointsAwarded;
+
+            return {
+                questionId: questionId,
+                answers: Array.isArray(answerArray) ? answerArray : [answerArray],
+                pointsAwarded: pointsAwarded
+            };
+        });
+
+        const finalScore = totalPoints / questions.length;
+    
         const submission = {
             email,
             testId,
             questionAttempts,
             attemptTime: new Date().toISOString(),
-            totalPoints: null,
-            finalScore: null,
+            totalPoints: totalPoints,
+            finalScore: finalScore,
         };
-
-        console.log(submission)
 
         try {
             const response = await fetch('http://localhost:8090/api/v1/test/solve', {
@@ -144,16 +165,33 @@ const SolveTest = () => {
                 throw new Error('Failed to submit test.');
             }
 
-            toast.success('Тестът е предаден успешно.');
+            const result = await response.json();
+            const grade = result.grade;
+
+            toast.success('Test submitted successfully.');
             sessionStorage.removeItem(`test-${testId}`);
             sessionStorage.removeItem(`startTime-${testId}`);
-            navigate('/');
+
+            const shownQuestions = questions.filter(q => questionAttempts.some(attempt => attempt.questionId === q.id));
+
+            if (test.status === 'PUBLIC') {
+                navigate('/test-result', {
+                    state: {
+                        userAnswers: answers,
+                        result: {totalPoints, finalScore, grade},
+                        shownQuestions
+                    }
+                });
+            } else {
+                navigate('/');
+            }
         } catch (error) {
             console.error('Error during test submission:', error);
-            toast.error('Грешка при предаването.');
+            toast.error('Failed to submit test.');
         }
         setLoading(false);
-    }, [answers, email, navigate, setLoading, testId, token]);
+    }, [answers, email, navigate, setLoading, test, testId, token, questions]);
+    
 
     useEffect(() => {
         if (remainingTime > 0) {
@@ -162,7 +200,7 @@ const SolveTest = () => {
                     const newTime = prevTime - 1;
                     if (newTime <= 0) {
                         clearInterval(timer);
-                        handleSubmit();  // Automatically submit when time is up
+                        handleSubmit();
                     }
                     return newTime;
                 });
@@ -197,6 +235,7 @@ const SolveTest = () => {
             [questionId]: answerText,
         }));
     };
+
 
     if (!test) {
         return <div>Loading...</div>;
@@ -249,7 +288,7 @@ const SolveTest = () => {
                                 rows="3"
                                 value={answers[question.id] || ''}
                                 onChange={e => handleOpenAnswerChange(question.id, e.target.value)}
-                                placeholder="Your answer..."
+                                placeholder="Въведи отговор"
                             ></textarea>
                         )}
                     </div>

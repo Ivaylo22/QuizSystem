@@ -71,6 +71,7 @@ public class GetTestByIdOperationProcessor implements GetTestByIdOperation {
                 .minutesToSolve(test.getMinutesToSolve())
                 .mixedQuestions(test.getMixedQuestions())
                 .sections(test.getSections().stream().map(this::toSectionModel).toList())
+                .status(test.getStatus().name())
                 .build();
     }
 

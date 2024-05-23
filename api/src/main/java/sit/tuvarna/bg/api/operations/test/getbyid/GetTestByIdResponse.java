@@ -28,4 +28,6 @@ public class GetTestByIdResponse implements ProcessorResponse {
     private Boolean mixedQuestions;
 
     private List<SectionModel> sections;
+
+    private String status;
 }

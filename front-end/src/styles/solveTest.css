@@ -1,7 +1,14 @@
+.solve-test-container {
+    overflow-y: auto;
+    max-height: 90vh;
+    position: relative;
+}
+
 .question-container {
     padding: 20px;
     border: 1px solid #eaeaea;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .answer-container {
