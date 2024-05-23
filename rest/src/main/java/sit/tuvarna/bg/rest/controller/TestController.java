@@ -12,6 +12,9 @@ import sit.tuvarna.bg.api.operations.test.create.CreateTestResponse;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdOperation;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdRequest;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdResponse;
+import sit.tuvarna.bg.api.operations.test.getmytests.GetMyTestsOperation;
+import sit.tuvarna.bg.api.operations.test.getmytests.GetMyTestsRequest;
+import sit.tuvarna.bg.api.operations.test.getmytests.GetMyTestsResponse;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsOperation;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsRequest;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsResponse;
@@ -32,6 +35,15 @@ public class TestController {
     private final GetPublicTestsOperation getPublicTests;
     private final GetTestByIdOperation getTest;
     private final SolveTestOperation solveTest;
+    private final GetMyTestsOperation getMyTests;
+
+    @GetMapping("/get-mine")
+    public ResponseEntity<GetMyTestsResponse> getMyTests(@RequestParam @NotBlank(message = "Email is required") String userEmail) {
+        GetMyTestsRequest request = GetMyTestsRequest.builder()
+                .email(userEmail)
+                .build();
+        return new ResponseEntity<>(getMyTests.process(request), HttpStatus.OK);
+    }
 
     @GetMapping("/get-by-id")
     public ResponseEntity<GetTestByIdResponse> getTestById(@RequestParam @NotBlank(message = "TestId is required") String testId) {

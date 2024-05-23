@@ -6,9 +6,10 @@ import {useLoading} from '../context/LoadingContext';
 const AllTests = () => {
     const [tests, setTests] = useState([]);
     const [selectedTest, setSelectedTest] = useState(null);
-    const {setLoading} = useLoading();
     const [selectedSubject, setSelectedSubject] = useState('Всички');
     const [selectedGrade, setSelectedGrade] = useState('Всички');
+    const [sortConfig, setSortConfig] = useState({key: '', direction: ''});
+    const {setLoading} = useLoading();
     const navigate = useNavigate();
 
     const token = localStorage.getItem('token');
@@ -67,6 +68,26 @@ const AllTests = () => {
         );
     };
 
+    const sortTests = (key) => {
+        let direction = 'ascending';
+        if (sortConfig.key === key && sortConfig.direction === 'ascending') {
+            direction = 'descending';
+        }
+
+        const sortedTests = [...tests].sort((a, b) => {
+            if (a[key] < b[key]) {
+                return direction === 'ascending' ? -1 : 1;
+            }
+            if (a[key] > b[key]) {
+                return direction === 'ascending' ? 1 : -1;
+            }
+            return 0;
+        });
+
+        setTests(sortedTests);
+        setSortConfig({key, direction});
+    };
+
     const subjects = ['Всички', ...new Set(tests.map(test => test.subject))];
     const grades = ['Всички', ...Array.from({length: 12}, (_, i) => (i + 1).toString())];
 
@@ -95,11 +116,11 @@ const AllTests = () => {
                 </div>
             </div>
             <div className="test-list-header">
-                <div className="header-item">Заглавие</div>
-                <div className="header-item">Клас</div>
-                <div className="header-item">Предмет</div>
-                <div className="header-item">Минутите за решаване</div>
-                <div className="header-item">Създател</div>
+                <div className="header-item" onClick={() => sortTests('title')}>Заглавие</div>
+                <div className="header-item" onClick={() => sortTests('grade')}>Клас</div>
+                <div className="header-item" onClick={() => sortTests('subject')}>Предмет</div>
+                <div className="header-item" onClick={() => sortTests('minutesToSolve')}>Минутите за решаване</div>
+                <div className="header-item" onClick={() => sortTests('creatorEmail')}>Създател</div>
             </div>
             {filteredTests.length === 0 ? (
                 <div className="no-tests">За съжаление няма такива тестове!</div>

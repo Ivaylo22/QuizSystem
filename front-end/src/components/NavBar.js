@@ -154,6 +154,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
             <ul className="navbar-links">
                 <li><NavLink to="/solve" className="btn">Решавай</NavLink></li>
                 <li><NavLink to="/create" className="btn">Създай</NavLink></li>
+                <li><NavLink to="/my-tests" className="btn">Моите тестове</NavLink></li>
                 {isAdmin && <li><NavLink to="/requested" className="btn">Заявени куизове</NavLink></li>}
             </ul>
             <div className="navbar-auth">

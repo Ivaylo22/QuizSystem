@@ -16,4 +16,6 @@ public interface TestRepository extends JpaRepository<Test, UUID> {
 
     @Query("SELECT t FROM Test t WHERE t.id = :id")
     Optional<Test> findByIdBasic(UUID id);
+
+    List<Test> getAllByCreatorEmail(String creatorEmail);
 }

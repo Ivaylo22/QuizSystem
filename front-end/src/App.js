@@ -26,6 +26,7 @@ import Loader from './components/Loader';
 import AllTests from './pages/AllTests.js';
 import TestResults from './pages/TestResults.js';
 import ProtectedRoute from './ProtectedRoute.js';
+import MyTests from './pages/MyTests.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -132,6 +133,7 @@ function App() {
                                     <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
                                     <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
                                     <Route path="/create" element={<CreateChoice/>}/>
+                                    <Route path="/my-tests" element={<MyTests/>}/>
                                     <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
                                     <Route path="/create-test" element={<CreateTest email={email} token={token}/>}/>
                                     <Route path="/solve" element={<SolveChoice/>}/>
