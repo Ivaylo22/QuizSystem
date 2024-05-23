@@ -1,10 +1,11 @@
 import React from 'react';
-import {useLocation} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import '../styles/testResults.css';
 
 const TestResults = () => {
     const {state} = useLocation();
     const {userAnswers, result, shownQuestions} = state;
+    const navigate = useNavigate();
 
     const isOpenAnswerCorrect = (questionId, userAnswer) => {
         const correctAnswers = shownQuestions
@@ -72,6 +73,9 @@ const TestResults = () => {
                     )}
                 </div>
             ))}
+            <div className="text-center mt-4">
+                <button className="btn btn-primary btn-back" onClick={() => navigate('/')}>Назад</button>
+            </div>
         </div>
     );
 };
