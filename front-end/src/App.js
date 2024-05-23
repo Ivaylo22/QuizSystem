@@ -25,6 +25,7 @@ import { useLoading } from './context/LoadingContext';
 import Loader from './components/Loader';
 import AllTests from './pages/AllTests.js';
 import TestResults from './pages/TestResults.js';
+import ProtectedRoute from './ProtectedRoute.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -76,7 +77,7 @@ function App() {
                 },
             });
             if (response.ok) {
-                const { userInformation } = await response.json();
+                const {userInformation} = await response.json();
                 const isAdmin = userInformation.role === 'ADMIN';
                 setIsLoggedIn(true);
                 setIsAdmin(isAdmin);
@@ -114,39 +115,41 @@ function App() {
 
     return (
         <Router>
-            <Loader loading={loading} />
+            <Loader loading={loading}/>
             <div className='app-container'>
                 <NavBar isLoggedIn={isLoggedIn} isAdmin={isAdmin} setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                    userInformation={userInformation} />
+                        userInformation={userInformation}/>
                 <div className='content'>
                     <Routes>
-                        <Route path="/" element={<Home />} />
-
-                        <Route path="/register" element={<Register />} />
+                        <Route path="/register" element={<Register/>}/>
                         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
-                            setUserInformation={setUserInformation} />} />
-
-                        <Route path="/profile" element={<Profile userInformation={userInformation} />} />
-                        <Route path="/achievements" element={<Achievements token={token} email={email} />} />
-                        <Route path="/stats" element={<Statistics userInformation={userInformation} />} />
-
-                        <Route path="/create" element={<CreateChoice/>}/>
-                        <Route path="/create-quiz" element={<CreateQuiz email={email} token={token} />} />
-                        <Route path="/create-test" element={<CreateTest email={email} token={token}/>}/>
-
-                        <Route path="/solve" element={<SolveChoice/>}/>
-                        <Route path="/quizzes" element={<AllQuizzes email={email} token={token} />} />
-                        <Route path="/tests" element={<AllTests/>}/>
-
-                        <Route path="/solve-test/:testId" element={<SolveTest/>}/>
-                        <Route path="/solve-quiz/:quizId" element={<SolveQuiz email={email} token={token} />} />
-                        <Route path="/quiz-results/:quizId" element={<QuizResults token={token} />} />
-                        <Route path="/test-result" element={<TestResults/>}/>
-
-                        <Route path="/requested" element={<AdminRoute><RequestedQuizzes token={token} /></AdminRoute>} />
-                        <Route path="/requested/:quizId"
-                            element={<AdminRoute><RequestedQuizInfo token={token} /></AdminRoute>} />
-                        <Route path="/not-found" element={<NotFound />} />
+                                                             setUserInformation={setUserInformation}/>}/>
+                        <Route path="*" element={
+                            <ProtectedRoute>
+                                <Routes>
+                                    <Route path="/" element={<Home/>}/>
+                                    <Route path="/profile" element={<Profile userInformation={userInformation}/>}/>
+                                    <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
+                                    <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
+                                    <Route path="/create" element={<CreateChoice/>}/>
+                                    <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
+                                    <Route path="/create-test" element={<CreateTest email={email} token={token}/>}/>
+                                    <Route path="/solve" element={<SolveChoice/>}/>
+                                    <Route path="/quizzes" element={<AllQuizzes email={email} token={token}/>}/>
+                                    <Route path="/tests" element={<AllTests/>}/>
+                                    <Route path="/solve-test/:testId" element={<SolveTest/>}/>
+                                    <Route path="/solve-quiz/:quizId"
+                                           element={<SolveQuiz email={email} token={token}/>}/>
+                                    <Route path="/quiz-results/:quizId" element={<QuizResults token={token}/>}/>
+                                    <Route path="/test-result" element={<TestResults/>}/>
+                                    <Route path="/requested"
+                                           element={<AdminRoute><RequestedQuizzes token={token}/></AdminRoute>}/>
+                                    <Route path="/requested/:quizId"
+                                           element={<AdminRoute><RequestedQuizInfo token={token}/></AdminRoute>}/>
+                                    <Route path="/not-found" element={<NotFound/>}/>
+                                </Routes>
+                            </ProtectedRoute>
+                        }/>
                     </Routes>
                 </div>
             </div>
@@ -154,7 +157,7 @@ function App() {
                 position="bottom-center"
                 autoClose={2000}
                 hideProgressBar={true}
-                pauseOnHover={false} />
+                pauseOnHover={false}/>
         </Router>
     );
 }

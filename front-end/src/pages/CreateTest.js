@@ -510,8 +510,6 @@ const CreateTest = () => {
         return imageUrl;
     };
 
-    console.log(test);
-
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div ref={containerRef} className="create-test-container">
