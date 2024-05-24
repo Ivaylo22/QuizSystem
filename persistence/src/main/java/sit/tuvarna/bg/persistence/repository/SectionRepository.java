@@ -15,5 +15,10 @@ public interface SectionRepository extends JpaRepository<Section, UUID> {
     @Query("SELECT DISTINCT s FROM Section s " +
             "LEFT JOIN FETCH s.questions q " +
             "WHERE s.test.id = :testId")
-    List<Section> findSectionsWithQuestions(@Param("testId") UUID testId);
+    List<Section> findSectionsWithQuestionsByTestId(@Param("testId") UUID testId);
+
+    @Query("SELECT DISTINCT s FROM Section s " +
+            "LEFT JOIN FETCH s.questions q " +
+            "WHERE s.test.accessKey = :accessKey")
+    List<Section> findSectionsWithQuestionsByAccessKey(@Param("accessKey") String accessKey);
 }

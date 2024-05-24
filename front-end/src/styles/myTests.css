@@ -58,9 +58,8 @@
 }
 
 .btn-cancel, .btn-start, .btn-view {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
     cursor: pointer;
+    width: 200px;
 }
 
 .btn-cancel {
@@ -74,7 +73,6 @@
 }
 
 .btn-view {
-    border-radius: 12px;
-    background-color: #1d3eab;
+    background-color: rgb(41, 91, 199) !important;
     color: white;
 }

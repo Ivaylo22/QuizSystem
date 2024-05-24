@@ -155,7 +155,7 @@ const MyTests = () => {
                         <div className="dialog-buttons-container">
                             <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
                             {selectedTest.status === 'PUBLIC' ? (
-                                <button className='btn-view'
+                                <button className='btn-view btn-start'
                                         onClick={() => navigate(`/test-summary/${selectedTest.id}`)}>Виж
                                     Резултати</button>
                             ) : (
@@ -169,7 +169,8 @@ const MyTests = () => {
                                                 onClick={() => handleGenerateAccessKey(selectedTest.id)}>Генерирай
                                             Достъп</button>
                                     )}
-                                    <button className='btn-view' onClick={() => handleViewAttempts(selectedTest.id)}>Виж
+                                    <button className='btn-view btn-start'
+                                            onClick={() => handleViewAttempts(selectedTest.id)}>Виж
                                         Опити
                                     </button>
                                 </>

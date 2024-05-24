@@ -18,4 +18,7 @@ public interface TestRepository extends JpaRepository<Test, UUID> {
     Optional<Test> findByIdBasic(UUID id);
 
     List<Test> getAllByCreatorEmail(String creatorEmail);
+
+    @Query("SELECT t FROM Test t WHERE t.accessKey = :accessKey")
+    Optional<Test> findByAccessKey(String accessKey);
 }

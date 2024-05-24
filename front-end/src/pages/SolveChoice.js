@@ -1,14 +1,36 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import "../styles/createSolveChoice.css";
+import {toast} from 'react-toastify';
 
 const SolveChoice = () => {
     const navigate = useNavigate();
     const [showDialog, setShowDialog] = useState(false);
     const [accessKey, setAccessKey] = useState('');
 
-    const handleStartTest = () => {
-        navigate(`/solve-by-key/${accessKey}`);
+    const token = localStorage.getItem("token");
+
+    const handleStartTest = async () => {
+        try {
+            const response = await fetch(`http://localhost:8090/api/v1/test/get-by-access-key?accessKey=${accessKey}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+            if (!response.ok) {
+                throw new Error('Test not found');
+            }
+            const data = await response.json();
+            if (data) {
+                navigate(`/solve-by-key/${accessKey}`);
+            } else {
+                toast.error('Тест с този код не същесвува.');
+            }
+        } catch (error) {
+            toast.error('Тест с този код не същесвува.');
+        }
     };
 
     return (

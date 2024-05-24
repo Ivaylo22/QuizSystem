@@ -8,9 +8,9 @@ import sit.tuvarna.bg.api.exception.TestNotFoundException;
 import sit.tuvarna.bg.api.model.AnswerModel;
 import sit.tuvarna.bg.api.model.QuestionModel;
 import sit.tuvarna.bg.api.model.SectionModel;
-import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdOperation;
-import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdRequest;
-import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdResponse;
+import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyOperation;
+import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyRequest;
+import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyResponse;
 import sit.tuvarna.bg.persistence.entity.Answer;
 import sit.tuvarna.bg.persistence.entity.Question;
 import sit.tuvarna.bg.persistence.entity.Section;
@@ -24,7 +24,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class GetTestByIdOperationProcessor implements GetTestByIdOperation {
+public class GetByAccessKeyOperationProcessor implements GetByAccessKeyOperation {
 
     private final TestRepository testRepository;
     private final SectionRepository sectionRepository;
@@ -32,11 +32,11 @@ public class GetTestByIdOperationProcessor implements GetTestByIdOperation {
 
     @Override
     @Transactional
-    public GetTestByIdResponse process(GetTestByIdRequest request) {
-        Test test = testRepository.findByIdBasic(UUID.fromString(request.getTestId()))
+    public GetByAccessKeyResponse process(GetByAccessKeyRequest request) {
+        Test test = testRepository.findByAccessKey(request.getAccessKey())
                 .orElseThrow(TestNotFoundException::new);
 
-        List<Section> sections = sectionRepository.findSectionsWithQuestionsByTestId(UUID.fromString(request.getTestId()));
+        List<Section> sections = sectionRepository.findSectionsWithQuestionsByAccessKey(request.getAccessKey());
 
         List<UUID> questionIds = sections.stream()
                 .flatMap(section -> section.getQuestions().stream())
@@ -61,8 +61,8 @@ public class GetTestByIdOperationProcessor implements GetTestByIdOperation {
         return toResponse(test);
     }
 
-    private GetTestByIdResponse toResponse(Test test) {
-        return GetTestByIdResponse.builder()
+    private GetByAccessKeyResponse toResponse(Test test) {
+        return GetByAccessKeyResponse.builder()
                 .id(test.getId().toString())
                 .title(test.getTitle())
                 .grade(test.getGrade())

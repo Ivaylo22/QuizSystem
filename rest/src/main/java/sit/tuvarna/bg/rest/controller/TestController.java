@@ -15,6 +15,9 @@ import sit.tuvarna.bg.api.operations.test.deletekey.DeleteKeyResponse;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyOperation;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyRequest;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyResponse;
+import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyOperation;
+import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyRequest;
+import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyResponse;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdOperation;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdRequest;
 import sit.tuvarna.bg.api.operations.test.getbyid.GetTestByIdResponse;
@@ -40,6 +43,7 @@ public class TestController {
     private final GetSubjectsOperation getSubjects;
     private final GetPublicTestsOperation getPublicTests;
     private final GetTestByIdOperation getTest;
+    private final GetByAccessKeyOperation getByAccessKey;
     private final SolveTestOperation solveTest;
     private final GetMyTestsOperation getMyTests;
     private final GenerateKeyOperation generateKey;
@@ -59,6 +63,14 @@ public class TestController {
                 .testId(testId)
                 .build();
         return new ResponseEntity<>(getTest.process(request), HttpStatus.OK);
+    }
+
+    @GetMapping("/get-by-access-key")
+    public ResponseEntity<GetByAccessKeyResponse> getTestByAccessKey(@RequestParam @NotBlank(message = "AccessKey is required") String accessKey) {
+        GetByAccessKeyRequest request = GetByAccessKeyRequest.builder()
+                .accessKey(accessKey)
+                .build();
+        return new ResponseEntity<>(getByAccessKey.process(request), HttpStatus.OK);
     }
 
     @GetMapping("/subjects")
@@ -87,7 +99,6 @@ public class TestController {
     public ResponseEntity<GenerateKeyResponse> generateKey(@RequestBody @Valid GenerateKeyRequest request) {
         return new ResponseEntity<>(generateKey.process(request), HttpStatus.OK);
     }
-
 
     @PostMapping("/delete-key")
     public ResponseEntity<DeleteKeyResponse> deleteKey(@RequestBody @Valid DeleteKeyRequest request) {
