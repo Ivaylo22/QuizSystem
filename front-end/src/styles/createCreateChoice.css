@@ -1,4 +1,4 @@
-.create-choice-container {
+.create-create-choice-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,7 @@
     padding: 0 15px;
 }
 
-.button-row {
+.create-button-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -15,7 +15,7 @@
     width: 100%;
 }
 
-.btn-container {
+.create-btn-container {
     position: relative;
     display: flex;
     flex: 1 1 200px;
@@ -23,7 +23,7 @@
     max-width: 200px;
 }
 
-.choice-button {
+.create-choice-button {
     height: 8vh;
     width: 100%;
     color: var(--text-color);
@@ -38,7 +38,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.choice-button:hover {
+.create-choice-button:hover {
     color: var(--text-color);
     background-color: var(--main-color);
     border: 2px solid var(--secondary-color);
@@ -46,7 +46,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.dropdown-description {
+.create-dropdown-description {
     visibility: hidden;
     position: absolute;
     width: 100%;
@@ -66,7 +66,7 @@
     padding: 2%
 }
 
-.btn-container:hover .dropdown-description {
+.create-btn-container:hover .create-dropdown-description {
     visibility: visible;
     opacity: 1;
     transform: translateY(0px);
