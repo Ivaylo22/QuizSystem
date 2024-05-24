@@ -19,7 +19,7 @@ const SolveChoice = () => {
                     </div>
                 </div>
                 <div className="btn-container">
-                    <button className="btn btn-primary btn-lg m-3 choice-button"
+                    <button className="btn btn-lg m-3 choice-button"
                             onClick={() => navigate('/tests')}>
                         Реши тест
                     </button>

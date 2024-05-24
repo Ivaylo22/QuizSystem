@@ -160,3 +160,7 @@
 .status-not-taken {
     border-left: 5px solid #dc3545;
 }
+
+.header-item:hover {
+    cursor: pointer;
+}

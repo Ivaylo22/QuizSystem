@@ -246,7 +246,6 @@ const CreateQuiz = ({ email, token }) => {
         if (!validateQuiz()) {
             return;
         }
-        console.log("ASD");
 
         try {
             const questionsWithoutImages = quiz.questions.map(({ image, ...rest }) => rest);

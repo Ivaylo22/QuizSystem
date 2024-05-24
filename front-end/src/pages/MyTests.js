@@ -131,7 +131,11 @@ const MyTests = () => {
                             <div className="test-detail">{test.subject}</div>
                             <div className="test-detail">{transformStatus(test.status)}</div>
                             <div className="test-detail">{test.attemptsCount}</div>
-                            <div className="test-detail">{new Date(test.createdAt).toLocaleDateString()}</div>
+                            <div className="test-detail">{new Date(test.createdAt).toLocaleDateString('bg-BG', {
+                                day: '2-digit',
+                                month: '2-digit',
+                                year: 'numeric'
+                            })}</div>
                         </div>
                     </div>
                 ))

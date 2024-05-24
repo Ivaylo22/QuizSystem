@@ -7,9 +7,8 @@ const AllQuizzes = ({ email, token }) => {
     const [quizzes, setQuizzes] = useState([]);
     const [selectedQuiz, setSelectedQuiz] = useState(null);
     const {setLoading} = useLoading();
-    const [filterBy, setFilterBy] = useState('createdAt');
-    const [order, setOrder] = useState('asc');
     const [selectedCategory, setSelectedCategory] = useState('Всички');
+    const [sortConfig, setSortConfig] = useState({key: 'createdAt', direction: 'asc'});
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -63,7 +62,7 @@ const AllQuizzes = ({ email, token }) => {
         let sortedQuizzes = quizzes.filter(quiz => selectedCategory === 'Всички' || quiz.category === selectedCategory);
         sortedQuizzes.sort((a, b) => {
             let valA, valB;
-            switch (filterBy) {
+            switch (sortConfig.key) {
                 case 'createdAt':
                     valA = new Date(a.createdAt);
                     valB = new Date(b.createdAt);
@@ -76,17 +75,33 @@ const AllQuizzes = ({ email, token }) => {
                     valA = a.questionsCount;
                     valB = b.questionsCount;
                     break;
+                case 'name':
+                    valA = a.name.toLowerCase();
+                    valB = b.name.toLowerCase();
+                    break;
+                case 'category':
+                    valA = a.category.toLowerCase();
+                    valB = b.category.toLowerCase();
+                    break;
                 default:
                     return 0;
             }
 
-            if (order === 'asc') {
+            if (sortConfig.direction === 'asc') {
                 return valA > valB ? 1 : -1;
             } else {
                 return valA < valB ? 1 : -1;
             }
         });
         return sortedQuizzes;
+    };
+
+    const requestSort = (key) => {
+        let direction = 'asc';
+        if (sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
+        }
+        setSortConfig({key, direction});
     };
 
     const categories = ['Всички', ...new Set(quizzes.map(quiz => quiz.category))];
@@ -103,24 +118,14 @@ const AllQuizzes = ({ email, token }) => {
                             ))}
                         </select>
                     </div>
-                    <div className="col-md-6 d-flex align-items-start pt-1">
-                        <select className="form-control" value={filterBy} onChange={(e) => setFilterBy(e.target.value)}>
-                            <option value="createdAt">Дата на създаване</option>
-                            <option value="personalBestXpGained">Мой опит</option>
-                            <option value="questionsCount">Брой въпроси</option>
-                        </select>
-                        <button className={`btn ${order === 'asc' ? 'btn-asc' : 'btn-desc'}`}
-                                onClick={() => setOrder(order === 'asc' ? 'desc' : 'asc')}>
-                            {order === 'asc' ? 'Възходящ' : 'Низходящ'}
-                        </button>
-                    </div>
                 </div>
             </div>
             <div className="quiz-list-header">
-                <div className="header-item">Име</div>
-                <div className="header-item">Категория</div>
-                <div className="header-item">Въпроси</div>
-                <div className="header-item">Мой опит</div>
+                <div className="header-item" onClick={() => requestSort('name')}>Име</div>
+                <div className="header-item" onClick={() => requestSort('category')}>Категория</div>
+                <div className="header-item" onClick={() => requestSort('questionsCount')}>Въпроси</div>
+                <div className="header-item" onClick={() => requestSort('personalBestXpGained')}>Мой опит</div>
+                <div className="header-item" onClick={() => requestSort('createdAt')}>Дата на създаване</div>
             </div>
             {sortQuizzes().map(quiz => {
                 const statusClass = quiz.haveBeenPassed ? 'status-passed' :
@@ -140,6 +145,11 @@ const AllQuizzes = ({ email, token }) => {
                             <div className="quiz-detail">{quiz.category}</div>
                             <div className="quiz-detail">{quiz.questionsCount}</div>
                             <div className="quiz-detail">{quiz.personalBestXpGained ?? 0}/100</div>
+                            <div className="quiz-detail">{new Date(quiz.createdAt).toLocaleDateString('bg-BG', {
+                                day: '2-digit',
+                                month: '2-digit',
+                                year: 'numeric'
+                            })}</div>
                         </div>
                     </div>
                 );
@@ -151,6 +161,7 @@ const AllQuizzes = ({ email, token }) => {
                         <p className='mt-2'>Категория: {selectedQuiz.category}</p>
                         <p>Въпроси: {selectedQuiz.questionsCount}</p>
                         <p>Мой опит: {selectedQuiz.personalBestXpGained ?? 0}/100</p>
+                        <p>Дата на създаване: {new Date(selectedQuiz.createdAt).toLocaleDateString()}</p>
 
                         <p className='mt-2 text-center'>При натискане на бутона "Започни" ще започне да тече вашето време</p>
                         <div className="dialog-buttons-container">
