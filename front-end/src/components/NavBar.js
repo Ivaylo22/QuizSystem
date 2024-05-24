@@ -2,21 +2,23 @@ import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import quizLogo from '../res/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
+import {faBell, faBars} from '@fortawesome/free-solid-svg-icons';
 import {Client} from '@stomp/stompjs';
 import "../styles/navbar.css";
 
 const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformation }) => {
     const [notifications, setNotifications] = useState([]);
     const [showNotifications, setShowNotifications] = useState(false);
-    const navigate = useNavigate();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
     const dropdownRef = useRef(null);
     const notificationRef = useRef(null);
     const stompClient = useRef(null);
 
     const toggleNotifications = () => setShowNotifications(!showNotifications);
     const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -65,7 +67,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
 
             stompClient.current.activate();
         };
-    
+
         if (isLoggedIn) {
             connectWebSocket();
         }
@@ -151,7 +153,8 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
             <div className="navbar-logo">
                 <img src={quizLogo} alt="Logo"/>
             </div>
-            <ul className="navbar-links">
+            <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleMenu}/>
+            <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
                 <li><NavLink to="/solve" className="btn">Решавай</NavLink></li>
                 <li><NavLink to="/create" className="btn">Създай</NavLink></li>
                 <li><NavLink to="/my-tests" className="btn">Моите тестове</NavLink></li>
