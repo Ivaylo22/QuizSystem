@@ -8,6 +8,7 @@ const AllQuizzes = ({ email, token }) => {
     const [selectedQuiz, setSelectedQuiz] = useState(null);
     const {setLoading} = useLoading();
     const [selectedCategory, setSelectedCategory] = useState('Всички');
+    const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({key: 'createdAt', direction: 'asc'});
     const navigate = useNavigate();
 
@@ -59,7 +60,12 @@ const AllQuizzes = ({ email, token }) => {
     };
 
     const sortQuizzes = () => {
-        let sortedQuizzes = quizzes.filter(quiz => selectedCategory === 'Всички' || quiz.category === selectedCategory);
+        let sortedQuizzes = quizzes.filter(quiz => {
+            const matchesCategory = selectedCategory === 'Всички' || quiz.category === selectedCategory;
+            const matchesSearchTerm = quiz.name.toLowerCase().includes(searchTerm.toLowerCase());
+            return matchesCategory && matchesSearchTerm;
+        });
+
         sortedQuizzes.sort((a, b) => {
             let valA, valB;
             switch (sortConfig.key) {
@@ -111,12 +117,24 @@ const AllQuizzes = ({ email, token }) => {
             <div className="filters-container mt-4 mx-auto">
                 <div className="row mb-3">
                     <div className="col-md-6">
-                        <select className="form-control" value={selectedCategory}
+                        <label htmlFor="category" className="form-label">Категория:</label>
+                        <select id="category" className="form-control" value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}>
                             {categories.map(category => (
                                 <option key={category} value={category}>{category}</option>
                             ))}
                         </select>
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="search" className="form-label">Търсене по име:</label>
+                        <input
+                            type="text"
+                            id="search"
+                            className="form-control"
+                            placeholder="Търсене..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
                     </div>
                 </div>
             </div>
@@ -161,7 +179,11 @@ const AllQuizzes = ({ email, token }) => {
                         <p className='mt-2'>Категория: {selectedQuiz.category}</p>
                         <p>Въпроси: {selectedQuiz.questionsCount}</p>
                         <p>Мой опит: {selectedQuiz.personalBestXpGained ?? 0}/100</p>
-                        <p>Дата на създаване: {new Date(selectedQuiz.createdAt).toLocaleDateString()}</p>
+                        <p>Дата на създаване: {new Date(selectedQuiz.createdAt).toLocaleDateString('bg-BG', {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: 'numeric'
+                        })}</p>
 
                         <p className='mt-2 text-center'>При натискане на бутона "Започни" ще започне да тече вашето време</p>
                         <div className="dialog-buttons-container">
