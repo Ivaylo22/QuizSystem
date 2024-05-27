@@ -13,6 +13,6 @@ import java.util.UUID;
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, UUID> {
 
-    @Query("SELECT a FROM Answer a WHERE a.question.id = :questionId")
-    List<Answer> findAnswersByQuestionId(@Param("questionId") UUID questionId);
+    @Query("SELECT q FROM Question q WHERE q.section.test.id = :testId")
+    List<Question> findAllByTestId(@Param("testId") UUID testId);
 }

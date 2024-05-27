@@ -3,6 +3,7 @@ package sit.tuvarna.bg.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -24,4 +25,7 @@ public class QuestionAttempt {
     private Question question;
 
     private Double pointsAwarded;
+
+    @ElementCollection
+    private List<String> chosenAnswers;
 }

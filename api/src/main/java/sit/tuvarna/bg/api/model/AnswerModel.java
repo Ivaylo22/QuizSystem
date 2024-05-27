@@ -10,7 +10,13 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class AnswerModel {
 
+    private String id;
+
     private String content;
 
     private Boolean isCorrect;
+
+    private Long count;
+
+    private Double percentage;
 }

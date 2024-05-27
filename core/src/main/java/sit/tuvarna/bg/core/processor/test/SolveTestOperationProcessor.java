@@ -73,6 +73,7 @@ public class SolveTestOperationProcessor implements SolveTestOperation {
                     .usersTests(usersTests)
                     .question(question)
                     .pointsAwarded(attemptDto.getPointsAwarded())
+                    .chosenAnswers(attemptDto.getAnswers())
                     .build();
 
             questionAttemptRepository.save(questionAttempt);
@@ -110,3 +111,4 @@ public class SolveTestOperationProcessor implements SolveTestOperation {
         return bd.doubleValue();
     }
 }
+

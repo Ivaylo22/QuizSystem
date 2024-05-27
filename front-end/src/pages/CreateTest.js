@@ -32,6 +32,8 @@ const CreateTest = () => {
         questions: new Map()
     });
 
+    console.log(test);
+
     const toggleSettingsDialog = () => {
         setShowSettings(!showSettings);
     };
@@ -300,7 +302,7 @@ const CreateTest = () => {
             }
             return section;
         });
-        setTest({sections: updatedSections});
+        setTest(prevTest => ({...prevTest, sections: updatedSections}));
     };
 
     const onDragEnd = (result) => {
