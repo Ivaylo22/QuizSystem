@@ -11,13 +11,11 @@ import sit.tuvarna.bg.api.model.TestSummaryModel;
 import sit.tuvarna.bg.api.operations.test.gettestsummary.GetTestSummaryOperation;
 import sit.tuvarna.bg.api.operations.test.gettestsummary.GetTestSummaryRequest;
 import sit.tuvarna.bg.api.operations.test.gettestsummary.GetTestSummaryResponse;
-import sit.tuvarna.bg.persistence.entity.Answer;
-import sit.tuvarna.bg.persistence.entity.Question;
-import sit.tuvarna.bg.persistence.entity.QuestionAttempt;
-import sit.tuvarna.bg.persistence.entity.Test;
+import sit.tuvarna.bg.persistence.entity.*;
 import sit.tuvarna.bg.persistence.repository.QuestionAttemptRepository;
 import sit.tuvarna.bg.persistence.repository.QuestionRepository;
 import sit.tuvarna.bg.persistence.repository.TestRepository;
+import sit.tuvarna.bg.persistence.repository.UsersTestsRepository;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -29,6 +27,7 @@ public class GetTestSummaryOperationProcessor implements GetTestSummaryOperation
     private final TestRepository testRepository;
     private final QuestionRepository questionRepository;
     private final QuestionAttemptRepository questionAttemptRepository;
+    private final UsersTestsRepository usersTestsRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -81,7 +80,7 @@ public class GetTestSummaryOperationProcessor implements GetTestSummaryOperation
                                 .isCorrect(correctAnswers.contains(entry.getKey()))
                                 .percentage((entry.getValue() * 100.0) / totalAttempts)
                                 .build())
-                        .collect(Collectors.toList());
+                        .toList();
             } else {
                 answerModels = question.getAnswers().stream()
                         .map(answer -> {
@@ -94,7 +93,7 @@ public class GetTestSummaryOperationProcessor implements GetTestSummaryOperation
                                     .percentage(percentage)
                                     .build();
                         })
-                        .collect(Collectors.toList());
+                        .toList();
             }
 
             return QuestionModel.builder()
@@ -103,13 +102,17 @@ public class GetTestSummaryOperationProcessor implements GetTestSummaryOperation
                     .questionType(QuestionType.valueOf(question.getType().name()))
                     .answers(answerModels)
                     .build();
-        }).collect(Collectors.toList());
+        }).toList();
+
+        List<UsersTests> userTests = usersTestsRepository.findAllByTest(test);
+        double averageGrade = userTests.stream().mapToDouble(UsersTests::getFinalScore).average().orElse(0.0);
 
         return GetTestSummaryResponse.builder()
                 .model(TestSummaryModel.builder()
                         .testId(test.getId().toString())
                         .title(test.getTitle())
                         .questions(questionModels)
+                        .averageScore(averageGrade)
                         .build())
                 .build();
     }

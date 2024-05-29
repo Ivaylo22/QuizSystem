@@ -69,6 +69,7 @@ const TestSummary = () => {
     return (
         <div className="container test-summary-container">
             <h2 className="text-center mt-4">{test.title}</h2>
+            <h4 className="text-center mt-2">Среден резултат: {test.averageScore.toFixed(2)}</h4>
             {sortedQuestions.map((question, qIndex) => (
                 <div key={qIndex} className="question-container mb-4 p-3">
                     <h4 className="question-title">Въпрос {qIndex + 1} ({translateQuestionType(question.questionType)})</h4>
@@ -88,6 +89,9 @@ const TestSummary = () => {
                     </ul>
                 </div>
             ))}
+            <div className="text-center mt-4">
+                <button onClick={() => navigate('/my-tests')} className="btn btn-primary btn-back">Назад</button>
+            </div>
         </div>
     );
 };

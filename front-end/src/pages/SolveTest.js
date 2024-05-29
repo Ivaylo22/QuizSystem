@@ -90,7 +90,7 @@ const SolveTest = () => {
             }
         } catch (error) {
             console.error('Failed to fetch test:', error);
-            toast.error('Failed to fetch test.');
+            toast.error('Възникна грешка! Моля опитайте по-късно.');
         }
         setLoading(false);
     }, [testId, token, setLoading, buildQuestions]);
@@ -141,7 +141,7 @@ const SolveTest = () => {
         });
 
         const finalScore = totalPoints / questions.length;
-    
+
         const submission = {
             email,
             testId,
@@ -168,7 +168,7 @@ const SolveTest = () => {
             const result = await response.json();
             const grade = result.grade;
 
-            toast.success('Test submitted successfully.');
+            toast.success('Тестът е успешно решен!');
             sessionStorage.removeItem(`test-${testId}`);
             sessionStorage.removeItem(`startTime-${testId}`);
 
@@ -187,11 +187,11 @@ const SolveTest = () => {
             }
         } catch (error) {
             console.error('Error during test submission:', error);
-            toast.error('Failed to submit test.');
+            toast.error('Възникна грешка! Моля опитейте по-късно.');
         }
         setLoading(false);
     }, [answers, email, navigate, setLoading, test, testId, token, questions]);
-    
+
 
     useEffect(() => {
         if (remainingTime > 0) {
@@ -247,6 +247,19 @@ const SolveTest = () => {
         return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     };
 
+    const translateQuestionType = (questionType) => {
+        switch (questionType) {
+            case 'SINGLE_ANSWER':
+                return 'Един верен отговор';
+            case 'MULTIPLE_ANSWER':
+                return 'Няколко верни отговора';
+            case 'OPEN':
+                return 'Отворен отговор';
+            default:
+                return 'Неопределен тип въпрос';
+        }
+    };
+
     return (
         <div className="solve-test-container container">
             <div className="timer-sticky">
@@ -261,6 +274,7 @@ const SolveTest = () => {
             <form onSubmit={handleSubmit}>
                 {questions.map((question, qIndex) => (
                     <div key={question.id} className="question-container mb-4 p-3">
+                        <p className="question-type">{translateQuestionType(question.questionType)}</p>
                         <h4 className="question-title mb-2">{question.question}</h4>
                         {question.image && (
                             <img src={question.image} alt={`Question ${qIndex + 1}`} className="img-fluid mb-2"/>

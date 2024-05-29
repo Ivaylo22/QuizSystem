@@ -46,12 +46,12 @@ const TestResults = () => {
                         <>
                             <div
                                 className={`user-answer ${isOpenAnswerCorrect(question.id, userAnswers[question.id] || '') ? "user-correct" : "user-incorrect"}`}>
-                                Your answer: {userAnswers[question.id]}
+                                Твой отговор: {userAnswers[question.id]}
                             </div>
                             {!isOpenAnswerCorrect(question.id, userAnswers[question.id] || '') && (
                                 <div className="correct-answer-display">
-                                    Correct
-                                    answer: {question.answers.filter(a => a.isCorrect).map(a => a.content).join(', ')}
+                                    Верен
+                                    отговор: {question.answers.filter(a => a.isCorrect).map(a => a.content).join(', ')}
                                 </div>
                             )}
                         </>

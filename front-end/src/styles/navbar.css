@@ -156,7 +156,6 @@
     border: 2px solid transparent;
     cursor: pointer;
     font-size: large;
-    padding: 10px 20px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     flex: 1;

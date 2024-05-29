@@ -124,13 +124,13 @@ function App() {
                         userInformation={userInformation}/>
                 <div className='content'>
                     <Routes>
+                        <Route path="/" element={<Home/>}/>
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setIsAdmin={setIsAdmin}
                                                              setUserInformation={setUserInformation}/>}/>
                         <Route path="*" element={
                             <ProtectedRoute>
                                 <Routes>
-                                    <Route path="/" element={<Home/>}/>
                                     <Route path="/profile" element={<Profile userInformation={userInformation}/>}/>
                                     <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
                                     <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>

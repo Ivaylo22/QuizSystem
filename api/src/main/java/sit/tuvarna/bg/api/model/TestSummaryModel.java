@@ -14,4 +14,5 @@ public class TestSummaryModel {
     private String testId;
     private String title;
     private List<QuestionModel> questions;
+    private Double averageScore;
 }
