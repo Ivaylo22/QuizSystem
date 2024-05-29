@@ -5,19 +5,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import sit.tuvarna.bg.api.enums.QuestionType;
 import sit.tuvarna.bg.api.exception.TestNotFoundException;
+import sit.tuvarna.bg.api.exception.UserNotFoundException;
 import sit.tuvarna.bg.api.model.AnswerModel;
 import sit.tuvarna.bg.api.model.QuestionModel;
 import sit.tuvarna.bg.api.model.SectionModel;
 import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyOperation;
 import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyRequest;
 import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyResponse;
-import sit.tuvarna.bg.persistence.entity.Answer;
-import sit.tuvarna.bg.persistence.entity.Question;
-import sit.tuvarna.bg.persistence.entity.Section;
-import sit.tuvarna.bg.persistence.entity.Test;
-import sit.tuvarna.bg.persistence.repository.AnswerRepository;
-import sit.tuvarna.bg.persistence.repository.SectionRepository;
-import sit.tuvarna.bg.persistence.repository.TestRepository;
+import sit.tuvarna.bg.persistence.entity.*;
+import sit.tuvarna.bg.persistence.repository.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -29,12 +25,22 @@ public class GetByAccessKeyOperationProcessor implements GetByAccessKeyOperation
     private final TestRepository testRepository;
     private final SectionRepository sectionRepository;
     private final AnswerRepository answerRepository;
+    private final UserRepository userRepository;
+    private final UsersTestsRepository usersTestsRepository;
 
     @Override
     @Transactional
     public GetByAccessKeyResponse process(GetByAccessKeyRequest request) {
         Test test = testRepository.findByAccessKey(request.getAccessKey())
                 .orElseThrow(TestNotFoundException::new);
+        User user = userRepository.findByEmail(request.getUserEmail())
+                .orElseThrow(UserNotFoundException::new);
+
+        if (usersTestsRepository.existsByUserAndTest(user, test)) {
+            return GetByAccessKeyResponse.builder()
+                    .alreadySolved(true)
+                    .build();
+        }
 
         List<Section> sections = sectionRepository.findSectionsWithQuestionsByAccessKey(request.getAccessKey());
 
@@ -72,6 +78,7 @@ public class GetByAccessKeyOperationProcessor implements GetByAccessKeyOperation
                 .mixedQuestions(test.getMixedQuestions())
                 .sections(test.getSections().stream().map(this::toSectionModel).toList())
                 .status(test.getStatus().name())
+                .alreadySolved(false)
                 .build();
     }
 

@@ -10,4 +10,5 @@ import sit.tuvarna.bg.api.base.ProcessorRequest;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class GetByAccessKeyRequest implements ProcessorRequest {
     private String accessKey;
+    private String userEmail;
 }

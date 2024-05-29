@@ -30,4 +30,6 @@ public class GetByAccessKeyResponse implements ProcessorResponse {
     private List<SectionModel> sections;
 
     private String status;
+
+    private Boolean alreadySolved;
 }

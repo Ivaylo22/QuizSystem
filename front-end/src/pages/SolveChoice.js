@@ -9,10 +9,11 @@ const SolveChoice = () => {
     const [accessKey, setAccessKey] = useState('');
 
     const token = localStorage.getItem("token");
+    const email = localStorage.getItem("email");
 
     const handleStartTest = async () => {
         try {
-            const response = await fetch(`http://localhost:8090/api/v1/test/get-by-access-key?accessKey=${accessKey}`, {
+            const response = await fetch(`http://localhost:8090/api/v1/test/get-by-access-key?accessKey=${accessKey}&userEmail=${email}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -23,13 +24,13 @@ const SolveChoice = () => {
                 throw new Error('Test not found');
             }
             const data = await response.json();
-            if (data) {
-                navigate(`/solve-by-key/${accessKey}`);
+            if (data.alreadySolved) {
+                toast.error('Вече сте решавали този тест');
             } else {
-                toast.error('Тест с този код не същесвува.');
+                navigate(`/solve-by-key/${accessKey}`);
             }
         } catch (error) {
-            toast.error('Тест с този код не същесвува.');
+            toast.error('Тест с този код не съществува.');
         }
     };
 

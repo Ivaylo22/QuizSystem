@@ -78,9 +78,11 @@ public class TestController {
     }
 
     @GetMapping("/get-by-access-key")
-    public ResponseEntity<GetByAccessKeyResponse> getTestByAccessKey(@RequestParam @NotBlank(message = "AccessKey is required") String accessKey) {
+    public ResponseEntity<GetByAccessKeyResponse> getTestByAccessKey(@RequestParam @NotBlank(message = "AccessKey is required") String accessKey,
+                                                                     @RequestParam @NotBlank(message = "User email is required") String userEmail) {
         GetByAccessKeyRequest request = GetByAccessKeyRequest.builder()
                 .accessKey(accessKey)
+                .userEmail(userEmail)
                 .build();
         return new ResponseEntity<>(getByAccessKey.process(request), HttpStatus.OK);
     }
