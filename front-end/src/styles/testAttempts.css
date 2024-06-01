@@ -1,0 +1,46 @@
+.test-attempts-container {
+    margin-top: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.test-attempts-header {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    user-select: none;
+}
+
+.no-attempts {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attempt-card {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+.attempt-detail {
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-back {
+    margin-top: 20px;
+}

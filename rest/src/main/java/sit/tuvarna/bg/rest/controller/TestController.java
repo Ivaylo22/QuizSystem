@@ -30,6 +30,9 @@ import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsResponse;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsOperation;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsRequest;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsResponse;
+import sit.tuvarna.bg.api.operations.test.gettestattempts.GetTestAttemptsOperation;
+import sit.tuvarna.bg.api.operations.test.gettestattempts.GetTestAttemptsRequest;
+import sit.tuvarna.bg.api.operations.test.gettestattempts.GetTestAttemptsResponse;
 import sit.tuvarna.bg.api.operations.test.gettestsummary.GetTestSummaryOperation;
 import sit.tuvarna.bg.api.operations.test.gettestsummary.GetTestSummaryRequest;
 import sit.tuvarna.bg.api.operations.test.gettestsummary.GetTestSummaryResponse;
@@ -52,6 +55,7 @@ public class TestController {
     private final GenerateKeyOperation generateKey;
     private final DeleteKeyOperation deleteKey;
     private final GetTestSummaryOperation getTestSummary;
+    private final GetTestAttemptsOperation getTestAttempts;
 
     @GetMapping("/get-test-summary")
     public ResponseEntity<GetTestSummaryResponse> getTestSummary(@RequestParam @NotBlank(message = "TestId is required") String testId) {
@@ -85,6 +89,12 @@ public class TestController {
                 .userEmail(userEmail)
                 .build();
         return new ResponseEntity<>(getByAccessKey.process(request), HttpStatus.OK);
+    }
+
+    @GetMapping("/get-test-attempts")
+    public ResponseEntity<GetTestAttemptsResponse> getTestAttempts(@RequestParam @NotBlank(message = "Test id is required") String testId) {
+        GetTestAttemptsRequest request = GetTestAttemptsRequest.builder().testId(testId).build();
+        return new ResponseEntity<>(getTestAttempts.process(request), HttpStatus.OK);
     }
 
     @GetMapping("/subjects")

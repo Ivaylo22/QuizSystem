@@ -48,7 +48,7 @@ const SolveTestByAccess = () => {
     const fetchTest = useCallback(async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:8090/api/v1/test/get-by-access-key?accessKey=${accessKey}`, {
+            const response = await fetch(`http://localhost:8090/api/v1/test/get-by-access-key?accessKey=${accessKey}&userEmail=${email}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -93,7 +93,7 @@ const SolveTestByAccess = () => {
             toast.error('Грешка при зареждане на тест.');
         }
         setLoading(false);
-    }, [accessKey, token, setLoading, buildQuestions]);
+    }, [accessKey, token, setLoading, buildQuestions, email]);
 
     useEffect(() => {
         fetchTest();
