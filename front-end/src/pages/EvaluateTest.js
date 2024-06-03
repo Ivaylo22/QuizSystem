@@ -149,9 +149,9 @@ const EvaluateTest = () => {
                 </div>
             ))}
             <div className="text-center mt-4 mb-3">
-                <button className="btn btn-secondary" onClick={() => navigate(`/test-attempts/${testId}`)}>Назад
+                <button className="btn btn-primary btn-back" onClick={() => navigate(`/test-attempts/${testId}`)}>Назад
                 </button>
-                <button className="btn btn-primary" onClick={handleSaveChanges}>Запази промените</button>
+                <button className="btn btn-primary btn-save" onClick={handleSaveChanges}>Запази промените</button>
             </div>
         </div>
     );

@@ -1,5 +1,13 @@
 .btn-back {
-    margin-bottom: 2%;
+    background-color: rgb(141, 135, 135);
+}
+
+.btn-back:hover {
+    background-color: rgb(110, 107, 107);
+}
+
+.btn-save {
+    margin-bottom: 3px;
 }
 
 .points-input {
