@@ -15,6 +15,9 @@ import sit.tuvarna.bg.api.operations.test.deletekey.DeleteKeyResponse;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyOperation;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyRequest;
 import sit.tuvarna.bg.api.operations.test.generatekey.GenerateKeyResponse;
+import sit.tuvarna.bg.api.operations.test.getattemptdata.GetAttemptDataOperation;
+import sit.tuvarna.bg.api.operations.test.getattemptdata.GetAttemptDataRequest;
+import sit.tuvarna.bg.api.operations.test.getattemptdata.GetAttemptDataResponse;
 import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyOperation;
 import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyRequest;
 import sit.tuvarna.bg.api.operations.test.getbyaccesskey.GetByAccessKeyResponse;
@@ -39,6 +42,8 @@ import sit.tuvarna.bg.api.operations.test.gettestsummary.GetTestSummaryResponse;
 import sit.tuvarna.bg.api.operations.test.solve.SolveTestOperation;
 import sit.tuvarna.bg.api.operations.test.solve.SolveTestRequest;
 import sit.tuvarna.bg.api.operations.test.solve.SolveTestResponse;
+import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsOperation;
+import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsRequest;
 
 @RestController
 @RequiredArgsConstructor
@@ -56,6 +61,17 @@ public class TestController {
     private final DeleteKeyOperation deleteKey;
     private final GetTestSummaryOperation getTestSummary;
     private final GetTestAttemptsOperation getTestAttempts;
+    private final GetAttemptDataOperation getAttemptData;
+    private final UpdateAttemptPointsOperation updateAttemptPoints;
+
+    @GetMapping("/get-attempt-data")
+    public ResponseEntity<GetAttemptDataResponse> getAttemptData(@RequestParam String testId, @RequestParam String userEmail) {
+        GetAttemptDataRequest request = GetAttemptDataRequest.builder()
+                .testId(testId)
+                .userEmail(userEmail)
+                .build();
+        return ResponseEntity.ok(getAttemptData.process(request));
+    }
 
     @GetMapping("/get-test-summary")
     public ResponseEntity<GetTestSummaryResponse> getTestSummary(@RequestParam @NotBlank(message = "TestId is required") String testId) {
@@ -107,6 +123,12 @@ public class TestController {
     public ResponseEntity<GetPublicTestsResponse> getPublicTests() {
         GetPublicTestsRequest request = GetPublicTestsRequest.builder().build();
         return new ResponseEntity<>(getPublicTests.process(request), HttpStatus.OK);
+    }
+
+    @PostMapping("/update-attempt-points")
+    public ResponseEntity<Void> updateAttemptPoints(@RequestBody UpdateAttemptPointsRequest request) {
+        updateAttemptPoints.process(request);
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/create")

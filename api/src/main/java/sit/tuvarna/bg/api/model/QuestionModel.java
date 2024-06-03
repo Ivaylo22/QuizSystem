@@ -20,7 +20,11 @@ public class QuestionModel {
 
     private Integer maximumPoints;
 
+    private Integer earnedPoints;
+
     private QuestionType questionType;
+
+    private List<String> chosenAnswers;
 
     private List<AnswerModel> answers;
 }

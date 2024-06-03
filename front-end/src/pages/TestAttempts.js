@@ -67,6 +67,10 @@ const TestAttempts = () => {
         attempt.userEmail.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
+    const handleEvaluateTest = (attempt) => {
+        navigate(`/evaluate-test/${attempt.userEmail}/${attempt.testId}`);
+    };
+
     return (
         <div className="container test-attempts-container">
             <h2 className="text-center mt-4">Опити за Тест</h2>
@@ -89,7 +93,8 @@ const TestAttempts = () => {
                 <div className="no-attempts">Няма намерени опити!</div>
             ) : (
                 filteredAttempts.map(attempt => (
-                    <div className="attempt-card" key={`${attempt.userId}-${attempt.solvedAt}`}>
+                    <div className="attempt-card" key={`${attempt.userEmail}-${attempt.solvedAt}`}
+                         onClick={() => handleEvaluateTest(attempt)}>
                         <div className="attempt-detail">{attempt.testName}</div>
                         <div className="attempt-detail">{attempt.userEmail}</div>
                         <div className="attempt-detail">

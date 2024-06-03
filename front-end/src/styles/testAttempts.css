@@ -33,6 +33,11 @@
     padding: 1rem;
     border-bottom: 1px solid #ccc;
     align-items: center;
+    cursor: pointer;
+}
+
+.attempt-card:hover {
+    border: 1px solid black;
 }
 
 .attempt-detail {

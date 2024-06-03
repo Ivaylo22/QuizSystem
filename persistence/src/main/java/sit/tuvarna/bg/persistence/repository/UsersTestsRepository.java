@@ -7,11 +7,14 @@ import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.entity.UsersTests;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface UsersTestsRepository extends JpaRepository<UsersTests, UUID> {
     List<UsersTests> findAllByTest(Test test);
+
+    Optional<UsersTests> findByTestAndUser(Test test, User user);
 
     boolean existsByUserAndTest(User user, Test test);
 }

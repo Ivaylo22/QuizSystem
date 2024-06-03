@@ -9,7 +9,7 @@ import java.util.UUID;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
-@Setter(AccessLevel.PRIVATE)
+@Setter
 @Builder
 @Entity
 @Table(name = "question_attempt")
@@ -18,14 +18,14 @@ public class QuestionAttempt {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private UsersTests usersTests;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Question question;
 
     private Double pointsAwarded;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> chosenAnswers;
 }
