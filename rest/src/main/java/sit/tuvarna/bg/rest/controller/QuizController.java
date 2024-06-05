@@ -24,6 +24,9 @@ import sit.tuvarna.bg.api.operations.quiz.getbyid.GetQuizByIdResponse;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesResponse;
+import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesOperation;
+import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesRequest;
+import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesResponse;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesResponse;
@@ -44,6 +47,15 @@ public class QuizController {
     private final ApproveQuizOperation approveQuiz;
     private final DeclineQuizOperation declineQuiz;
     private final SolveQuizOperation solve;
+    private final GetMyQuizzesOperation getMyQuizzes;
+
+    @GetMapping("/get-mine")
+    public ResponseEntity<GetMyQuizzesResponse> getMyQuizzes(@RequestParam @NotBlank(message = "Email is required") String userEmail) {
+        GetMyQuizzesRequest request = GetMyQuizzesRequest.builder()
+                .email(userEmail)
+                .build();
+        return new ResponseEntity<>(getMyQuizzes.process(request), HttpStatus.OK);
+    }
 
     @GetMapping("/categories")
     public ResponseEntity<GetCategoriesResponse> getCategories() {

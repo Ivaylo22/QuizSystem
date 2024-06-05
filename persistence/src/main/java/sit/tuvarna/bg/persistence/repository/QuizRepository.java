@@ -6,9 +6,12 @@ import sit.tuvarna.bg.persistence.entity.Category;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface QuizRepository extends JpaRepository<Quiz, UUID> {
     List<Quiz> findAllByCategory(Category category);
+
+    List<Quiz> getAllByCreatorEmail(String email);
 }

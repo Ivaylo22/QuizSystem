@@ -36,4 +36,6 @@ public class QuizModel {
     private Integer personalBestXpGained;
 
     private LocalDateTime createdAt;
+
+    private Integer attemptsCount;
 }
