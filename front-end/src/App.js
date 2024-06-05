@@ -32,6 +32,7 @@ import TestSummary from './pages/TestSummary.js';
 import TestAttempts from './pages/TestAttempts.js';
 import EvaluateTest from './pages/EvaluateTest.js';
 import GetMineChoice from './pages/GetMineChoice.js';
+import MyQuizzes from './pages/MyQuizzes.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -140,6 +141,7 @@ function App() {
                                     <Route path="/create" element={<CreateChoice/>}/>
                                     <Route path="/get-mine" element={<GetMineChoice/>}/>
                                     <Route path="/my-tests" element={<MyTests/>}/>
+                                    <Route path="/my-quizzes" element={<MyQuizzes/>}/>
                                     <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
                                     <Route path="/create-test" element={<CreateTest email={email} token={token}/>}/>
                                     <Route path="/solve" element={<SolveChoice/>}/>

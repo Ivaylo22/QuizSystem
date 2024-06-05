@@ -12,6 +12,8 @@ const AllQuizzes = ({ email, token }) => {
     const [sortConfig, setSortConfig] = useState({key: 'createdAt', direction: 'asc'});
     const navigate = useNavigate();
 
+    console.log(quizzes)
+
     useEffect(() => {
         const fetchQuizzes = async () => {
             setLoading(true);

@@ -10,22 +10,26 @@ const RequestedQuiz = ({quizzes}) => {
     };
 
     return (
-        <div className="requested-quizzes-container">
+        <div className="requested-quizzes-container container mt-5">
             <h2 className="quizzes-title">Заявени Куизове</h2>
             {quizzes.length > 0 ? (
                 <div className="list-group">
                     {quizzes.map((quiz, index) => (
-                        <div key={index}
-                             className="list-group-item d-flex justify-content-between align-items-center mb-3">
-                            <div>
+                        <div
+                            key={index}
+                            className="quiz-item list-group-item d-flex justify-content-between align-items-center mb-3"
+                        >
+                            <div className="quiz-details">
                                 <h5 className="mb-1 quiz-title">{quiz.name}</h5>
                                 <p className="mb-1 quiz-detail">Категория: <span
                                     className="quiz-info">{quiz.category}</span></p>
-                                <p>Заявен от: <span className="quiz-info">{quiz.userEmail}</span></p>
+                                <p className="quiz-detail">Заявен от: <span
+                                    className="quiz-info">{quiz.userEmail}</span></p>
                             </div>
                             <button
                                 onClick={() => handleShowDetails(quiz.quizId)}
-                                className="btn btn-details">
+                                className="btn btn-details"
+                            >
                                 Виж Детайли
                             </button>
                         </div>
