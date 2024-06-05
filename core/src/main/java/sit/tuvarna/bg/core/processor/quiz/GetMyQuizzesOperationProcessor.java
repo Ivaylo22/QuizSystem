@@ -30,6 +30,7 @@ public class GetMyQuizzesOperationProcessor implements GetMyQuizzesOperation {
                         .category(q.getCategory().getCategory())
                         .createdAt(q.getCreatedAt())
                         .attemptsCount(usersQuizzesRepository.getUsersQuizzesByQuiz(q).size())
+                        .status(q.getStatus().name())
                         .build())
                 .toList();
 

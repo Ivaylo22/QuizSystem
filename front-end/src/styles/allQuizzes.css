@@ -151,7 +151,7 @@
 
 .btn-desc:focus, .btn-desc:active, .btn-desc.active {
     background-color: var(--secondary-color) !important;
-    border-color: var (--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
     box-shadow: none !important;
     color: white !important;
 }

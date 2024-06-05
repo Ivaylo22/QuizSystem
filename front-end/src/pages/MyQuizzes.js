@@ -92,6 +92,75 @@ const MyQuizzes = () => {
         setLoading(false);
     };
 
+    const handleArchiveQuiz = async (quizId) => {
+        setLoading(true);
+        try {
+            const response = await fetch(`http://localhost:8090/api/v1/quiz/archive`, {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({id: quizId}),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to archive quiz.');
+            }
+            setQuizzes(prevQuizzes => prevQuizzes.map(quiz => quiz.quizId === quizId ? {
+                ...quiz,
+                status: 'ARCHIVED'
+            } : quiz));
+            toast.success('Куизът е архивиран успешно');
+            handleCloseModal();
+        } catch (error) {
+            console.error('Error archiving quiz:', error);
+            toast.error('Грешка при архивиране на куиз. Моля опитайте по-късно.');
+        }
+        setLoading(false);
+    };
+
+    const handleActivateQuiz = async (quizId) => {
+        setLoading(true);
+        try {
+            const response = await fetch(`http://localhost:8090/api/v1/quiz/active`, {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({id: quizId}),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to activate quiz.');
+            }
+            setQuizzes(prevQuizzes => prevQuizzes.map(quiz => quiz.quizId === quizId ? {
+                ...quiz,
+                status: 'ACTIVE'
+            } : quiz));
+            toast.success('Куизът е активиран успешно');
+            handleCloseModal();
+        } catch (error) {
+            console.error('Error activating quiz:', error);
+            toast.error('Грешка при активиране на куиз. Моля опитайте по-късно.');
+        }
+        setLoading(false);
+    };
+
+    const translateStatus = (status) => {
+        switch (status) {
+            case 'DECLINED':
+                return 'Отказан';
+            case 'ACTIVE':
+                return 'Активен';
+            case 'REQUESTED':
+                return 'Заявен';
+            case 'ARCHIVED':
+                return 'Архивиран';
+            default:
+                return status;
+        }
+    };
+
     return (
         <div className="container my-quizzes-container">
             <h2 className="text-center mt-4">Моите Куизове</h2>
@@ -109,6 +178,7 @@ const MyQuizzes = () => {
                 <div className="header-item" onClick={() => handleSort('category')}>Категория</div>
                 <div className="header-item" onClick={() => handleSort('attemptsCount')}>Брой Опити</div>
                 <div className="header-item" onClick={() => handleSort('createdAt')}>Дата на Създаване</div>
+                <div className="header-item" onClick={() => handleSort('status')}>Статус</div>
             </div>
             {filteredQuizzes.length === 0 ? (
                 <div className="no-quizzes">Нямате създадени куизове!</div>
@@ -131,6 +201,7 @@ const MyQuizzes = () => {
                                 month: '2-digit',
                                 year: 'numeric'
                             })}</div>
+                            <div className="quiz-detail">{translateStatus(quiz.status)}</div>
                         </div>
                     </div>
                 ))
@@ -142,11 +213,21 @@ const MyQuizzes = () => {
                         <p className='mt-2'>Категория: {selectedQuiz.category}</p>
                         <p>Брой Опити: {selectedQuiz.attemptsCount}</p>
                         <p>Дата на Създаване: {new Date(selectedQuiz.createdAt).toLocaleDateString()}</p>
+                        <p>Статус: {translateStatus(selectedQuiz.status)}</p>
                         <div className="dialog-buttons-container">
                             <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
-                            <button className='btn-start' onClick={() => handleDeleteQuiz(selectedQuiz.quizId)}>Изтрий
-                                Куиз
-                            </button>
+                            {selectedQuiz.status === 'ACTIVE' && (
+                                <button className='btn-start'
+                                        onClick={() => handleArchiveQuiz(selectedQuiz.quizId)}>Архивирай</button>
+                            )}
+                            {selectedQuiz.status === 'ARCHIVED' && (
+                                <button className='btn-start'
+                                        onClick={() => handleActivateQuiz(selectedQuiz.quizId)}>Активирай</button>
+                            )}
+                            {selectedQuiz.status !== 'ACTIVE' && selectedQuiz.status !== 'ARCHIVED' && (
+                                <button className='btn-start'
+                                        onClick={() => handleDeleteQuiz(selectedQuiz.quizId)}>Изтрий Куиз</button>
+                            )}
                         </div>
                     </dialog>
                 </div>

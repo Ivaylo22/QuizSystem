@@ -6,9 +6,14 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizOperation;
+import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizRequest;
+import sit.tuvarna.bg.api.operations.quiz.active.ActiveQuizResponse;
 import sit.tuvarna.bg.api.operations.quiz.approve.ApproveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.approve.ApproveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.approve.ApproveQuizResponse;
+import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizRequest;
+import sit.tuvarna.bg.api.operations.quiz.archive.ArchiveQuizResponse;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizResponse;
@@ -33,6 +38,7 @@ import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesRespon
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizResponse;
+import sit.tuvarna.bg.core.processor.quiz.ArchiveQuizOperationProcessor;
 
 @RestController
 @RequiredArgsConstructor
@@ -48,6 +54,8 @@ public class QuizController {
     private final DeclineQuizOperation declineQuiz;
     private final SolveQuizOperation solve;
     private final GetMyQuizzesOperation getMyQuizzes;
+    private final ArchiveQuizOperationProcessor archiveQuiz;
+    private final ActiveQuizOperation activeQuiz;
 
     @GetMapping("/get-mine")
     public ResponseEntity<GetMyQuizzesResponse> getMyQuizzes(@RequestParam @NotBlank(message = "Email is required") String userEmail) {
@@ -112,5 +120,19 @@ public class QuizController {
             @RequestBody @Valid DeclineQuizRequest request
     ) {
         return new ResponseEntity<>(declineQuiz.process(request), HttpStatus.OK);
+    }
+
+    @PatchMapping("/archive")
+    public ResponseEntity<ArchiveQuizResponse> archiveQuiz(
+            @RequestBody @Valid ArchiveQuizRequest request
+    ) {
+        return new ResponseEntity<>(archiveQuiz.process(request), HttpStatus.OK);
+    }
+
+    @PatchMapping("/active")
+    public ResponseEntity<ActiveQuizResponse> activeQuiz(
+            @RequestBody @Valid ActiveQuizRequest request
+    ) {
+        return new ResponseEntity<>(activeQuiz.process(request), HttpStatus.OK);
     }
 }

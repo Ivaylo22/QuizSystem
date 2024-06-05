@@ -38,4 +38,6 @@ public class QuizModel {
     private LocalDateTime createdAt;
 
     private Integer attemptsCount;
+
+    private String status;
 }
