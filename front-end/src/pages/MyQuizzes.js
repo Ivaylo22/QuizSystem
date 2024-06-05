@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import '../styles/myQuizzes.css';
 import {useLoading} from '../context/LoadingContext';
+import {useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
 
 const MyQuizzes = () => {
@@ -66,30 +67,6 @@ const MyQuizzes = () => {
 
     const handleCloseModal = () => {
         setSelectedQuiz(null);
-    };
-
-    const handleDeleteQuiz = async (quizId) => {
-        setLoading(true);
-        try {
-            const response = await fetch(`http://localhost:8090/api/v1/quiz/delete`, {
-                method: 'DELETE',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({quizId}),
-            });
-            if (!response.ok) {
-                throw new Error('Failed to delete quiz.');
-            }
-            setQuizzes(prevQuizzes => prevQuizzes.filter(quiz => quiz.quizId !== quizId));
-            toast.success('Куизът е изтрит успешно');
-            handleCloseModal();
-        } catch (error) {
-            console.error('Error deleting quiz:', error);
-            toast.error('Грешка при изтриване на куиз. Моля опитайте по-късно.');
-        }
-        setLoading(false);
     };
 
     const handleArchiveQuiz = async (quizId) => {
@@ -161,6 +138,12 @@ const MyQuizzes = () => {
         }
     };
 
+    const navigate = useNavigate();
+
+    const handleViewQuiz = (quizId) => {
+        navigate(`/quiz-info/${quizId}`);
+    };
+
     return (
         <div className="container my-quizzes-container">
             <h2 className="text-center mt-4">Моите Куизове</h2>
@@ -216,17 +199,15 @@ const MyQuizzes = () => {
                         <p>Статус: {translateStatus(selectedQuiz.status)}</p>
                         <div className="dialog-buttons-container">
                             <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
+                            <button className='btn-start' onClick={() => handleViewQuiz(selectedQuiz.quizId)}>Виж куиз
+                            </button>
                             {selectedQuiz.status === 'ACTIVE' && (
-                                <button className='btn-start'
+                                <button className='btn-start  btn-view'
                                         onClick={() => handleArchiveQuiz(selectedQuiz.quizId)}>Архивирай</button>
                             )}
                             {selectedQuiz.status === 'ARCHIVED' && (
-                                <button className='btn-start'
+                                <button className='btn-start btn-view'
                                         onClick={() => handleActivateQuiz(selectedQuiz.quizId)}>Активирай</button>
-                            )}
-                            {selectedQuiz.status !== 'ACTIVE' && selectedQuiz.status !== 'ARCHIVED' && (
-                                <button className='btn-start'
-                                        onClick={() => handleDeleteQuiz(selectedQuiz.quizId)}>Изтрий Куиз</button>
                             )}
                         </div>
                     </dialog>

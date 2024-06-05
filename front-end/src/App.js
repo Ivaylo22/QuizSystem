@@ -33,6 +33,7 @@ import TestAttempts from './pages/TestAttempts.js';
 import EvaluateTest from './pages/EvaluateTest.js';
 import GetMineChoice from './pages/GetMineChoice.js';
 import MyQuizzes from './pages/MyQuizzes.js';
+import QuizInfo from './pages/QuizInfo.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -160,6 +161,7 @@ function App() {
                                     <Route path="/test-summary/:testId" element={<TestSummary/>}/>
                                     <Route path="/test-attempts/:testId" element={<TestAttempts/>}/>
                                     <Route path="/evaluate-test/:userEmail/:testId" element={<EvaluateTest/>}/>
+                                    <Route path="/quiz-info/:quizId" element={<QuizInfo/>}/>
                                     <Route path="/not-found" element={<NotFound/>}/>
                                 </Routes>
                             </ProtectedRoute>
