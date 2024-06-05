@@ -157,7 +157,7 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
             <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
                 <li><NavLink to="/solve" className="btn">Решавай</NavLink></li>
                 <li><NavLink to="/create" className="btn">Създай</NavLink></li>
-                <li><NavLink to="/my-tests" className="btn">Моите тестове</NavLink></li>
+                <li><NavLink to="/get-mine" className="btn">Създадени от мен</NavLink></li>
                 {isAdmin && <li><NavLink to="/requested" className="btn">Заявени куизове</NavLink></li>}
             </ul>
             <div className="navbar-auth">

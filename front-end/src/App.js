@@ -31,6 +31,7 @@ import SolveTestByAccess from './pages/SolveTestByAccess.js';
 import TestSummary from './pages/TestSummary.js';
 import TestAttempts from './pages/TestAttempts.js';
 import EvaluateTest from './pages/EvaluateTest.js';
+import GetMineChoice from './pages/GetMineChoice.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -137,6 +138,7 @@ function App() {
                                     <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
                                     <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
                                     <Route path="/create" element={<CreateChoice/>}/>
+                                    <Route path="/get-mine" element={<GetMineChoice/>}/>
                                     <Route path="/my-tests" element={<MyTests/>}/>
                                     <Route path="/create-quiz" element={<CreateQuiz email={email} token={token}/>}/>
                                     <Route path="/create-test" element={<CreateTest email={email} token={token}/>}/>

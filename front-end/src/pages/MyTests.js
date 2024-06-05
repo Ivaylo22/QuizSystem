@@ -66,7 +66,7 @@ const MyTests = () => {
                 accessKey: data.accessKey
             } : test));
             toast.success(`Код за достъп ${data.accessKey}`);
-            handleCloseModal(); // Close the dialog
+            handleCloseModal();
         } catch (error) {
             console.error('Error generating access key:', error);
             toast.error('Грешка при създаване на ключ. Моля опитайте по-късно');
@@ -90,7 +90,7 @@ const MyTests = () => {
             }
             setTests(prevTests => prevTests.map(test => test.id === testId ? {...test, accessKey: null} : test));
             toast.success('Успешно премахнат код за достъп');
-            handleCloseModal(); // Close the dialog
+            handleCloseModal();
         } catch (error) {
             console.error('Error deleting access key:', error);
             toast.error('Грешка при изтриване на ключ Моля опитайте по-късно.');
