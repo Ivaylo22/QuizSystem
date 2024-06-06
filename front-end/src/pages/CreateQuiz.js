@@ -277,6 +277,8 @@ const CreateQuiz = ({ email, token }) => {
         }
     };
 
+    console.log(quiz);
+
     return (
         <div className="create-quiz-container">
             <form onSubmit={handleSubmit} className="quiz-form">

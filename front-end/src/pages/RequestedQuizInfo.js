@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
+import {Modal} from 'react-bootstrap';
 import "../styles/requestedQuizInfo.css";
 import {useLoading} from '../context/LoadingContext';
 
@@ -8,6 +9,8 @@ const RequestedQuizInfo = ({token}) => {
     const {quizId} = useParams();
     const navigate = useNavigate();
     const [quiz, setQuiz] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+    const [modalImage, setModalImage] = useState('');
 
     const {setLoading} = useLoading();
     useEffect(() => {
@@ -85,7 +88,7 @@ const RequestedQuizInfo = ({token}) => {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to decli e quiz');
+                throw new Error('Failed to decline quiz');
             }
 
             await response.json();
@@ -96,6 +99,14 @@ const RequestedQuizInfo = ({token}) => {
         }
     };
 
+    const handleImageClick = (image) => {
+        setModalImage(image);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
 
     if (!quiz) {
         return <div>Loading...</div>;
@@ -112,8 +123,13 @@ const RequestedQuizInfo = ({token}) => {
                 <div key={qIndex} className="question-container mb-4 p-3">
                     <h4 className="question-title">Въпрос {qIndex + 1} ({translateQuestionType(question.questionType)})</h4>
                     {question.image && (
-                        <img src={question.image} alt={`Въпрос ${qIndex + 1}`}
-                             className="img-fluid mb-2 question-image"/>
+                        <img
+                            src={question.image}
+                            alt={`Въпрос ${qIndex + 1}`}
+                            className="img-fluid mb-2 question-image"
+                            onClick={() => handleImageClick(question.image)}
+                            style={{cursor: 'pointer'}}
+                        />
                     )}
                     <p className='question-content mb-2'>{question.question}</p>
                     <ul className="list-unstyled answers-list">
@@ -128,8 +144,14 @@ const RequestedQuizInfo = ({token}) => {
             ))}
             <div className="quiz-actions text-center">
                 <button onClick={declineQuiz} className="btn-decline">Отхвърли</button>
-                <button onClick={approveQuiz} className="btn-approve me-2"> Одобри</button>
+                <button onClick={approveQuiz} className="btn-approve me-2">Одобри</button>
             </div>
+
+            <Modal show={showModal} onHide={handleCloseModal} centered size="xl">
+                <Modal.Body>
+                    <img src={modalImage} alt="Full Size" className="img-fluid" style={{width: '100%'}}/>
+                </Modal.Body>
+            </Modal>
         </div>
     );
 };

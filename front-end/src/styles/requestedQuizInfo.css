@@ -47,6 +47,9 @@
     height: auto;
     border-radius: 4px;
     margin-bottom: 10px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid black;
 }
 
 .btn-decline, .btn-approve {
