@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import {Modal} from 'react-bootstrap';
 import "../styles/solveQuiz.css";
 import {useLoading} from '../context/LoadingContext';
 
@@ -14,6 +15,8 @@ const SolveQuiz = ({email, token}) => {
     const [startTime] = useState(new Date().getTime());
     const [elapsedTime, setElapsedTime] = useState(0);
     const {setLoading} = useLoading();
+    const [showModal, setShowModal] = useState(false);
+    const [modalImage, setModalImage] = useState('');
 
     useEffect(() => {
         const fetchQuiz = async () => {
@@ -138,9 +141,19 @@ const SolveQuiz = ({email, token}) => {
         }
     };
 
+    const handleImageClick = (image) => {
+        setModalImage(image);
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     if (!quiz) {
         return <div>Loading...</div>;
     }
+
     return (
         <div className="container solve-quiz-container">
             <div className="timer-sticky">
@@ -156,7 +169,13 @@ const SolveQuiz = ({email, token}) => {
                 <div key={question.id} className="question-container mb-4 p-3">
                     <h4 className="question-title mb-2">{question.question}</h4>
                     {question.image && (
-                        <img src={question.image} alt={`Въпрос ${qIndex + 1}`} className="img-fluid mb-2" />
+                        <img
+                            src={question.image}
+                            alt={`Въпрос ${qIndex + 1}`}
+                            className="img-fluid mb-2 question-image"
+                            onClick={() => handleImageClick(question.image)}
+                            style={{cursor: 'pointer'}}
+                        />
                     )}
                     {question.questionType !== 'OPEN' ? question.answers.map((answer, aIndex) => (
                         <div key={aIndex} className="form-check">
@@ -187,6 +206,12 @@ const SolveQuiz = ({email, token}) => {
             <div className="submit-quiz-container text-center mb-4">
                 <button onClick={handleSubmitQuiz} className="btn btn-primary">Предай</button>
             </div>
+
+            <Modal show={showModal} onHide={handleCloseModal} centered size="xl">
+                <Modal.Body>
+                    <img src={modalImage} alt="Full Size" className="img-fluid" style={{width: '100%'}}/>
+                </Modal.Body>
+            </Modal>
         </div>
     );
 };

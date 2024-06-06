@@ -37,7 +37,7 @@ const QuizResults = () => {
                     <h4>{question.question}</h4>
                     {question.image && (
                         <img src={question.image ?? 'default-placeholder.png'} alt={`Question ${qIndex + 1}`}
-                             className="img-fluid mb-3"/>
+                             className="img-fluid mb-3 question-image"/>
                     )}
                     {question.questionType === 'OPEN' ? (
                         <>
