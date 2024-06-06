@@ -47,4 +47,6 @@ public class Quiz {
 
     @ManyToOne
     Category category;
+
+    private LocalDateTime lastUpdated;
 }
