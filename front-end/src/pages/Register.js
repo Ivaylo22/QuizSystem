@@ -12,10 +12,38 @@ const Register = () => {
         confirmPassword: '',
         avatar: null
     });
+    const [passwordValidations, setPasswordValidations] = useState({
+        length: false,
+        upper: false,
+        lower: false,
+        number: false,
+        special: false,
+    });
+    const [isPasswordFocused, setIsPasswordFocused] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+
+        if (name === 'password') {
+            validatePassword(value);
+        }
+    };
+
+    const validatePassword = (password) => {
+        const length = password.length >= 8;
+        const upper = /[A-Z]/.test(password);
+        const lower = /[a-z]/.test(password);
+        const number = /[0-9]/.test(password);
+        const special = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        setPasswordValidations({
+            length,
+            upper,
+            lower,
+            number,
+            special,
+        });
     };
 
     const handleFileChange = (e) => {
@@ -44,6 +72,11 @@ const Register = () => {
 
         if (formData.password !== formData.confirmPassword) {
             toast.error('Паролите не съвпадат');
+            return;
+        }
+
+        if (!Object.values(passwordValidations).every(Boolean)) {
+            toast.error('Паролата не отговаря на всички изисквания');
             return;
         }
 
@@ -90,7 +123,33 @@ const Register = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Парола:</label>
-                    <input type="password" name="password" className="form-control" placeholder="Парола" onChange={handleChange} required />
+                    <input
+                        type="password"
+                        name="password"
+                        className="form-control"
+                        placeholder="Парола"
+                        onChange={handleChange}
+                        onFocus={() => setIsPasswordFocused(true)}
+                        onBlur={() => setIsPasswordFocused(false)}
+                        required
+                    />
+                    <ul className={`password-requirements ${isPasswordFocused ? 'visible' : ''}`}>
+                        <li className={passwordValidations.length ? 'valid' : 'invalid'}>
+                            Поне 8 символа
+                        </li>
+                        <li className={passwordValidations.upper ? 'valid' : 'invalid'}>
+                            Поне една главна буква
+                        </li>
+                        <li className={passwordValidations.lower ? 'valid' : 'invalid'}>
+                            Поне една малка буква
+                        </li>
+                        <li className={passwordValidations.number ? 'valid' : 'invalid'}>
+                            Поне едно число
+                        </li>
+                        <li className={passwordValidations.special ? 'valid' : 'invalid'}>
+                            Поне един специален символ
+                        </li>
+                    </ul>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="confirmPassword" className="form-label">Потвърди парола:</label>

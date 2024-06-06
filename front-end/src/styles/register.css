@@ -1,9 +1,61 @@
-.form-control {
-    border: 2px solid var(--secondary-color);
-    border-radius: 4px;
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #f7f7f7;
 }
 
-.form-label {
-    padding-left: 2%;
-    font-size: large;
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.password-requirements {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.password-requirements.visible {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.password-requirements li {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 24px; /* Space for the icon */
+}
+
+.password-requirements .valid::before {
+    content: '✔️';
+    color: green;
+    position: absolute;
+    left: 0;
+}
+
+.password-requirements .invalid::before {
+    content: '❌';
+    color: red;
+    position: absolute;
+    left: 0;
+}
+
+.password-requirements .valid {
+    color: green;
+}
+
+.password-requirements .invalid {
+    color: red;
 }

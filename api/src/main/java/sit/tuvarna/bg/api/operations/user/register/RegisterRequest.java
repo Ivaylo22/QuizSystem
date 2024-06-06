@@ -2,6 +2,7 @@ package sit.tuvarna.bg.api.operations.user.register;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import sit.tuvarna.bg.api.base.ProcessorRequest;
 
@@ -19,5 +20,6 @@ public class RegisterRequest implements ProcessorRequest {
     private String password;
 
     @NotBlank(message = "Confirm password is required.")
+    @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$")
     private String confirmPassword;
 }
