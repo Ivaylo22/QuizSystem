@@ -168,20 +168,29 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                             {hasUnread && <span className="notification-dot"></span>}
                             {showNotifications && (
                                 <div ref={notificationRef} className="notification-dropdown">
-                                    {notifications.map((notification, index) => (
-                                        <div key={index} className={`notification-item ${notification.read ? "read" : "unread"}`}>
-                                            {notification.message}
-                                            <div className="notification-actions">
-                                                {!notification.read && (
-                                                    <button className="notification-action"
+                                    {notifications
+                                        .slice()
+                                        .sort((a, b) => {
+                                            if (a.read === b.read) {
+                                                return new Date(b.createdAt) - new Date(a.createdAt);
+                                            }
+                                            return a.read ? 1 : -1;
+                                        })
+                                        .map((notification, index) => (
+                                            <div key={index}
+                                                 className={`notification-item ${notification.read ? "read" : "unread"}`}>
+                                                {notification.message}
+                                                <div className="notification-actions">
+                                                    {!notification.read && (
+                                                        <button className="notification-action"
                                                             onClick={() => markAsRead(notification.id)}>Прочети</button>
-                                                )}
-                                                <button className="notification-action"
+                                                    )}
+                                                    <button className="notification-action"
                                                         onClick={() => deleteNotification(notification.id)}>Изтрий
-                                                </button>
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        ))}
                                     {notifications.length === 0 &&
                                         <div className="notification-item">Няма съобщения</div>}
                                 </div>
