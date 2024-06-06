@@ -9,7 +9,6 @@ import Login from './pages/Login';
 import NavBar from './components/NavBar';
 import Profile from './pages/Profile';
 import Achievements from './pages/Achievements';
-import Statistics from './pages/Statistics';
 import CreateQuiz from './pages/CreateQuiz';
 import RequestedQuizzes from './pages/RequestedQuizzes';
 import RequestedQuizInfo from './pages/RequestedQuizInfo';
@@ -35,6 +34,7 @@ import GetMineChoice from './pages/GetMineChoice.js';
 import MyQuizzes from './pages/MyQuizzes.js';
 import QuizInfo from './pages/QuizInfo.js';
 import Leaderboard from './pages/Leaderboard.js';
+import Statistics from './pages/Statistics.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -139,7 +139,7 @@ function App() {
                                 <Routes>
                                     <Route path="/profile" element={<Profile userInformation={userInformation}/>}/>
                                     <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
-                                    <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
+                                    <Route path="/stats" element={<Statistics token={token} email={email}/>}/>
                                     <Route path="/leaderboard" element={<Leaderboard/>}/>
                                     <Route path="/create" element={<CreateChoice/>}/>
                                     <Route path="/get-mine" element={<GetMineChoice/>}/>

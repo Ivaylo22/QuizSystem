@@ -4,9 +4,29 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px;
+    margin: 0 auto;
 }
 
-.statistics-info p {
+.statistics-info {
+    width: 1000px;
+}
+
+.statistic-item {
+    display: flex;
+    justify-content: space-between;
     margin: 10px 0;
-    font-size: 20px;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}
+
+.statistic-item strong {
+    color: #333;
+}
+
+.statistic-item span {
+    color: #555;
 }
