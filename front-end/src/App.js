@@ -34,6 +34,7 @@ import EvaluateTest from './pages/EvaluateTest.js';
 import GetMineChoice from './pages/GetMineChoice.js';
 import MyQuizzes from './pages/MyQuizzes.js';
 import QuizInfo from './pages/QuizInfo.js';
+import Leaderboard from './pages/Leaderboard.js';
 
 function App() {
     const token = localStorage.getItem('token');
@@ -139,6 +140,7 @@ function App() {
                                     <Route path="/profile" element={<Profile userInformation={userInformation}/>}/>
                                     <Route path="/achievements" element={<Achievements token={token} email={email}/>}/>
                                     <Route path="/stats" element={<Statistics userInformation={userInformation}/>}/>
+                                    <Route path="/leaderboard" element={<Leaderboard/>}/>
                                     <Route path="/create" element={<CreateChoice/>}/>
                                     <Route path="/get-mine" element={<GetMineChoice/>}/>
                                     <Route path="/my-tests" element={<MyTests/>}/>

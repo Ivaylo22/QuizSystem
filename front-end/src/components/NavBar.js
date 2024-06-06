@@ -194,6 +194,9 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
                                     <button className='dropdown-item' onClick={() => navigate('/profile')}>Моят профил</button>
                                     <button className='dropdown-item' onClick={() => navigate('/achievements')}>Постижения</button>
                                     <button className='dropdown-item' onClick={() => navigate('/stats')}>Статистики</button>
+                                    <button className='dropdown-item'
+                                            onClick={() => navigate('/leaderboard')}>Класация
+                                    </button>
                                     <button className='dropdown-item' onClick={onLogout}>Отписване</button>
                                 </div>
                             )}

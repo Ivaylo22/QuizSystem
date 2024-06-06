@@ -72,11 +72,9 @@ const EvaluateTest = () => {
                 throw new Error('Failed to update attempt points');
             }
 
-            toast.success('Points updated successfully');
             navigate(`/test-attempts/${testId}`);
         } catch (error) {
             console.error('Error:', error);
-            toast.error('Failed to update attempt points');
         }
         setLoading(false);
     };

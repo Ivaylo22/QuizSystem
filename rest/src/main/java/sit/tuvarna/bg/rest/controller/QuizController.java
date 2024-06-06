@@ -35,6 +35,9 @@ import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesResponse;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getrequested.GetRequestedQuizzesResponse;
+import sit.tuvarna.bg.api.operations.quiz.leaderboard.GetLeaderboardOperation;
+import sit.tuvarna.bg.api.operations.quiz.leaderboard.GetLeaderboardRequest;
+import sit.tuvarna.bg.api.operations.quiz.leaderboard.GetLeaderboardResponse;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizOperation;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizRequest;
 import sit.tuvarna.bg.api.operations.quiz.solve.SolveQuizResponse;
@@ -56,6 +59,13 @@ public class QuizController {
     private final GetMyQuizzesOperation getMyQuizzes;
     private final ArchiveQuizOperationProcessor archiveQuiz;
     private final ActiveQuizOperation activeQuiz;
+    private final GetLeaderboardOperation getLeaderboard;
+
+    @GetMapping("/get-leaderboard")
+    public ResponseEntity<GetLeaderboardResponse> getLeaderBoard() {
+        GetLeaderboardRequest request = GetLeaderboardRequest.builder().build();
+        return new ResponseEntity<>(getLeaderboard.process(request), HttpStatus.OK);
+    }
 
     @GetMapping("/get-mine")
     public ResponseEntity<GetMyQuizzesResponse> getMyQuizzes(@RequestParam @NotBlank(message = "Email is required") String userEmail) {
