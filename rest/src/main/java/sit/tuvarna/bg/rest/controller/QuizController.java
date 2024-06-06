@@ -29,6 +29,9 @@ import sit.tuvarna.bg.api.operations.quiz.getbyid.GetQuizByIdResponse;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getcategories.GetCategoriesResponse;
+import sit.tuvarna.bg.api.operations.quiz.getdaily.GetDailyQuizOperation;
+import sit.tuvarna.bg.api.operations.quiz.getdaily.GetDailyQuizRequest;
+import sit.tuvarna.bg.api.operations.quiz.getdaily.GetDailyQuizResponse;
 import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesResponse;
@@ -60,6 +63,13 @@ public class QuizController {
     private final ArchiveQuizOperationProcessor archiveQuiz;
     private final ActiveQuizOperation activeQuiz;
     private final GetLeaderboardOperation getLeaderboard;
+    private final GetDailyQuizOperation getDaily;
+
+    @GetMapping("/get-daily")
+    public ResponseEntity<GetDailyQuizResponse> getDaily() {
+        GetDailyQuizRequest request = GetDailyQuizRequest.builder().build();
+        return new ResponseEntity<>(getDaily.process(request), HttpStatus.OK);
+    }
 
     @GetMapping("/get-leaderboard")
     public ResponseEntity<GetLeaderboardResponse> getLeaderBoard() {

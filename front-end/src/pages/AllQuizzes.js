@@ -10,6 +10,8 @@ const AllQuizzes = ({ email, token }) => {
     const [selectedCategory, setSelectedCategory] = useState('Всички');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortConfig, setSortConfig] = useState({key: 'createdAt', direction: 'asc'});
+    const [dailyQuiz, setDailyQuiz] = useState(null);
+    const [showDailyQuizDialog, setShowDailyQuizDialog] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -53,10 +55,33 @@ const AllQuizzes = ({ email, token }) => {
 
     const handleCloseModal = () => {
         setSelectedQuiz(null);
+        setShowDailyQuizDialog(false);
     };
 
     const handleStartQuiz = (quizId) => {
         navigate(`/solve-quiz/${quizId}`);
+    };
+
+    const fetchDailyQuiz = async () => {
+        setLoading(true);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/quiz/get-daily', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+            if (!response.ok) {
+                throw new Error('Failed to fetch daily quiz.');
+            }
+            const data = await response.json();
+            setDailyQuiz(data);
+            setShowDailyQuizDialog(true);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+        setLoading(false);
     };
 
     const sortQuizzes = () => {
@@ -114,6 +139,7 @@ const AllQuizzes = ({ email, token }) => {
 
     return (
         <div className="container all-quizzes-container align-items-center">
+            <button className="btn btn-primary mt-3" onClick={fetchDailyQuiz}>Реши дневен куиз</button>
             <div className="filters-container mt-4 mx-auto">
                 <div className="row mb-3">
                     <div className="col-md-6">
@@ -189,6 +215,24 @@ const AllQuizzes = ({ email, token }) => {
                         <div className="dialog-buttons-container">
                             <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
                             <button className='btn-start' onClick={() => handleStartQuiz(selectedQuiz.quizId)}>Започни</button>
+                        </div>
+                    </dialog>
+                </div>
+            )}
+            {showDailyQuizDialog && dailyQuiz && (
+                <div className="dialog-overlay" onClick={handleCloseModal}>
+                    <dialog open className="quiz-dialog" onClick={e => e.stopPropagation()}>
+                        <h3 className='text-center'>{dailyQuiz.title}</h3>
+                        <p className='mt-2'>Категория: {dailyQuiz.category}</p>
+                        <p>Въпроси: {dailyQuiz.questionsCount}</p>
+                        <p>Средно време за решаване: {dailyQuiz.averageTimeToSolve} минути</p>
+
+                        <p className='mt-2 text-center'>При натискане на бутона "Започни" ще започне да тече вашето
+                            време</p>
+                        <div className="dialog-buttons-container">
+                            <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
+                            <button className='btn-start' onClick={() => handleStartQuiz(dailyQuiz.quizId)}>Започни
+                            </button>
                         </div>
                     </dialog>
                 </div>
