@@ -38,7 +38,6 @@ public class UserController {
     private final GetUserInfoOperation getUserInfo;
     private final ChangePasswordOperation changePassword;
     private final ArchiveUserOperation archiveUser;
-
     private final XPProgressService progressService;
 
 

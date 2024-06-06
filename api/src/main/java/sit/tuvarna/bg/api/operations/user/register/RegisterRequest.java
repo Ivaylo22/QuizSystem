@@ -17,6 +17,7 @@ public class RegisterRequest implements ProcessorRequest {
     private String email;
 
     @NotBlank(message = "Password is required.")
+    @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$")
     private String password;
 
     @NotBlank(message = "Confirm password is required.")

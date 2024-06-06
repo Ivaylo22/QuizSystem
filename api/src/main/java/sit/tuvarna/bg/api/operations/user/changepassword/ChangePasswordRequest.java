@@ -1,6 +1,7 @@
 package sit.tuvarna.bg.api.operations.user.changepassword;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import sit.tuvarna.bg.api.base.ProcessorRequest;
 
@@ -15,8 +16,10 @@ public class ChangePasswordRequest implements ProcessorRequest {
     private String email;
 
     @NotBlank(message = "New password is required.")
+    @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$")
     private String newPassword;
 
     @NotBlank(message = "Confirm new password is required.")
+    @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$")
     private String confirmNewPassword;
 }

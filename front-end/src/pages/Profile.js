@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../styles/profile.css";
 import { toast } from 'react-toastify';
 import {useLoading} from '../context/LoadingContext';
+import ChangePasswordDialog from '../components/ChangePasswordDialog';
 
 const Profile = () => {
     const [userInformation, setUserInformation] = useState(null);
@@ -10,6 +11,7 @@ const Profile = () => {
         xpTowardsNextLevel: 0,
         xpRequirementForNextLevel: 0,
     });
+    const [isChangePasswordOpen, setIsChangePasswordOpen] = useState(false);
     const {setLoading} = useLoading();
 
     const token = localStorage.getItem('token');
@@ -65,11 +67,43 @@ const Profile = () => {
         if (email && token) {
             fetchUserInfo();
         }
-    }, [email, token, setLoading]); 
+    }, [email, token, setLoading]);
 
     const xpPercentage = xpProgress.xpTowardsNextLevel < xpProgress.xpRequirementForNextLevel
         ? (xpProgress.xpTowardsNextLevel / xpProgress.xpRequirementForNextLevel) * 100
         : 0;
+
+    const handleOpenChangePassword = () => {
+        setIsChangePasswordOpen(true);
+    };
+
+    const handleCloseChangePassword = () => {
+        setIsChangePasswordOpen(false);
+    };
+
+    const handleChangePassword = async (formData) => {
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/user/change-password', {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                toast.success('Паролата е променена успешно');
+                handleCloseChangePassword();
+            } else {
+                const errorText = await response.text();
+                toast.error(`Грешка при смяна на паролата: ${errorText}`);
+            }
+        } catch (error) {
+            console.error('Error changing password:', error);
+            toast.error('Грешка при смяна на паролата.');
+        }
+    };
 
     if (!userInformation) {
         return <div>Loading...</div>;
@@ -88,7 +122,13 @@ const Profile = () => {
                 <div className="xp-bar-container">
                     <div className="xp-bar" style={{ width: `${xpPercentage}%` }}></div>
                 </div>
+                <button className="btn-change-password" onClick={handleOpenChangePassword}>Смяна на парола</button>
             </div>
+            <ChangePasswordDialog
+                isOpen={isChangePasswordOpen}
+                onClose={handleCloseChangePassword}
+                onSubmit={handleChangePassword}
+            />
         </div>
     );
 };
