@@ -2,6 +2,8 @@ package sit.tuvarna.bg.core.processor.achievement;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import sit.tuvarna.bg.api.enums.NotificationType;
+import sit.tuvarna.bg.core.externalservices.NotificationService;
 import sit.tuvarna.bg.persistence.entity.Achievement;
 import sit.tuvarna.bg.persistence.entity.User;
 import sit.tuvarna.bg.persistence.repository.AchievementRepository;
@@ -18,6 +20,7 @@ public class AchievementService {
     private final UsersQuizzesRepository usersQuizzesRepository;
     private final AchievementRepository achievementRepository;
     private final UserRepository userRepository;
+    private final NotificationService notificationService;
 
     public void updateUserAchievements(User user) {
         List<Achievement> allAchievements = achievementRepository.findAll();
@@ -28,6 +31,7 @@ public class AchievementService {
                 earnedAchievements.add(achievement);
                 user.getAchievements().add(achievement);
                 user.setAchievementPoints(user.getAchievementPoints() + achievement.getPoints());
+                notificationService.sendNotificationToUser(NotificationType.ACHIEVEMENT_EARNED, achievement.getName(), user.getEmail());
             }
         }
 

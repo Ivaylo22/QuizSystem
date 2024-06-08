@@ -1,5 +1,9 @@
 package sit.tuvarna.bg.persistence.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import jakarta.persistence.*;
 import lombok.*;
 import sit.tuvarna.bg.persistence.enums.QuestionType;
@@ -15,6 +19,9 @@ import java.util.UUID;
 @Builder
 @Entity
 @Table(name = "questions")
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({"question", "questionType", "answers"})
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -39,5 +46,6 @@ public class Question {
     private Section section;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JacksonXmlElementWrapper(localName = "answers")
     private List<Answer> answers = new ArrayList<>();
 }

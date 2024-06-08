@@ -43,16 +43,17 @@ const CreateQuiz = ({ email, token }) => {
 
     const [quiz, setQuiz] = useState({
         title: '',
-        category: 'Обща култура',
-        userEmail: email,
+        category: 'Математика',
+        creatorEmail: email,
         questions: new Array(5).fill(null).map(() => ({
             question: '',
-            questionType: 'SINGLE_ANSWER',
+            type: 'SINGLE_ANSWER',
             answers: [{ content: '', isCorrect: false }],
             image: null,
             imageFile: null
         })),
     });
+    console.log(quiz);
 
     const handleFileChange = (questionIndex, event) => {
         const file = event.target.files[0];
@@ -118,8 +119,8 @@ const CreateQuiz = ({ email, token }) => {
             case 'answer':
                 updatedQuiz.questions[index].answers[answerIndex].content = e.target.value;
                 break;
-            case 'questionType':
-                updatedQuiz.questions[index].questionType = e.target.value;
+            case 'type':
+                updatedQuiz.questions[index].type = e.target.value;
                 if (e.target.value === 'OPEN') {
                     updatedQuiz.questions[index].answers = [{ content: '', isCorrect: true }];
                 } else {
@@ -127,7 +128,7 @@ const CreateQuiz = ({ email, token }) => {
                 }
                 break;
             case 'toggleCorrect':
-                if (updatedQuiz.questions[index].questionType === 'SINGLE_ANSWER') {
+                if (updatedQuiz.questions[index].type === 'SINGLE_ANSWER') {
                     updatedQuiz.questions[index].answers = updatedQuiz.questions[index].answers.map((answer, i) => ({ ...answer, isCorrect: i === answerIndex }));
                 } else {
                     updatedQuiz.questions[index].answers[answerIndex].isCorrect = !updatedQuiz.questions[index].answers[answerIndex].isCorrect;
@@ -180,7 +181,7 @@ const CreateQuiz = ({ email, token }) => {
             ...prevQuiz,
             questions: prevQuiz.questions.concat({
                 question: '',
-                questionType: 'SINGLE_ANSWER',
+                type: 'SINGLE_ANSWER',
                 answers: [{ content: '', isCorrect: false }],
                 image: null
             })
@@ -213,11 +214,11 @@ const CreateQuiz = ({ email, token }) => {
             }
 
             const correctAnswers = question.answers.filter(a => a.isCorrect);
-            if (question.questionType !== 'OPEN' && correctAnswers.length === 0) {
+            if (question.type !== 'OPEN' && correctAnswers.length === 0) {
                 hasError = true;
             }
 
-            if (question.questionType === 'OPEN' && correctAnswers[0].content.trim() === '') {
+            if (question.type === 'OPEN' && correctAnswers[0].content.trim() === '') {
                 hasError = true;
             }
 
@@ -277,7 +278,83 @@ const CreateQuiz = ({ email, token }) => {
         }
     };
 
-    console.log(quiz);
+    const handleSaveAsJson = async () => {
+        try {
+            const jsonString = JSON.stringify(quiz); // Serialize the quiz to JSON string
+            const response = await fetch('http://localhost:8090/api/v1/file/convert-to-json', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: jsonString, // Send the JSON string
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to save as JSON');
+            }
+
+            const blob = await response.blob();
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `${quiz.title}.json`;
+            link.click();
+        } catch (error) {
+            console.error('Error saving as JSON:', error);
+        }
+    };
+
+    const handleSaveAsXml = async () => {
+        try {
+            const jsonString = JSON.stringify(quiz); // Serialize the quiz to JSON string
+            const response = await fetch('http://localhost:8090/api/v1/file/convert-to-xml', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: jsonString, // Send the JSON string
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to save as XML');
+            }
+
+            const blob = await response.blob();
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `${quiz.title}.xml`;
+            link.click();
+        } catch (error) {
+            console.error('Error saving as XML:', error);
+        }
+    };
+
+    const handleSaveAsPdf = async () => {
+        try {
+            const jsonString = JSON.stringify(quiz); // Serialize the quiz to JSON string
+            const response = await fetch('http://localhost:8090/api/v1/file/convert-to-pdf', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: jsonString, // Send the JSON string
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to save as PDF');
+            }
+
+            const blob = await response.blob();
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `${quiz.title}.pdf`;
+            link.click();
+        } catch (error) {
+            console.error('Error saving as PDF:', error);
+        }
+    };
 
     return (
         <div className="create-quiz-container">
@@ -322,7 +399,8 @@ const CreateQuiz = ({ email, token }) => {
                                 </div>
                             )}
                         </div>
-                        <select className="question-type-select" value={question.questionType} onChange={(e) => handleChange(e, qIndex, 'questionType')}>
+                        <select className="question-type-select" value={question.type}
+                                onChange={(e) => handleChange(e, qIndex, 'type')}>
                             <option value="SINGLE_ANSWER">Един верен отговор</option>
                             <option value="MULTIPLE_ANSWER">Няколко верни отговора</option>
                             <option value="OPEN">Отворен отговор</option>
@@ -350,7 +428,7 @@ const CreateQuiz = ({ email, token }) => {
                             </div>
                         ))}
                         <div className="buttons-container">
-                            {question.questionType !== 'OPEN' && (
+                            {question.type !== 'OPEN' && (
                                 <button type="button" className="add-answer-btn" onClick={() => addAnswer(qIndex)}>
                                     Добави отговор
                                 </button>
@@ -364,6 +442,15 @@ const CreateQuiz = ({ email, token }) => {
                 <div className="buttons-container">
                     <button type="button" onClick={addQuestion} className="add-question-btn">Добави въпрос</button>
                     <button type="submit" className="btn btn-success submit-quiz-btn">Създай куиз</button>
+                    <button type="button" onClick={handleSaveAsJson} className="btn btn-primary save-quiz-btn">Запази
+                        като JSON
+                    </button>
+                    <button type="button" onClick={handleSaveAsXml} className="btn btn-secondary save-quiz-btn">Запази
+                        като XML
+                    </button>
+                    <button type="button" onClick={handleSaveAsPdf} className="btn btn-secondary save-quiz-btn">Запази
+                        като PDF
+                    </button>
                 </div>
             </form>
         </div>

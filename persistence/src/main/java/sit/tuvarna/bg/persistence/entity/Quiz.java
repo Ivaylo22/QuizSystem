@@ -1,8 +1,13 @@
 package sit.tuvarna.bg.persistence.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import sit.tuvarna.bg.persistence.deserializer.CategoryDeserializer;
 import sit.tuvarna.bg.persistence.enums.QuizStatus;
 
 import java.time.LocalDateTime;
@@ -17,6 +22,9 @@ import java.util.UUID;
 @Builder
 @Entity
 @Table(name = "quizzes")
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({"title", "category", "userEmail", "questions"})
+@JacksonXmlRootElement(localName = "quiz")
 public class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -46,6 +54,7 @@ public class Quiz {
     private List<Question> questions = new ArrayList<>();
 
     @ManyToOne
+    @JsonDeserialize(using = CategoryDeserializer.class)
     Category category;
 
     private LocalDateTime lastUpdated;

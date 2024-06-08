@@ -150,6 +150,8 @@ const SolveQuiz = ({email, token}) => {
         setShowModal(false);
     };
 
+    console.log(quiz);
+
     if (!quiz) {
         return <div>Loading...</div>;
     }
