@@ -109,6 +109,8 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 10px;
+    width: 30%;
+    margin-bottom: 10px;
 }
 
 .remove-question-btn:hover,
@@ -210,4 +212,30 @@ button:focus {
 .remove-img {
     width: 160px;
     margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.save-quiz-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    background-color: #007bff;
+    color: white;
+    width: 50% px;
+}
+
+.save-quiz-btn:hover {
+    opacity: 0.8;
+    background-color: #007bff;
+    color: white;
 }

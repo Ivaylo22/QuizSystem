@@ -28,6 +28,7 @@ public class DailyQuizScheduling {
             return;
         }
 
+        System.out.println("TEST TEST");
         quizRepository.resetDailyQuiz();
 
         Random random = new Random();

@@ -29,46 +29,52 @@ public class GetAllQuizzesForUserForUserOperationProcessor implements GetAllQuiz
 
     @Override
     public GetAllQuizzesForUserResponse process(GetAllQuizzesForUserRequest request) {
-        List<Quiz> quizzes = quizRepository.findAll()
-                .stream()
-                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
-                .toList();
-        User user = userRepository.findByEmail(request.getUserEmail())
-                .orElseThrow(UserNotFoundException::new);
-        List<QuizModel> quizModels = new ArrayList<>();
+        try {
+            List<Quiz> quizzes = quizRepository.findAll()
+                    .stream()
+                    .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
+                    .toList();
+            User user = userRepository.findByEmail(request.getUserEmail())
+                    .orElseThrow(UserNotFoundException::new);
+            List<QuizModel> quizModels = new ArrayList<>();
 
-        if (!quizzes.isEmpty()) {
-            for (Quiz quiz : quizzes) {
-                List<UsersQuizzes> userQuizzes = usersQuizzesRepository.getUsersQuizzesByUserAndQuiz(user, quiz);
+            if (!quizzes.isEmpty()) {
+                for (Quiz quiz : quizzes) {
+                    List<UsersQuizzes> userQuizzes = usersQuizzesRepository.getUsersQuizzesByUserAndQuiz(user, quiz);
 
-                Optional<Integer> maxCorrectAnswers = usersQuizzesRepository.findMaxCorrectAnswersByUserAndQuiz(user, quiz);
-                Optional<Integer> bestTime = usersQuizzesRepository.findBestTimeByUserAndQuiz(user, quiz);
-                Optional<Integer> maxExperienceGained = usersQuizzesRepository.findMaxExperienceGainedByUserAndQuiz(user, quiz);
+                    Optional<Integer> maxCorrectAnswers = usersQuizzesRepository.findMaxCorrectAnswersByUserAndQuiz(user, quiz);
+                    Optional<Integer> bestTime = usersQuizzesRepository.findBestTimeByUserAndQuiz(user, quiz);
+                    Optional<Integer> maxExperienceGained = usersQuizzesRepository.findMaxExperienceGainedByUserAndQuiz(user, quiz);
 
-                boolean haveBeenCompleted = !userQuizzes.isEmpty();
-                boolean haveBeenPassed = userQuizzes.stream().anyMatch(uq -> uq.getExperienceGained() > 80);
+                    boolean haveBeenCompleted = !userQuizzes.isEmpty();
+                    boolean haveBeenPassed = userQuizzes.stream().anyMatch(uq -> uq.getExperienceGained() > 80);
 
-                QuizModel quizModel = QuizModel.builder()
-                        .quizId(String.valueOf(quiz.getId()))
-                        .name(quiz.getTitle())
-                        .category(quiz.getCategory().getCategory())
-                        .averageSecondsNeeded(quiz.getAverageSecondsNeeded())
-                        .averageCorrectAnswers(quiz.getAverageCorrectAnswers())
-                        .haveBeenCompleted(haveBeenCompleted)
-                        .haveBeenPassed(haveBeenPassed)
-                        .personalBestCorrectAnswers(maxCorrectAnswers.orElse(null))
-                        .personalBestTime(bestTime.orElse(null))
-                        .personalBestXpGained(maxExperienceGained.orElse(null))
-                        .questionsCount(quiz.getQuestions().size())
-                        .createdAt(quiz.getCreatedAt())
-                        .build();
+                    QuizModel quizModel = QuizModel.builder()
+                            .quizId(String.valueOf(quiz.getId()))
+                            .name(quiz.getTitle())
+                            .category(quiz.getCategory().getCategory())
+                            .averageSecondsNeeded(quiz.getAverageSecondsNeeded())
+                            .averageCorrectAnswers(quiz.getAverageCorrectAnswers())
+                            .haveBeenCompleted(haveBeenCompleted)
+                            .haveBeenPassed(haveBeenPassed)
+                            .personalBestCorrectAnswers(maxCorrectAnswers.orElse(null))
+                            .personalBestTime(bestTime.orElse(null))
+                            .personalBestXpGained(maxExperienceGained.orElse(null))
+                            .questionsCount(quiz.getQuestions().size())
+                            .createdAt(quiz.getCreatedAt())
+                            .userEmail(user.getEmail())
+                            .build();
 
-                quizModels.add(quizModel);
+                    quizModels.add(quizModel);
+                }
             }
-        }
 
-        return GetAllQuizzesForUserResponse.builder()
-                .quizModels(quizModels)
-                .build();
+            return GetAllQuizzesForUserResponse.builder()
+                    .quizModels(quizModels)
+                    .build();
+        } catch (Exception e) {
+            e.printStackTrace();  // Log the exception
+            throw e;  // Rethrow the exception to be caught by the global exception handler
+        }
     }
 }

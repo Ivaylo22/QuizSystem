@@ -74,7 +74,11 @@ public class FileOperationsService {
 
         int questionNumber = 1;
         for (Question question : quiz.getQuestions()) {
-            Paragraph questionParagraph = new Paragraph("\nВъпрос " + questionNumber + ". " + question.getQuestion()).setFont(font);
+            String questionText = "Въпрос " + questionNumber + ". " + question.getQuestion();
+            if (question.getType().name().equals("MULTIPLE_ANSWER")) {
+                questionText += " (Няколко верни отговора)";
+            }
+            Paragraph questionParagraph = new Paragraph("\n" + questionText).setFont(font);
             document.add(questionParagraph);
 
             List list = new List(ListNumberingType.DECIMAL);

@@ -53,7 +53,6 @@ const CreateQuiz = ({ email, token }) => {
             imageFile: null
         })),
     });
-    console.log(quiz);
 
     const handleFileChange = (questionIndex, event) => {
         const file = event.target.files[0];
@@ -279,15 +278,18 @@ const CreateQuiz = ({ email, token }) => {
     };
 
     const handleSaveAsJson = async () => {
+        if (!validateQuiz()) {
+            return;
+        }
         try {
-            const jsonString = JSON.stringify(quiz); // Serialize the quiz to JSON string
+            const jsonString = JSON.stringify(quiz); 
             const response = await fetch('http://localhost:8090/api/v1/file/convert-to-json', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
                 },
-                body: jsonString, // Send the JSON string
+                body: jsonString,
             });
 
             if (!response.ok) {
@@ -305,6 +307,9 @@ const CreateQuiz = ({ email, token }) => {
     };
 
     const handleSaveAsXml = async () => {
+        if (!validateQuiz()) {
+            return;
+        }
         try {
             const jsonString = JSON.stringify(quiz); // Serialize the quiz to JSON string
             const response = await fetch('http://localhost:8090/api/v1/file/convert-to-xml', {
@@ -331,6 +336,9 @@ const CreateQuiz = ({ email, token }) => {
     };
 
     const handleSaveAsPdf = async () => {
+        if (!validateQuiz()) {
+            return;
+        }
         try {
             const jsonString = JSON.stringify(quiz); // Serialize the quiz to JSON string
             const response = await fetch('http://localhost:8090/api/v1/file/convert-to-pdf', {
@@ -442,15 +450,15 @@ const CreateQuiz = ({ email, token }) => {
                 <div className="buttons-container">
                     <button type="button" onClick={addQuestion} className="add-question-btn">Добави въпрос</button>
                     <button type="submit" className="btn btn-success submit-quiz-btn">Създай куиз</button>
-                    <button type="button" onClick={handleSaveAsJson} className="btn btn-primary save-quiz-btn">Запази
-                        като JSON
-                    </button>
-                    <button type="button" onClick={handleSaveAsXml} className="btn btn-secondary save-quiz-btn">Запази
-                        като XML
-                    </button>
-                    <button type="button" onClick={handleSaveAsPdf} className="btn btn-secondary save-quiz-btn">Запази
-                        като PDF
-                    </button>
+                    <div className="button-group">
+                        <button type="button" onClick={handleSaveAsJson} className="btn save-quiz-btn">Запази като
+                            JSON
+                        </button>
+                        <button type="button" onClick={handleSaveAsXml} className="btn save-quiz-btn">Запази като XML
+                        </button>
+                        <button type="button" onClick={handleSaveAsPdf} className="btn save-quiz-btn">Запази като PDF
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
