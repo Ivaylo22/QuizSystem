@@ -282,7 +282,7 @@ const CreateQuiz = ({ email, token }) => {
             return;
         }
         try {
-            const jsonString = JSON.stringify(quiz); 
+            const jsonString = JSON.stringify(quiz);
             const response = await fetch('http://localhost:8090/api/v1/file/convert-to-json', {
                 method: 'POST',
                 headers: {
@@ -364,9 +364,51 @@ const CreateQuiz = ({ email, token }) => {
         }
     };
 
+    const handleFileUpload = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        setLoading(true);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/file/upload-and-convert', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: formData,
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to upload and convert file.');
+            }
+
+            const json = await response.json();
+            setQuiz(json);
+        } catch (error) {
+            console.error('Error uploading and converting file:', error);
+            toast.error('Error uploading and converting file.');
+        }
+        setLoading(false);
+    };
+
     return (
         <div className="create-quiz-container">
             <form onSubmit={handleSubmit} className="quiz-form">
+                <div className="form-group">
+                    <label htmlFor="file-upload" className="form-label">Създай от .json или .xml файл</label>
+                    <input
+                        type="file"
+                        id="file-upload"
+                        className="form-control"
+                        accept=".json, .xml"
+                        placeholder='Избери файл'
+                        text='Избери файл'
+                        onChange={handleFileUpload}
+                    />
+                </div>
                 <div className="form-group quiz-title-group">
                     <input type="text" className="form-control mb-3 quiz-title-input" placeholder="Заглавие на куиза" value={quiz.title} onChange={(e) => handleChange(e, null, 'title')} />
 

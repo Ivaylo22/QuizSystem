@@ -4,6 +4,8 @@ import com.amazonaws.util.IOUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 
 import com.itextpdf.io.font.PdfEncodings;
 import com.itextpdf.kernel.font.PdfFont;
@@ -24,6 +27,7 @@ import com.itextpdf.layout.properties.ListNumberingType;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 import sit.tuvarna.bg.persistence.entity.Answer;
 import sit.tuvarna.bg.persistence.entity.Question;
 import sit.tuvarna.bg.persistence.entity.Quiz;
@@ -33,6 +37,8 @@ import sit.tuvarna.bg.persistence.entity.Quiz;
 public class FileOperationsService {
     private final ObjectMapper objectMapper;
     private final XmlMapper xmlMapper;
+    private static final Logger logger = LoggerFactory.getLogger(FileOperationsService.class);
+
 
     public ResponseEntity<byte[]> convertToXml(Quiz quiz) throws Exception {
         String xmlContent = xmlMapper.writeValueAsString(quiz); // Serialize to pretty XML
@@ -105,5 +111,25 @@ public class FileOperationsService {
         headers.setContentDispositionFormData("attachment", encodedFilename);
 
         return new ResponseEntity<>(baos.toByteArray(), headers, HttpStatus.OK);
+    }
+
+    public ResponseEntity<String> uploadAndConvertFile(MultipartFile file) {
+        try {
+            String content = new String(file.getBytes(), StandardCharsets.UTF_8);
+            Quiz quiz;
+            if (Objects.requireNonNull(file.getOriginalFilename()).endsWith(".json")) {
+                quiz = objectMapper.readValue(content, Quiz.class);
+            } else if (file.getOriginalFilename().endsWith(".xml")) {
+                quiz = xmlMapper.readValue(content, Quiz.class);
+            } else {
+                throw new IllegalArgumentException("Unsupported file format");
+            }
+
+            String jsonContent = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(quiz);
+            return ResponseEntity.ok(jsonContent);
+        } catch (Exception e) {
+            logger.error("Error while uploading and converting file", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error while processing the file: " + e.getMessage());
+        }
     }
 }

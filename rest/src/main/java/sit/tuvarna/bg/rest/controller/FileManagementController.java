@@ -3,10 +3,8 @@ package sit.tuvarna.bg.rest.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import sit.tuvarna.bg.core.externalservices.FileOperationsService;
 import sit.tuvarna.bg.persistence.entity.Quiz;
 
@@ -34,5 +32,10 @@ public class FileManagementController {
     public ResponseEntity<byte[]> convertToPdf(@RequestBody String quizString) throws Exception {
         Quiz quiz = objectMapper.readValue(quizString, Quiz.class);
         return fileOperationsService.convertToPdf(quiz);
+    }
+
+    @PostMapping("/upload-and-convert")
+    public ResponseEntity<String> uploadAndConvertFile(@RequestPart("file") MultipartFile file) throws Exception {
+        return fileOperationsService.uploadAndConvertFile(file);
     }
 }
