@@ -223,23 +223,17 @@ public class FileOperationsService {
         }
     }
 
-    public ResponseEntity<String> uploadAndConvertTestFile(MultipartFile file) {
-        try {
-            String content = new String(file.getBytes(), StandardCharsets.UTF_8);
-            Test test;
-            if (Objects.requireNonNull(file.getOriginalFilename()).endsWith(".json")) {
-                test = objectMapper.readValue(content, Test.class);
-            } else if (file.getOriginalFilename().endsWith(".xml")) {
-                test = xmlMapper.readValue(content, Test.class);
-            } else {
-                throw new IllegalArgumentException("Unsupported file format");
-            }
-
-            String jsonContent = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(test);
-            return ResponseEntity.ok(jsonContent);
-        } catch (Exception e) {
-            logger.error("Error while uploading and converting test file", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error while processing the file: " + e.getMessage());
+    public String uploadAndConvertTestFile(MultipartFile file) throws Exception {
+        String content = new String(file.getBytes(), StandardCharsets.UTF_8);
+        Test test;
+        if (Objects.requireNonNull(file.getOriginalFilename()).endsWith(".json")) {
+            test = objectMapper.readValue(content, Test.class);
+        } else if (file.getOriginalFilename().endsWith(".xml")) {
+            test = xmlMapper.readValue(content, Test.class);
+        } else {
+            throw new IllegalArgumentException("Unsupported file format");
         }
+
+        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(test);
     }
 }

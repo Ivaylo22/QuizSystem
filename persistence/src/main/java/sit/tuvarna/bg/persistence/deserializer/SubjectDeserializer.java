@@ -31,7 +31,22 @@ public class SubjectDeserializer extends JsonDeserializer<Subject> {
             return null;
         }
 
-        String subjectName = subjectNode.asText();
+        String subjectName;
+        if (subjectNode.isObject()) {
+            JsonNode subjectNameNode = subjectNode.get("subject");
+            if (subjectNameNode != null && !subjectNameNode.isNull()) {
+                subjectName = subjectNameNode.asText();
+            } else {
+                subjectName = null;
+            }
+        } else {
+            subjectName = subjectNode.asText();
+        }
+
+        if (subjectName == null || subjectName.isEmpty()) {
+            return null;
+        }
+
         return subjectRepository.findBySubject(subjectName)
                 .orElseGet(() -> {
                     Subject newSubject = Subject.builder().subject(subjectName).build();

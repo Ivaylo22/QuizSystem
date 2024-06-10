@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +22,8 @@ import java.nio.charset.StandardCharsets;
 public class FileManagementController {
 
     private final ObjectMapper objectMapper;
-    private final XmlMapper xmlMapper;
     private final FileOperationsService fileOperationsService;
+    private static final Logger logger = LoggerFactory.getLogger(FileManagementController.class);
 
     @PostMapping("/convert-to-xml")
     public ResponseEntity<byte[]> convertToXml(@RequestBody String quizString) throws Exception {
@@ -47,9 +49,21 @@ public class FileManagementController {
     }
 
     @PostMapping("/convert-test-to-xml")
-    public ResponseEntity<byte[]> convertTestToXml(@RequestBody String testString) throws Exception {
-        Test test = objectMapper.readValue(testString, Test.class);
-        return fileOperationsService.convertTestToXml(test);
+    public ResponseEntity<byte[]> convertTestToXml(@RequestBody String testString) {
+        try {
+            // Deserialize the input string into a Test object using ObjectMapper
+            Test test = objectMapper.readValue(testString, Test.class);
+
+            // Convert the Test object to XML and return the response
+            return fileOperationsService.convertTestToXml(test);
+        } catch (Exception e) {
+            // Log the exception using a logger
+            logger.error("Error while converting test to XML", e);
+
+            // Return an error response with appropriate status code and message
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(("Error while processing the request: " + e.getMessage()).getBytes(StandardCharsets.UTF_8));
+        }
     }
 
     @PostMapping("/convert-test-to-json")
@@ -74,7 +88,13 @@ public class FileManagementController {
     }
 
     @PostMapping("/upload-and-convert-test")
-    public ResponseEntity<String> uploadAndConvertTest(@RequestPart("file") MultipartFile file) throws Exception {
-        return fileOperationsService.uploadAndConvertTestFile(file);
+    public ResponseEntity<String> uploadAndConvertTestFile(@RequestParam("file") MultipartFile file) {
+        try {
+            String jsonContent = fileOperationsService.uploadAndConvertTestFile(file);
+            return ResponseEntity.ok(jsonContent);
+        } catch (Exception e) {
+            logger.error("Error while uploading and converting test file", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error while processing the file: " + e.getMessage());
+        }
     }
 }

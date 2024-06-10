@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, useLocation} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
 import '../styles/createTest.css';
@@ -23,8 +23,10 @@ const CreateTest = () => {
     const [subjects, setSubjects] = useState([]);
     const {setLoading} = useLoading();
     const navigate = useNavigate();
+    const location = useLocation();
     const hasNavigated = useRef(false);
     const containerRef = useRef(null);
+    const fileInputRef = useRef(null);
     const [collapsedSections, setCollapsedSections] = useState({});
     const [showSettings, setShowSettings] = useState(false);
     const [showVariantsDialog, setShowVariantsDialog] = useState(false);
@@ -33,6 +35,13 @@ const CreateTest = () => {
         sections: [],
         questions: new Map()
     });
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        if (params.get('fromFile') === 'true' && fileInputRef.current) {
+            fileInputRef.current.click();
+        }
+    }, [location]);
 
     console.log(test);
 
@@ -61,11 +70,16 @@ const CreateTest = () => {
 
             const uniqueSubjects = Array.from(new Set(data.subjects));
             setSubjects(uniqueSubjects);
+
+            // Ensure the loaded subject is in the subject list
+            if (test.subject && !uniqueSubjects.includes(test.subject)) {
+                setSubjects(prevSubjects => [...prevSubjects, test.subject]);
+            }
         } catch (error) {
             console.error('Failed to fetch subjects:', error);
         }
         setLoading(false);
-    }, [token, setLoading]);
+    }, [token, setLoading, test.subject]);
 
     useEffect(() => {
         if (!token && !hasNavigated.current) {
@@ -76,7 +90,7 @@ const CreateTest = () => {
         if (token) {
             fetchSubjects();
         }
-    }, [token, navigate, fetchSubjects]);
+    }, [token, navigate, fetchSubjects, test.subject]);
 
     useEffect(() => {
         const handleDragOver = (event) => {
@@ -535,10 +549,8 @@ const CreateTest = () => {
             }
 
             const json = await response.json();
-            console.log(json.subject.subject);
-
-            const subject = json.subject.subject;
-
+            console.log(json);
+    
             json.sections = json.sections.map(section => ({
                 ...section,
                 id: section.id || `section-${uuidv4()}`,
@@ -552,10 +564,9 @@ const CreateTest = () => {
                 }))
             }));
 
-            console.log(subject);
             setTest({
                 ...json,
-                subject: json.subject || ''
+                subject: json.subject.subject || ''
             });
         } catch (error) {
             console.error('Error uploading and converting file:', error);
@@ -574,6 +585,7 @@ const CreateTest = () => {
 
         const testWithQuestionType = {
             ...testObject,
+            subject: typeof testObject.subject === 'object' ? testObject.subject : {subject: testObject.subject},
             sections: testObject.sections.map(section => ({
                 ...section,
                 questions: section.questions.map(question => ({
@@ -711,6 +723,7 @@ const CreateTest = () => {
                         placeholder='Избери файл'
                         text='Избери файл'
                         onChange={handleFileUpload}
+                        ref={fileInputRef}
                     />
                 </div>
                 {showSettings && (
@@ -805,6 +818,7 @@ const CreateTest = () => {
                         </dialog>
                     </div>
                 )}
+                {/* Render Sections and Questions */}
                 {test.sections.map((section, sIndex) => (
                     <Droppable key={section.id} droppableId={section.id}>
                         {(provided) => (
@@ -924,9 +938,11 @@ const CreateTest = () => {
                     </Droppable>
                 ))}
                 <button onClick={handleSubmit} className="btn btn-success submit-test">Създай тест</button>
-                <button onClick={handleSaveAsJson} className="btn btn-primary">Закази като JSON</button>
-                <button onClick={handleSaveAsXml} className="btn btn-primary">Запази като XML</button>
-                <button onClick={handleSaveAsPdf} className="btn btn-primary">Запази като PDF</button>
+                <div className='mx-0 button-container'>
+                    <button onClick={handleSaveAsJson} className="btn btn-primary">Запази като JSON</button>
+                    <button onClick={handleSaveAsXml} className="btn btn-primary">Запази като XML</button>
+                    <button onClick={handleSaveAsPdf} className="btn btn-primary">Запази като PDF</button>
+                </div>
             </div>
         </DragDropContext>
     );

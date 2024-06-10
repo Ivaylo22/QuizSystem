@@ -2,10 +2,13 @@ package sit.tuvarna.bg.rest.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.RequiredArgsConstructor;
+import sit.tuvarna.bg.persistence.deserializer.SubjectDeserializer;
+import sit.tuvarna.bg.persistence.entity.Subject;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,6 +36,7 @@ public class AppConfig {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         module.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(formatter));
         mapper.registerModule(module);
+        mapper.registerModule(new SimpleModule().addDeserializer(Subject.class, new SubjectDeserializer()));
         return mapper;
     }
 
