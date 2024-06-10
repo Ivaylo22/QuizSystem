@@ -3,10 +3,9 @@ package sit.tuvarna.bg.persistence.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Data
+@NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter(AccessLevel.PRIVATE)
 @Builder
 @Entity
 @Table(name = "subjects")

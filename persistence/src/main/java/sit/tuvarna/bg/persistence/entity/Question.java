@@ -1,8 +1,6 @@
 package sit.tuvarna.bg.persistence.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,11 +18,12 @@ import java.util.UUID;
 @Entity
 @Table(name = "questions")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"question", "questionType", "answers"})
+@JsonPropertyOrder({"question", "questionType", "maximumPoints", "answers"})
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @JsonIgnore
     private UUID id;
 
     @Column(nullable = false)
@@ -35,6 +34,7 @@ public class Question {
     private Integer maximumPoints;
 
     @Enumerated(EnumType.STRING)
+    @JsonProperty("questionType")
     private QuestionType type;
 
     @ManyToOne

@@ -27,6 +27,8 @@ const CreateTest = () => {
     const containerRef = useRef(null);
     const [collapsedSections, setCollapsedSections] = useState({});
     const [showSettings, setShowSettings] = useState(false);
+    const [showVariantsDialog, setShowVariantsDialog] = useState(false);
+    const [variants, setVariants] = useState(1);
     const [problematicIssues, setProblematicIssues] = useState({
         sections: [],
         questions: new Map()
@@ -467,7 +469,7 @@ const CreateTest = () => {
             if (!data.questionIdMap) {
                 throw new Error('No questionIdMap returned in the response');
             }
-    
+
             const uploadPromises = test.sections.flatMap(section =>
                 section.questions.map(async (question) => {
                     if (question.image) {
@@ -490,7 +492,6 @@ const CreateTest = () => {
         }
     };
 
-
     const uploadFile = async (file, questionId) => {
         const formData = new FormData();
         formData.append('file', file);
@@ -512,6 +513,185 @@ const CreateTest = () => {
         return imageUrl;
     };
 
+    const handleFileUpload = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        setLoading(true);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/file/upload-and-convert-test', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: formData,
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to upload and convert file.');
+            }
+
+            const json = await response.json();
+            console.log(json.subject.subject);
+
+            const subject = json.subject.subject;
+
+            json.sections = json.sections.map(section => ({
+                ...section,
+                id: section.id || `section-${uuidv4()}`,
+                questions: section.questions.map(question => ({
+                    ...question,
+                    id: question.id || uuidv4(),
+                    answers: question.answers.map(answer => ({
+                        ...answer,
+                        id: answer.id || uuidv4()
+                    }))
+                }))
+            }));
+
+            console.log(subject);
+            setTest({
+                ...json,
+                subject: json.subject || ''
+            });
+        } catch (error) {
+            console.error('Error uploading and converting file:', error);
+            toast.error('Error uploading and converting file.');
+        }
+        setLoading(false);
+    };
+
+    const convertTestToJsonString = (testObject) => {
+        const replacer = (key, value) => {
+            if (value instanceof File) {
+                return undefined;
+            }
+            return value;
+        };
+
+        const testWithQuestionType = {
+            ...testObject,
+            sections: testObject.sections.map(section => ({
+                ...section,
+                questions: section.questions.map(question => ({
+                    ...question,
+                    questionType: question.questionType || 'SINGLE_ANSWER'
+                }))
+            }))
+        };
+
+        return JSON.stringify(testWithQuestionType, replacer, 2);
+    };
+
+    const handleSaveAsJson = async () => {
+        if (!validateTest()) {
+            return;
+        }
+        const testString = convertTestToJsonString(test);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/file/convert-test-to-json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: testString
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to convert to JSON.');
+            }
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'test.json';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        } catch (error) {
+            console.error('Error converting to JSON:', error);
+            toast.error('Error converting to JSON.');
+        }
+    };
+
+    const handleSaveAsXml = async () => {
+        if (!validateTest()) {
+            return;
+        }
+        const testString = convertTestToJsonString(test);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/file/convert-test-to-xml', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: testString
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to convert to XML.');
+            }
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'test.xml';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        } catch (error) {
+            console.error('Error converting to XML:', error);
+            toast.error('Error converting to XML.');
+        }
+    };
+
+    const handleSaveAsPdf = () => {
+        setShowVariantsDialog(true);
+    };
+
+    const handleGeneratePdf = async () => {
+        setShowVariantsDialog(false);
+
+        if (!validateTest()) {
+            return;
+        }
+        const testString = convertTestToJsonString(test);
+
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/file/convert-test-to-pdf', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({testString, variants})
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to convert to PDF.');
+            }
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'test.pdf';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        } catch (error) {
+            console.error('Error converting to PDF:', error);
+            toast.error('Error converting to PDF.');
+        }
+    };
+
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div ref={containerRef} className="create-test-container">
@@ -520,6 +700,18 @@ const CreateTest = () => {
                     <button onClick={toggleSettingsDialog} className="btn settings-button">
                         <i className="fas fa-cog settings-icon"></i>
                     </button>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="file-upload" className="form-label">Създай от .json или .xml файл</label>
+                    <input
+                        type="file"
+                        id="file-upload"
+                        className="form-control"
+                        accept=".json, .xml"
+                        placeholder='Избери файл'
+                        text='Избери файл'
+                        onChange={handleFileUpload}
+                    />
                 </div>
                 {showSettings && (
                     <div className="dialog-overlay" onClick={toggleSettingsDialog}>
@@ -588,6 +780,26 @@ const CreateTest = () => {
                             </div>
                             <div className="dialog-buttons-container mx-auto">
                                 <button className="btn btn-primary mx-auto" onClick={toggleSettingsDialog}>Затвори
+                                </button>
+                            </div>
+                        </dialog>
+                    </div>
+                )}
+                {showVariantsDialog && (
+                    <div className="dialog-overlay" onClick={() => setShowVariantsDialog(false)}>
+                        <dialog open className="variants-dialog" onClick={e => e.stopPropagation()}>
+                            <h3>Изберете брой на варианти</h3>
+                            <div className="form-group">
+                                <label htmlFor="variants">Брой варианти:</label>
+                                <input type="number" id="variants" name="variants" min="1" value={variants}
+                                       onChange={(e) => setVariants(parseInt(e.target.value) || 1)}
+                                       className="form-control"/>
+                            </div>
+                            <div className="dialog-buttons-container mx-auto">
+                                <button className="btn btn-primary mx-auto" onClick={handleGeneratePdf}>Генерирай PDF
+                                </button>
+                                <button className="btn btn-secondary mx-auto"
+                                        onClick={() => setShowVariantsDialog(false)}>Отказ
                                 </button>
                             </div>
                         </dialog>
@@ -712,6 +924,9 @@ const CreateTest = () => {
                     </Droppable>
                 ))}
                 <button onClick={handleSubmit} className="btn btn-success submit-test">Създай тест</button>
+                <button onClick={handleSaveAsJson} className="btn btn-primary">Закази като JSON</button>
+                <button onClick={handleSaveAsXml} className="btn btn-primary">Запази като XML</button>
+                <button onClick={handleSaveAsPdf} className="btn btn-primary">Запази като PDF</button>
             </div>
         </DragDropContext>
     );
