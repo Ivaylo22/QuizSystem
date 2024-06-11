@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import sit.tuvarna.bg.persistence.entity.Quiz;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 
 import java.time.LocalDateTime;
@@ -28,11 +29,13 @@ public class DailyQuizScheduling {
             return;
         }
 
-        System.out.println("TEST TEST");
         quizRepository.resetDailyQuiz();
 
         Random random = new Random();
-        Quiz dailyQuiz = quizzes.get(random.nextInt(quizzes.size()));
+        Quiz dailyQuiz = quizzes.stream()
+                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
+                .toList()
+                .get(random.nextInt(quizzes.size()));
         dailyQuiz.setIsDaily(true);
         dailyQuiz.setLastUpdated(LocalDateTime.now(ZoneOffset.UTC));
 
