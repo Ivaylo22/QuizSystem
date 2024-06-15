@@ -1,106 +1,106 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Analyzing Literary Devices",
+    "grade": 9,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "Identify the literary device used in this sentence: 'The stars danced playfully in the moonlit sky.'",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
+                "content": "Metaphor",
                 "isCorrect": false
               },
               {
-                "content": "B",
+                "content": "Simile",
+                "isCorrect": false
+              },
+              {
+                "content": "Personification",
                 "isCorrect": true
-              },
-              {
-                "content": "C",
-                "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "What is the primary theme of George Orwell's '1984'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
-                "isCorrect": false
-              },
-              {
-                "content": "Orange",
+                "content": "The dangers of totalitarianism",
                 "isCorrect": true
               },
               {
-                "content": "Purple",
+                "content": "The power of love",
+                "isCorrect": false
+              },
+              {
+                "content": "The importance of friendship",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all animals from the list:",
+            "question": "Select all examples of foreshadowing in literature:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Dog",
+                "content": "A character finds a mysterious key early in the story.",
                 "isCorrect": true
               },
               {
-                "content": "Cat",
-                "isCorrect": true
-              },
-              {
-                "content": "Car",
+                "content": "A character explains their past in a long monologue.",
                 "isCorrect": false
+              },
+              {
+                "content": "Dark clouds gathering before a major event.",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "Which sentence contains an example of hyperbole?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
-                "isCorrect": false
-              },
-              {
-                "content": "9",
+                "content": "She was so hungry she could eat a horse.",
                 "isCorrect": true
               },
               {
-                "content": "10",
+                "content": "The leaves danced in the wind.",
+                "isCorrect": false
+              },
+              {
+                "content": "He was as quiet as a mouse.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "Explain the significance of the mockingbird in Harper Lee's 'To Kill a Mockingbird'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
+                "content": "The mockingbird symbolizes innocence and goodness, representing characters like Tom Robinson and Boo Radley who are innocent but persecuted.",
                 "isCorrect": true
               }
             ]
@@ -110,107 +110,107 @@
     ]
   },
   {
-    "title": "English Adventures Part 2",
-    "grade": 2,
+    "title": "Advanced Vocabulary and Grammar",
+    "grade": 9,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "Which animal says 'woof'?",
+            "question": "Which word is a synonym for 'benevolent'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Cat",
+                "content": "Malevolent",
                 "isCorrect": false
               },
               {
-                "content": "Dog",
+                "content": "Kind",
                 "isCorrect": true
               },
               {
-                "content": "Cow",
+                "content": "Cruel",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a baby dog?",
+            "question": "Identify the correct use of the subjunctive mood:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Kitten",
+                "content": "If I was you, I would go to the doctor.",
                 "isCorrect": false
               },
               {
-                "content": "Puppy",
+                "content": "If I were you, I would go to the doctor.",
                 "isCorrect": true
               },
               {
-                "content": "Calf",
+                "content": "If I am you, I would go to the doctor.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all things that can fly:",
+            "question": "Select all adverbial clauses in the following sentences:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Bird",
+                "content": "Although he was tired, he finished his homework.",
                 "isCorrect": true
               },
               {
-                "content": "Airplane",
-                "isCorrect": true
-              },
-              {
-                "content": "Fish",
+                "content": "He finished his homework quickly.",
                 "isCorrect": false
+              },
+              {
+                "content": "Because she arrived late, she missed the bus.",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What do you call a group of fish?",
+            "question": "Which of the following sentences is grammatically correct?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "School",
+                "content": "Neither of the answers is correct.",
                 "isCorrect": true
               },
               {
-                "content": "Pack",
+                "content": "Neither of the answers are correct.",
                 "isCorrect": false
               },
               {
-                "content": "Herd",
+                "content": "Neither of the answer is correct.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color are bananas?",
+            "question": "Write a paragraph explaining the difference between 'affect' and 'effect' with examples.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Yellow",
+                "content": "Affect is a verb meaning 'to influence,' as in 'The weather can affect your mood.' Effect is a noun meaning 'a result,' as in 'The effect of the new law was immediate.'",
                 "isCorrect": true
               }
             ]
@@ -220,107 +220,107 @@
     ]
   },
   {
-    "title": "Fun with English Part 2",
-    "grade": 2,
+    "title": "Literary Themes and Analysis",
+    "grade": 9,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the opposite of 'left'?",
+            "question": "Which of the following is a common theme in Shakespeare's tragedies?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Right",
+                "content": "The corrupting power of unchecked ambition",
                 "isCorrect": true
               },
               {
-                "content": "Up",
+                "content": "The joy of new love",
                 "isCorrect": false
               },
               {
-                "content": "Down",
+                "content": "The importance of family",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What shape is a door?",
+            "question": "In 'The Great Gatsby,' what does the green light symbolize?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Circle",
-                "isCorrect": false
-              },
-              {
-                "content": "Square",
+                "content": "Gatsby's hope and dreams",
                 "isCorrect": true
               },
               {
-                "content": "Triangle",
+                "content": "Daisy's wealth",
+                "isCorrect": false
+              },
+              {
+                "content": "The American Dream",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all items that are vehicles:",
+            "question": "Select all characteristics of a tragic hero:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Car",
+                "content": "Noble birth",
                 "isCorrect": true
               },
               {
-                "content": "Bicycle",
+                "content": "Excessive pride",
                 "isCorrect": true
               },
               {
-                "content": "Apple",
+                "content": "Comedic personality",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "How many wheels does a bicycle have?",
+            "question": "Which sentence best describes the theme of 'To Kill a Mockingbird'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "2",
+                "content": "The moral nature of human beings",
                 "isCorrect": true
               },
               {
-                "content": "3",
+                "content": "The importance of education",
                 "isCorrect": false
               },
               {
-                "content": "4",
+                "content": "The complexities of love",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the night sky?",
+            "question": "Discuss the significance of the title 'Pride and Prejudice' in relation to the main characters' development.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Black",
+                "content": "The title 'Pride and Prejudice' reflects the main characters' flaws and growth. Darcy's pride and Elizabeth's prejudice lead to misunderstandings, but as they overcome these traits, they find mutual respect and love.",
                 "isCorrect": true
               }
             ]

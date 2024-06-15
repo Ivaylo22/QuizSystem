@@ -1,106 +1,106 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Advanced Grammar and Vocabulary",
+    "grade": 6,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "Which of the following sentences is in the passive voice?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
+                "content": "The cat chased the mouse.",
                 "isCorrect": false
               },
               {
-                "content": "B",
+                "content": "The mouse was chased by the cat.",
                 "isCorrect": true
               },
               {
-                "content": "C",
+                "content": "The cat is chasing the mouse.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "Choose the correct form: 'She has ______ many books.'",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
+                "content": "too",
                 "isCorrect": false
               },
               {
-                "content": "Orange",
+                "content": "to",
+                "isCorrect": false
+              },
+              {
+                "content": "two",
                 "isCorrect": true
-              },
-              {
-                "content": "Purple",
-                "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all animals from the list:",
+            "question": "Select all adverbs from the list:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Dog",
+                "content": "Quickly",
                 "isCorrect": true
               },
               {
-                "content": "Cat",
-                "isCorrect": true
-              },
-              {
-                "content": "Car",
+                "content": "Bright",
                 "isCorrect": false
+              },
+              {
+                "content": "Happily",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "What is the correct form of 'to be' for 'They ____ happy.'",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
+                "content": "is",
                 "isCorrect": false
               },
               {
-                "content": "9",
+                "content": "are",
                 "isCorrect": true
               },
               {
-                "content": "10",
+                "content": "am",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "Describe the main character in the book 'Charlotte's Web'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
+                "content": "The main character is Wilbur, a pig who befriends a spider named Charlotte.",
                 "isCorrect": true
               }
             ]
@@ -110,107 +110,107 @@
     ]
   },
   {
-    "title": "English Adventures Part 2",
-    "grade": 2,
+    "title": "Comprehensive English Skills",
+    "grade": 6,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "Which animal says 'woof'?",
+            "question": "What is the antonym of 'difficult'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Cat",
-                "isCorrect": false
-              },
-              {
-                "content": "Dog",
+                "content": "Easy",
                 "isCorrect": true
               },
               {
-                "content": "Cow",
+                "content": "Hard",
+                "isCorrect": false
+              },
+              {
+                "content": "Tough",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a baby dog?",
+            "question": "Which word is a synonym for 'brave'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Kitten",
+                "content": "Cowardly",
                 "isCorrect": false
               },
               {
-                "content": "Puppy",
+                "content": "Fearful",
+                "isCorrect": false
+              },
+              {
+                "content": "Courageous",
                 "isCorrect": true
-              },
-              {
-                "content": "Calf",
-                "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all things that can fly:",
+            "question": "Select all nouns from the list:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Bird",
+                "content": "Happiness",
                 "isCorrect": true
               },
               {
-                "content": "Airplane",
-                "isCorrect": true
-              },
-              {
-                "content": "Fish",
+                "content": "Jump",
                 "isCorrect": false
+              },
+              {
+                "content": "Friendship",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What do you call a group of fish?",
+            "question": "Which sentence uses the correct form of 'their', 'there', or 'they're'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "School",
+                "content": "They're going to the park.",
                 "isCorrect": true
               },
               {
-                "content": "Pack",
+                "content": "Their going to the park.",
                 "isCorrect": false
               },
               {
-                "content": "Herd",
+                "content": "There going to the park.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color are bananas?",
+            "question": "Summarize the plot of the story 'Alice in Wonderland'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Yellow",
+                "content": "Alice falls through a rabbit hole into a fantastical world where she meets various strange creatures.",
                 "isCorrect": true
               }
             ]
@@ -220,107 +220,107 @@
     ]
   },
   {
-    "title": "Fun with English Part 2",
-    "grade": 2,
+    "title": "Reading Comprehension and Analysis",
+    "grade": 6,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the opposite of 'left'?",
+            "question": "Which sentence is an example of a simile?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Right",
+                "content": "He is as brave as a lion.",
                 "isCorrect": true
               },
               {
-                "content": "Up",
+                "content": "The wind howled through the trees.",
                 "isCorrect": false
               },
               {
-                "content": "Down",
+                "content": "Time is a thief.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What shape is a door?",
+            "question": "Identify the metaphor in the sentence: 'Time is a thief.'",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Circle",
-                "isCorrect": false
-              },
-              {
-                "content": "Square",
+                "content": "'Time is a thief.'",
                 "isCorrect": true
               },
               {
-                "content": "Triangle",
+                "content": "'Time'",
+                "isCorrect": false
+              },
+              {
+                "content": "'Thief'",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all items that are vehicles:",
+            "question": "Select all conjunctions from the list:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Car",
+                "content": "And",
                 "isCorrect": true
               },
               {
-                "content": "Bicycle",
+                "content": "But",
                 "isCorrect": true
               },
               {
-                "content": "Apple",
+                "content": "Quickly",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "How many wheels does a bicycle have?",
+            "question": "Which of the following is a complete sentence?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "2",
-                "isCorrect": true
-              },
-              {
-                "content": "3",
+                "content": "Running through the park.",
                 "isCorrect": false
               },
               {
-                "content": "4",
+                "content": "She loves to read books.",
+                "isCorrect": true
+              },
+              {
+                "content": "After the rain stops.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the night sky?",
+            "question": "Explain the moral of the story 'The Boy Who Cried Wolf'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Black",
+                "content": "The moral is that lying can lead to serious consequences and people will not believe you even when you tell the truth.",
                 "isCorrect": true
               }
             ]

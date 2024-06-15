@@ -1,106 +1,106 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Analyzing Shakespearean Tragedies",
+    "grade": 11,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "What is the tragic flaw of Hamlet in Shakespeare's 'Hamlet'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
+                "content": "Ambition",
                 "isCorrect": false
               },
               {
-                "content": "B",
+                "content": "Indecision",
                 "isCorrect": true
               },
               {
-                "content": "C",
+                "content": "Jealousy",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "Which character in 'Macbeth' represents unchecked ambition and its consequences?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
+                "content": "Banquo",
                 "isCorrect": false
               },
               {
-                "content": "Orange",
+                "content": "Macbeth",
                 "isCorrect": true
               },
               {
-                "content": "Purple",
+                "content": "Duncan",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all animals from the list:",
+            "question": "Select all themes present in 'Othello':",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Dog",
+                "content": "Jealousy",
                 "isCorrect": true
               },
               {
-                "content": "Cat",
+                "content": "Race",
                 "isCorrect": true
               },
               {
-                "content": "Car",
+                "content": "Nature",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "What is the outcome of the feud in 'Romeo and Juliet'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
+                "content": "The Montagues win",
                 "isCorrect": false
               },
               {
-                "content": "9",
+                "content": "Both families reconcile",
                 "isCorrect": true
               },
               {
-                "content": "10",
+                "content": "The Capulets win",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "Analyze the role of fate in 'Julius Caesar' by William Shakespeare.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
+                "content": "Fate in 'Julius Caesar' is shown through omens and prophecies, highlighting the inevitability of events.",
                 "isCorrect": true
               }
             ]
@@ -110,107 +110,107 @@
     ]
   },
   {
-    "title": "English Adventures Part 2",
-    "grade": 2,
+    "title": "Exploring American Literature",
+    "grade": 11,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "Which animal says 'woof'?",
+            "question": "What is the primary theme of F. Scott Fitzgerald's 'The Great Gatsby'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Cat",
-                "isCorrect": false
-              },
-              {
-                "content": "Dog",
+                "content": "The American Dream",
                 "isCorrect": true
               },
               {
-                "content": "Cow",
+                "content": "Friendship",
+                "isCorrect": false
+              },
+              {
+                "content": "War",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a baby dog?",
+            "question": "Who wrote the famous line 'I celebrate myself, and sing myself'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Kitten",
-                "isCorrect": false
-              },
-              {
-                "content": "Puppy",
+                "content": "Walt Whitman",
                 "isCorrect": true
               },
               {
-                "content": "Calf",
+                "content": "Mark Twain",
+                "isCorrect": false
+              },
+              {
+                "content": "Emily Dickinson",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all things that can fly:",
+            "question": "Select all works that address the theme of racial injustice:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Bird",
+                "content": "To Kill a Mockingbird",
                 "isCorrect": true
               },
               {
-                "content": "Airplane",
-                "isCorrect": true
-              },
-              {
-                "content": "Fish",
+                "content": "The Adventures of Tom Sawyer",
                 "isCorrect": false
+              },
+              {
+                "content": "Beloved",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What do you call a group of fish?",
+            "question": "Which novel by John Steinbeck is set during the Great Depression?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "School",
+                "content": "The Grapes of Wrath",
                 "isCorrect": true
               },
               {
-                "content": "Pack",
+                "content": "East of Eden",
                 "isCorrect": false
               },
               {
-                "content": "Herd",
+                "content": "Of Mice and Men",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color are bananas?",
+            "question": "Discuss the significance of the setting in Nathaniel Hawthorne's 'The Scarlet Letter'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Yellow",
+                "content": "The Puritan setting highlights themes of sin, guilt, and redemption.",
                 "isCorrect": true
               }
             ]
@@ -220,107 +220,107 @@
     ]
   },
   {
-    "title": "Fun with English Part 2",
-    "grade": 2,
+    "title": "Critical Analysis of Modernist Literature",
+    "grade": 11,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the opposite of 'left'?",
+            "question": "Which novel is considered a major work of Modernist literature?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Right",
+                "content": "Ulysses by James Joyce",
                 "isCorrect": true
               },
               {
-                "content": "Up",
+                "content": "Pride and Prejudice by Jane Austen",
                 "isCorrect": false
               },
               {
-                "content": "Down",
+                "content": "Moby-Dick by Herman Melville",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What shape is a door?",
+            "question": "Who is the author of the poem 'The Waste Land'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Circle",
-                "isCorrect": false
-              },
-              {
-                "content": "Square",
+                "content": "T.S. Eliot",
                 "isCorrect": true
               },
               {
-                "content": "Triangle",
+                "content": "Robert Frost",
+                "isCorrect": false
+              },
+              {
+                "content": "Ezra Pound",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all items that are vehicles:",
+            "question": "Select all characteristics of Modernist literature:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Car",
+                "content": "Stream of consciousness",
                 "isCorrect": true
               },
               {
-                "content": "Bicycle",
-                "isCorrect": true
-              },
-              {
-                "content": "Apple",
+                "content": "Linear narratives",
                 "isCorrect": false
+              },
+              {
+                "content": "Fragmentation",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "How many wheels does a bicycle have?",
+            "question": "What is the main theme of Virginia Woolf's 'Mrs Dalloway'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "2",
-                "isCorrect": true
-              },
-              {
-                "content": "3",
+                "content": "War and peace",
                 "isCorrect": false
               },
               {
-                "content": "4",
+                "content": "The complexities of time and identity",
+                "isCorrect": true
+              },
+              {
+                "content": "Romantic love",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the night sky?",
+            "question": "Explain the significance of the fragmented narrative style in 'To the Lighthouse' by Virginia Woolf.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Black",
+                "content": "It reflects the Modernist focus on inner thoughts and perceptions.",
                 "isCorrect": true
               }
             ]

@@ -1,106 +1,106 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Advanced Grammar and Syntax",
+    "grade": 8,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "Identify the verb tense used in this sentence: 'By the time she arrives, we will have finished the project.'",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
+                "content": "Future Simple",
                 "isCorrect": false
               },
               {
-                "content": "B",
+                "content": "Future Perfect",
                 "isCorrect": true
               },
               {
-                "content": "C",
+                "content": "Present Perfect",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "Which sentence correctly uses a semicolon?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
-                "isCorrect": false
-              },
-              {
-                "content": "Orange",
+                "content": "She loves to read; therefore, she visits the library often.",
                 "isCorrect": true
               },
               {
-                "content": "Purple",
+                "content": "She loves to read, therefore; she visits the library often.",
+                "isCorrect": false
+              },
+              {
+                "content": "She loves to read therefore; she visits the library often.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all animals from the list:",
+            "question": "Select all examples of passive voice:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Dog",
+                "content": "The cake was eaten by the children.",
                 "isCorrect": true
               },
               {
-                "content": "Cat",
-                "isCorrect": true
-              },
-              {
-                "content": "Car",
+                "content": "The children ate the cake.",
                 "isCorrect": false
+              },
+              {
+                "content": "A song was sung by her.",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "Which sentence contains an example of a gerund?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
-                "isCorrect": false
-              },
-              {
-                "content": "9",
+                "content": "Running is a good way to stay fit.",
                 "isCorrect": true
               },
               {
-                "content": "10",
+                "content": "She runs every morning.",
+                "isCorrect": false
+              },
+              {
+                "content": "He will run tomorrow.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "Explain the difference between 'affect' and 'effect' with examples.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
+                "content": "Affect is a verb meaning 'to influence,' as in 'The weather can affect your mood.",
                 "isCorrect": true
               }
             ]
@@ -110,107 +110,107 @@
     ]
   },
   {
-    "title": "English Adventures Part 2",
-    "grade": 2,
+    "title": "Literary Analysis and Techniques",
+    "grade": 8,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "Which animal says 'woof'?",
+            "question": "Which of the following is an example of dramatic irony?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Cat",
-                "isCorrect": false
-              },
-              {
-                "content": "Dog",
+                "content": "A character steps into a room without knowing a killer is hiding there, but the audience knows.",
                 "isCorrect": true
               },
               {
-                "content": "Cow",
+                "content": "A fire station burns down.",
+                "isCorrect": false
+              },
+              {
+                "content": "A pilot has a fear of heights.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a baby dog?",
+            "question": "What is the main conflict in 'Romeo and Juliet'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Kitten",
-                "isCorrect": false
-              },
-              {
-                "content": "Puppy",
+                "content": "The feud between the Montagues and the Capulets",
                 "isCorrect": true
               },
               {
-                "content": "Calf",
+                "content": "Romeo's love for Rosaline",
+                "isCorrect": false
+              },
+              {
+                "content": "The war between two cities",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all things that can fly:",
+            "question": "Select all literary devices used in the following sentence: 'The wind howled like a wolf in the night.'",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Bird",
+                "content": "Simile",
                 "isCorrect": true
               },
               {
-                "content": "Airplane",
-                "isCorrect": true
-              },
-              {
-                "content": "Fish",
+                "content": "Metaphor",
                 "isCorrect": false
+              },
+              {
+                "content": "Personification",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What do you call a group of fish?",
+            "question": "Which of the following is a theme commonly found in dystopian literature?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "School",
+                "content": "The struggle for power",
                 "isCorrect": true
               },
               {
-                "content": "Pack",
+                "content": "Romantic love conquers all",
                 "isCorrect": false
               },
               {
-                "content": "Herd",
+                "content": "A journey of self-discovery",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color are bananas?",
+            "question": "Describe the significance of the green light in 'The Great Gatsby'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Yellow",
+                "content": "The green light symbolizes Gatsby's hopes and dreams for the future, particularly his desire to reunite with Daisy.",
                 "isCorrect": true
               }
             ]
@@ -220,107 +220,107 @@
     ]
   },
   {
-    "title": "Fun with English Part 2",
-    "grade": 2,
+    "title": "Vocabulary Enrichment and Complex Sentences",
+    "grade": 8,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the opposite of 'left'?",
+            "question": "Which word means the same as 'conundrum'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Right",
-                "isCorrect": true
-              },
-              {
-                "content": "Up",
+                "content": "Solution",
                 "isCorrect": false
               },
               {
-                "content": "Down",
+                "content": "Puzzle",
+                "isCorrect": true
+              },
+              {
+                "content": "Complaint",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What shape is a door?",
+            "question": "Choose the sentence that uses correct parallel structure.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Circle",
+                "content": "She likes dancing, to sing, and reading.",
                 "isCorrect": false
               },
               {
-                "content": "Square",
+                "content": "She likes to dance, sing, and read.",
                 "isCorrect": true
               },
               {
-                "content": "Triangle",
+                "content": "She likes dancing, singing, and to read.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all items that are vehicles:",
+            "question": "Select all words that are antonyms of 'benevolent':",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Car",
+                "content": "Malevolent",
                 "isCorrect": true
               },
               {
-                "content": "Bicycle",
-                "isCorrect": true
-              },
-              {
-                "content": "Apple",
+                "content": "Kind",
                 "isCorrect": false
+              },
+              {
+                "content": "Cruel",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "How many wheels does a bicycle have?",
+            "question": "Which sentence is an example of a complex sentence?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "2",
-                "isCorrect": true
-              },
-              {
-                "content": "3",
+                "content": "I went to the store and bought some milk.",
                 "isCorrect": false
               },
               {
-                "content": "4",
+                "content": "I went to the store because we needed milk.",
+                "isCorrect": true
+              },
+              {
+                "content": "The store was out of milk.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the night sky?",
+            "question": "Write an essay on the impact of social media on teenagers.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Black",
+                "content": "Social media has a significant impact on teenagers, affecting their mental health, social skills, and exposure to information.",
                 "isCorrect": true
               }
             ]

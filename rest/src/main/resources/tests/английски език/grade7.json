@@ -1,106 +1,106 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Grammar and Composition Mastery",
+    "grade": 7,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "Identify the part of speech for the underlined word: 'She ran *quickly* to catch the bus.'",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
+                "content": "Noun",
                 "isCorrect": false
               },
               {
-                "content": "B",
+                "content": "Adverb",
                 "isCorrect": true
               },
               {
-                "content": "C",
+                "content": "Adjective",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "Which of the following sentences is written in the past perfect tense?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
+                "content": "She has finished her homework.",
                 "isCorrect": false
               },
               {
-                "content": "Orange",
+                "content": "She had finished her homework before dinner.",
                 "isCorrect": true
               },
               {
-                "content": "Purple",
+                "content": "She finishes her homework quickly.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all animals from the list:",
+            "question": "Select all prepositions from the list:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Dog",
+                "content": "Above",
                 "isCorrect": true
               },
               {
-                "content": "Cat",
-                "isCorrect": true
-              },
-              {
-                "content": "Car",
+                "content": "Run",
                 "isCorrect": false
+              },
+              {
+                "content": "Between",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "Which sentence uses correct subject-verb agreement?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
+                "content": "The dogs runs fast.",
                 "isCorrect": false
               },
               {
-                "content": "9",
+                "content": "The dog run fast.",
+                "isCorrect": false
+              },
+              {
+                "content": "The dog runs fast.",
                 "isCorrect": true
-              },
-              {
-                "content": "10",
-                "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "Write a short paragraph describing your favorite holiday.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
+                "content": "My favorite holiday is Christmas because I get to spend time with my family, exchange gifts, and enjoy delicious food.",
                 "isCorrect": true
               }
             ]
@@ -110,107 +110,107 @@
     ]
   },
   {
-    "title": "English Adventures Part 2",
-    "grade": 2,
+    "title": "Literary Devices and Reading Comprehension",
+    "grade": 7,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "Which animal says 'woof'?",
+            "question": "Which of the following is an example of alliteration?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Cat",
-                "isCorrect": false
-              },
-              {
-                "content": "Dog",
+                "content": "Peter Piper picked a peck of pickled peppers.",
                 "isCorrect": true
               },
               {
-                "content": "Cow",
+                "content": "The leaves were dancing in the wind.",
+                "isCorrect": false
+              },
+              {
+                "content": "She sells seashells by the seashore.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a baby dog?",
+            "question": "What is the main theme of the novel 'To Kill a Mockingbird'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Kitten",
-                "isCorrect": false
-              },
-              {
-                "content": "Puppy",
+                "content": "Racial injustice",
                 "isCorrect": true
               },
               {
-                "content": "Calf",
+                "content": "Love and friendship",
+                "isCorrect": false
+              },
+              {
+                "content": "Adventure and exploration",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all things that can fly:",
+            "question": "Select all examples of personification from the list:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Bird",
+                "content": "The wind whispered through the trees.",
                 "isCorrect": true
               },
               {
-                "content": "Airplane",
-                "isCorrect": true
-              },
-              {
-                "content": "Fish",
+                "content": "The car zoomed down the road.",
                 "isCorrect": false
+              },
+              {
+                "content": "The clock told us it was time to leave.",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What do you call a group of fish?",
+            "question": "Which of the following is a metaphor?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "School",
-                "isCorrect": true
-              },
-              {
-                "content": "Pack",
+                "content": "Her smile was as bright as the sun.",
                 "isCorrect": false
               },
               {
-                "content": "Herd",
+                "content": "He is a shining star.",
+                "isCorrect": true
+              },
+              {
+                "content": "The moon was a ghostly galleon.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color are bananas?",
+            "question": "Explain the significance of the mockingbird symbol in 'To Kill a Mockingbird'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Yellow",
+                "content": "The mockingbird symbolizes innocence and the idea that it is a sin to harm something that does no harm to others.",
                 "isCorrect": true
               }
             ]
@@ -220,107 +220,107 @@
     ]
   },
   {
-    "title": "Fun with English Part 2",
-    "grade": 2,
+    "title": "Advanced Vocabulary and Sentence Structure",
+    "grade": 7,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the opposite of 'left'?",
+            "question": "Which word means the same as 'diligent'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Right",
-                "isCorrect": true
-              },
-              {
-                "content": "Up",
+                "content": "Lazy",
                 "isCorrect": false
               },
               {
-                "content": "Down",
+                "content": "Hardworking",
+                "isCorrect": true
+              },
+              {
+                "content": "Careless",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What shape is a door?",
+            "question": "Choose the sentence that uses correct punctuation.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Circle",
+                "content": "She said 'hello' and walked away.",
                 "isCorrect": false
               },
               {
-                "content": "Square",
+                "content": "She said, 'hello' and walked away.",
+                "isCorrect": false
+              },
+              {
+                "content": "She said, 'Hello,' and walked away.",
                 "isCorrect": true
-              },
-              {
-                "content": "Triangle",
-                "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all items that are vehicles:",
+            "question": "Select all words that are synonyms of 'happy':",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Car",
+                "content": "Joyful",
                 "isCorrect": true
               },
               {
-                "content": "Bicycle",
-                "isCorrect": true
-              },
-              {
-                "content": "Apple",
+                "content": "Sad",
                 "isCorrect": false
+              },
+              {
+                "content": "Content",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "How many wheels does a bicycle have?",
+            "question": "Which sentence is an example of a compound sentence?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "2",
-                "isCorrect": true
-              },
-              {
-                "content": "3",
+                "content": "She runs every day.",
                 "isCorrect": false
               },
               {
-                "content": "4",
+                "content": "She runs every day, and she eats healthy food.",
+                "isCorrect": true
+              },
+              {
+                "content": "Running is her favorite activity.",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the night sky?",
+            "question": "Write a short story about a memorable day at school.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Black",
+                "content": "One memorable day at school was when we had a science fair, and my project won first place.",
                 "isCorrect": true
               }
             ]

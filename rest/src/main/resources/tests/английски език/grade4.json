@@ -1,54 +1,274 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Exploring English Grammar",
+    "grade": 4,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "What is the past tense of 'eat'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
+                "content": "Eated",
                 "isCorrect": false
               },
               {
-                "content": "B",
+                "content": "Ate",
                 "isCorrect": true
               },
               {
-                "content": "C",
+                "content": "Eating",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "What is a synonym for 'quick'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
+                "content": "Slow",
                 "isCorrect": false
               },
               {
-                "content": "Orange",
+                "content": "Fast",
                 "isCorrect": true
               },
               {
-                "content": "Purple",
+                "content": "Lazy",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Select all verbs from the list:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Run",
+                "isCorrect": true
+              },
+              {
+                "content": "Jump",
+                "isCorrect": true
+              },
+              {
+                "content": "Blue",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What is the plural form of 'child'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Childs",
+                "isCorrect": false
+              },
+              {
+                "content": "Children",
+                "isCorrect": true
+              },
+              {
+                "content": "Childes",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What is the main ingredient in an omelet?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Eggs",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "English Vocabulary Challenge",
+    "grade": 4,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Which animal is known as the 'king of the jungle'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Elephant",
+                "isCorrect": false
+              },
+              {
+                "content": "Lion",
+                "isCorrect": true
+              },
+              {
+                "content": "Tiger",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What is the opposite of 'start'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Finish",
+                "isCorrect": true
+              },
+              {
+                "content": "Begin",
+                "isCorrect": false
+              },
+              {
+                "content": "Open",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Select all nouns from the list:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Book",
+                "isCorrect": true
+              },
+              {
+                "content": "Run",
+                "isCorrect": false
+              },
+              {
+                "content": "Car",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "What is the past tense of 'go'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Goed",
+                "isCorrect": false
+              },
+              {
+                "content": "Went",
+                "isCorrect": true
+              },
+              {
+                "content": "Gone",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color is a ripe strawberry?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Red",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Fun with English - Grade 4",
+    "grade": 4,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "What is the synonym for 'happy'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Sad",
+                "isCorrect": false
+              },
+              {
+                "content": "Joyful",
+                "isCorrect": true
+              },
+              {
+                "content": "Angry",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What shape has four equal sides?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Triangle",
+                "isCorrect": false
+              },
+              {
+                "content": "Square",
+                "isCorrect": true
+              },
+              {
+                "content": "Circle",
                 "isCorrect": false
               }
             ]
@@ -68,259 +288,39 @@
                 "isCorrect": true
               },
               {
-                "content": "Car",
+                "content": "Table",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "What is the plural form of 'goose'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
+                "content": "Gooses",
                 "isCorrect": false
               },
               {
-                "content": "9",
+                "content": "Geese",
                 "isCorrect": true
               },
               {
-                "content": "10",
+                "content": "Goosies",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "What is the main ingredient in a fruit salad?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
-                "isCorrect": true
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "English Adventures Part 2",
-    "grade": 2,
-    "subject": "Английски език",
-    "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
-    "hasMixedQuestions": false,
-    "status": "PUBLIC",
-    "scoringFormula": "formula2",
-    "sections": [
-      {
-        "totalQuestionsCount": 5,
-        "usedQuestionsCount": 5,
-        "questions": [
-          {
-            "question": "Which animal says 'woof'?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "SINGLE_ANSWER",
-            "answers": [
-              {
-                "content": "Cat",
-                "isCorrect": false
-              },
-              {
-                "content": "Dog",
-                "isCorrect": true
-              },
-              {
-                "content": "Cow",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "What do you call a baby dog?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "SINGLE_ANSWER",
-            "answers": [
-              {
-                "content": "Kitten",
-                "isCorrect": false
-              },
-              {
-                "content": "Puppy",
-                "isCorrect": true
-              },
-              {
-                "content": "Calf",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "Select all things that can fly:",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "MULTIPLE_ANSWER",
-            "answers": [
-              {
-                "content": "Bird",
-                "isCorrect": true
-              },
-              {
-                "content": "Airplane",
-                "isCorrect": true
-              },
-              {
-                "content": "Fish",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "What do you call a group of fish?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "SINGLE_ANSWER",
-            "answers": [
-              {
-                "content": "School",
-                "isCorrect": true
-              },
-              {
-                "content": "Pack",
-                "isCorrect": false
-              },
-              {
-                "content": "Herd",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "What color are bananas?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "OPEN",
-            "answers": [
-              {
-                "content": "Yellow",
-                "isCorrect": true
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Fun with English Part 2",
-    "grade": 2,
-    "subject": "Английски език",
-    "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
-    "hasMixedQuestions": false,
-    "status": "PUBLIC",
-    "scoringFormula": "formula2",
-    "sections": [
-      {
-        "totalQuestionsCount": 5,
-        "usedQuestionsCount": 5,
-        "questions": [
-          {
-            "question": "What is the opposite of 'left'?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "SINGLE_ANSWER",
-            "answers": [
-              {
-                "content": "Right",
-                "isCorrect": true
-              },
-              {
-                "content": "Up",
-                "isCorrect": false
-              },
-              {
-                "content": "Down",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "What shape is a door?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "SINGLE_ANSWER",
-            "answers": [
-              {
-                "content": "Circle",
-                "isCorrect": false
-              },
-              {
-                "content": "Square",
-                "isCorrect": true
-              },
-              {
-                "content": "Triangle",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "Select all items that are vehicles:",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "MULTIPLE_ANSWER",
-            "answers": [
-              {
-                "content": "Car",
-                "isCorrect": true
-              },
-              {
-                "content": "Bicycle",
-                "isCorrect": true
-              },
-              {
-                "content": "Apple",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "How many wheels does a bicycle have?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "SINGLE_ANSWER",
-            "answers": [
-              {
-                "content": "2",
-                "isCorrect": true
-              },
-              {
-                "content": "3",
-                "isCorrect": false
-              },
-              {
-                "content": "4",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "question": "What color is the night sky?",
-            "image": null,
-            "maximumPoints": 2,
-            "questionType": "OPEN",
-            "answers": [
-              {
-                "content": "Black",
+                "content": "Fruits",
                 "isCorrect": true
               }
             ]

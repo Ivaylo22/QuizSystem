@@ -1,106 +1,106 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Exploring Modern Poetry",
+    "grade": 10,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "Identify the theme of T.S. Eliot's poem 'The Love Song of J. Alfred Prufrock'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
+                "content": "Love and romance",
                 "isCorrect": false
               },
               {
-                "content": "B",
+                "content": "Isolation and indecision",
                 "isCorrect": true
               },
               {
-                "content": "C",
+                "content": "Nature and its beauty",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "Which literary device is predominantly used in Sylvia Plath's 'Daddy'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
+                "content": "Simile",
                 "isCorrect": false
               },
               {
-                "content": "Orange",
+                "content": "Metaphor",
                 "isCorrect": true
               },
               {
-                "content": "Purple",
+                "content": "Alliteration",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all animals from the list:",
+            "question": "Select all examples of imagery in Robert Frost's 'The Road Not Taken':",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Dog",
+                "content": "Two roads diverged in a yellow wood",
                 "isCorrect": true
               },
               {
-                "content": "Cat",
-                "isCorrect": true
-              },
-              {
-                "content": "Car",
+                "content": "I doubted if I should ever come back",
                 "isCorrect": false
+              },
+              {
+                "content": "And looked down one as far as I could",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "What is the tone of Maya Angelou's poem 'Still I Rise'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
+                "content": "Defeated",
                 "isCorrect": false
               },
               {
-                "content": "9",
+                "content": "Triumphant",
                 "isCorrect": true
               },
               {
-                "content": "10",
+                "content": "Melancholic",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "Write a short analysis of the use of symbolism in Langston Hughes' poem 'Harlem'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
+                "content": "Hughes' 'Harlem' uses symbols like a 'raisin in the sun' to show deferred dreams.",
                 "isCorrect": true
               }
             ]
@@ -110,107 +110,107 @@
     ]
   },
   {
-    "title": "English Adventures Part 2",
-    "grade": 2,
+    "title": "Advanced Literary Analysis",
+    "grade": 10,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "Which animal says 'woof'?",
+            "question": "What is the central theme of Mary Shelley's 'Frankenstein'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Cat",
-                "isCorrect": false
-              },
-              {
-                "content": "Dog",
+                "content": "The dangers of unchecked ambition",
                 "isCorrect": true
               },
               {
-                "content": "Cow",
+                "content": "The joy of scientific discovery",
+                "isCorrect": false
+              },
+              {
+                "content": "The beauty of nature",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a baby dog?",
+            "question": "Which narrative technique is used extensively in 'Wuthering Heights' by Emily Brontë?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Kitten",
+                "content": "Stream of consciousness",
                 "isCorrect": false
               },
               {
-                "content": "Puppy",
+                "content": "Framed narrative",
                 "isCorrect": true
               },
               {
-                "content": "Calf",
+                "content": "First-person point of view",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all things that can fly:",
+            "question": "Select all characters who can be considered tragic heroes:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Bird",
+                "content": "Oedipus in 'Oedipus Rex'",
                 "isCorrect": true
               },
               {
-                "content": "Airplane",
+                "content": "Hamlet in 'Hamlet'",
                 "isCorrect": true
               },
               {
-                "content": "Fish",
+                "content": "Huckleberry Finn in 'The Adventures of Huckleberry Finn'",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a group of fish?",
+            "question": "Which of the following best describes the narrative style of F. Scott Fitzgerald's 'The Great Gatsby'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "School",
+                "content": "First-person limited",
                 "isCorrect": true
               },
               {
-                "content": "Pack",
+                "content": "Third-person omniscient",
                 "isCorrect": false
               },
               {
-                "content": "Herd",
+                "content": "Second-person",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color are bananas?",
+            "question": "Discuss the significance of the setting in 'Jane Eyre' and how it influences the protagonist.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Yellow",
+                "content": "Settings in 'Jane Eyre' reflect stages of Jane's growth and independence.",
                 "isCorrect": true
               }
             ]
@@ -220,107 +220,107 @@
     ]
   },
   {
-    "title": "Fun with English Part 2",
-    "grade": 2,
+    "title": "Exploring Themes in Classic Literature",
+    "grade": 10,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the opposite of 'left'?",
+            "question": "Which theme is prevalent in Charles Dickens' 'A Tale of Two Cities'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Right",
-                "isCorrect": true
-              },
-              {
-                "content": "Up",
+                "content": "Revenge",
                 "isCorrect": false
               },
               {
-                "content": "Down",
+                "content": "Resurrection",
+                "isCorrect": true
+              },
+              {
+                "content": "Romance",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What shape is a door?",
+            "question": "In 'Moby-Dick,' what does the white whale symbolize?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Circle",
+                "content": "Nature's beauty",
                 "isCorrect": false
               },
               {
-                "content": "Square",
+                "content": "The unknown",
                 "isCorrect": true
               },
               {
-                "content": "Triangle",
+                "content": "A character's inner peace",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all items that are vehicles:",
+            "question": "Select all motifs found in 'The Catcher in the Rye':",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Car",
+                "content": "Phoniness",
                 "isCorrect": true
               },
               {
-                "content": "Bicycle",
+                "content": "Innocence",
                 "isCorrect": true
               },
               {
-                "content": "Apple",
+                "content": "Magic",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "How many wheels does a bicycle have?",
+            "question": "Which character from 'Pride and Prejudice' represents the theme of social class and marriage?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "2",
+                "content": "Elizabeth Bennet",
                 "isCorrect": true
               },
               {
-                "content": "3",
+                "content": "Lady Catherine de Bourgh",
                 "isCorrect": false
               },
               {
-                "content": "4",
+                "content": "Mr. Collins",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the night sky?",
+            "question": "Analyze the role of fate in Thomas Hardy's 'Tess of the d'Urbervilles'.",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Black",
+                "content": "In 'Tess of the d'Urbervilles,' fate shapes Tess's life and destiny.",
                 "isCorrect": true
               }
             ]

@@ -1,106 +1,106 @@
 [
   {
-    "title": "Exploring English Fundamentals",
-    "grade": 2,
+    "title": "Understanding Postmodern Literature",
+    "grade": 12,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the second letter of the alphabet?",
+            "question": "Which author is known for postmodern works such as 'Slaughterhouse-Five'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "A",
-                "isCorrect": false
-              },
-              {
-                "content": "B",
+                "content": "Kurt Vonnegut",
                 "isCorrect": true
               },
               {
-                "content": "C",
+                "content": "Ernest Hemingway",
+                "isCorrect": false
+              },
+              {
+                "content": "William Faulkner",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is an orange?",
+            "question": "What is a common theme in postmodern literature?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Blue",
-                "isCorrect": false
-              },
-              {
-                "content": "Orange",
+                "content": "The rejection of absolute truths",
                 "isCorrect": true
               },
               {
-                "content": "Purple",
+                "content": "The hero's journey",
+                "isCorrect": false
+              },
+              {
+                "content": "Romantic idealism",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all animals from the list:",
+            "question": "Select all elements that characterize postmodern literature:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Dog",
+                "content": "Metafiction",
                 "isCorrect": true
               },
               {
-                "content": "Cat",
+                "content": "Unreliable narrators",
                 "isCorrect": true
               },
               {
-                "content": "Car",
+                "content": "Traditional narrative structures",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What is the number before ten?",
+            "question": "Which novel is an example of magical realism, a subgenre often associated with postmodernism?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "8",
-                "isCorrect": false
-              },
-              {
-                "content": "9",
+                "content": "One Hundred Years of Solitude",
                 "isCorrect": true
               },
               {
-                "content": "10",
+                "content": "The Old Man and the Sea",
+                "isCorrect": false
+              },
+              {
+                "content": "The Great Gatsby",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the grass?",
+            "question": "What is the significance of pastiche in postmodern literature?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Green",
+                "content": "Blending genres and styles to create irony or challenge norms.",
                 "isCorrect": true
               }
             ]
@@ -110,107 +110,107 @@
     ]
   },
   {
-    "title": "English Adventures Part 2",
-    "grade": 2,
+    "title": "Examining Dystopian Fiction",
+    "grade": 12,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "Which animal says 'woof'?",
+            "question": "Who is the author of '1984', a seminal dystopian novel?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Cat",
-                "isCorrect": false
-              },
-              {
-                "content": "Dog",
+                "content": "George Orwell",
                 "isCorrect": true
               },
               {
-                "content": "Cow",
+                "content": "Aldous Huxley",
+                "isCorrect": false
+              },
+              {
+                "content": "Ray Bradbury",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What do you call a baby dog?",
+            "question": "What is the central theme of Aldous Huxley's 'Brave New World'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Kitten",
-                "isCorrect": false
-              },
-              {
-                "content": "Puppy",
+                "content": "The dehumanizing aspects of technology",
                 "isCorrect": true
               },
               {
-                "content": "Calf",
+                "content": "The dangers of a totalitarian government",
+                "isCorrect": false
+              },
+              {
+                "content": "The struggle for independence",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all things that can fly:",
+            "question": "Select all novels that explore dystopian themes:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Bird",
+                "content": "The Handmaid's Tale",
                 "isCorrect": true
               },
               {
-                "content": "Airplane",
-                "isCorrect": true
-              },
-              {
-                "content": "Fish",
+                "content": "To Kill a Mockingbird",
                 "isCorrect": false
+              },
+              {
+                "content": "Fahrenheit 451",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "What do you call a group of fish?",
+            "question": "In '1984', what is the significance of the phrase 'Big Brother is watching you'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "School",
+                "content": "Government surveillance",
                 "isCorrect": true
               },
               {
-                "content": "Pack",
+                "content": "Benevolent state",
                 "isCorrect": false
               },
               {
-                "content": "Herd",
+                "content": "Warning against rebellion",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color are bananas?",
+            "question": "How does technology control society in 'Fahrenheit 451'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Yellow",
+                "content": "By promoting entertainment and suppressing critical thinking.",
                 "isCorrect": true
               }
             ]
@@ -220,107 +220,107 @@
     ]
   },
   {
-    "title": "Fun with English Part 2",
-    "grade": 2,
+    "title": "Exploring Contemporary Poetry",
+    "grade": 12,
     "subject": "Английски език",
     "creatorEmail": "admin@abv.bg",
-    "minutesToSolve": 45,
+    "minutesToSolve": 60,
     "hasMixedQuestions": false,
     "status": "PUBLIC",
-    "scoringFormula": "formula2",
+    "scoringFormula": "formula3",
     "sections": [
       {
         "totalQuestionsCount": 5,
         "usedQuestionsCount": 5,
         "questions": [
           {
-            "question": "What is the opposite of 'left'?",
+            "question": "Who wrote the poem 'Howl', which became a defining work of the Beat Generation?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Right",
+                "content": "Allen Ginsberg",
                 "isCorrect": true
               },
               {
-                "content": "Up",
+                "content": "Jack Kerouac",
                 "isCorrect": false
               },
               {
-                "content": "Down",
+                "content": "Lawrence Ferlinghetti",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What shape is a door?",
+            "question": "What is the primary theme of Maya Angelou's poem 'Still I Rise'?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "Circle",
-                "isCorrect": false
-              },
-              {
-                "content": "Square",
+                "content": "Resilience and empowerment",
                 "isCorrect": true
               },
               {
-                "content": "Triangle",
+                "content": "Love and loss",
+                "isCorrect": false
+              },
+              {
+                "content": "Nature and beauty",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "Select all items that are vehicles:",
+            "question": "Select all poets associated with confessional poetry:",
             "image": null,
             "maximumPoints": 2,
             "questionType": "MULTIPLE_ANSWER",
             "answers": [
               {
-                "content": "Car",
+                "content": "Sylvia Plath",
                 "isCorrect": true
               },
               {
-                "content": "Bicycle",
-                "isCorrect": true
-              },
-              {
-                "content": "Apple",
+                "content": "Robert Frost",
                 "isCorrect": false
+              },
+              {
+                "content": "Anne Sexton",
+                "isCorrect": true
               }
             ]
           },
           {
-            "question": "How many wheels does a bicycle have?",
+            "question": "Which poet wrote 'The Wild Iris', a Pulitzer Prize-winning collection?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "SINGLE_ANSWER",
             "answers": [
               {
-                "content": "2",
+                "content": "Louise Glück",
                 "isCorrect": true
               },
               {
-                "content": "3",
+                "content": "Rita Dove",
                 "isCorrect": false
               },
               {
-                "content": "4",
+                "content": "Billy Collins",
                 "isCorrect": false
               }
             ]
           },
           {
-            "question": "What color is the night sky?",
+            "question": "What does 'Blackberry-Picking' symbolize?",
             "image": null,
             "maximumPoints": 2,
             "questionType": "OPEN",
             "answers": [
               {
-                "content": "Black",
+                "content": "The fleeting nature of pleasure and decay of life.",
                 "isCorrect": true
               }
             ]

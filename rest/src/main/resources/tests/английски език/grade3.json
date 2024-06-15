@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Exploring English Concepts",
+    "grade": 3,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "What is the past tense of 'run'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Run",
+                "isCorrect": false
+              },
+              {
+                "content": "Ran",
+                "isCorrect": true
+              },
+              {
+                "content": "Running",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color is a ripe banana?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Green",
+                "isCorrect": false
+              },
+              {
+                "content": "Yellow",
+                "isCorrect": true
+              },
+              {
+                "content": "Brown",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Select all adjectives from the list:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Happy",
+                "isCorrect": true
+              },
+              {
+                "content": "Quick",
+                "isCorrect": true
+              },
+              {
+                "content": "Jump",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What is the plural form of 'mouse'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Mouses",
+                "isCorrect": false
+              },
+              {
+                "content": "Mouse",
+                "isCorrect": false
+              },
+              {
+                "content": "Mice",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "What is the main ingredient in a salad?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Lettuce",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "English Adventures Part 3",
+    "grade": 3,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Which animal says 'quack'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Dog",
+                "isCorrect": false
+              },
+              {
+                "content": "Duck",
+                "isCorrect": true
+              },
+              {
+                "content": "Cow",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What is the opposite of 'big'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Small",
+                "isCorrect": true
+              },
+              {
+                "content": "Tall",
+                "isCorrect": false
+              },
+              {
+                "content": "Large",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Select all the verbs from the list:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Run",
+                "isCorrect": true
+              },
+              {
+                "content": "Jump",
+                "isCorrect": true
+              },
+              {
+                "content": "Red",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What do you call a baby horse?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Foal",
+                "isCorrect": true
+              },
+              {
+                "content": "Calf",
+                "isCorrect": false
+              },
+              {
+                "content": "Puppy",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color are strawberries?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Red",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Fun with English Part 3",
+    "grade": 3,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "What is the synonym of 'happy'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Sad",
+                "isCorrect": false
+              },
+              {
+                "content": "Joyful",
+                "isCorrect": true
+              },
+              {
+                "content": "Angry",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What shape is a stop sign?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Circle",
+                "isCorrect": false
+              },
+              {
+                "content": "Square",
+                "isCorrect": false
+              },
+              {
+                "content": "Octagon",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Select all items that are fruits:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Apple",
+                "isCorrect": true
+              },
+              {
+                "content": "Carrot",
+                "isCorrect": false
+              },
+              {
+                "content": "Banana",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "What is the opposite of 'cold'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Hot",
+                "isCorrect": true
+              },
+              {
+                "content": "Warm",
+                "isCorrect": false
+              },
+              {
+                "content": "Cool",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color is an apple?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Red",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
