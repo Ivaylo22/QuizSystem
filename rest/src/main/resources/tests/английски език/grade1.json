@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Exploring English Basics",
+    "grade": 1,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "What is the first letter of the alphabet?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "A",
+                "isCorrect": true
+              },
+              {
+                "content": "B",
+                "isCorrect": false
+              },
+              {
+                "content": "C",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color is the sky on a clear day?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Blue",
+                "isCorrect": true
+              },
+              {
+                "content": "Green",
+                "isCorrect": false
+              },
+              {
+                "content": "Red",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Select all fruits from the list:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Apple",
+                "isCorrect": true
+              },
+              {
+                "content": "Banana",
+                "isCorrect": true
+              },
+              {
+                "content": "Car",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What is the number after five?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "6",
+                "isCorrect": true
+              },
+              {
+                "content": "4",
+                "isCorrect": false
+              },
+              {
+                "content": "8",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color is the sun?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Yellow",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "English Adventures",
+    "grade": 1,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Which animal says 'meow'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Cat",
+                "isCorrect": true
+              },
+              {
+                "content": "Dog",
+                "isCorrect": false
+              },
+              {
+                "content": "Cow",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What do you call a baby cat?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Kitten",
+                "isCorrect": true
+              },
+              {
+                "content": "Puppy",
+                "isCorrect": false
+              },
+              {
+                "content": "Calf",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Select all things you can wear:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Hat",
+                "isCorrect": true
+              },
+              {
+                "content": "Shoes",
+                "isCorrect": true
+              },
+              {
+                "content": "Apple",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What do you call a group of lions?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Pride",
+                "isCorrect": true
+              },
+              {
+                "content": "Pack",
+                "isCorrect": false
+              },
+              {
+                "content": "Herd",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color is grass?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Green",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Fun with English",
+    "grade": 1,
+    "subject": "Английски език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "What is the opposite of 'up'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Down",
+                "isCorrect": true
+              },
+              {
+                "content": "Left",
+                "isCorrect": false
+              },
+              {
+                "content": "Right",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What shape is a wheel?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Circle",
+                "isCorrect": true
+              },
+              {
+                "content": "Square",
+                "isCorrect": false
+              },
+              {
+                "content": "Triangle",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Select all items that are food:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Bread",
+                "isCorrect": true
+              },
+              {
+                "content": "Water",
+                "isCorrect": false
+              },
+              {
+                "content": "Cheese",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "How many sides does a triangle have?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "3",
+                "isCorrect": true
+              },
+              {
+                "content": "4",
+                "isCorrect": false
+              },
+              {
+                "content": "5",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "What color is the ocean?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Blue",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

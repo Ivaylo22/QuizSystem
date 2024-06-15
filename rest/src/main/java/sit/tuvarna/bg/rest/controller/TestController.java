@@ -30,6 +30,9 @@ import sit.tuvarna.bg.api.operations.test.getmytests.GetMyTestsResponse;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsOperation;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsRequest;
 import sit.tuvarna.bg.api.operations.test.getpublictests.GetPublicTestsResponse;
+import sit.tuvarna.bg.api.operations.test.getrandom.GetRandomOperation;
+import sit.tuvarna.bg.api.operations.test.getrandom.GetRandomRequest;
+import sit.tuvarna.bg.api.operations.test.getrandom.GetRandomResponse;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsOperation;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsRequest;
 import sit.tuvarna.bg.api.operations.test.getsubjects.GetSubjectsResponse;
@@ -44,6 +47,8 @@ import sit.tuvarna.bg.api.operations.test.solve.SolveTestRequest;
 import sit.tuvarna.bg.api.operations.test.solve.SolveTestResponse;
 import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsOperation;
 import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsRequest;
+
+import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
@@ -63,6 +68,16 @@ public class TestController {
     private final GetTestAttemptsOperation getTestAttempts;
     private final GetAttemptDataOperation getAttemptData;
     private final UpdateAttemptPointsOperation updateAttemptPoints;
+    private final GetRandomOperation getRandom;
+
+    @GetMapping("/get-random-test")
+    public GetRandomResponse getRandomTest(@RequestParam String grade, @RequestParam String subject) {
+        GetRandomRequest request = GetRandomRequest.builder()
+                .grade(grade)
+                .subject(subject)
+                .build();
+        return getRandom.process(request);
+    }
 
     @GetMapping("/get-attempt-data")
     public ResponseEntity<GetAttemptDataResponse> getAttemptData(@RequestParam String testId, @RequestParam String userEmail) {

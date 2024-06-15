@@ -1,6 +1,8 @@
 package sit.tuvarna.bg.core.processor.test;
 
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import sit.tuvarna.bg.api.exception.DatabaseException;
@@ -27,6 +29,8 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class CreateTestOperationProcessor implements CreateTestOperation {
+
+    private static final Logger logger = LoggerFactory.getLogger(CreateTestOperationProcessor.class);
 
     private final TestRepository testRepository;
     private final SubjectRepository subjectRepository;
@@ -90,7 +94,13 @@ public class CreateTestOperationProcessor implements CreateTestOperation {
                 }
                 question.setAnswers(answers);
                 question = questionRepository.save(question);
-                questionIdMap.put(questionModel.getId(), question.getId());
+
+                String questionModelId = questionModel.getId();
+                if (questionModelId == null) {
+                    questionModelId = UUID.randomUUID().toString();
+                }
+
+                questionIdMap.put(questionModelId, question.getId());
                 questions.add(question);
             }
             section.setQuestions(questions);

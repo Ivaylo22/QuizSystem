@@ -43,6 +43,42 @@ const CreateTest = () => {
         }
     }, [location]);
 
+    const fetchRandomTest = async () => {
+        setLoading(true);
+        try {
+            const response = await fetch(`http://localhost:8090/api/v1/test/get-random-test?grade=${test.grade}&subject=${test.subject}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+            if (!response.ok) {
+                throw new Error('Failed to fetch random test.');
+            }
+            const data = await response.json();
+            setTest({
+                ...data,
+                sections: data.sections.map(section => ({
+                    ...section,
+                    questions: section.questions.map(question => ({
+                        ...question,
+                        id: question.id || uuidv4(),
+                        answers: question.answers.map(answer => ({
+                            ...answer,
+                            id: answer.id || uuidv4()
+                        }))
+                    }))
+                }))
+            });
+            toast.success('Тестът е успешно зареден.');
+        } catch (error) {
+            console.error('Failed to fetch random test:', error);
+            toast.error('Не можем да намерим такъв тест. Моля опитайте с друг предмет или клас.');
+        }
+        setLoading(false);
+    };
+
     console.log(test);
 
     const toggleSettingsDialog = () => {
@@ -456,14 +492,19 @@ const CreateTest = () => {
             return;
         }
 
+        const {id, ...restTest} = test;
         const testToSubmit = {
-            ...test,
-            sections: test.sections.map(section => ({
+            ...restTest,
+            sections: test.sections.map(({id, ...section}) => ({
                 ...section,
-                questions: section.questions.map(({image, ...rest}) => rest)
+                questions: section.questions.map(({image, id, ...restQuestion}) => ({
+                    ...restQuestion,
+                    answers: restQuestion.answers.map(({id, ...restAnswer}) => restAnswer)
+                }))
             }))
         };
 
+        console.log(testToSubmit)
         try {
             const response = await fetch('http://localhost:8090/api/v1/test/create', {
                 method: 'POST',
@@ -505,6 +546,7 @@ const CreateTest = () => {
             toast.error('Проблем при създаването на теста.');
         }
     };
+
 
     const uploadFile = async (file, questionId) => {
         const formData = new FormData();
@@ -726,6 +768,8 @@ const CreateTest = () => {
                         ref={fileInputRef}
                     />
                 </div>
+                <button onClick={fetchRandomTest} className="btn btn-primary">Зареди случаен тест</button>
+
                 {showSettings && (
                     <div className="dialog-overlay" onClick={toggleSettingsDialog}>
                         <dialog open className="settings-dialog" onClick={e => e.stopPropagation()}>
@@ -785,10 +829,10 @@ const CreateTest = () => {
                                 </select>
                             </div>
                             <div className="form-group form-check">
-                                <input type="checkbox" id="mixedQuestions" checked={test.hasMixedQuestions}
+                                <input type="checkbox" id="hasMixedQuestions" checked={test.hasMixedQuestions}
                                        onChange={(e) => setTest({...test, hasMixedQuestions: e.target.checked})}
                                        className="form-check-input"/>
-                                <label className="form-check-label" htmlFor="mixedQuestions">Разбъркване на
+                                <label className="form-check-label" htmlFor="hasMixedQuestions">Разбъркване на
                                     въпросите</label>
                             </div>
                             <div className="dialog-buttons-container mx-auto">
