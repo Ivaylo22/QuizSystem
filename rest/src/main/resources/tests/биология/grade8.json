@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Клетъчна структура и функция",
+    "grade": 8,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой органел е известен като 'силата на клетката'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Митохондрия",
+                "isCorrect": true
+              },
+              {
+                "content": "Голги комплекс",
+                "isCorrect": false
+              },
+              {
+                "content": "Лизозома",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната функция на рибозомите?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Синтез на протеини",
+                "isCorrect": true
+              },
+              {
+                "content": "Производство на енергия",
+                "isCorrect": false
+              },
+              {
+                "content": "Транспортиране на вещества",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички компоненти на клетъчната мембрана:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Фосфолипиди",
+                "isCorrect": true
+              },
+              {
+                "content": "Протеини",
+                "isCorrect": true
+              },
+              {
+                "content": "ДНК",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой процес включва разделяне на клетката на две дъщерни клетки?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Митоза",
+                "isCorrect": true
+              },
+              {
+                "content": "Осмоза",
+                "isCorrect": false
+              },
+              {
+                "content": "Дифузия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете основната функция на ядрената мембрана.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Ядрената мембрана защитава генетичния материал на клетката и регулира транспорта на вещества между ядрото и цитоплазмата.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Генетика и наследственост",
+    "grade": 8,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е известен като 'бащата на генетиката'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Грегор Мендел",
+                "isCorrect": true
+              },
+              {
+                "content": "Чарлз Дарвин",
+                "isCorrect": false
+              },
+              {
+                "content": "Франсис Крик",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната функция на ДНК в клетката?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Съхранение на генетична информация",
+                "isCorrect": true
+              },
+              {
+                "content": "Синтез на протеини",
+                "isCorrect": false
+              },
+              {
+                "content": "Производство на енергия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички фактори, които влияят на наследствеността:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гени",
+                "isCorrect": true
+              },
+              {
+                "content": "Околна среда",
+                "isCorrect": true
+              },
+              {
+                "content": "Диета",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой процес включва прехвърляне на генетичен материал от родителите към потомството?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Наследственост",
+                "isCorrect": true
+              },
+              {
+                "content": "Мутация",
+                "isCorrect": false
+              },
+              {
+                "content": "Рекомбинация",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете ролята на рибонуклеинова киселина (РНК) в генетичния процес.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "РНК играе ключова роля в процеса на транслация, като пренася информацията от ДНК до рибозомите за синтеза на протеини.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

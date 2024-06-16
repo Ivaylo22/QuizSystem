@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Система на организма и органи",
+    "grade": 7,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя система отговаря за пренасянето на кислород и хранителни вещества в тялото?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Циркулаторна система",
+                "isCorrect": true
+              },
+              {
+                "content": "Дихателна система",
+                "isCorrect": false
+              },
+              {
+                "content": "Нервна система",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната функция на бъбреците?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Филтрация на кръвта и образуване на урина",
+                "isCorrect": true
+              },
+              {
+                "content": "Синтез на хормони",
+                "isCorrect": false
+              },
+              {
+                "content": "Производство на енергия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички органи, които са част от дихателната система:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Бели дробове",
+                "isCorrect": true
+              },
+              {
+                "content": "Сърце",
+                "isCorrect": false
+              },
+              {
+                "content": "Трахея",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното значение на черния дроб в организма?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Детоксикация на вредни вещества",
+                "isCorrect": true
+              },
+              {
+                "content": "Производство на инсулин",
+                "isCorrect": false
+              },
+              {
+                "content": "Регулиране на телесната температура",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете ролята на мозъка в нервната система.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Мозъкът контролира всички волеви и неволеви функции на организма, включително движения, усещания и когнитивни процеси.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Човешко развитие и репродукция",
+    "grade": 7,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е основното значение на половите хормони?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Регулация на метаболизма",
+                "isCorrect": false
+              },
+              {
+                "content": "Контрол на репродуктивните функции",
+                "isCorrect": true
+              },
+              {
+                "content": "Поддържане на имунната система",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е функцията на плацентата по време на бременност?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Осигуряване на кислород и хранителни вещества на плода",
+                "isCorrect": true
+              },
+              {
+                "content": "Производство на хормони",
+                "isCorrect": false
+              },
+              {
+                "content": "Регулиране на телесната температура на майката",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички етапи от човешкото развитие:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Зачатие",
+                "isCorrect": true
+              },
+              {
+                "content": "Раждане",
+                "isCorrect": true
+              },
+              {
+                "content": "Детство",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой орган е отговорен за производството на сперматозоиди?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Тестиси",
+                "isCorrect": true
+              },
+              {
+                "content": "Яйчници",
+                "isCorrect": false
+              },
+              {
+                "content": "Простата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете процеса на овулация.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Овулацията е процесът, при който зряла яйцеклетка се освобождава от яйчника и е готова за оплождане.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

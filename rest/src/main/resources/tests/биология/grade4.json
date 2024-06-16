@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Хранителни вериги и мрежи",
+    "grade": 4,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кое е основното звено в една хранителна верига?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Производител",
+                "isCorrect": true
+              },
+              {
+                "content": "Потребител",
+                "isCorrect": false
+              },
+              {
+                "content": "Разградител",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на разградителите в екосистемата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Разграждат мъртвата материя",
+                "isCorrect": true
+              },
+              {
+                "content": "Произвеждат храна",
+                "isCorrect": false
+              },
+              {
+                "content": "Ловуват плячка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички примери за потребители:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лъв",
+                "isCorrect": true
+              },
+              {
+                "content": "Зайче",
+                "isCorrect": true
+              },
+              {
+                "content": "Трева",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква роля играят растенията в хранителната верига?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Производители",
+                "isCorrect": true
+              },
+              {
+                "content": "Потребители",
+                "isCorrect": false
+              },
+              {
+                "content": "Разградители",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Защо слънцето е важно за хранителната верига?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Слънцето предоставя енергията, необходима за фотосинтезата, което прави възможно производството на храна.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Човешката анатомия",
+    "grade": 4,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя част на тялото ни помага да мислим?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мозъкът",
+                "isCorrect": true
+              },
+              {
+                "content": "Сърцето",
+                "isCorrect": false
+              },
+              {
+                "content": "Краката",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е функцията на белите дробове?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Помагат ни да дишаме",
+                "isCorrect": true
+              },
+              {
+                "content": "Преместват кръвта",
+                "isCorrect": false
+              },
+              {
+                "content": "Смилат храната",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички органи, които са част от храносмилателната система:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Стомах",
+                "isCorrect": true
+              },
+              {
+                "content": "Черва",
+                "isCorrect": true
+              },
+              {
+                "content": "Мозък",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Къде се намира сърцето в тялото?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "В гърдите",
+                "isCorrect": true
+              },
+              {
+                "content": "В главата",
+                "isCorrect": false
+              },
+              {
+                "content": "В краката",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на кожата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Кожата предпазва тялото от вредни влияния и поддържа вътрешните органи.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

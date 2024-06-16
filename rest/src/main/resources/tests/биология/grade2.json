@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Жизнен цикъл на пеперудата",
+    "grade": 2,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е първият етап от жизнения цикъл на пеперудата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Яйце",
+                "isCorrect": true
+              },
+              {
+                "content": "Гъсеница",
+                "isCorrect": false
+              },
+              {
+                "content": "Какавида",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "В какво се превръща гъсеницата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Пеперуда",
+                "isCorrect": true
+              },
+              {
+                "content": "Риба",
+                "isCorrect": false
+              },
+              {
+                "content": "Птица",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички етапи от жизнения цикъл на пеперудата:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Яйце",
+                "isCorrect": true
+              },
+              {
+                "content": "Гъсеница",
+                "isCorrect": true
+              },
+              {
+                "content": "Кученце",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой етап идва след гъсеницата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Какавида",
+                "isCorrect": true
+              },
+              {
+                "content": "Яйце",
+                "isCorrect": false
+              },
+              {
+                "content": "Пеперуда",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Защо пеперудите снасят яйца?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Пеперудите снасят яйца, за да създадат следващото поколение.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Части на растението",
+    "grade": 2,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя част на растението поема вода?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Корените",
+                "isCorrect": true
+              },
+              {
+                "content": "Листата",
+                "isCorrect": false
+              },
+              {
+                "content": "Цветовете",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е функцията на стъблото?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Поддържа растението изправено",
+                "isCorrect": true
+              },
+              {
+                "content": "Абсорбира вода",
+                "isCorrect": false
+              },
+              {
+                "content": "Произвежда семена",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички неща, които са част от растението:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Корен",
+                "isCorrect": true
+              },
+              {
+                "content": "Листа",
+                "isCorrect": true
+              },
+              {
+                "content": "Котка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Къде се намират семената на растението?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "В плодовете",
+                "isCorrect": true
+              },
+              {
+                "content": "В корените",
+                "isCorrect": false
+              },
+              {
+                "content": "В листата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Защо растенията имат цветове?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Цветовете помагат за размножаването, като привличат опрашители.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

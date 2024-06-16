@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Генетика и наследственост",
+    "grade": 12,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е основната функция на митозата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Създаване на генетична разнообразие",
+                "isCorrect": false
+              },
+              {
+                "content": "Растеж и възстановяване на тъкани",
+                "isCorrect": true
+              },
+              {
+                "content": "Произвеждане на гамети",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой учен е известен с формулирането на законите на наследствеността?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Чарлз Дарвин",
+                "isCorrect": false
+              },
+              {
+                "content": "Грегор Мендел",
+                "isCorrect": true
+              },
+              {
+                "content": "Томас Морган",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички характеристики на автозомно рецесивното унаследяване:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Проявява се само когато индивидът има две копия на рецесивния алел",
+                "isCorrect": true
+              },
+              {
+                "content": "Една копие на доминантния алел е достатъчно за изява на характеристиката",
+                "isCorrect": false
+              },
+              {
+                "content": "Родителите могат да бъдат носители, без да проявяват болестта",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя структура съдържа генетичната информация в клетката?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Рибозомата",
+                "isCorrect": false
+              },
+              {
+                "content": "Митохондрията",
+                "isCorrect": false
+              },
+              {
+                "content": "Ядрото",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Обяснете процеса на кръстосване (кросинговър) и неговата значимост за генетичното разнообразие.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Кръстосването е процес, при който хромозомите обменят сегменти по време на мейозата, което води до нови комбинации на алели и повишава генетичното разнообразие.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Екология и опазване на околната среда",
+    "grade": 12,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е биосфера?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Част от Земята, в която съществува живот",
+                "isCorrect": true
+              },
+              {
+                "content": "Слоят на атмосферата",
+                "isCorrect": false
+              },
+              {
+                "content": "Зона на океанските дълбочини",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната причина за глобалното затопляне?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Изсичане на горите",
+                "isCorrect": false
+              },
+              {
+                "content": "Увеличение на парниковите газове",
+                "isCorrect": true
+              },
+              {
+                "content": "Замърсяване на водите",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички начини за опазване на биологичното разнообразие:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Създаване на защитени зони",
+                "isCorrect": true
+              },
+              {
+                "content": "Намаляване на използването на пестициди",
+                "isCorrect": true
+              },
+              {
+                "content": "Повишаване на индустриализацията",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е трофична мрежа?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Система от взаимовръзки между различни хранителни вериги в екосистемата",
+                "isCorrect": true
+              },
+              {
+                "content": "Място, където организмите получават енергия",
+                "isCorrect": false
+              },
+              {
+                "content": "Процес на разграждане на органични вещества",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете ролята на фотосинтезата в екосистемите.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Фотосинтезата е процес, при който растенията преобразуват слънчевата енергия в химична енергия, произвеждайки кислород и органични съединения, което е основа за поддържане на живота в екосистемите.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

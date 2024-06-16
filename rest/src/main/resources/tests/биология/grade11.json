@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Молекулярна биология",
+    "grade": 11,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е основният компонент на плазмената мембрана на клетките?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Фосфолипиди",
+                "isCorrect": true
+              },
+              {
+                "content": "Протеини",
+                "isCorrect": false
+              },
+              {
+                "content": "Холестерол",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основната функция на рибозомите в клетката?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Синтез на белтъци",
+                "isCorrect": true
+              },
+              {
+                "content": "Произвеждане на енергия",
+                "isCorrect": false
+              },
+              {
+                "content": "Съхранение на генетичен материал",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички нуклеотиди, които се срещат в ДНК:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Аденин",
+                "isCorrect": true
+              },
+              {
+                "content": "Тимин",
+                "isCorrect": true
+              },
+              {
+                "content": "Урацил",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е функцията на ензимите в биохимичните реакции?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ускоряване на реакциите чрез понижаване на енергията на активация",
+                "isCorrect": true
+              },
+              {
+                "content": "Регулиране на температурата в клетката",
+                "isCorrect": false
+              },
+              {
+                "content": "Пренасяне на кислород",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете ролята на ДНК полимеразата в процеса на репликация.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "ДНК полимеразата е ензим, който катализира синтеза на нова ДНК верига, използвайки съществуващата верига като шаблон.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Еволюция и биологично разнообразие",
+    "grade": 11,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой учен е известен с теорията за еволюцията чрез естествен отбор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Чарлз Дарвин",
+                "isCorrect": true
+              },
+              {
+                "content": "Грегор Мендел",
+                "isCorrect": false
+              },
+              {
+                "content": "Жан-Батист Ламарк",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основната причина за генетичната вариация в популациите?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мутации в ДНК",
+                "isCorrect": true
+              },
+              {
+                "content": "Естествен отбор",
+                "isCorrect": false
+              },
+              {
+                "content": "Генетичен дрейф",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички фактори, които могат да доведат до видообразуване:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Географска изолация",
+                "isCorrect": true
+              },
+              {
+                "content": "Генетична мутация",
+                "isCorrect": true
+              },
+              {
+                "content": "Климатични промени",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой от следните процеси е пример за микроеволюция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Промени в генетичния състав на популация през поколенията",
+                "isCorrect": true
+              },
+              {
+                "content": "Образуване на нов вид",
+                "isCorrect": false
+              },
+              {
+                "content": "Изчезване на вид",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете ролята на адаптациите в еволюцията на видовете.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Адаптациите са характеристики, които подобряват шансовете на индивидите за оцеляване и размножаване в конкретна среда, като допринасят за еволюционния успех на вида.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

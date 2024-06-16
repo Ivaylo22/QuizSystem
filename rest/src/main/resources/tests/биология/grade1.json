@@ -1,0 +1,110 @@
+{
+  "title": "Въведение в растенията",
+  "grade": 1,
+  "subject": "Биология",
+  "creatorEmail": "admin@abv.bg",
+  "minutesToSolve": 40,
+  "hasMixedQuestions": false,
+  "status": "PUBLIC",
+  "scoringFormula": "formula1",
+  "sections": [
+    {
+      "totalQuestionsCount": 5,
+      "usedQuestionsCount": 5,
+      "questions": [
+        {
+          "question": "Какво е необходимо на растенията, за да растат?",
+          "image": null,
+          "maximumPoints": 2,
+          "questionType": "SINGLE_ANSWER",
+          "answers": [
+            {
+              "content": "Вода и слънчева светлина",
+              "isCorrect": true
+            },
+            {
+              "content": "Камъни и пясък",
+              "isCorrect": false
+            },
+            {
+              "content": "Метал и стъкло",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Коя част от растението е отговорна за фотосинтезата?",
+          "image": null,
+          "maximumPoints": 2,
+          "questionType": "SINGLE_ANSWER",
+          "answers": [
+            {
+              "content": "Листата",
+              "isCorrect": true
+            },
+            {
+              "content": "Корените",
+              "isCorrect": false
+            },
+            {
+              "content": "Стъблото",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Изберете всички неща, които са растения:",
+          "image": null,
+          "maximumPoints": 2,
+          "questionType": "MULTIPLE_ANSWER",
+          "answers": [
+            {
+              "content": "Дърво",
+              "isCorrect": true
+            },
+            {
+              "content": "Котка",
+              "isCorrect": false
+            },
+            {
+              "content": "Цвете",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "question": "Какъв цвят са повечето листа на растенията?",
+          "image": null,
+          "maximumPoints": 2,
+          "questionType": "SINGLE_ANSWER",
+          "answers": [
+            {
+              "content": "Зелен",
+              "isCorrect": true
+            },
+            {
+              "content": "Син",
+              "isCorrect": false
+            },
+            {
+              "content": "Червен",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Защо растенията се нуждаят от слънчева светлина?",
+          "image": null,
+          "maximumPoints": 2,
+          "questionType": "OPEN",
+          "answers": [
+            {
+              "content": "Растенията се нуждаят от слънчева светлина, за да произвеждат храна чрез фотосинтеза.",
+              "isCorrect": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

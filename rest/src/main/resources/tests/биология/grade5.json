@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Растения и тяхната структура",
+    "grade": 5,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя част на растението е отговорна за фотосинтезата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Листата",
+                "isCorrect": true
+              },
+              {
+                "content": "Корените",
+                "isCorrect": false
+              },
+              {
+                "content": "Семената",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е функцията на корените?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Абсорбират вода и минерали",
+                "isCorrect": true
+              },
+              {
+                "content": "Произвеждат цветове",
+                "isCorrect": false
+              },
+              {
+                "content": "Събират слънчева светлина",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички части на растението, които са над земята:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Листа",
+                "isCorrect": true
+              },
+              {
+                "content": "Стебло",
+                "isCorrect": true
+              },
+              {
+                "content": "Корени",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Как се нарича процесът на преобразуване на светлинната енергия в химическа енергия в растенията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Фотосинтеза",
+                "isCorrect": true
+              },
+              {
+                "content": "Дишане",
+                "isCorrect": false
+              },
+              {
+                "content": "Смилане",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е значението на цветята за растенията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Цветята са важни за размножаването, защото съдържат органите за полово размножаване на растенията.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Човешката циркулаторна система",
+    "grade": 5,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя част на циркулаторната система помпа кръвта?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сърцето",
+                "isCorrect": true
+              },
+              {
+                "content": "Белите дробове",
+                "isCorrect": false
+              },
+              {
+                "content": "Черния дроб",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е функцията на червените кръвни клетки?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Пренасят кислород",
+                "isCorrect": true
+              },
+              {
+                "content": "Борят се с инфекции",
+                "isCorrect": false
+              },
+              {
+                "content": "Смилат храната",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички кръвоносни съдове:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Артерии",
+                "isCorrect": true
+              },
+              {
+                "content": "Вени",
+                "isCorrect": true
+              },
+              {
+                "content": "Нерви",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява кръвообращението?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Процесът на пренасяне на кръвта в тялото",
+                "isCorrect": true
+              },
+              {
+                "content": "Процесът на дишане",
+                "isCorrect": false
+              },
+              {
+                "content": "Процесът на храносмилане",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на плазмата в кръвта?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Плазмата пренася хранителни вещества, хормони и отпадни продукти в кръвта.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на генетиката",
+    "grade": 6,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Каква е основната функция на ДНК?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Да съхранява генетична информация",
+                "isCorrect": true
+              },
+              {
+                "content": "Да катализира химични реакции",
+                "isCorrect": false
+              },
+              {
+                "content": "Да транспортира кислород",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е откривателят на закона за наследствеността?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Грегор Мендел",
+                "isCorrect": true
+              },
+              {
+                "content": "Чарлз Дарвин",
+                "isCorrect": false
+              },
+              {
+                "content": "Луи Пастьор",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички молекули, които участват в процеса на транслация:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "мРНК",
+                "isCorrect": true
+              },
+              {
+                "content": "тРНК",
+                "isCorrect": true
+              },
+              {
+                "content": "ДНК",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е ген?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сегмент от ДНК, който кодира определен протеин",
+                "isCorrect": true
+              },
+              {
+                "content": "Тип клетка",
+                "isCorrect": false
+              },
+              {
+                "content": "Молекула, която пренася кислород",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява мутацията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Мутацията е промяна в нуклеотидната последователност на генетичния материал на организмите.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Клетъчно дишане и фотосинтеза",
+    "grade": 6,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е основната функция на митохондриите?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Производство на енергия",
+                "isCorrect": true
+              },
+              {
+                "content": "Синтез на протеини",
+                "isCorrect": false
+              },
+              {
+                "content": "Разграждане на отпадъци",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният продукт на фотосинтезата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Глюкоза",
+                "isCorrect": true
+              },
+              {
+                "content": "Кислород",
+                "isCorrect": false
+              },
+              {
+                "content": "Въглероден диоксид",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички процеси, свързани с клетъчното дишане:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гликолиза",
+                "isCorrect": true
+              },
+              {
+                "content": "Кребсов цикъл",
+                "isCorrect": true
+              },
+              {
+                "content": "Фотолиза",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Къде се случва фотосинтезата в растителните клетки?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хлоропласти",
+                "isCorrect": true
+              },
+              {
+                "content": "Митохондрии",
+                "isCorrect": false
+              },
+              {
+                "content": "Рибозоми",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на хлорофила във фотосинтезата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Хлорофилът абсорбира светлинната енергия, необходима за фотосинтезата.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

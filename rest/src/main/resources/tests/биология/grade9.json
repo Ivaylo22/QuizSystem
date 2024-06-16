@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Екология и околна среда",
+    "grade": 9,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой процес е основен за цикъла на въглерода в природата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Фотосинтеза",
+                "isCorrect": true
+              },
+              {
+                "content": "Дишане",
+                "isCorrect": false
+              },
+              {
+                "content": "Денитрификация",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява биоразнообразието?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Разнообразието на животински и растителни видове в една екосистема",
+                "isCorrect": true
+              },
+              {
+                "content": "Процесът на еволюция на видове",
+                "isCorrect": false
+              },
+              {
+                "content": "Количество на водните ресурси",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички фактори, които влияят на екосистемата:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Климатични условия",
+                "isCorrect": true
+              },
+              {
+                "content": "Човешка дейност",
+                "isCorrect": true
+              },
+              {
+                "content": "Цветът на почвата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя от следните е ключова за поддържане на екологично равновесие?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Екосистемната устойчивост",
+                "isCorrect": true
+              },
+              {
+                "content": "Градската експанзия",
+                "isCorrect": false
+              },
+              {
+                "content": "Прекомерната експлоатация на ресурси",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на хранителните вериги в екосистемите.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Хранителните вериги показват връзките между различните организми в екосистемата, като показват кой кого яде и как енергията се пренася през различните трофични нива.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Еволюция и природен отбор",
+    "grade": 9,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой учен е известен с теорията за еволюцията чрез природен отбор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Чарлз Дарвин",
+                "isCorrect": true
+              },
+              {
+                "content": "Грегор Мендел",
+                "isCorrect": false
+              },
+              {
+                "content": "Алфред Уолъс",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява адаптацията в биологията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Приспособяване на организмите към околната среда",
+                "isCorrect": true
+              },
+              {
+                "content": "Процес на клетъчно делене",
+                "isCorrect": false
+              },
+              {
+                "content": "Образуване на нови видове",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички механизми, които допринасят за еволюцията:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мутации",
+                "isCorrect": true
+              },
+              {
+                "content": "Генетичен дрейф",
+                "isCorrect": true
+              },
+              {
+                "content": "Осмоза",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е резултатът от естествения отбор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Приспособяване на организмите към средата",
+                "isCorrect": true
+              },
+              {
+                "content": "Унищожаване на видове",
+                "isCorrect": false
+              },
+              {
+                "content": "Създаване на нови екосистеми",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете ролята на естествения отбор в еволюцията на видовете.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Естественият отбор действа като механизъм, който селектира най-приспособените индивиди за оцеляване и размножаване, водещо до еволюционни промени в популациите с течение на времето.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

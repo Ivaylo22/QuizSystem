@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Клетъчна биология и генетика",
+    "grade": 10,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е основната функция на митохондриите в клетката?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Произвеждане на енергия чрез клетъчно дишане",
+                "isCorrect": true
+              },
+              {
+                "content": "Синтезиране на белтъци",
+                "isCorrect": false
+              },
+              {
+                "content": "Съхранение на генетичен материал",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой процес е отговорен за разпределението на генетичния материал по време на клетъчното делене?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Митоза",
+                "isCorrect": true
+              },
+              {
+                "content": "Мейоза",
+                "isCorrect": false
+              },
+              {
+                "content": "Осмоза",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички фази на клетъчния цикъл:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Интерфаза",
+                "isCorrect": true
+              },
+              {
+                "content": "Телофаза",
+                "isCorrect": true
+              },
+              {
+                "content": "Кариотип",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой учен е известен с откриването на закона за наследствеността?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Грегор Мендел",
+                "isCorrect": true
+              },
+              {
+                "content": "Джеймс Уотсън",
+                "isCorrect": false
+              },
+              {
+                "content": "Франсис Крик",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на ДНК репликацията в клетъчния цикъл.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "ДНК репликацията е процесът, при който ДНК молекулата се удвоява преди клетъчното делене, осигурявайки точна генетична информация за двете дъщерни клетки.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Екосистеми и биогеохимични цикли",
+    "grade": 10,
+    "subject": "Биология",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой процес играе основна роля в кръговрата на азота?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Нитрификация",
+                "isCorrect": true
+              },
+              {
+                "content": "Фотосинтеза",
+                "isCorrect": false
+              },
+              {
+                "content": "Дишане",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява трофичната верига?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Последователността на организмите в екосистемата според тяхното хранене",
+                "isCorrect": true
+              },
+              {
+                "content": "Промяната на сезоните през годината",
+                "isCorrect": false
+              },
+              {
+                "content": "Взаимодействието между биотични и абиотични фактори",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички компоненти на биогеохимичния цикъл:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Въглерод",
+                "isCorrect": true
+              },
+              {
+                "content": "Азот",
+                "isCorrect": true
+              },
+              {
+                "content": "Кислород",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната функция на продуцентите в екосистемата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Синтез на органични вещества чрез фотосинтеза",
+                "isCorrect": true
+              },
+              {
+                "content": "Разграждане на мъртва органична материя",
+                "isCorrect": false
+              },
+              {
+                "content": "Консумация на други организми",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете ролята на разложителите в екосистемите.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Разложителите разграждат мъртва органична материя, освобождавайки хранителни вещества обратно в почвата, което подпомага цикъла на веществата в екосистемата.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
