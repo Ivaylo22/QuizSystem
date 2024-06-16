@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Граматика за 7 клас - Основи",
+    "grade": 7,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кое е правилното склонение на съществителното име 'ученик' в множествено число?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "ученици",
+                "isCorrect": true
+              },
+              {
+                "content": "учениче",
+                "isCorrect": false
+              },
+              {
+                "content": "ученички",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е противоположното на 'висок'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "нисък",
+                "isCorrect": true
+              },
+              {
+                "content": "тесен",
+                "isCorrect": false
+              },
+              {
+                "content": "къс",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички съществителни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "книга",
+                "isCorrect": true
+              },
+              {
+                "content": "учене",
+                "isCorrect": true
+              },
+              {
+                "content": "бягам",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'смел'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "храбър",
+                "isCorrect": true
+              },
+              {
+                "content": "страхлив",
+                "isCorrect": false
+              },
+              {
+                "content": "мъдър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на слънцето?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Българска литература за 7 клас",
+    "grade": 7,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Бай Ганьо'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Алеко Константинов",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво означава думата 'епически'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Свързан с героични дела",
+                "isCorrect": true
+              },
+              {
+                "content": "Свързан с любовни истории",
+                "isCorrect": false
+              },
+              {
+                "content": "Свързан с природни описания",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения на Христо Ботев:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Майце си",
+                "isCorrect": true
+              },
+              {
+                "content": "До моето първо либе",
+                "isCorrect": true
+              },
+              {
+                "content": "Хаджи Димитър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'роман'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "повест",
+                "isCorrect": false
+              },
+              {
+                "content": "романс",
+                "isCorrect": false
+              },
+              {
+                "content": "епопея",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на небето през нощта?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Черен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Правописни правила за 7 клас",
+    "grade": 7,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя дума е изписана правилно?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "написване",
+                "isCorrect": true
+              },
+              {
+                "content": "написванье",
+                "isCorrect": false
+              },
+              {
+                "content": "написаване",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое е множественото число на 'дърво'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "дървета",
+                "isCorrect": true
+              },
+              {
+                "content": "дървото",
+                "isCorrect": false
+              },
+              {
+                "content": "дървето",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички прилагателни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "красив",
+                "isCorrect": true
+              },
+              {
+                "content": "умен",
+                "isCorrect": true
+              },
+              {
+                "content": "пиша",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е антоним на 'топъл'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "студен",
+                "isCorrect": true
+              },
+              {
+                "content": "горещ",
+                "isCorrect": false
+              },
+              {
+                "content": "прохладен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на листата през есента?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

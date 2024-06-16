@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Анализ на българска литература",
+    "grade": 11,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е основната тема в романа 'Тютюн' на Димитър Димов?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Любов и семейство",
+                "isCorrect": false
+              },
+              {
+                "content": "Социални и политически проблеми",
+                "isCorrect": true
+              },
+              {
+                "content": "Исторически събития",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой герой в 'Железният светилник' олицетворява борбата за свобода?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Султана",
+                "isCorrect": false
+              },
+              {
+                "content": "Лазар",
+                "isCorrect": true
+              },
+              {
+                "content": "Катерина",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения на Йордан Йовков:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Албена",
+                "isCorrect": true
+              },
+              {
+                "content": "Шибил",
+                "isCorrect": true
+              },
+              {
+                "content": "Под игото",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'смелост'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "страх",
+                "isCorrect": false
+              },
+              {
+                "content": "храброст",
+                "isCorrect": true
+              },
+              {
+                "content": "тъга",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на розата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Червен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Стилистика и езикови правила",
+    "grade": 11,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е правилната форма за множествено число на 'доктор'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "доктора",
+                "isCorrect": false
+              },
+              {
+                "content": "доктори",
+                "isCorrect": true
+              },
+              {
+                "content": "докторе",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е изписана правилно?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "магазин",
+                "isCorrect": true
+              },
+              {
+                "content": "магажин",
+                "isCorrect": false
+              },
+              {
+                "content": "магязин",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които се пишат с 'ъ' в края:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "дърво",
+                "isCorrect": false
+              },
+              {
+                "content": "път",
+                "isCorrect": true
+              },
+              {
+                "content": "змия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е антоним на 'смел'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "страхлив",
+                "isCorrect": true
+              },
+              {
+                "content": "силен",
+                "isCorrect": false
+              },
+              {
+                "content": "мълчалив",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на морето?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Литературни жанрове и течения",
+    "grade": 11,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е характерно за символизма?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Използване на символи и метафори",
+                "isCorrect": true
+              },
+              {
+                "content": "Реалистично описание на живота",
+                "isCorrect": false
+              },
+              {
+                "content": "Исторически разкази",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое произведение е пример за романтизъм?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Евгений Онегин",
+                "isCorrect": true
+              },
+              {
+                "content": "Граф Монте Кристо",
+                "isCorrect": false
+              },
+              {
+                "content": "Дядо Йоцо гледа",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички примери за епична поезия:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Илиада",
+                "isCorrect": true
+              },
+              {
+                "content": "Енеида",
+                "isCorrect": true
+              },
+              {
+                "content": "Малкият принц",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е автор на 'Стихотворения'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Христо Ботев",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Пейо Яворов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява терминът 'анафора'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Анафората е литературен похват, при който една и съща дума или фраза се повтаря в началото на последователни изречения или стихове.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

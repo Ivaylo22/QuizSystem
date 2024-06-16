@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Български език за 4 клас - Основи",
+    "grade": 4,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е главната буква в началото на изречението?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Малка буква",
+                "isCorrect": false
+              },
+              {
+                "content": "Главна буква",
+                "isCorrect": true
+              },
+              {
+                "content": "Средна буква",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е синоним на думата 'красив'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Грозен",
+                "isCorrect": false
+              },
+              {
+                "content": "Прекрасен",
+                "isCorrect": true
+              },
+              {
+                "content": "Малък",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които са съществителни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Дърво",
+                "isCorrect": true
+              },
+              {
+                "content": "Тичам",
+                "isCorrect": false
+              },
+              {
+                "content": "Книга",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е антоним на 'голям'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Малък",
+                "isCorrect": true
+              },
+              {
+                "content": "Широк",
+                "isCorrect": false
+              },
+              {
+                "content": "Висок",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на ябълката?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Червен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Езикови упражнения за 4 клас",
+    "grade": 4,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какъв е правописът на думата 'приятел'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Прияте",
+                "isCorrect": false
+              },
+              {
+                "content": "Приятел",
+                "isCorrect": true
+              },
+              {
+                "content": "Пиятел",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума означава същото като 'бърз'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Бавен",
+                "isCorrect": false
+              },
+              {
+                "content": "Светкавичен",
+                "isCorrect": true
+              },
+              {
+                "content": "Тежък",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които са прилагателни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Червен",
+                "isCorrect": true
+              },
+              {
+                "content": "Тичам",
+                "isCorrect": false
+              },
+              {
+                "content": "Висок",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е антоним на 'висок'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Нисък",
+                "isCorrect": true
+              },
+              {
+                "content": "Широк",
+                "isCorrect": false
+              },
+              {
+                "content": "Тежък",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на небето през деня?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Езикови приключения за 4 клас",
+    "grade": 4,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя дума е синоним на 'щастлив'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Тъжен",
+                "isCorrect": false
+              },
+              {
+                "content": "Радостен",
+                "isCorrect": true
+              },
+              {
+                "content": "Сериозен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Как се изписва правилно думата 'облак'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Облак",
+                "isCorrect": true
+              },
+              {
+                "content": "Ооблак",
+                "isCorrect": false
+              },
+              {
+                "content": "Облакк",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които са глаголи:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Тичам",
+                "isCorrect": true
+              },
+              {
+                "content": "Чета",
+                "isCorrect": true
+              },
+              {
+                "content": "Бяло",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е противоположната дума на 'студен'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Горещ",
+                "isCorrect": true
+              },
+              {
+                "content": "Топъл",
+                "isCorrect": false
+              },
+              {
+                "content": "Хладен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на тревата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Зелен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Български език за 3 клас - Основи",
+    "grade": 3,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е третата буква в българската азбука?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "А",
+                "isCorrect": false
+              },
+              {
+                "content": "Б",
+                "isCorrect": false
+              },
+              {
+                "content": "В",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какъв е звукът на буквата 'К'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "К",
+                "isCorrect": true
+              },
+              {
+                "content": "Л",
+                "isCorrect": false
+              },
+              {
+                "content": "М",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които започват с буквата 'С':",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Слънце",
+                "isCorrect": true
+              },
+              {
+                "content": "Дом",
+                "isCorrect": false
+              },
+              {
+                "content": "Слон",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е последната буква в думата 'зима'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "А",
+                "isCorrect": true
+              },
+              {
+                "content": "М",
+                "isCorrect": false
+              },
+              {
+                "content": "З",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на лимона?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Развитие на езиковите умения за 3 клас",
+    "grade": 3,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е гласната буква в думата 'електрон'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Е",
+                "isCorrect": true
+              },
+              {
+                "content": "К",
+                "isCorrect": false
+              },
+              {
+                "content": "Н",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя буква звучи като 'Л'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Л",
+                "isCorrect": true
+              },
+              {
+                "content": "М",
+                "isCorrect": false
+              },
+              {
+                "content": "Н",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които започват с буквата 'Г':",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гора",
+                "isCorrect": true
+              },
+              {
+                "content": "Кола",
+                "isCorrect": false
+              },
+              {
+                "content": "Гъба",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е последната буква в думата 'химикал'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Л",
+                "isCorrect": true
+              },
+              {
+                "content": "К",
+                "isCorrect": false
+              },
+              {
+                "content": "И",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на млякото?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бял",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Езикови приключения за 3 клас",
+    "grade": 3,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е първата буква в думата 'учител'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "У",
+                "isCorrect": true
+              },
+              {
+                "content": "Ч",
+                "isCorrect": false
+              },
+              {
+                "content": "Т",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е звукът на буквата 'Ф'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ф",
+                "isCorrect": true
+              },
+              {
+                "content": "Б",
+                "isCorrect": false
+              },
+              {
+                "content": "В",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които започват с буквата 'Л':",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лъв",
+                "isCorrect": true
+              },
+              {
+                "content": "Маса",
+                "isCorrect": false
+              },
+              {
+                "content": "Лампа",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е последната буква в думата 'компютър'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Р",
+                "isCorrect": true
+              },
+              {
+                "content": "Т",
+                "isCorrect": false
+              },
+              {
+                "content": "П",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на морето?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Анализ на литературни произведения",
+    "grade": 10,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е основната тема в 'Под игото' на Иван Вазов?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Борбата за свобода",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовта и семейството",
+                "isCorrect": false
+              },
+              {
+                "content": "Приятелството",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой герой в 'Хъшове' олицетворява борбата за независимост?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван",
+                "isCorrect": false
+              },
+              {
+                "content": "Странджата",
+                "isCorrect": true
+              },
+              {
+                "content": "Бойчо",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения на Елин Пелин:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гераците",
+                "isCorrect": true
+              },
+              {
+                "content": "Чичовци",
+                "isCorrect": false
+              },
+              {
+                "content": "Андрешко",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'възвишен'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "благороден",
+                "isCorrect": true
+              },
+              {
+                "content": "низък",
+                "isCorrect": false
+              },
+              {
+                "content": "обикновен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на снега?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бял",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Правописни правила и пунктуация",
+    "grade": 10,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е правилната форма за множествено число на 'дете'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "деца",
+                "isCorrect": true
+              },
+              {
+                "content": "дети",
+                "isCorrect": false
+              },
+              {
+                "content": "детище",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е изписана правилно?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "караван",
+                "isCorrect": false
+              },
+              {
+                "content": "каравана",
+                "isCorrect": true
+              },
+              {
+                "content": "караваня",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които се пишат с 'и' накрая:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "книги",
+                "isCorrect": true
+              },
+              {
+                "content": "ученици",
+                "isCorrect": true
+              },
+              {
+                "content": "учител",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е антоним на 'тъмен'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "светъл",
+                "isCorrect": true
+              },
+              {
+                "content": "черен",
+                "isCorrect": false
+              },
+              {
+                "content": "блед",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на лимона?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Литературни термини и анализ",
+    "grade": 10,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво представлява алитерацията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Повторение на съгласни звуци",
+                "isCorrect": true
+              },
+              {
+                "content": "Повторение на гласни звуци",
+                "isCorrect": false
+              },
+              {
+                "content": "Повторение на думи",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое произведение е написано от Пейо Яворов?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Две хубави очи",
+                "isCorrect": true
+              },
+              {
+                "content": "До Чикаго и назад",
+                "isCorrect": false
+              },
+              {
+                "content": "Майце си",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички примери за метафора:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Море от любов",
+                "isCorrect": true
+              },
+              {
+                "content": "Гората шепне",
+                "isCorrect": true
+              },
+              {
+                "content": "Силен като лъв",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое произведение е пример за епос?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Илиада",
+                "isCorrect": true
+              },
+              {
+                "content": "Ромео и Жулиета",
+                "isCorrect": false
+              },
+              {
+                "content": "Дон Кихот",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво означава терминът 'алегория'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Алегорията е литературен похват, при който абстрактни идеи или качества се представят чрез конкретни образи и символи.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

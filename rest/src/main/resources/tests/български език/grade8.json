@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Граматика за 8 клас - Основи",
+    "grade": 8,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кое е правилното склонение на съществителното име 'човек' в множествено число?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "хора",
+                "isCorrect": true
+              },
+              {
+                "content": "човеки",
+                "isCorrect": false
+              },
+              {
+                "content": "човечета",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е противоположното на 'тъмно'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "светло",
+                "isCorrect": true
+              },
+              {
+                "content": "тясно",
+                "isCorrect": false
+              },
+              {
+                "content": "широко",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички глаголи:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "пиша",
+                "isCorrect": true
+              },
+              {
+                "content": "чета",
+                "isCorrect": true
+              },
+              {
+                "content": "книга",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'красив'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "прекрасен",
+                "isCorrect": true
+              },
+              {
+                "content": "уродлив",
+                "isCorrect": false
+              },
+              {
+                "content": "грозен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на снега?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бял",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Българска литература за 8 клас",
+    "grade": 8,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Под игото'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван Вазов",
+                "isCorrect": true
+              },
+              {
+                "content": "Алеко Константинов",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво означава думата 'роман'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Литературно произведение с дълга форма",
+                "isCorrect": true
+              },
+              {
+                "content": "Кратък разказ",
+                "isCorrect": false
+              },
+              {
+                "content": "Поетична форма",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения на Иван Вазов:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Немили-недраги",
+                "isCorrect": true
+              },
+              {
+                "content": "Епопея на забравените",
+                "isCorrect": true
+              },
+              {
+                "content": "Хаджи Димитър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'грижовен'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "внимателен",
+                "isCorrect": true
+              },
+              {
+                "content": "небрежен",
+                "isCorrect": false
+              },
+              {
+                "content": "забавен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на небето през деня?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Правописни правила за 8 клас",
+    "grade": 8,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя дума е изписана правилно?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "обучение",
+                "isCorrect": true
+              },
+              {
+                "content": "обученье",
+                "isCorrect": false
+              },
+              {
+                "content": "обучаване",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое е множественото число на 'стол'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "столове",
+                "isCorrect": true
+              },
+              {
+                "content": "столето",
+                "isCorrect": false
+              },
+              {
+                "content": "столове",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички съществителни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "книга",
+                "isCorrect": true
+              },
+              {
+                "content": "учител",
+                "isCorrect": true
+              },
+              {
+                "content": "пиша",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е антоним на 'студен'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "топъл",
+                "isCorrect": true
+              },
+              {
+                "content": "горещ",
+                "isCorrect": false
+              },
+              {
+                "content": "прохладен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на морето?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

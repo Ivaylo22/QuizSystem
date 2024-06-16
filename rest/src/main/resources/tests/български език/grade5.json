@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Граматика за 5 клас - Основи",
+    "grade": 5,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кое е правилното склонение на съществителното име 'ученик' в множествено число?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "ученици",
+                "isCorrect": true
+              },
+              {
+                "content": "ученикъте",
+                "isCorrect": false
+              },
+              {
+                "content": "учениките",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е противоположното на 'светъл'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "тъмен",
+                "isCorrect": true
+              },
+              {
+                "content": "черен",
+                "isCorrect": false
+              },
+              {
+                "content": "сив",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички глаголи:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "играя",
+                "isCorrect": true
+              },
+              {
+                "content": "писане",
+                "isCorrect": false
+              },
+              {
+                "content": "чета",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'умен'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "глупав",
+                "isCorrect": false
+              },
+              {
+                "content": "интелигентен",
+                "isCorrect": true
+              },
+              {
+                "content": "мързелив",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на морето?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Българска литература за 5 клас",
+    "grade": 5,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Под игото'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван Вазов",
+                "isCorrect": true
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво означава думата 'епос'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лирика",
+                "isCorrect": false
+              },
+              {
+                "content": "Разказ",
+                "isCorrect": false
+              },
+              {
+                "content": "Епична поема",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички литературни жанрове:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "роман",
+                "isCorrect": true
+              },
+              {
+                "content": "къща",
+                "isCorrect": false
+              },
+              {
+                "content": "повест",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е синоним на 'герой'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "страхливец",
+                "isCorrect": false
+              },
+              {
+                "content": "храбрец",
+                "isCorrect": true
+              },
+              {
+                "content": "предател",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на розата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Червен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Правописни правила за 5 клас",
+    "grade": 5,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя дума е изписана правилно?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "участие",
+                "isCorrect": true
+              },
+              {
+                "content": "участйе",
+                "isCorrect": false
+              },
+              {
+                "content": "участее",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое е множественото число на 'дете'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "децата",
+                "isCorrect": false
+              },
+              {
+                "content": "деца",
+                "isCorrect": true
+              },
+              {
+                "content": "детето",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички прилагателни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "висок",
+                "isCorrect": true
+              },
+              {
+                "content": "бърз",
+                "isCorrect": true
+              },
+              {
+                "content": "пиша",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя дума е антоним на 'мързелив'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "работлив",
+                "isCorrect": true
+              },
+              {
+                "content": "ленив",
+                "isCorrect": false
+              },
+              {
+                "content": "зает",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на снега?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бял",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

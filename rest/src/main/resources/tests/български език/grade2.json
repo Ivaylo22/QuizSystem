@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Основи на българския език",
+    "grade": 2,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е втората буква в българската азбука?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "А",
+                "isCorrect": false
+              },
+              {
+                "content": "Б",
+                "isCorrect": true
+              },
+              {
+                "content": "В",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е звукът на буквата 'Н'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "М",
+                "isCorrect": false
+              },
+              {
+                "content": "Н",
+                "isCorrect": true
+              },
+              {
+                "content": "П",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които започват с буквата 'П':",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Петър",
+                "isCorrect": true
+              },
+              {
+                "content": "Котка",
+                "isCorrect": false
+              },
+              {
+                "content": "Пеперуда",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е последната буква в думата 'автобус'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "С",
+                "isCorrect": true
+              },
+              {
+                "content": "Б",
+                "isCorrect": false
+              },
+              {
+                "content": "Т",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на небето през деня?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Развитие на езиковите умения",
+    "grade": 2,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е гласната буква в думата 'градина'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "А",
+                "isCorrect": false
+              },
+              {
+                "content": "И",
+                "isCorrect": true
+              },
+              {
+                "content": "Д",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя буква звучи като 'Т'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Т",
+                "isCorrect": true
+              },
+              {
+                "content": "П",
+                "isCorrect": false
+              },
+              {
+                "content": "В",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които започват с буквата 'В':",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Вятър",
+                "isCorrect": true
+              },
+              {
+                "content": "Маса",
+                "isCorrect": false
+              },
+              {
+                "content": "Вода",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е последната буква в думата 'училище'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Е",
+                "isCorrect": true
+              },
+              {
+                "content": "И",
+                "isCorrect": false
+              },
+              {
+                "content": "Ш",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на слънцето?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Езикови приключения",
+    "grade": 2,
+    "subject": "български език",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е първата буква в думата 'ябълка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Я",
+                "isCorrect": true
+              },
+              {
+                "content": "Б",
+                "isCorrect": false
+              },
+              {
+                "content": "К",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е звукът на буквата 'З'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "З",
+                "isCorrect": true
+              },
+              {
+                "content": "С",
+                "isCorrect": false
+              },
+              {
+                "content": "Ш",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички думи, които започват с буквата 'Р':",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Риба",
+                "isCorrect": true
+              },
+              {
+                "content": "Кола",
+                "isCorrect": false
+              },
+              {
+                "content": "Роза",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е последната буква в думата 'дърво'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "О",
+                "isCorrect": true
+              },
+              {
+                "content": "Р",
+                "isCorrect": false
+              },
+              {
+                "content": "В",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на ябълката?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Червен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
