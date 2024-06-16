@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Комплексни числа",
+    "grade": 12,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е комплексното число i?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Корен квадратен от -1",
+                "isCorrect": true
+              },
+              {
+                "content": "Корен квадратен от 1",
+                "isCorrect": false
+              },
+              {
+                "content": "Корен квадратен от 0",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое е комплексното спрямо числото 3 + 4i?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "3 - 4i",
+                "isCorrect": true
+              },
+              {
+                "content": "-3 + 4i",
+                "isCorrect": false
+              },
+              {
+                "content": "-3 - 4i",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички свойства на комплексните числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Могат да бъдат представени в алгебрична форма",
+                "isCorrect": true
+              },
+              {
+                "content": "Могат да бъдат представени в полярна форма",
+                "isCorrect": true
+              },
+              {
+                "content": "Имат само реална част",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е модулната форма на комплексното число 1 + i?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "√2",
+                "isCorrect": true
+              },
+              {
+                "content": "1",
+                "isCorrect": false
+              },
+              {
+                "content": "i",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на комплексното число в реалния живот.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Комплексните числа се използват в инженерството, физиката и компютърната графика за представяне на вълни, електрически вериги и 3D ротации.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Интегрално смятане",
+    "grade": 12,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Каква е определението за определен интеграл?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Интеграл с определени граници на интегриране",
+                "isCorrect": true
+              },
+              {
+                "content": "Интеграл без граници на интегриране",
+                "isCorrect": false
+              },
+              {
+                "content": "Производна на функция",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е интегралната формула за ∫x dx?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x^2/2 + C",
+                "isCorrect": true
+              },
+              {
+                "content": "x^2 + C",
+                "isCorrect": false
+              },
+              {
+                "content": "2x + C",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички свойства на определените интеграли:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Линейност на интеграла",
+                "isCorrect": true
+              },
+              {
+                "content": "Симетрия на интеграла",
+                "isCorrect": true
+              },
+              {
+                "content": "Суверенитет на интеграла",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното свойство на неопределените интеграли?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Представляват семейство функции",
+                "isCorrect": true
+              },
+              {
+                "content": "Представляват една функция",
+                "isCorrect": false
+              },
+              {
+                "content": "Представляват производна на функция",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете приложението на интегралите в реалния живот.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Интегралите се използват за изчисляване на площи под криви, обеми на тела, работа в механиката и в много други приложения в науката и инженерството.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

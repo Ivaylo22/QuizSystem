@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на алгебрата",
+    "grade": 9,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Решете уравнението: 3x + 2 = 11",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x = 3",
+                "isCorrect": true
+              },
+              {
+                "content": "x = 2",
+                "isCorrect": false
+              },
+              {
+                "content": "x = 1",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният закон на пропорцията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Произведението на крайни членове е равно на произведението на средни членове",
+                "isCorrect": true
+              },
+              {
+                "content": "Сумата на всички страни е равна на 360 градуса",
+                "isCorrect": false
+              },
+              {
+                "content": "Произведението на всички страни е равно на произведението на височините",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички числа, които са кратни на 4:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "8",
+                "isCorrect": true
+              },
+              {
+                "content": "12",
+                "isCorrect": true
+              },
+              {
+                "content": "15",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява квадратната функция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Функция от вида y = ax^2 + bx + c",
+                "isCorrect": true
+              },
+              {
+                "content": "Функция от вида y = ax + b",
+                "isCorrect": false
+              },
+              {
+                "content": "Функция от вида y = a/x",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Определете дали функцията y = 2x - 5 е линейна.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Да, функцията y = 2x - 5 е линейна, защото може да бъде представена във формата y = mx + b.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Геометрични принципи",
+    "grade": 9,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Каква е сумата на вътрешните ъгли на триъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "180 градуса",
+                "isCorrect": true
+              },
+              {
+                "content": "360 градуса",
+                "isCorrect": false
+              },
+              {
+                "content": "90 градуса",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е периметърът на правоъгълник със страни 5 см и 7 см?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "24 см",
+                "isCorrect": true
+              },
+              {
+                "content": "22 см",
+                "isCorrect": false
+              },
+              {
+                "content": "20 см",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички видове ъгли:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Остър ъгъл",
+                "isCorrect": true
+              },
+              {
+                "content": "Тъп ъгъл",
+                "isCorrect": true
+              },
+              {
+                "content": "Пръстен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е формулата за лице на правоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лице = дължина x ширина",
+                "isCorrect": true
+              },
+              {
+                "content": "Лице = 2 x (дължина + ширина)",
+                "isCorrect": false
+              },
+              {
+                "content": "Лице = дължина x височина",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете свойствата на равностранен триъгълник.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Равностранен триъгълник има три равни страни и три равни ъгъла, всеки от които е 60 градуса.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

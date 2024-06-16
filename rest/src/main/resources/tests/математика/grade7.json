@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Разширена алгебра - Част 1",
+    "grade": 7,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Решете уравнението: 2x + 5 = 15",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x = 5",
+                "isCorrect": false
+              },
+              {
+                "content": "x = 10",
+                "isCorrect": false
+              },
+              {
+                "content": "x = 5",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кое от следните е правилно за линейната функция y = 3x + 2?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Наклонът е 2",
+                "isCorrect": false
+              },
+              {
+                "content": "Наклонът е 3",
+                "isCorrect": true
+              },
+              {
+                "content": "Наклонът е -3",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички прости числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "7",
+                "isCorrect": true
+              },
+              {
+                "content": "9",
+                "isCorrect": false
+              },
+              {
+                "content": "11",
+                "isCorrect": true
+              },
+              {
+                "content": "12",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко е 12 × 11?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "121",
+                "isCorrect": false
+              },
+              {
+                "content": "132",
+                "isCorrect": true
+              },
+              {
+                "content": "144",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете стойността на π (пи) до две десетични места.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "3.14",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Разширена алгебра - Част 2",
+    "grade": 7,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Решете неравенството: 3x - 4 > 5",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x > 3",
+                "isCorrect": true
+              },
+              {
+                "content": "x < 3",
+                "isCorrect": false
+              },
+              {
+                "content": "x > 1",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е формулата за лицето на правоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "A = ab",
+                "isCorrect": true
+              },
+              {
+                "content": "A = a²",
+                "isCorrect": false
+              },
+              {
+                "content": "A = 2ab",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички числа, които са делими на 4:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "8",
+                "isCorrect": true
+              },
+              {
+                "content": "14",
+                "isCorrect": false
+              },
+              {
+                "content": "16",
+                "isCorrect": true
+              },
+              {
+                "content": "20",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Колко е 15 × 4?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "60",
+                "isCorrect": true
+              },
+              {
+                "content": "65",
+                "isCorrect": false
+              },
+              {
+                "content": "70",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете стойността на числото e (основата на естествения логаритъм) до две десетични места.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "2.72",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

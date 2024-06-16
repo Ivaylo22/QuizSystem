@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Алгебра и геометрия - Част 1",
+    "grade": 8,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Решете уравнението: x^2 - 9 = 0",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x = 3 или x = -3",
+                "isCorrect": true
+              },
+              {
+                "content": "x = 9 или x = -9",
+                "isCorrect": false
+              },
+              {
+                "content": "x = 3 или x = 0",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко е лицето на триъгълник с основа 10 см и височина 5 см?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "50 см²",
+                "isCorrect": false
+              },
+              {
+                "content": "25 см²",
+                "isCorrect": true
+              },
+              {
+                "content": "30 см²",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички квадратни числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "4",
+                "isCorrect": true
+              },
+              {
+                "content": "8",
+                "isCorrect": false
+              },
+              {
+                "content": "9",
+                "isCorrect": true
+              },
+              {
+                "content": "12",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко е 7 × 8?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "54",
+                "isCorrect": false
+              },
+              {
+                "content": "56",
+                "isCorrect": true
+              },
+              {
+                "content": "58",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете стойността на златното сечение (φ) до две десетични места.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "1.62",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Алгебра и геометрия - Част 2",
+    "grade": 8,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Решете неравенството: 5x + 2 ≤ 17",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x ≤ 3",
+                "isCorrect": true
+              },
+              {
+                "content": "x ≥ 3",
+                "isCorrect": false
+              },
+              {
+                "content": "x < 3",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е формулата за обиколката на кръг?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "C = πd",
+                "isCorrect": true
+              },
+              {
+                "content": "C = 2πr",
+                "isCorrect": false
+              },
+              {
+                "content": "C = πr²",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички правилни многоъгълници:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Квадрат",
+                "isCorrect": true
+              },
+              {
+                "content": "Правоъгълник",
+                "isCorrect": false
+              },
+              {
+                "content": "Ромб",
+                "isCorrect": false
+              },
+              {
+                "content": "Правилен петоъгълник",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Колко е 9 × 6?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "54",
+                "isCorrect": true
+              },
+              {
+                "content": "56",
+                "isCorrect": false
+              },
+              {
+                "content": "60",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете стойността на числото i (имагинерната единица) до две десетични места.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "√-1",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

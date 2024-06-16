@@ -1,0 +1,344 @@
+[
+  {
+    "title": "Математически Основи - Част 1",
+    "grade": 5,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 54 + 28?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "82",
+                "isCorrect": true
+              },
+              {
+                "content": "81",
+                "isCorrect": false
+              },
+              {
+                "content": "80",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое число е между 59 и 61?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "58",
+                "isCorrect": false
+              },
+              {
+                "content": "60",
+                "isCorrect": true
+              },
+              {
+                "content": "62",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички прости числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "29",
+                "isCorrect": true
+              },
+              {
+                "content": "30",
+                "isCorrect": false
+              },
+              {
+                "content": "31",
+                "isCorrect": true
+              },
+              {
+                "content": "32",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко страни има петоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "4",
+                "isCorrect": false
+              },
+              {
+                "content": "5",
+                "isCorrect": true
+              },
+              {
+                "content": "6",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете числото, което е след 75.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "76",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Математически Основи - Част 2",
+    "grade": 5,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 73 - 37?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "36",
+                "isCorrect": true
+              },
+              {
+                "content": "35",
+                "isCorrect": false
+              },
+              {
+                "content": "34",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое число е между 88 и 90?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "87",
+                "isCorrect": false
+              },
+              {
+                "content": "89",
+                "isCorrect": true
+              },
+              {
+                "content": "91",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички четни числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "43",
+                "isCorrect": false
+              },
+              {
+                "content": "44",
+                "isCorrect": true
+              },
+              {
+                "content": "45",
+                "isCorrect": false
+              },
+              {
+                "content": "46",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Колко ъгъла има осмоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "7",
+                "isCorrect": false
+              },
+              {
+                "content": "8",
+                "isCorrect": true
+              },
+              {
+                "content": "9",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете числото, което е преди 99.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "98",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Математически Основи - Част 3",
+    "grade": 5,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 85 + 15?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "100",
+                "isCorrect": true
+              },
+              {
+                "content": "101",
+                "isCorrect": false
+              },
+              {
+                "content": "102",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое число е между 78 и 80?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "77",
+                "isCorrect": false
+              },
+              {
+                "content": "79",
+                "isCorrect": true
+              },
+              {
+                "content": "81",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички прости числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "37",
+                "isCorrect": true
+              },
+              {
+                "content": "38",
+                "isCorrect": false
+              },
+              {
+                "content": "39",
+                "isCorrect": false
+              },
+              {
+                "content": "40",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко страни има седмоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "6",
+                "isCorrect": false
+              },
+              {
+                "content": "7",
+                "isCorrect": true
+              },
+              {
+                "content": "8",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете числото, което е след 85.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "86",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Основи на Математиката - Част 1",
+    "grade": 3,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 12 + 8?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "18",
+                "isCorrect": false
+              },
+              {
+                "content": "20",
+                "isCorrect": true
+              },
+              {
+                "content": "22",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво число е между 13 и 15?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "12",
+                "isCorrect": false
+              },
+              {
+                "content": "14",
+                "isCorrect": true
+              },
+              {
+                "content": "16",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички прости числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "2",
+                "isCorrect": true
+              },
+              {
+                "content": "4",
+                "isCorrect": false
+              },
+              {
+                "content": "5",
+                "isCorrect": true
+              },
+              {
+                "content": "6",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко страни има триъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "2",
+                "isCorrect": false
+              },
+              {
+                "content": "3",
+                "isCorrect": true
+              },
+              {
+                "content": "4",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете числото, което е след 15.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "16",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Основи на Математиката - Част 2",
+    "grade": 3,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 14 - 5?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "8",
+                "isCorrect": false
+              },
+              {
+                "content": "9",
+                "isCorrect": true
+              },
+              {
+                "content": "10",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво число е между 18 и 20?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "17",
+                "isCorrect": false
+              },
+              {
+                "content": "19",
+                "isCorrect": true
+              },
+              {
+                "content": "21",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички четни числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "3",
+                "isCorrect": false
+              },
+              {
+                "content": "4",
+                "isCorrect": true
+              },
+              {
+                "content": "7",
+                "isCorrect": false
+              },
+              {
+                "content": "8",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Колко ъгъла има петоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "4",
+                "isCorrect": false
+              },
+              {
+                "content": "5",
+                "isCorrect": true
+              },
+              {
+                "content": "6",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете числото, което е преди 22.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "21",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

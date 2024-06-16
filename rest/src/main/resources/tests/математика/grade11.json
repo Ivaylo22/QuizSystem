@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Логаритми и експоненциални функции",
+    "grade": 11,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Решете уравнението: log(x) = 3",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x = 1000",
+                "isCorrect": true
+              },
+              {
+                "content": "x = 10",
+                "isCorrect": false
+              },
+              {
+                "content": "x = 3",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното свойство на логаритмите?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "log(ab) = log(a) + log(b)",
+                "isCorrect": true
+              },
+              {
+                "content": "log(a/b) = log(a) - log(b)",
+                "isCorrect": false
+              },
+              {
+                "content": "log(a^b) = b*log(a)",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички истински изрази:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "log(1) = 0",
+                "isCorrect": true
+              },
+              {
+                "content": "log(10) = 1",
+                "isCorrect": true
+              },
+              {
+                "content": "log(0) = 1",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е стойността на e^0?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "0",
+                "isCorrect": false
+              },
+              {
+                "content": "1",
+                "isCorrect": true
+              },
+              {
+                "content": "e",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво представлява логаритмичната функция.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Логаритмичната функция е обратната функция на експоненциалната функция и се използва за намиране на степента, на която трябва да се повдигне основата, за да се получи дадено число.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Вектори и векторна алгебра",
+    "grade": 11,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Каква е сумата на векторите A(2, 3) и B(1, 4)?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "A + B = (3, 7)",
+                "isCorrect": true
+              },
+              {
+                "content": "A + B = (1, 7)",
+                "isCorrect": false
+              },
+              {
+                "content": "A + B = (3, 1)",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е скаларен произведение на вектори?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Произведение на дължините на векторите и косинуса на ъгъла между тях",
+                "isCorrect": true
+              },
+              {
+                "content": "Произведение на дължините на векторите и синуса на ъгъла между тях",
+                "isCorrect": false
+              },
+              {
+                "content": "Произведение на дължините на векторите и тангенса на ъгъла между тях",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички векторни операции:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Събиране на вектори",
+                "isCorrect": true
+              },
+              {
+                "content": "Умножение на вектори",
+                "isCorrect": true
+              },
+              {
+                "content": "Деление на вектори",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е модул на вектор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Дължината на вектора",
+                "isCorrect": true
+              },
+              {
+                "content": "Посоката на вектора",
+                "isCorrect": false
+              },
+              {
+                "content": "Произведението на координатите на вектора",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво представлява векторният произведение на два вектора.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Векторното произведение на два вектора е вектор, който е перпендикулярен на равнината, определена от двата вектора, и чиято дължина е равна на площта на паралелограма, образуван от двата вектора.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Диференциално смятане",
+    "grade": 11,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Каква е производната на функцията f(x) = x^2?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "f'(x) = 2x",
+                "isCorrect": true
+              },
+              {
+                "content": "f'(x) = x",
+                "isCorrect": false
+              },
+              {
+                "content": "f'(x) = x^2",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е производната на sin(x)?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "cos(x)",
+                "isCorrect": true
+              },
+              {
+                "content": "-sin(x)",
+                "isCorrect": false
+              },
+              {
+                "content": "tan(x)",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички верни твърдения за производните:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Производната на константа е 0",
+                "isCorrect": true
+              },
+              {
+                "content": "Производната на сума от функции е сумата на производните",
+                "isCorrect": true
+              },
+              {
+                "content": "Производната на произведение от функции е произведението на производните",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е производната на ln(x)?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1/x",
+                "isCorrect": true
+              },
+              {
+                "content": "x",
+                "isCorrect": false
+              },
+              {
+                "content": "e^x",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво представлява точка на инфлексия.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Точка на инфлексия е точка на кривата, в която кривината променя знака си, т.е. функцията преминава от изпъкнала в вдлъбната или обратното.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

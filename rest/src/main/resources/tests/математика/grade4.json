@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Математически Основи - Част 1",
+    "grade": 4,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 25 + 17?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "41",
+                "isCorrect": false
+              },
+              {
+                "content": "42",
+                "isCorrect": true
+              },
+              {
+                "content": "43",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое число е между 27 и 29?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "26",
+                "isCorrect": false
+              },
+              {
+                "content": "28",
+                "isCorrect": true
+              },
+              {
+                "content": "30",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички прости числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "11",
+                "isCorrect": true
+              },
+              {
+                "content": "12",
+                "isCorrect": false
+              },
+              {
+                "content": "13",
+                "isCorrect": true
+              },
+              {
+                "content": "14",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко страни има правоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "3",
+                "isCorrect": false
+              },
+              {
+                "content": "4",
+                "isCorrect": true
+              },
+              {
+                "content": "5",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете числото, което е след 32.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "33",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Математически Основи - Част 2",
+    "grade": 4,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 36 - 18?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "18",
+                "isCorrect": true
+              },
+              {
+                "content": "19",
+                "isCorrect": false
+              },
+              {
+                "content": "20",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое число е между 44 и 46?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "43",
+                "isCorrect": false
+              },
+              {
+                "content": "45",
+                "isCorrect": true
+              },
+              {
+                "content": "47",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички четни числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "23",
+                "isCorrect": false
+              },
+              {
+                "content": "24",
+                "isCorrect": true
+              },
+              {
+                "content": "25",
+                "isCorrect": false
+              },
+              {
+                "content": "26",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Колко ъгъла има шестоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "5",
+                "isCorrect": false
+              },
+              {
+                "content": "6",
+                "isCorrect": true
+              },
+              {
+                "content": "7",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете числото, което е преди 52.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "51",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

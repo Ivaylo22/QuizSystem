@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Алгебра и Геометрия - Част 1",
+    "grade": 6,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 144 ÷ 12?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "12",
+                "isCorrect": true
+              },
+              {
+                "content": "11",
+                "isCorrect": false
+              },
+              {
+                "content": "10",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое число е квадратен корен от 49?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "6",
+                "isCorrect": false
+              },
+              {
+                "content": "7",
+                "isCorrect": true
+              },
+              {
+                "content": "8",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички числа, които са кратни на 5:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "25",
+                "isCorrect": true
+              },
+              {
+                "content": "30",
+                "isCorrect": true
+              },
+              {
+                "content": "33",
+                "isCorrect": false
+              },
+              {
+                "content": "40",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Колко е 8 × 7?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "54",
+                "isCorrect": false
+              },
+              {
+                "content": "56",
+                "isCorrect": true
+              },
+              {
+                "content": "58",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете резултата от 9².",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "81",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Алгебра и Геометрия - Част 2",
+    "grade": 6,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Колко е 81 ÷ 9?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "8",
+                "isCorrect": false
+              },
+              {
+                "content": "9",
+                "isCorrect": true
+              },
+              {
+                "content": "10",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое число е кубичен корен от 27?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "2",
+                "isCorrect": false
+              },
+              {
+                "content": "3",
+                "isCorrect": true
+              },
+              {
+                "content": "4",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички числа, които са кратни на 3:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "9",
+                "isCorrect": true
+              },
+              {
+                "content": "12",
+                "isCorrect": true
+              },
+              {
+                "content": "15",
+                "isCorrect": true
+              },
+              {
+                "content": "17",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Колко е 7 × 8?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "54",
+                "isCorrect": false
+              },
+              {
+                "content": "56",
+                "isCorrect": true
+              },
+              {
+                "content": "58",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете резултата от 12².",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "144",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

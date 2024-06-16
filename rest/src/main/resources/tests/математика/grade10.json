@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на алгебрата",
+    "grade": 10,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Решете уравнението: 2x^2 - 3x + 1 = 0",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "x = 1, x = 0.5",
+                "isCorrect": false
+              },
+              {
+                "content": "x = 1, x = -0.5",
+                "isCorrect": true
+              },
+              {
+                "content": "x = -1, x = 0.5",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е дискриминантата на квадратно уравнение?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "b^2 - 4ac",
+                "isCorrect": true
+              },
+              {
+                "content": "b^2 + 4ac",
+                "isCorrect": false
+              },
+              {
+                "content": "a^2 - 4bc",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички примери на рационални числа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "0.75",
+                "isCorrect": true
+              },
+              {
+                "content": "1/3",
+                "isCorrect": true
+              },
+              {
+                "content": "√2",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е свойството на адитивната инверсия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "a + (-a) = 0",
+                "isCorrect": true
+              },
+              {
+                "content": "a - a = 0",
+                "isCorrect": false
+              },
+              {
+                "content": "a * 0 = 0",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Определете дали числото 7/3 е рационално.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Да, числото 7/3 е рационално, защото може да бъде представено като дроб с цели числа в числителя и знаменателя.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Геометрични принципи",
+    "grade": 10,
+    "subject": "Математика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Каква е сумата на външните ъгли на многоъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "360 градуса",
+                "isCorrect": true
+              },
+              {
+                "content": "180 градуса",
+                "isCorrect": false
+              },
+              {
+                "content": "720 градуса",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е лицето на кръг с радиус 5 см?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "25π см^2",
+                "isCorrect": false
+              },
+              {
+                "content": "10π см^2",
+                "isCorrect": false
+              },
+              {
+                "content": "25π см^2",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички видове триъгълници:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Равнобедрен",
+                "isCorrect": true
+              },
+              {
+                "content": "Равностранен",
+                "isCorrect": true
+              },
+              {
+                "content": "Равнополучен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява височината на триъгълник?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Перпендикулярният сегмент от върха на триъгълника до противоположната страна",
+                "isCorrect": true
+              },
+              {
+                "content": "Перпендикулярният сегмент от средата на триъгълника до противоположната страна",
+                "isCorrect": false
+              },
+              {
+                "content": "Линията, която свързва две страни на триъгълника",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво е свойството на външния ъгъл на триъгълник.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Свойството на външния ъгъл на триъгълник гласи, че той е равен на сумата от двата срещулежащи вътрешни ъгъла.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
