@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Старобългарска литература",
+    "grade": 8,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Слово за похода на Игор'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Неизвестен автор",
+                "isCorrect": true
+              },
+              {
+                "content": "Йоан Екзарх",
+                "isCorrect": false
+              },
+              {
+                "content": "Константин Преславски",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в 'Слово за похода на Игор'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Битката между русите и половците",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовна история",
+                "isCorrect": false
+              },
+              {
+                "content": "Природни описания",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от старобългарската литература:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Азбучна молитва",
+                "isCorrect": true
+              },
+              {
+                "content": "О писменах",
+                "isCorrect": true
+              },
+              {
+                "content": "История славянобългарска",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Слово за похода на Игор'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Княз Игор",
+                "isCorrect": true
+              },
+              {
+                "content": "Боян",
+                "isCorrect": false
+              },
+              {
+                "content": "Владимир",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на старобългарската литература.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Старобългарската литература е литература, създадена през Първото и Второто българско царство, която има основополагащо значение за развитието на българската култура и писменост.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Средновековна българска литература",
+    "grade": 8,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал 'Житие на Константин-Кирил'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Св. Климент Охридски",
+                "isCorrect": false
+              },
+              {
+                "content": "Св. Методий",
+                "isCorrect": false
+              },
+              {
+                "content": "Неизвестен автор",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в 'Житие на Константин-Кирил'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мисионерската дейност на Константин-Кирил",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовна история",
+                "isCorrect": false
+              },
+              {
+                "content": "Природни описания",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения на средновековната българска литература:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Проглас към евангелието",
+                "isCorrect": true
+              },
+              {
+                "content": "Шестоднев",
+                "isCorrect": true
+              },
+              {
+                "content": "Под игото",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Житие на Константин-Кирил'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Константин-Кирил",
+                "isCorrect": true
+              },
+              {
+                "content": "Методий",
+                "isCorrect": false
+              },
+              {
+                "content": "Княз Борис",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на средновековната българска литература.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Средновековната българска литература обхваща произведенията, създадени в периода на Второто българско царство, които имат важно значение за утвърждаването на българската идентичност и култура.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

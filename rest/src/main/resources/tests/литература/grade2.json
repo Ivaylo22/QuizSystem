@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Изследване на българските приказки",
+    "grade": 2,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Патиланско царство'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ран Босилек",
+                "isCorrect": true
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": false
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е главният герой в 'Хитър Петър'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хитър Петър",
+                "isCorrect": true
+              },
+              {
+                "content": "Бай Ганьо",
+                "isCorrect": false
+              },
+              {
+                "content": "Петко Славейков",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички герои от български приказки:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Косе Босе",
+                "isCorrect": true
+              },
+              {
+                "content": "Пепеляшка",
+                "isCorrect": false
+              },
+              {
+                "content": "Трите прасенца",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво означава думата 'басня'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кратка приказка с морална поука",
+                "isCorrect": true
+              },
+              {
+                "content": "Дълъг роман",
+                "isCorrect": false
+              },
+              {
+                "content": "Историческо произведение",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'герой' в литературен контекст.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Герой е персонаж в литературно произведение, който играе важна роля в сюжета.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Приказни светове",
+    "grade": 2,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал 'Дядо и ряпа'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Елин Пелин",
+                "isCorrect": true
+              },
+              {
+                "content": "Ран Босилек",
+                "isCorrect": false
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво символизира ряпата в приказката 'Дядо и ряпа'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Упоритост",
+                "isCorrect": true
+              },
+              {
+                "content": "Леност",
+                "isCorrect": false
+              },
+              {
+                "content": "Алчност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички литературни произведения, които са басни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лисицата и гроздето",
+                "isCorrect": true
+              },
+              {
+                "content": "Тримата братя и златната ябълка",
+                "isCorrect": false
+              },
+              {
+                "content": "Щурецът и мравката",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява сюжетът на една приказка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Поредицата от събития в историята",
+                "isCorrect": true
+              },
+              {
+                "content": "Мястото на действието",
+                "isCorrect": false
+              },
+              {
+                "content": "Героите в приказката",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'автор'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Автор е човекът, който пише литературно произведение.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

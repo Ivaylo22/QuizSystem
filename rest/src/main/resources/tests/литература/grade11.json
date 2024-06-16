@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Модернизъм и Постмодернизъм в Литературата",
+    "grade": 11,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Процесът'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Франц Кафка",
+                "isCorrect": true
+              },
+              {
+                "content": "Джеймс Джойс",
+                "isCorrect": false
+              },
+              {
+                "content": "Марсел Пруст",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема в 'Лолита' на Владимир Набоков?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Любов и обсебеност",
+                "isCorrect": true
+              },
+              {
+                "content": "Приключения и изследвания",
+                "isCorrect": false
+              },
+              {
+                "content": "Социална несправедливост",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от периода на модернизма:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Одисей",
+                "isCorrect": true
+              },
+              {
+                "content": "Мадам Бовари",
+                "isCorrect": false
+              },
+              {
+                "content": "Метаморфозата",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Процесът'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Йозеф К.",
+                "isCorrect": true
+              },
+              {
+                "content": "Стивън Дедалус",
+                "isCorrect": false
+              },
+              {
+                "content": "Жан Валжан",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на модернизма в литературата.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Модернизмът в литературата се характеризира с отхвърляне на традиционните форми и експериментиране с нови техники за изразяване, отразявайки сложността и хаоса на съвременния живот.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Литературен Екзистенциализъм",
+    "grade": 11,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Чужденецът'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Албер Камю",
+                "isCorrect": true
+              },
+              {
+                "content": "Жан-Пол Сартр",
+                "isCorrect": false
+              },
+              {
+                "content": "Фридрих Ницше",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема в 'Битието и Нищото' на Жан-Пол Сартр?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Свободата и отговорността",
+                "isCorrect": true
+              },
+              {
+                "content": "Любов и романтика",
+                "isCorrect": false
+              },
+              {
+                "content": "Социална справедливост",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения, свързани с екзистенциализма:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Чужденецът",
+                "isCorrect": true
+              },
+              {
+                "content": "В очакване на Годо",
+                "isCorrect": true
+              },
+              {
+                "content": "Дон Кихот",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Чужденецът'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мьорсо",
+                "isCorrect": true
+              },
+              {
+                "content": "Рокантен",
+                "isCorrect": false
+              },
+              {
+                "content": "Грегор Замза",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на екзистенциализма в литературата.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Екзистенциализмът в литературата изследва въпросите за човешката свобода, индивидуалността и смисъла на живота, често представяйки герои, изправени пред екзистенциални кризи.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Постмодернизъм и Литература",
+    "grade": 11,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Слотърхаус 5'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кърт Вонегът",
+                "isCorrect": true
+              },
+              {
+                "content": "Томас Пинчън",
+                "isCorrect": false
+              },
+              {
+                "content": "Дон ДеЛило",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема в 'Безкрайна шега' на Дейвид Фостър Уолъс?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Зависимост и самота",
+                "isCorrect": true
+              },
+              {
+                "content": "Любов и семейство",
+                "isCorrect": false
+              },
+              {
+                "content": "Приключения и открития",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички характеристики на постмодернизма в литературата:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ирония и игра",
+                "isCorrect": true
+              },
+              {
+                "content": "Линейно разказване",
+                "isCorrect": false
+              },
+              {
+                "content": "Метатекстуалност",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Слотърхаус 5'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Били Пилгрим",
+                "isCorrect": true
+              },
+              {
+                "content": "О'Брайън",
+                "isCorrect": false
+              },
+              {
+                "content": "Филип Кинкейд",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на постмодернизма в литературата.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Постмодернизмът в литературата акцентира върху фрагментацията, иронията и отхвърлянето на големите разкази, често използвайки игриви и експериментални форми на разказване.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

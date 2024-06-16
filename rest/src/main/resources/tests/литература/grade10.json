@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Символизъм и Модернизъм в Литературата",
+    "grade": 10,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Албатросът'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Шарл Бодлер",
+                "isCorrect": true
+              },
+              {
+                "content": "Пол Верлен",
+                "isCorrect": false
+              },
+              {
+                "content": "Артур Рембо",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема в 'Старецът и морето' на Ърнест Хемингуей?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Борбата на човека срещу природата",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовна история",
+                "isCorrect": false
+              },
+              {
+                "content": "Социални неравенства",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от периода на символизма:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цветя на злото",
+                "isCorrect": true
+              },
+              {
+                "content": "Пиршество",
+                "isCorrect": false
+              },
+              {
+                "content": "Песни без думи",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Старецът и морето'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сантяго",
+                "isCorrect": true
+              },
+              {
+                "content": "Мануел",
+                "isCorrect": false
+              },
+              {
+                "content": "Роберто",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на символизма в литературата.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Символизмът в литературата акцентира върху използването на символи за изразяване на абстрактни идеи и емоции, като често се противопоставя на реализма и рационалността.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Реализъм и Натурализъм в Литературата",
+    "grade": 10,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Война и мир'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лев Толстой",
+                "isCorrect": true
+              },
+              {
+                "content": "Фьодор Достоевски",
+                "isCorrect": false
+              },
+              {
+                "content": "Иван Тургенев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема в 'Госпожа Бовари' на Гюстав Флобер?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Илюзиите и реалността",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовна история",
+                "isCorrect": false
+              },
+              {
+                "content": "Социални неравенства",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от периода на натурализма:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Нана",
+                "isCorrect": true
+              },
+              {
+                "content": "Германски ръководител",
+                "isCorrect": false
+              },
+              {
+                "content": "Терез Ракен",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Война и мир'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Пиер Безухов",
+                "isCorrect": true
+              },
+              {
+                "content": "Андрей Болконски",
+                "isCorrect": false
+              },
+              {
+                "content": "Наташа Ростова",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на реализма в литературата.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Реализмът в литературата се стреми да изобрази живота и обществото такъв, какъвто е, без идеализации, като акцентира върху детайлите и ежедневието.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

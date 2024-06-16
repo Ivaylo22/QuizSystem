@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Разглеждане на български народни приказки",
+    "grade": 4,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е главният герой в приказката 'Хитър Петър'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хитър Петър",
+                "isCorrect": true
+              },
+              {
+                "content": "Златната ябълка",
+                "isCorrect": false
+              },
+              {
+                "content": "Трите прасенца",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво символизира героят в 'Житената питка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Щедрост",
+                "isCorrect": false
+              },
+              {
+                "content": "Упоритост",
+                "isCorrect": true
+              },
+              {
+                "content": "Завист",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български приказни герои:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Крали Марко",
+                "isCorrect": true
+              },
+              {
+                "content": "Хан Аспарух",
+                "isCorrect": false
+              },
+              {
+                "content": "Патиланчо",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в приказката 'Снежанка и седемте джуджета'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Любов",
+                "isCorrect": false
+              },
+              {
+                "content": "Доброта и злонамереност",
+                "isCorrect": true
+              },
+              {
+                "content": "Алчност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'приказка'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Приказка е кратко повествование, обикновено за деца, с измислени герои и събития.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Приказни сюжети и мотиви",
+    "grade": 4,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на приказката 'Палечка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ханс Кристиан Андерсен",
+                "isCorrect": true
+              },
+              {
+                "content": "Братя Грим",
+                "isCorrect": false
+              },
+              {
+                "content": "Ангел Каралийчев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява антагонистът в приказката?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Героят, който помага",
+                "isCorrect": false
+              },
+              {
+                "content": "Главният герой",
+                "isCorrect": false
+              },
+              {
+                "content": "Героят, който се противопоставя на главния герой",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички класически приказки:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Червената шапчица",
+                "isCorrect": true
+              },
+              {
+                "content": "Малкият принц",
+                "isCorrect": false
+              },
+              {
+                "content": "Пепеляшка",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво учи приказката 'Лисицата и гроздето'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Търпение",
+                "isCorrect": false
+              },
+              {
+                "content": "Завист и разочарование",
+                "isCorrect": true
+              },
+              {
+                "content": "Смелост",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'морална поука'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Морална поука е урок или послание, което се извлича от историята и учи на добри или лоши постъпки.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Български фолклорни приказки",
+    "grade": 4,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал приказката 'Златното момиче'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ангел Каралийчев",
+                "isCorrect": true
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": false
+              },
+              {
+                "content": "Ран Босилек",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на вълшебния помощник в приказките?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Да пречи на героя",
+                "isCorrect": false
+              },
+              {
+                "content": "Да помага на героя в изпитанията",
+                "isCorrect": true
+              },
+              {
+                "content": "Да разказва историята",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички персонажи, които са магически същества:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Фея",
+                "isCorrect": true
+              },
+              {
+                "content": "Рицар",
+                "isCorrect": false
+              },
+              {
+                "content": "Дракон",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво учи приказката 'Тримата братя и златната ябълка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Любов",
+                "isCorrect": false
+              },
+              {
+                "content": "Смелост и упоритост",
+                "isCorrect": true
+              },
+              {
+                "content": "Алчност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'фолклор'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Фолклор е съвкупност от народни обичаи, песни, приказки и вярвания, предавани от поколение на поколение.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

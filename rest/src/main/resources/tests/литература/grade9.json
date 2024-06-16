@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Ренесансова литература",
+    "grade": 9,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Божествена комедия'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Данте Алигиери",
+                "isCorrect": true
+              },
+              {
+                "content": "Франческо Петрарка",
+                "isCorrect": false
+              },
+              {
+                "content": "Джовани Бокачо",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в 'Дон Кихот' на Мигел де Сервантес?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Борбата между идеализъм и реалност",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовната история",
+                "isCorrect": false
+              },
+              {
+                "content": "Природните красоти",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от ренесансовата литература:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Божествена комедия",
+                "isCorrect": true
+              },
+              {
+                "content": "Кентърберийски разкази",
+                "isCorrect": true
+              },
+              {
+                "content": "Евгений Онегин",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Дон Кихот'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Дон Кихот",
+                "isCorrect": true
+              },
+              {
+                "content": "Санчо Панса",
+                "isCorrect": false
+              },
+              {
+                "content": "Дулсинея",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на ренесансовата литература.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Ренесансовата литература представя възраждането на интереса към античността и човешките ценности, като същевременно отразява социалните и културни промени в Европа през този период.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Класицизъм и Просвещение",
+    "grade": 9,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Тартюф'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Молиер",
+                "isCorrect": true
+              },
+              {
+                "content": "Жан Расин",
+                "isCorrect": false
+              },
+              {
+                "content": "Пиер Корней",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в 'Фауст' на Йохан Волфганг фон Гьоте?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Борбата за знание и смисъл в живота",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовна история",
+                "isCorrect": false
+              },
+              {
+                "content": "Природни описания",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от периода на Просвещението:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кандид",
+                "isCorrect": true
+              },
+              {
+                "content": "Робинзон Крузо",
+                "isCorrect": true
+              },
+              {
+                "content": "Дон Жуан",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Фауст'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Фауст",
+                "isCorrect": true
+              },
+              {
+                "content": "Мефистофел",
+                "isCorrect": false
+              },
+              {
+                "content": "Гретхен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на класицизма и просвещението в литературата.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Класицизмът и Просвещението в литературата отразяват стремежа към рационалност, ред и образование, като се поставя акцент върху човешката разсъдливост и моралните ценности.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

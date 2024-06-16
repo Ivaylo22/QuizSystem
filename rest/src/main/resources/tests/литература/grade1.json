@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Въведение в литературата",
+    "grade": 1,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Малкият принц'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Антоан дьо Сент-Екзюпери",
+                "isCorrect": true
+              },
+              {
+                "content": "Луис Карол",
+                "isCorrect": false
+              },
+              {
+                "content": "Роалд Дал",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое е главното животно в приказката 'Червената шапчица'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Вълк",
+                "isCorrect": true
+              },
+              {
+                "content": "Мечка",
+                "isCorrect": false
+              },
+              {
+                "content": "Лисица",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички литературни жанрове:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Приказка",
+                "isCorrect": true
+              },
+              {
+                "content": "Роман",
+                "isCorrect": true
+              },
+              {
+                "content": "Рисунка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е главният герой в една история?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Протагонist",
+                "isCorrect": true
+              },
+              {
+                "content": "Антагонист",
+                "isCorrect": false
+              },
+              {
+                "content": "Автор",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'приказка'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Приказка е кратък разказ с вълшебни елементи, често с морална поука.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Изследване на класическата литература",
+    "grade": 1,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя книга е написана от Астрид Линдгрен?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Пипи Дългото чорапче",
+                "isCorrect": true
+              },
+              {
+                "content": "Алиса в страната на чудесата",
+                "isCorrect": false
+              },
+              {
+                "content": "Мечо Пух",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е главният герой в 'Пинокио'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Пинокио",
+                "isCorrect": true
+              },
+              {
+                "content": "Гепето",
+                "isCorrect": false
+              },
+              {
+                "content": "Джими Крикет",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички книги, които са приказки:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Спящата красавица",
+                "isCorrect": true
+              },
+              {
+                "content": "Робинзон Крузо",
+                "isCorrect": false
+              },
+              {
+                "content": "Пепеляшка",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Как се нарича човекът, който пише книги?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Автор",
+                "isCorrect": true
+              },
+              {
+                "content": "Илюстратор",
+                "isCorrect": false
+              },
+              {
+                "content": "Редактор",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'роман'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Роман е дълго литературно произведение с множество герои и сложен сюжет.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Любими детски приказки",
+    "grade": 1,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Мечо Пух'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "А.А. Милн",
+                "isCorrect": true
+              },
+              {
+                "content": "Луис Карол",
+                "isCorrect": false
+              },
+              {
+                "content": "Роалд Дал",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е главният герой в 'Алиса в страната на чудесата'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Алиса",
+                "isCorrect": true
+              },
+              {
+                "content": "Белият заек",
+                "isCorrect": false
+              },
+              {
+                "content": "Кралицата на сърцата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички автори на детски приказки:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Братя Грим",
+                "isCorrect": true
+              },
+              {
+                "content": "Агата Кристи",
+                "isCorrect": false
+              },
+              {
+                "content": "Ханс Кристиан Андерсен",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво е важно за една приказка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Моралната поука",
+                "isCorrect": true
+              },
+              {
+                "content": "Дългите описания",
+                "isCorrect": false
+              },
+              {
+                "content": "Историческата достоверност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'приказка'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Приказка е кратък разказ с вълшебни елементи, често с морална поука.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

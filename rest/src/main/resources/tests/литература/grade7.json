@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Средновековна българска литература",
+    "grade": 7,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното послание на 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Значението на националното самосъзнание",
+                "isCorrect": true
+              },
+              {
+                "content": "Красотата на природата",
+                "isCorrect": false
+              },
+              {
+                "content": "Исторически факти за света",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от средновековната българска литература:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сказание за буквите",
+                "isCorrect": true
+              },
+              {
+                "content": "Бай Ганьо",
+                "isCorrect": false
+              },
+              {
+                "content": "Житие на св. Иван Рилски",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Житие на св. Иван Рилски'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Св. Иван Рилски",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'средновековие'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Средновековието е исторически период, който обхваща времето от V до XV век.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Българско възраждане и литература",
+    "grade": 7,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": true
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Историята и културата на българите",
+                "isCorrect": true
+              },
+              {
+                "content": "Природни красоти",
+                "isCorrect": false
+              },
+              {
+                "content": "Любовни истории",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от Българското възраждане:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Житие и страдание грешнаго Софрония",
+                "isCorrect": true
+              },
+              {
+                "content": "Под игото",
+                "isCorrect": false
+              },
+              {
+                "content": "Горски пътник",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Житие и страдание грешнаго Софрония'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Софроний Врачански",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'възраждане'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Възраждането е период на културен и национален подем в българската история през XVIII-XIX век.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Класическа българска литература",
+    "grade": 7,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на романа 'Под игото'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван Вазов",
+                "isCorrect": true
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема на романа 'Под игото'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Освобождението на България",
+                "isCorrect": true
+              },
+              {
+                "content": "Любовни истории",
+                "isCorrect": false
+              },
+              {
+                "content": "Природни красоти",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения на Иван Вазов:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Под игото",
+                "isCorrect": true
+              },
+              {
+                "content": "Епопея на забравените",
+                "isCorrect": true
+              },
+              {
+                "content": "До Чикаго и назад",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в романа 'Под игото'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Бойчо Огнянов",
+                "isCorrect": true
+              },
+              {
+                "content": "Стефчов",
+                "isCorrect": false
+              },
+              {
+                "content": "Каравелов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'класическа литература'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Класическа литература се отнася до произведения, които са издържали проверката на времето и се считат за образци на литературното изкуство.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

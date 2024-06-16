@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Български народни песни и приказки",
+    "grade": 5,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на приказката 'Тримата братя и златната ябълка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Народно творчество",
+                "isCorrect": true
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на злодея в народните приказки?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Да помага на героя",
+                "isCorrect": false
+              },
+              {
+                "content": "Да създава препятствия и изпитания за героя",
+                "isCorrect": true
+              },
+              {
+                "content": "Да разказва историята",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български народни песни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хубава си, моя горо",
+                "isCorrect": true
+              },
+              {
+                "content": "Аз съм българче",
+                "isCorrect": true
+              },
+              {
+                "content": "Под игото",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое от следните е характеристика на народната приказка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Детайлиран опис на природата",
+                "isCorrect": false
+              },
+              {
+                "content": "Проста и ясна структура на сюжета",
+                "isCorrect": true
+              },
+              {
+                "content": "Научни факти и данни",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'епос'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Епос е литературен жанр, който включва дълги разкази за велики дела и герои, обикновено предавани устно.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Разкази и легенди за българската история",
+    "grade": 5,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал разказа 'Българските чудеса'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван Вазов",
+                "isCorrect": true
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              },
+              {
+                "content": "Алеко Константинов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната идея в разказа 'Немили-недраги'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Любовта към природата",
+                "isCorrect": false
+              },
+              {
+                "content": "Тежката съдба на българските емигранти",
+                "isCorrect": true
+              },
+              {
+                "content": "Забавления и приключения",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения, които са част от българската литературна класика:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Под игото",
+                "isCorrect": true
+              },
+              {
+                "content": "Серафим",
+                "isCorrect": true
+              },
+              {
+                "content": "Войната на световете",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в разказа 'Една българка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Баба Илийца",
+                "isCorrect": true
+              },
+              {
+                "content": "Бай Ганьо",
+                "isCorrect": false
+              },
+              {
+                "content": "Иван Асен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'легенда'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Легенда е разказ за исторически събития или личности, често с елементи на фантазия и чудеса.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Изучаване на български поети и писатели",
+    "grade": 5,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на стихотворението 'Обесването на Васил Левски'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Христо Ботев",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Пейо Яворов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е темата на стихотворението 'Аз съм българче'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Любов към родината",
+                "isCorrect": true
+              },
+              {
+                "content": "Природни красоти",
+                "isCorrect": false
+              },
+              {
+                "content": "Приключения",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български писатели:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван Вазов",
+                "isCorrect": true
+              },
+              {
+                "content": "Джек Лондон",
+                "isCorrect": false
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в творчеството на Пейо Яворов?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Природни красоти",
+                "isCorrect": false
+              },
+              {
+                "content": "Любов и страдание",
+                "isCorrect": true
+              },
+              {
+                "content": "Приключения и пътувания",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'поезия'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Поезия е литературен жанр, който използва ритъм и рима, за да изрази емоции и идеи.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

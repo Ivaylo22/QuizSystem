@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Разбиране на постмодерната литература",
+    "grade": 12,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой автор е известен с постмодерни произведения като 'Кланица 5'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кърт Вонегът",
+                "isCorrect": true
+              },
+              {
+                "content": "Ернест Хемингуей",
+                "isCorrect": false
+              },
+              {
+                "content": "Уилям Фокнър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е общата тема в постмодерната литература?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Отхвърлянето на абсолютните истини",
+                "isCorrect": true
+              },
+              {
+                "content": "Пътуването на героя",
+                "isCorrect": false
+              },
+              {
+                "content": "Романтичен идеализъм",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички елементи, характеризиращи постмодерната литература:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Метафикция",
+                "isCorrect": true
+              },
+              {
+                "content": "Ненадеждни разказвачи",
+                "isCorrect": true
+              },
+              {
+                "content": "Традиционни наративни структури",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой роман е пример за магически реализъм, поджанр често асоцииран с постмодернизма?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сто години самота от Габриел Гарсия Маркес",
+                "isCorrect": true
+              },
+              {
+                "content": "Старецът и морето от Ернест Хемингуей",
+                "isCorrect": false
+              },
+              {
+                "content": "Великият Гетсби от Ф. Скот Фицджералд",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на пастиша в постмодерната литература.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Пастишът в постмодерната литература е значим, защото смесва различни жанрове и стилове, често за да създаде чувство за ирония или да предизвика традиционните литературни форми.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Изследване на дистопичната литература",
+    "grade": 12,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на '1984', основен дистопичен роман?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Джордж Оруел",
+                "isCorrect": true
+              },
+              {
+                "content": "Олдъс Хъксли",
+                "isCorrect": false
+              },
+              {
+                "content": "Рей Бредбъри",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема на 'Прекрасният нов свят' на Олдъс Хъксли?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Опасностите от тоталитарното правителство",
+                "isCorrect": false
+              },
+              {
+                "content": "Дехуманизиращите аспекти на технологиите",
+                "isCorrect": true
+              },
+              {
+                "content": "Борбата за независимост",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички романи, които изследват дистопични теми:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Историята на прислужницата",
+                "isCorrect": true
+              },
+              {
+                "content": "Да убиеш присмехулник",
+                "isCorrect": false
+              },
+              {
+                "content": "451 градуса по Фаренхайт",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "В '1984', какво е значението на фразата 'Големият брат те наблюдава'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Тя представлява потискащото наблюдение на правителството.",
+                "isCorrect": true
+              },
+              {
+                "content": "Тя означава доброжелателността на държавата.",
+                "isCorrect": false
+              },
+              {
+                "content": "Тя е предупреждение срещу бунта.",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Анализирайте ролята на технологиите в контролирането на обществото в '451 градуса по Фаренхайт' от Рей Бредбъри.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "В '451 градуса по Фаренхайт' технологиите се използват за контролиране на обществото чрез промотиране на повърхностни забавления и потискане на критичното мислене.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Изследване на съвременната поезия",
+    "grade": 12,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал поемата 'Вой', която става емблематична за бийт поколението?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Алън Гинсбърг",
+                "isCorrect": true
+              },
+              {
+                "content": "Джак Керуак",
+                "isCorrect": false
+              },
+              {
+                "content": "Лорънс Ферлингети",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната тема на поемата 'Все още се издигам' от Мая Анджелоу?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Устойчивост и овластяване",
+                "isCorrect": true
+              },
+              {
+                "content": "Любов и загуба",
+                "isCorrect": false
+              },
+              {
+                "content": "Природа и красота",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички поети, свързани с изповедалната поезия:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Силвия Плат",
+                "isCorrect": true
+              },
+              {
+                "content": "Робърт Фрост",
+                "isCorrect": false
+              },
+              {
+                "content": "Ан Секстън",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой съвременен поет е написал 'Дивият ирис', спечелил Пулицър награда?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Луиз Глюк",
+                "isCorrect": true
+              },
+              {
+                "content": "Рита Дъв",
+                "isCorrect": false
+              },
+              {
+                "content": "Били Колинс",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Интерпретирайте символиката на поемата 'Брането на къпини' от Шеймъс Хийни.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Поемата 'Брането на къпини' използва акта на бране на къпини като метафора за мимолетната природа на удоволствието и неизбежния разпад на живота.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "title": "Изследване на класическите приказки",
+    "grade": 3,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'Майчина сълза'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван Вазов",
+                "isCorrect": true
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": false
+              },
+              {
+                "content": "Ран Босилек",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво символизира героят в 'Лисицата и гроздето'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Алчност",
+                "isCorrect": false
+              },
+              {
+                "content": "Упоритост",
+                "isCorrect": false
+              },
+              {
+                "content": "Завист",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български автори на приказки:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ангел Каралийчев",
+                "isCorrect": true
+              },
+              {
+                "content": "Братя Грим",
+                "isCorrect": false
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в приказката 'Тримата братя и златната ябълка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Любов",
+                "isCorrect": false
+              },
+              {
+                "content": "Смелост",
+                "isCorrect": true
+              },
+              {
+                "content": "Алчност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'приказка'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Приказка е кратко повествование, обикновено за деца, с измислени герои и събития.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Приказни светове и герои",
+    "grade": 3,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал 'Златното момиче'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ангел Каралийчев",
+                "isCorrect": true
+              },
+              {
+                "content": "Елин Пелин",
+                "isCorrect": false
+              },
+              {
+                "content": "Ран Босилек",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява мотивът в една приказка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Централната идея или послание",
+                "isCorrect": false
+              },
+              {
+                "content": "Причината за действията на героите",
+                "isCorrect": true
+              },
+              {
+                "content": "Краят на историята",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички елементи на приказка:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Начало",
+                "isCorrect": true
+              },
+              {
+                "content": "Конфликт",
+                "isCorrect": true
+              },
+              {
+                "content": "Авторско предисловие",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво учи баснята 'Щурецът и мравката'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Търпение",
+                "isCorrect": false
+              },
+              {
+                "content": "Трудолюбие",
+                "isCorrect": true
+              },
+              {
+                "content": "Смелост",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'басня'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Басня е кратко произведение с животни или предмети като герои, което завършва с морална поука.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Светът на народните приказки",
+    "grade": 3,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя приказка разказва за животни, които се обединяват, за да избягат от опасност?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Бременските музиканти",
+                "isCorrect": true
+              },
+              {
+                "content": "Трите прасенца",
+                "isCorrect": false
+              },
+              {
+                "content": "Хитър Петър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е главният герой в 'Тримата братя и златната ябълка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Третият брат",
+                "isCorrect": true
+              },
+              {
+                "content": "Златната ябълка",
+                "isCorrect": false
+              },
+              {
+                "content": "Бащата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички герои от 'Патиланско царство':",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Баба Цоцолана",
+                "isCorrect": true
+              },
+              {
+                "content": "Дядо Вазил",
+                "isCorrect": false
+              },
+              {
+                "content": "Патиланчо",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво учи приказката 'Житената питка'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Щедрост",
+                "isCorrect": false
+              },
+              {
+                "content": "Упоритост",
+                "isCorrect": true
+              },
+              {
+                "content": "Алчност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'приказен герой'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Приказен герой е измислен персонаж, който участва в приказки и има важна роля в сюжета.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

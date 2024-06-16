@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Ранно българско възраждане",
+    "grade": 6,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Историята и културата на българите",
+                "isCorrect": true
+              },
+              {
+                "content": "Природни красоти",
+                "isCorrect": false
+              },
+              {
+                "content": "Любовни истории",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения от Българското възраждане:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Житие и страдание грешнаго Софрония",
+                "isCorrect": true
+              },
+              {
+                "content": "Под игото",
+                "isCorrect": false
+              },
+              {
+                "content": "Горски пътник",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Житие и страдание грешнаго Софрония'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Софроний Врачански",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'възраждане'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Възраждането е период на културен и национален подем в българската история през XVIII-XIX век.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Късно българско възраждане",
+    "grade": 6,
+    "subject": "Литература",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е написал 'Немили-недраги'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Иван Вазов",
+                "isCorrect": true
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              },
+              {
+                "content": "Алеко Константинов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната тема в 'Немили-недраги'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Съдбата на българските емигранти",
+                "isCorrect": true
+              },
+              {
+                "content": "Природни красоти",
+                "isCorrect": false
+              },
+              {
+                "content": "Любовни истории",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички произведения на Иван Вазов:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Под игото",
+                "isCorrect": true
+              },
+              {
+                "content": "Епопея на забравените",
+                "isCorrect": true
+              },
+              {
+                "content": "До Чикаго и назад",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният герой в 'Немили-недраги'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хаджи Димитър",
+                "isCorrect": true
+              },
+              {
+                "content": "Васил Левски",
+                "isCorrect": false
+              },
+              {
+                "content": "Бойчо Огнянов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете кратко обяснение за значението на думата 'възрожденска литература'.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Възрожденската литература обхваща произведенията, създадени по време на Българското възраждане, които имат за цел да събудят националното самосъзнание и дух.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
