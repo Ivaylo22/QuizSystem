@@ -6,6 +6,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import sit.tuvarna.bg.api.operations.test.archive.ArchiveTestOperation;
+import sit.tuvarna.bg.api.operations.test.archive.ArchiveTestRequest;
+import sit.tuvarna.bg.api.operations.test.archive.ArchiveTestResponse;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestOperation;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestRequest;
 import sit.tuvarna.bg.api.operations.test.create.CreateTestResponse;
@@ -48,8 +51,6 @@ import sit.tuvarna.bg.api.operations.test.solve.SolveTestResponse;
 import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsOperation;
 import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsRequest;
 
-import java.io.IOException;
-
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/api/v1/test")
@@ -69,6 +70,7 @@ public class TestController {
     private final GetAttemptDataOperation getAttemptData;
     private final UpdateAttemptPointsOperation updateAttemptPoints;
     private final GetRandomOperation getRandom;
+    private final ArchiveTestOperation archive;
 
     @GetMapping("/get-random-test")
     public GetRandomResponse getRandomTest(@RequestParam String grade, @RequestParam String subject) {
@@ -164,5 +166,12 @@ public class TestController {
     @PostMapping("/delete-key")
     public ResponseEntity<DeleteKeyResponse> deleteKey(@RequestBody @Valid DeleteKeyRequest request) {
         return new ResponseEntity<>(deleteKey.process(request), HttpStatus.OK);
+    }
+
+    @PatchMapping("/archive")
+    public ResponseEntity<ArchiveTestResponse> archiveTest(
+            @RequestBody @Valid ArchiveTestRequest request
+    ) {
+        return new ResponseEntity<>(archive.process(request), HttpStatus.OK);
     }
 }

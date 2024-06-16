@@ -13,6 +13,7 @@ const AllTests = () => {
     const navigate = useNavigate();
 
     const token = localStorage.getItem('token');
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
 
     useEffect(() => {
         const fetchTests = async () => {
@@ -59,6 +60,28 @@ const AllTests = () => {
 
     const handleStartTest = (testId) => {
         navigate(`/solve-test/${testId}`);
+    };
+
+    const handleArchiveTest = async (id) => {
+        setLoading(true);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/test/archive', {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({id}),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to archive test.');
+            }
+            setTests(tests.filter(test => test.id !== id));
+            setSelectedTest(null);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+        setLoading(false);
     };
 
     const filterTests = () => {
@@ -159,6 +182,8 @@ const AllTests = () => {
                             <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
                             <button className='btn-start' onClick={() => handleStartTest(selectedTest.id)}>Започни
                             </button>
+                            {isAdmin && <button className='btn-cancel'
+                                                onClick={() => handleArchiveTest(selectedTest.id)}>Архивирай</button>}
                         </div>
                     </dialog>
                 </div>

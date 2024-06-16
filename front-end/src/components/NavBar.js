@@ -151,7 +151,9 @@ const NavBar = ({ isLoggedIn, isAdmin, setIsLoggedIn, setIsAdmin, userInformatio
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src={quizLogo} alt="Logo"/>
+                <NavLink to="/">
+                    <img src={quizLogo} alt="Logo"/>
+                </NavLink>
             </div>
             <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleMenu}/>
             <ul className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>

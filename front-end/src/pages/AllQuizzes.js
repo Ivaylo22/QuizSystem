@@ -14,6 +14,8 @@ const AllQuizzes = ({ email, token }) => {
     const [showDailyQuizDialog, setShowDailyQuizDialog] = useState(false);
     const navigate = useNavigate();
 
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+
     useEffect(() => {
         const fetchQuizzes = async () => {
             setLoading(true);
@@ -60,6 +62,28 @@ const AllQuizzes = ({ email, token }) => {
 
     const handleStartQuiz = (quizId) => {
         navigate(`/solve-quiz/${quizId}`);
+    };
+
+    const handleArchiveQuiz = async (id) => {
+        setLoading(true);
+        try {
+            const response = await fetch('http://localhost:8090/api/v1/quiz/archive', {
+                method: 'PATCH',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({id}),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to archive quiz.');
+            }
+            setQuizzes(quizzes.filter(quiz => quiz.quizId !== id));
+            setSelectedQuiz(null);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+        setLoading(false);
     };
 
     const fetchDailyQuiz = async () => {
@@ -215,6 +239,8 @@ const AllQuizzes = ({ email, token }) => {
                         <div className="dialog-buttons-container">
                             <button className='btn-cancel' onClick={handleCloseModal}>Затвори</button>
                             <button className='btn-start' onClick={() => handleStartQuiz(selectedQuiz.quizId)}>Започни</button>
+                            {isAdmin && <button className='btn-cancel'
+                                                onClick={() => handleArchiveQuiz(selectedQuiz.quizId)}>Архивирай</button>}
                         </div>
                     </dialog>
                 </div>

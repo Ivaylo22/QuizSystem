@@ -115,7 +115,7 @@ const Register = () => {
     };
 
     return (
-        <div className="container pt-5 pb-2 register-container">
+        <div className="container pb-2 register-container">
             <form onSubmit={handleSubmit} className="w-50 mx-auto">
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">Имейл:</label>

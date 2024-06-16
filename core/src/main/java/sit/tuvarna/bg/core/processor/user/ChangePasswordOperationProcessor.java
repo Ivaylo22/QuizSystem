@@ -28,24 +28,14 @@ public class ChangePasswordOperationProcessor implements ChangePasswordOperation
                 .findByEmail(request.getEmail())
                 .orElseThrow(UserNotFoundException::new);
 
-        if(!Objects.equals(request.getNewPassword(), request.getConfirmNewPassword())) {
+        if (!Objects.equals(request.getPassword(), request.getConfirmPassword())) {
             throw new PasswordsDoNotMatchException();
         }
 
-        User changedUser = User
-                .builder()
-                .email(user.getEmail())
-                .password(passwordEncoder.encode(request.getNewPassword()))
-                .level(user.getLevel())
-                .experience(user.getExperience())
-                .achievementPoints(user.getAchievementPoints())
-                .avatarUrl(user.getAvatarUrl())
-                .role(user.getRole())
-                .isArchived(user.getIsArchived())
-                .build();
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
 
-        userRepository.save(changedUser);
+        userRepository.save(user);
 
-        return conversionService.convert(changedUser, ChangePasswordResponse.class);
+        return conversionService.convert(user, ChangePasswordResponse.class);
     }
 }

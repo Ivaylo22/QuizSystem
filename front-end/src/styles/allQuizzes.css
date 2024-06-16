@@ -104,16 +104,6 @@
     cursor: pointer;
 }
 
-.btn-cancel {
-    background: #ccc;
-    color: #333;
-}
-
-.btn-start {
-    background: #007bff;
-    color: white;
-}
-
 .btn {
     margin-left: 10px;
 }
