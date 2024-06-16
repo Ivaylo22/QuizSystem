@@ -1,0 +1,222 @@
+[
+  {
+    "title": "География на Европа",
+    "grade": 11,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е най-дългата река в Европа?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Река Дунав",
+                "isCorrect": false
+              },
+              {
+                "content": "Река Волга",
+                "isCorrect": true
+              },
+              {
+                "content": "Река Рейн",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-голямата страна в Европа по площ?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Франция",
+                "isCorrect": false
+              },
+              {
+                "content": "Германия",
+                "isCorrect": false
+              },
+              {
+                "content": "Русия",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички столици, които са разположени на река Дунав:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Будапеща",
+                "isCorrect": true
+              },
+              {
+                "content": "Виена",
+                "isCorrect": true
+              },
+              {
+                "content": "Прага",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-населената столица в Европа?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Берлин",
+                "isCorrect": false
+              },
+              {
+                "content": "Лондон",
+                "isCorrect": true
+              },
+              {
+                "content": "Мадрид",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете климатичните условия в Средиземноморския регион.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Средиземноморският регион има топъл и сух климат през лятото и мек, влажен климат през зимата.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Икономическа география на Азия",
+    "grade": 11,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е най-населената държава в Азия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Индия",
+                "isCorrect": false
+              },
+              {
+                "content": "Китай",
+                "isCorrect": true
+              },
+              {
+                "content": "Япония",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният експортен продукт на Саудитска Арабия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Памук",
+                "isCorrect": false
+              },
+              {
+                "content": "Петрол",
+                "isCorrect": true
+              },
+              {
+                "content": "Чай",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички страни, които са част от Югоизточна Азия:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Виетнам",
+                "isCorrect": true
+              },
+              {
+                "content": "Тайланд",
+                "isCorrect": true
+              },
+              {
+                "content": "Монголия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-голямата столица в Азия по население?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Токио, Япония",
+                "isCorrect": true
+              },
+              {
+                "content": "Пекин, Китай",
+                "isCorrect": false
+              },
+              {
+                "content": "Ню Делхи, Индия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете икономическото значение на Индийския субконтинент.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Индийският субконтинент е важен икономически регион заради голямото си население, развиващата се индустрия и стратегическото си разположение.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

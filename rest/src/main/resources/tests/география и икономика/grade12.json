@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Геополитически конфликти и ресурси",
+    "grade": 12,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е основният ресурс, който предизвиква конфликти в Близкия Изток?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Злато",
+                "isCorrect": false
+              },
+              {
+                "content": "Петрол",
+                "isCorrect": true
+              },
+              {
+                "content": "Вода",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя страна е най-големият износител на природен газ в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Русия",
+                "isCorrect": true
+              },
+              {
+                "content": "Катар",
+                "isCorrect": false
+              },
+              {
+                "content": "САЩ",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички страни, които имат значителни запаси от редки метали:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Китай",
+                "isCorrect": true
+              },
+              {
+                "content": "Австралия",
+                "isCorrect": true
+              },
+              {
+                "content": "Япония",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-голямата икономика в света по БВП?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Китай",
+                "isCorrect": false
+              },
+              {
+                "content": "САЩ",
+                "isCorrect": true
+              },
+              {
+                "content": "Япония",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете влиянието на глобализацията върху развиващите се икономики.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Глобализацията предоставя нови възможности за търговия и инвестиции, но също така създава предизвикателства като икономическа неравенство и зависимост от развитите страни.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Климатични промени и устойчиво развитие",
+    "grade": 12,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е основното предизвикателство пред устойчивото развитие?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Липса на ресурси",
+                "isCorrect": false
+              },
+              {
+                "content": "Климатични промени",
+                "isCorrect": true
+              },
+              {
+                "content": "Демографски взрив",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният източник на парникови газове?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Земеделие",
+                "isCorrect": false
+              },
+              {
+                "content": "Изгаряне на изкопаеми горива",
+                "isCorrect": true
+              },
+              {
+                "content": "Лесовъдство",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички мерки за намаляване на въглеродния отпечатък:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Използване на възобновяеми енергийни източници",
+                "isCorrect": true
+              },
+              {
+                "content": "Намаляване на употребата на пластмаса",
+                "isCorrect": false
+              },
+              {
+                "content": "Подобряване на енергийната ефективност",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя организация е основен инициатор на Парижкото споразумение за климата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Г-7",
+                "isCorrect": false
+              },
+              {
+                "content": "ООН",
+                "isCorrect": true
+              },
+              {
+                "content": "Световната банка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете ролята на международните организации в борбата с климатичните промени.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Международните организации като ООН координират усилията за справяне с климатичните промени чрез международни споразумения, финансиране на проекти и предоставяне на платформа за сътрудничество.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

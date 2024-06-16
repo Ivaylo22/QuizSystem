@@ -1,0 +1,222 @@
+[
+  {
+    "title": "География на Северна Америка",
+    "grade": 10,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е най-дългият речен басейн в Северна Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Река Мисисипи",
+                "isCorrect": true
+              },
+              {
+                "content": "Река Хъдсън",
+                "isCorrect": false
+              },
+              {
+                "content": "Река Колорадо",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое е най-голямото езеро в Северна Америка по площ?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Езеро Мичиган",
+                "isCorrect": false
+              },
+              {
+                "content": "Горно езеро",
+                "isCorrect": true
+              },
+              {
+                "content": "Езеро Ери",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави, които граничат със САЩ:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Канада",
+                "isCorrect": true
+              },
+              {
+                "content": "Мексико",
+                "isCorrect": true
+              },
+              {
+                "content": "Куба",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-населената столица в Северна Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Вашингтон, САЩ",
+                "isCorrect": false
+              },
+              {
+                "content": "Мексико Сити, Мексико",
+                "isCorrect": true
+              },
+              {
+                "content": "Отава, Канада",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете климатичните условия в централните равнини на САЩ.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Климатът в централните равнини на САЩ е континентален, с горещи лета и студени зими.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Икономическа география на Южна Америка",
+    "grade": 10,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е основната експортна стока на Бразилия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кафе",
+                "isCorrect": true
+              },
+              {
+                "content": "Петрол",
+                "isCorrect": false
+              },
+              {
+                "content": "Мед",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-дългата река в Южна Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Река Парана",
+                "isCorrect": false
+              },
+              {
+                "content": "Река Амазонка",
+                "isCorrect": true
+              },
+              {
+                "content": "Река Ориноко",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички страни, които са част от Андския регион:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Чили",
+                "isCorrect": true
+              },
+              {
+                "content": "Аржентина",
+                "isCorrect": true
+              },
+              {
+                "content": "Уругвай",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-голямата столица в Южна Америка по население?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Буенос Айрес, Аржентина",
+                "isCorrect": false
+              },
+              {
+                "content": "Сао Пауло, Бразилия",
+                "isCorrect": false
+              },
+              {
+                "content": "Лима, Перу",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Опишете климатичните условия в Амазонската джунгла.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Амазонската джунгла има влажен и топъл климат, с обилни валежи през цялата година.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

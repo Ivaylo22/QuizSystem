@@ -2,7 +2,7 @@
   {
     "title": "Основи на българския език",
     "grade": 2,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 40,
     "hasMixedQuestions": false,
@@ -112,7 +112,7 @@
   {
     "title": "Развитие на езиковите умения",
     "grade": 2,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 40,
     "hasMixedQuestions": false,
@@ -222,7 +222,7 @@
   {
     "title": "Езикови приключения",
     "grade": 2,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 40,
     "hasMixedQuestions": false,

@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Изследване на земните форми",
+    "grade": 3,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кое е най-голямото море в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Средиземно море",
+                "isCorrect": false
+              },
+              {
+                "content": "Карибско море",
+                "isCorrect": false
+              },
+              {
+                "content": "Филипинско море",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-високата планина в България?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Пирин",
+                "isCorrect": false
+              },
+              {
+                "content": "Рила",
+                "isCorrect": true
+              },
+              {
+                "content": "Стара планина",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички видове реки:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Планински реки",
+                "isCorrect": true
+              },
+              {
+                "content": "Пустинни реки",
+                "isCorrect": false
+              },
+              {
+                "content": "Равнинни реки",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният климатичен пояс на България?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Тропичен",
+                "isCorrect": false
+              },
+              {
+                "content": "Континентален",
+                "isCorrect": true
+              },
+              {
+                "content": "Полярен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на ледените полета?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бял",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Географски открития",
+    "grade": 3,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е най-големият остров в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гренландия",
+                "isCorrect": true
+              },
+              {
+                "content": "Нова Гвинея",
+                "isCorrect": false
+              },
+              {
+                "content": "Борнео",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е столицата на България?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Пловдив",
+                "isCorrect": false
+              },
+              {
+                "content": "Варна",
+                "isCorrect": false
+              },
+              {
+                "content": "София",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички планини в България:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Рила",
+                "isCorrect": true
+              },
+              {
+                "content": "Родопи",
+                "isCorrect": true
+              },
+              {
+                "content": "Пиринеи",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-голямата река в България?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Марица",
+                "isCorrect": true
+              },
+              {
+                "content": "Искър",
+                "isCorrect": false
+              },
+              {
+                "content": "Дунав",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на пустинните пясъци?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

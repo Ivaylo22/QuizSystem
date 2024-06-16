@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Климатични зони на Земята",
+    "grade": 4,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е най-горещата пустиня на Земята?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гоби",
+                "isCorrect": false
+              },
+              {
+                "content": "Сахара",
+                "isCorrect": true
+              },
+              {
+                "content": "Калахари",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е най-студеният климатичен пояс?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Полярен",
+                "isCorrect": true
+              },
+              {
+                "content": "Умерен",
+                "isCorrect": false
+              },
+              {
+                "content": "Тропичен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички континенти на Земята:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Африка",
+                "isCorrect": true
+              },
+              {
+                "content": "Азия",
+                "isCorrect": true
+              },
+              {
+                "content": "Аляска",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-дългата река в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Амазонка",
+                "isCorrect": false
+              },
+              {
+                "content": "Нил",
+                "isCorrect": true
+              },
+              {
+                "content": "Янцзъ",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на полярния лед?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бял",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Географски изследвания и открития",
+    "grade": 4,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е открил Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Фердинанд Магелан",
+                "isCorrect": false
+              },
+              {
+                "content": "Кристофор Колумб",
+                "isCorrect": true
+              },
+              {
+                "content": "Марко Поло",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-голямата планина в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "К2",
+                "isCorrect": false
+              },
+              {
+                "content": "Еверест",
+                "isCorrect": true
+              },
+              {
+                "content": "Маккинли",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави в Европа:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Франция",
+                "isCorrect": true
+              },
+              {
+                "content": "Германия",
+                "isCorrect": true
+              },
+              {
+                "content": "Египет",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-голямата пустиня в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сахара",
+                "isCorrect": true
+              },
+              {
+                "content": "Гоби",
+                "isCorrect": false
+              },
+              {
+                "content": "Атакама",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на джунглата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Зелен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

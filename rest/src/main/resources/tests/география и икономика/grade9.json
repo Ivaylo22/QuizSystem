@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Географски особености на Азия",
+    "grade": 9,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е най-високият връх в Азия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "К2",
+                "isCorrect": false
+              },
+              {
+                "content": "Еверест",
+                "isCorrect": true
+              },
+              {
+                "content": "Канчендзьонга",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя река е най-дългата в Азия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Яндзъ",
+                "isCorrect": true
+              },
+              {
+                "content": "Ганг",
+                "isCorrect": false
+              },
+              {
+                "content": "Меконг",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички страни, които са част от Югоизточна Азия:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Тайланд",
+                "isCorrect": true
+              },
+              {
+                "content": "Китай",
+                "isCorrect": false
+              },
+              {
+                "content": "Виетнам",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният икономически сектор в Саудитска Арабия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Земеделие",
+                "isCorrect": false
+              },
+              {
+                "content": "Туризъм",
+                "isCorrect": false
+              },
+              {
+                "content": "Петролна индустрия",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какъв е климатът на Индийския субконтинент?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Тропически",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Икономическа география на Европа",
+    "grade": 9,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula6",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е най-развитата икономика в Европа?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Италия",
+                "isCorrect": false
+              },
+              {
+                "content": "Германия",
+                "isCorrect": true
+              },
+              {
+                "content": "Испания",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната експортна стока на Норвегия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Риба",
+                "isCorrect": false
+              },
+              {
+                "content": "Петрол",
+                "isCorrect": true
+              },
+              {
+                "content": "Дървен материал",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички страни, които са част от Европейския съюз:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Франция",
+                "isCorrect": true
+              },
+              {
+                "content": "Русия",
+                "isCorrect": false
+              },
+              {
+                "content": "Гърция",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е столицата на Швеция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Осло",
+                "isCorrect": false
+              },
+              {
+                "content": "Стокхолм",
+                "isCorrect": true
+              },
+              {
+                "content": "Хелзинки",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е климатът в Средиземноморския регион?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Средиземноморски климат",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

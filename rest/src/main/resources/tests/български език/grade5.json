@@ -2,7 +2,7 @@
   {
     "title": "Граматика за 5 клас - Основи",
     "grade": 5,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 45,
     "hasMixedQuestions": false,
@@ -112,7 +112,7 @@
   {
     "title": "Българска литература за 5 клас",
     "grade": 5,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 45,
     "hasMixedQuestions": false,
@@ -222,7 +222,7 @@
   {
     "title": "Правописни правила за 5 клас",
     "grade": 5,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 45,
     "hasMixedQuestions": false,

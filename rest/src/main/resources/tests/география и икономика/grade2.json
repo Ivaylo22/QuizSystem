@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на географията",
+    "grade": 2,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е най-дългата река в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Амазонка",
+                "isCorrect": true
+              },
+              {
+                "content": "Нил",
+                "isCorrect": false
+              },
+              {
+                "content": "Янцзъ",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е най-големият континент?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Азия",
+                "isCorrect": true
+              },
+              {
+                "content": "Африка",
+                "isCorrect": false
+              },
+              {
+                "content": "Европа",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички пустини:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сахара",
+                "isCorrect": true
+              },
+              {
+                "content": "Гоби",
+                "isCorrect": true
+              },
+              {
+                "content": "Амазонка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на земната кора?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кафяв",
+                "isCorrect": true
+              },
+              {
+                "content": "Син",
+                "isCorrect": false
+              },
+              {
+                "content": "Червен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на снега?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бял",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Изучаване на континентите",
+    "grade": 2,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя планина е най-високата в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Еверест",
+                "isCorrect": true
+              },
+              {
+                "content": "Килиманджаро",
+                "isCorrect": false
+              },
+              {
+                "content": "Алпи",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на океаните?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              },
+              {
+                "content": "Зелен",
+                "isCorrect": false
+              },
+              {
+                "content": "Червен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички континенти:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Азия",
+                "isCorrect": true
+              },
+              {
+                "content": "Африка",
+                "isCorrect": true
+              },
+              {
+                "content": "Австралия",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на планините?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Зелен",
+                "isCorrect": false
+              },
+              {
+                "content": "Кафяв",
+                "isCorrect": true
+              },
+              {
+                "content": "Черен",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на пустините?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

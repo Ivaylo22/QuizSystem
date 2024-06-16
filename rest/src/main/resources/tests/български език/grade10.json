@@ -2,7 +2,7 @@
   {
     "title": "Анализ на литературни произведения",
     "grade": 10,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 60,
     "hasMixedQuestions": false,
@@ -112,7 +112,7 @@
   {
     "title": "Правописни правила и пунктуация",
     "grade": 10,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 60,
     "hasMixedQuestions": false,
@@ -222,7 +222,7 @@
   {
     "title": "Литературни термини и анализ",
     "grade": 10,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 60,
     "hasMixedQuestions": false,

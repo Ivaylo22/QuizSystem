@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Географски особености на континентите",
+    "grade": 6,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой континент е известен с най-голямата пустиня в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Африка",
+                "isCorrect": true
+              },
+              {
+                "content": "Азия",
+                "isCorrect": false
+              },
+              {
+                "content": "Австралия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е климатът в тропическите райони?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Сух и горещ",
+                "isCorrect": false
+              },
+              {
+                "content": "Влажен и топъл",
+                "isCorrect": true
+              },
+              {
+                "content": "Студен и сух",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави, които се намират в Южна Америка:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Бразилия",
+                "isCorrect": true
+              },
+              {
+                "content": "Аржентина",
+                "isCorrect": true
+              },
+              {
+                "content": "Испания",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-дългата река в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Амазонка",
+                "isCorrect": true
+              },
+              {
+                "content": "Нил",
+                "isCorrect": false
+              },
+              {
+                "content": "Янцзъ",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на пясъците в пустините?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Природни катастрофи и тяхното влияние",
+    "grade": 6,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кое природно явление е причина за цунами?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Вулканично изригване",
+                "isCorrect": false
+              },
+              {
+                "content": "Земетресение",
+                "isCorrect": true
+              },
+              {
+                "content": "Торнадо",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какви са последиците от изсичането на гори?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Намаляване на биоразнообразието",
+                "isCorrect": true
+              },
+              {
+                "content": "Повишаване на въздушното качество",
+                "isCorrect": false
+              },
+              {
+                "content": "Намаляване на въглеродния диоксид",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички природни бедствия:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Земетресение",
+                "isCorrect": true
+              },
+              {
+                "content": "Ураган",
+                "isCorrect": true
+              },
+              {
+                "content": "Изгаряне на гори",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое природно бедствие се характеризира с въртящи се ветрове?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Торнадо",
+                "isCorrect": true
+              },
+              {
+                "content": "Наводнение",
+                "isCorrect": false
+              },
+              {
+                "content": "Суша",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на водата при наводнение?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Кафяв",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

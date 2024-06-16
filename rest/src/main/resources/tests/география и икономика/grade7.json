@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Географски особености на Азия",
+    "grade": 7,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е най-високият връх в Азия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Еверест",
+                "isCorrect": true
+              },
+              {
+                "content": "К2",
+                "isCorrect": false
+              },
+              {
+                "content": "Канчендзьонга",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното население в Китай?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Монголци",
+                "isCorrect": false
+              },
+              {
+                "content": "Тибетци",
+                "isCorrect": false
+              },
+              {
+                "content": "Хан китайци",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави, които граничат с Индийския океан:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Индия",
+                "isCorrect": true
+              },
+              {
+                "content": "Япония",
+                "isCorrect": false
+              },
+              {
+                "content": "Индонезия",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-дългата река в Азия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Янцзъ",
+                "isCorrect": true
+              },
+              {
+                "content": "Меконг",
+                "isCorrect": false
+              },
+              {
+                "content": "Ганг",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е климатът в северната част на Русия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Субарктичен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Природни ресурси и икономика на Европа",
+    "grade": 7,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula4",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой природен ресурс е най-разпространен в Норвегия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Нефт",
+                "isCorrect": true
+              },
+              {
+                "content": "Въглища",
+                "isCorrect": false
+              },
+              {
+                "content": "Злато",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната икономическа дейност в Холандия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Туризъм",
+                "isCorrect": false
+              },
+              {
+                "content": "Земеделие",
+                "isCorrect": true
+              },
+              {
+                "content": "Риболов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави, които са част от Европейския съюз:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Германия",
+                "isCorrect": true
+              },
+              {
+                "content": "Швейцария",
+                "isCorrect": false
+              },
+              {
+                "content": "Испания",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е столицата на Франция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лондон",
+                "isCorrect": false
+              },
+              {
+                "content": "Берлин",
+                "isCorrect": false
+              },
+              {
+                "content": "Париж",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на водата в Алпите през зимата?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

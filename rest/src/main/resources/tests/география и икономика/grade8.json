@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Географски особености на Северна Америка",
+    "grade": 8,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula5",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е най-големият град в Съединените американски щати?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Лос Анджелис",
+                "isCorrect": false
+              },
+              {
+                "content": "Чикаго",
+                "isCorrect": false
+              },
+              {
+                "content": "Ню Йорк",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното природно богатство на Канада?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Злато",
+                "isCorrect": false
+              },
+              {
+                "content": "Нефт",
+                "isCorrect": true
+              },
+              {
+                "content": "Въглища",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави, които се намират в Северна Америка:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Канада",
+                "isCorrect": true
+              },
+              {
+                "content": "Мексико",
+                "isCorrect": true
+              },
+              {
+                "content": "Бразилия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е най-дългата река в Северна Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Река Мисисипи",
+                "isCorrect": true
+              },
+              {
+                "content": "Река Колорадо",
+                "isCorrect": false
+              },
+              {
+                "content": "Река Юкон",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е климатът в Аляска?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Арктичен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Икономическа география на Африка",
+    "grade": 8,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula5",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е основният износ на Нигерия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кафе",
+                "isCorrect": false
+              },
+              {
+                "content": "Нефт",
+                "isCorrect": true
+              },
+              {
+                "content": "Злато",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното икономическо значение на река Нил?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Риболов",
+                "isCorrect": false
+              },
+              {
+                "content": "Напояване",
+                "isCorrect": true
+              },
+              {
+                "content": "Туризъм",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави, които са част от Африканския съюз:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Египет",
+                "isCorrect": true
+              },
+              {
+                "content": "Южна Африка",
+                "isCorrect": true
+              },
+              {
+                "content": "Франция",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е столицата на Кения?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Дар ес Салаам",
+                "isCorrect": false
+              },
+              {
+                "content": "Кейптаун",
+                "isCorrect": false
+              },
+              {
+                "content": "Найроби",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какъв е климатът в Сахара?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Пустинен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

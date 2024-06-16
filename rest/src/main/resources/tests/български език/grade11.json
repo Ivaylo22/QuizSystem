@@ -2,7 +2,7 @@
   {
     "title": "Анализ на българска литература",
     "grade": 11,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 60,
     "hasMixedQuestions": false,
@@ -112,7 +112,7 @@
   {
     "title": "Стилистика и езикови правила",
     "grade": 11,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 60,
     "hasMixedQuestions": false,
@@ -222,7 +222,7 @@
   {
     "title": "Литературни жанрове и течения",
     "grade": 11,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 60,
     "hasMixedQuestions": false,

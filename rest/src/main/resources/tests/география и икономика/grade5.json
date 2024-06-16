@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Географски зони и техните особености",
+    "grade": 5,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя е най-голямата страна по площ в света?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Канада",
+                "isCorrect": false
+              },
+              {
+                "content": "Русия",
+                "isCorrect": true
+              },
+              {
+                "content": "Китай",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой океан е най-дълбок?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Атлантическият океан",
+                "isCorrect": false
+              },
+              {
+                "content": "Индийският океан",
+                "isCorrect": false
+              },
+              {
+                "content": "Тихият океан",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички планини в България:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Рила",
+                "isCorrect": true
+              },
+              {
+                "content": "Пирин",
+                "isCorrect": true
+              },
+              {
+                "content": "Карпати",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой континент се намира на юг от Европа?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Азия",
+                "isCorrect": false
+              },
+              {
+                "content": "Африка",
+                "isCorrect": true
+              },
+              {
+                "content": "Антарктида",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на саваната?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Жълт",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Природни ресурси и тяхното значение",
+    "grade": 5,
+    "subject": "География и икономика",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой ресурс се счита за изчерпаем?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Вятър",
+                "isCorrect": false
+              },
+              {
+                "content": "Въглища",
+                "isCorrect": true
+              },
+              {
+                "content": "Слънчева енергия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво се използва за производство на хидроенергия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Вятър",
+                "isCorrect": false
+              },
+              {
+                "content": "Вода",
+                "isCorrect": true
+              },
+              {
+                "content": "Нефт",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички възобновяеми ресурси:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Слънчева енергия",
+                "isCorrect": true
+              },
+              {
+                "content": "Въглища",
+                "isCorrect": false
+              },
+              {
+                "content": "Вятър",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната причина за обезлесяването?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Изграждане на градове",
+                "isCorrect": false
+              },
+              {
+                "content": "Изсичане на гори за дървесина",
+                "isCorrect": true
+              },
+              {
+                "content": "Замърсяване на въздуха",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на реките?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

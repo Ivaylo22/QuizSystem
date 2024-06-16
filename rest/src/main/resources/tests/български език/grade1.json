@@ -2,7 +2,7 @@
   {
     "title": "Букви и звуци",
     "grade": 1,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 30,
     "hasMixedQuestions": false,
@@ -112,7 +112,7 @@
   {
     "title": "Звуци и думи",
     "grade": 1,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 30,
     "hasMixedQuestions": false,
@@ -220,9 +220,9 @@
     ]
   },
   {
-    "title": "Начални знания по български език",
+    "title": "Начални знания по Български език",
     "grade": 1,
-    "subject": "български език",
+    "subject": "Български език",
     "creatorEmail": "admin@abv.bg",
     "minutesToSolve": 30,
     "hasMixedQuestions": false,
