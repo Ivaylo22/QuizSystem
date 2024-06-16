@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Запознаване с интернет",
+    "grade": 2,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е интернет?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Компютърна игра",
+                "isCorrect": false
+              },
+              {
+                "content": "Глобална мрежа",
+                "isCorrect": true
+              },
+              {
+                "content": "Телевизионен канал",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой браузър използваме, за да сърфираме в интернет?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Google Chrome",
+                "isCorrect": true
+              },
+              {
+                "content": "Microsoft Word",
+                "isCorrect": false
+              },
+              {
+                "content": "Paint",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички дейности, които можем да правим в интернет:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Търсене на информация",
+                "isCorrect": true
+              },
+              {
+                "content": "Игри",
+                "isCorrect": true
+              },
+              {
+                "content": "Готвене",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя програма използваме за изпращане на електронна поща?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Outlook",
+                "isCorrect": true
+              },
+              {
+                "content": "Photoshop",
+                "isCorrect": false
+              },
+              {
+                "content": "Calculator",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв цвят е логото на Google?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Многоцветно",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Основи на текстообработката",
+    "grade": 2,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя програма използваме за писане на текстове?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Microsoft Word",
+                "isCorrect": true
+              },
+              {
+                "content": "Microsoft Excel",
+                "isCorrect": false
+              },
+              {
+                "content": "Microsoft PowerPoint",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво прави бутонът 'Bold' в текстовия редактор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Подчертава текста",
+                "isCorrect": false
+              },
+              {
+                "content": "Прави текста удебелен",
+                "isCorrect": true
+              },
+              {
+                "content": "Изтрива текста",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички функции, които може да извършите в текстовия редактор:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Писане на текст",
+                "isCorrect": true
+              },
+              {
+                "content": "Добавяне на изображения",
+                "isCorrect": true
+              },
+              {
+                "content": "Слушане на музика",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво прави командата 'Save' в текстовия редактор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Запазва документа",
+                "isCorrect": true
+              },
+              {
+                "content": "Отваря нов документ",
+                "isCorrect": false
+              },
+              {
+                "content": "Отпечатва документа",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв цвят е иконата на 'Save' бутона в Microsoft Word?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

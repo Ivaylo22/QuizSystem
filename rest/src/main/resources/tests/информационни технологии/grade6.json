@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на програмирането",
+    "grade": 6,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е програмиране?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Процес на проектиране, писане, тестване и поддържане на код",
+                "isCorrect": true
+              },
+              {
+                "content": "Процес на рисуване",
+                "isCorrect": false
+              },
+              {
+                "content": "Процес на писане на текст",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява променлива в програмирането?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Място в паметта, където се съхраняват данни",
+                "isCorrect": true
+              },
+              {
+                "content": "Устройство за въвеждане на данни",
+                "isCorrect": false
+              },
+              {
+                "content": "Процесорът на компютъра",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички езици за програмиране:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Python",
+                "isCorrect": true
+              },
+              {
+                "content": "HTML",
+                "isCorrect": false
+              },
+              {
+                "content": "JavaScript",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната функция на цикъла в програмирането?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Да повтори серия от инструкции",
+                "isCorrect": true
+              },
+              {
+                "content": "Да спре изпълнението на програмата",
+                "isCorrect": false
+              },
+              {
+                "content": "Да създаде нова променлива",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е условие в програмирането?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Условието в програмирането е логическо изразяване, което контролира потока на програмата въз основа на това дали е вярно или невярно.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Работа с електронни таблици",
+    "grade": 6,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво представлява електронна таблица?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Документ за създаване на текст",
+                "isCorrect": false
+              },
+              {
+                "content": "Инструмент за организиране на данни в редове и колони",
+                "isCorrect": true
+              },
+              {
+                "content": "Програма за рисуване",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя формула ще използвате, за да намерите сумата на клетки от A1 до A5?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "=AVERAGE(A1:A5)",
+                "isCorrect": false
+              },
+              {
+                "content": "=SUM(A1:A5)",
+                "isCorrect": true
+              },
+              {
+                "content": "=MAX(A1:A5)",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички примери за софтуер за електронни таблици:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Microsoft Excel",
+                "isCorrect": true
+              },
+              {
+                "content": "Google Sheets",
+                "isCorrect": true
+              },
+              {
+                "content": "Adobe Acrobat",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната функция на графиките в електронните таблици?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Да съхраняват текстова информация",
+                "isCorrect": false
+              },
+              {
+                "content": "Да визуализират данни",
+                "isCorrect": true
+              },
+              {
+                "content": "Да разпечатат документа",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на функцията 'Filter' в електронните таблици?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Функцията 'Filter' позволява на потребителя да избере определени данни, които да се показват в таблицата, като скрива останалите.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

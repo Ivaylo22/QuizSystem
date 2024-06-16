@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Средновековна България",
+    "grade": 3,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е бил първият български цар?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Симеон I",
+                "isCorrect": true
+              },
+              {
+                "content": "Борис I",
+                "isCorrect": false
+              },
+              {
+                "content": "Аспарух",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя битка е била важна за утвърждаването на България през Средновековието?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Битката при Ахелой",
+                "isCorrect": true
+              },
+              {
+                "content": "Битката при Ватерло",
+                "isCorrect": false
+              },
+              {
+                "content": "Битката при Плиска",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български градове, основани през Средновековието:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Преслав",
+                "isCorrect": true
+              },
+              {
+                "content": "Варна",
+                "isCorrect": true
+              },
+              {
+                "content": "София",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е бил пръв патриарх на Българската православна църква?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Йоан Рилски",
+                "isCorrect": false
+              },
+              {
+                "content": "Евтимий Търновски",
+                "isCorrect": true
+              },
+              {
+                "content": "Климент Охридски",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Франция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Синьо, бяло и червено",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Велики български ханове и царе",
+    "grade": 3,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 35,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой хан е създал Българската държава през 681 година?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Аспарух",
+                "isCorrect": true
+              },
+              {
+                "content": "Крум",
+                "isCorrect": false
+              },
+              {
+                "content": "Тервел",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой цар е управлявал България по време на Златния век?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Симеон I",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Асен II",
+                "isCorrect": false
+              },
+              {
+                "content": "Калоян",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български ханове:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Крум",
+                "isCorrect": true
+              },
+              {
+                "content": "Симеон I",
+                "isCorrect": false
+              },
+              {
+                "content": "Тервел",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой български цар е разширил Българската държава до най-голямото й териториално разширение?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Симеон I",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Асен II",
+                "isCorrect": false
+              },
+              {
+                "content": "Калоян",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Италия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Зелено, бяло и червено",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Компютърни мрежи и интернет",
+    "grade": 7,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е IP адрес?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Номер на компютъра",
+                "isCorrect": false
+              },
+              {
+                "content": "Уникален адрес за идентификация в мрежата",
+                "isCorrect": true
+              },
+              {
+                "content": "Име на уебсайт",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой протокол се използва за пренос на уеб страници?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "FTP",
+                "isCorrect": false
+              },
+              {
+                "content": "HTTP",
+                "isCorrect": true
+              },
+              {
+                "content": "SMTP",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички компоненти на локална мрежа (LAN):",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Суич",
+                "isCorrect": true
+              },
+              {
+                "content": "Рутер",
+                "isCorrect": true
+              },
+              {
+                "content": "Принтер",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е DNS?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Система за имена на домейни",
+                "isCorrect": true
+              },
+              {
+                "content": "Протокол за пренос на данни",
+                "isCorrect": false
+              },
+              {
+                "content": "Тип интернет връзка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво е защитна стена (firewall).",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Защитната стена е система за сигурност, която контролира входящия и изходящия трафик въз основа на зададени правила за сигурност.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Програмиране и алгоритми",
+    "grade": 7,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е алгоритъм?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Инструкции за решаване на проблем",
+                "isCorrect": true
+              },
+              {
+                "content": "Компютърна програма",
+                "isCorrect": false
+              },
+              {
+                "content": "Електронна таблица",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява условен оператор в програмирането?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Оператор, който изпълнява инструкции при изпълнение на условие",
+                "isCorrect": true
+              },
+              {
+                "content": "Оператор, който създава цикъл",
+                "isCorrect": false
+              },
+              {
+                "content": "Оператор за деклариране на променлива",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички видове цикли в програмирането:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "for",
+                "isCorrect": true
+              },
+              {
+                "content": "while",
+                "isCorrect": true
+              },
+              {
+                "content": "if",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е разликата между глобална и локална променлива?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Глобалната променлива е видима в цялата програма, а локалната само в определен блок код",
+                "isCorrect": true
+              },
+              {
+                "content": "Локалната променлива е видима в цялата програма, а глобалната само в определен блок код",
+                "isCorrect": false
+              },
+              {
+                "content": "Няма разлика между глобална и локална променлива",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво е рекурсия в програмирането.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Рекурсията е метод, при който функция извиква сама себе си, за да реши проблем чрез по-малки подпроблеми.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

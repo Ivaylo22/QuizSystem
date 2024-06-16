@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Киберсигурност и защита на данни",
+    "grade": 12,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е фишинг?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мошенически опит за получаване на чувствителна информация",
+                "isCorrect": true
+              },
+              {
+                "content": "Атака на уебсайт",
+                "isCorrect": false
+              },
+              {
+                "content": "Софтуер за криптиране",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой протокол се използва за сигурно предаване на данни в интернет?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "HTTPS",
+                "isCorrect": true
+              },
+              {
+                "content": "FTP",
+                "isCorrect": false
+              },
+              {
+                "content": "SMTP",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички мерки за защита на данните:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Криптиране на данни",
+                "isCorrect": true
+              },
+              {
+                "content": "Редовно архивиране",
+                "isCorrect": true
+              },
+              {
+                "content": "Използване на слаби пароли",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява DDoS атака?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Атака с множество заявки за претоварване на мрежа или система",
+                "isCorrect": true
+              },
+              {
+                "content": "Инфекция с вирус",
+                "isCorrect": false
+              },
+              {
+                "content": "Кражба на идентичност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на двуфакторната автентикация.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Двуфакторната автентикация добавя допълнителен слой защита, като изисква две различни форми на идентификация преди достъп до системата.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Мрежови технологии и протоколи",
+    "grade": 12,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво представлява IP адресът?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Уникален идентификатор за устройство в мрежа",
+                "isCorrect": true
+              },
+              {
+                "content": "Тип операционна система",
+                "isCorrect": false
+              },
+              {
+                "content": "Протокол за сигурност",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой протокол се използва за изпращане на имейли?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "SMTP",
+                "isCorrect": true
+              },
+              {
+                "content": "HTTP",
+                "isCorrect": false
+              },
+              {
+                "content": "FTP",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички типове мрежови топологии:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Звезда",
+                "isCorrect": true
+              },
+              {
+                "content": "Пръстен",
+                "isCorrect": true
+              },
+              {
+                "content": "Листа",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява DNS?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Система за превръщане на домейн имена в IP адреси",
+                "isCorrect": true
+              },
+              {
+                "content": "Протокол за сигурност",
+                "isCorrect": false
+              },
+              {
+                "content": "Мрежов кабел",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на мрежовите маски.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Мрежовите маски се използват за разделяне на IP адресите на подмрежи, което помага за ефективното управление и организация на мрежата.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

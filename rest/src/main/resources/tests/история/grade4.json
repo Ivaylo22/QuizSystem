@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Възраждане на българската нация",
+    "grade": 4,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е българският революционер, наричан 'Апостола на свободата'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Васил Левски",
+                "isCorrect": true
+              },
+              {
+                "content": "Георги Раковски",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя година започва Априлското въстание?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1876",
+                "isCorrect": true
+              },
+              {
+                "content": "1877",
+                "isCorrect": false
+              },
+              {
+                "content": "1878",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни личности от Възраждането:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": true
+              },
+              {
+                "content": "Любен Каравелов",
+                "isCorrect": true
+              },
+              {
+                "content": "Крум",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е авторът на 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": true
+              },
+              {
+                "content": "Софроний Врачански",
+                "isCorrect": false
+              },
+              {
+                "content": "Георги Раковски",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Германия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Черно, червено и жълто",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Освобождението на България",
+    "grade": 4,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е бил главнокомандващ на руската армия по време на Руско-турската освободителна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Генерал Гурко",
+                "isCorrect": true
+              },
+              {
+                "content": "Генерал Скобелев",
+                "isCorrect": false
+              },
+              {
+                "content": "Генерал Радецки",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя година е подписан Санстефанският мирен договор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1878",
+                "isCorrect": true
+              },
+              {
+                "content": "1877",
+                "isCorrect": false
+              },
+              {
+                "content": "1876",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български революционери:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Васил Левски",
+                "isCorrect": true
+              },
+              {
+                "content": "Георги Раковски",
+                "isCorrect": true
+              },
+              {
+                "content": "Аспарух",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е бил главният български революционер, организатор на Априлското въстание?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Георги Бенковски",
+                "isCorrect": true
+              },
+              {
+                "content": "Любен Каравелов",
+                "isCorrect": false
+              },
+              {
+                "content": "Стефан Караджа",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Испания?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Червено и жълто",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

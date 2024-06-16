@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Обработка на данни и бази данни",
+    "grade": 11,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво представлява база данни?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Колекция от организирани данни",
+                "isCorrect": true
+              },
+              {
+                "content": "Текстов редактор",
+                "isCorrect": false
+              },
+              {
+                "content": "Операционна система",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой език се използва за управление на релационни бази данни?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "SQL",
+                "isCorrect": true
+              },
+              {
+                "content": "HTML",
+                "isCorrect": false
+              },
+              {
+                "content": "CSS",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички типове данни, които могат да се съхраняват в база данни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Текст",
+                "isCorrect": true
+              },
+              {
+                "content": "Числа",
+                "isCorrect": true
+              },
+              {
+                "content": "Файлове",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява първичният ключ в база данни?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Уникален идентификатор за запис",
+                "isCorrect": true
+              },
+              {
+                "content": "Тип данни",
+                "isCorrect": false
+              },
+              {
+                "content": "Име на таблица",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на нормализацията в базите данни.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Нормализацията в базите данни е процес на организиране на данните, за да се минимизира излишъкът и да се подобри целостта на данните.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Програмиране и софтуерно инженерство",
+    "grade": 11,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е алгоритъм?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Поредност от стъпки за решаване на проблем",
+                "isCorrect": true
+              },
+              {
+                "content": "Графичен интерфейс",
+                "isCorrect": false
+              },
+              {
+                "content": "Програмен език",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой програмен език е най-подходящ за уеб разработка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "JavaScript",
+                "isCorrect": true
+              },
+              {
+                "content": "C++",
+                "isCorrect": false
+              },
+              {
+                "content": "Python",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички етапи на софтуерния жизнен цикъл:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Анализ на изискванията",
+                "isCorrect": true
+              },
+              {
+                "content": "Проектиране",
+                "isCorrect": true
+              },
+              {
+                "content": "Тестиране",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво е дебъгване?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Процес на намиране и отстраняване на грешки в софтуера",
+                "isCorrect": true
+              },
+              {
+                "content": "Процес на инсталиране на софтуер",
+                "isCorrect": false
+              },
+              {
+                "content": "Процес на компилиране на код",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на версионния контрол в софтуерното инженерство.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Версионният контрол в софтуерното инженерство позволява проследяване на промени в кода, сътрудничество между разработчици и управление на различни версии на проекта.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

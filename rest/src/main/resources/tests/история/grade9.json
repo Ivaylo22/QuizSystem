@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Първата световна война",
+    "grade": 9,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя година започва Първата световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1914 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1918 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1939 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е основната причина за Първата световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Убийството на Франц Фердинанд",
+                "isCorrect": true
+              },
+              {
+                "content": "Икономическа криза",
+                "isCorrect": false
+              },
+              {
+                "content": "Революция в Русия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички държави, които са били част от Централните сили:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Германия",
+                "isCorrect": true
+              },
+              {
+                "content": "Франция",
+                "isCorrect": false
+              },
+              {
+                "content": "Австро-Унгария",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какви нови видове оръжия са използвани по време на Първата световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Танкове и химически оръжия",
+                "isCorrect": true
+              },
+              {
+                "content": "Ядрени оръжия",
+                "isCorrect": false
+              },
+              {
+                "content": "Дронове",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е значението на Версайския договор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Версайският договор завършва Първата световна война и налага тежки санкции на Германия.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "България в началото на XX век",
+    "grade": 9,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кога България се включва в Първата световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1915 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1914 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1916 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е причината за участието на България в Първата световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Териториални претенции и стремеж към национално обединение",
+                "isCorrect": true
+              },
+              {
+                "content": "Икономически интереси",
+                "isCorrect": false
+              },
+              {
+                "content": "Политически натиск от Русия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни събития в България в началото на XX век:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Обявяване на независимостта на България",
+                "isCorrect": true
+              },
+              {
+                "content": "Създаване на Народното събрание",
+                "isCorrect": false
+              },
+              {
+                "content": "Балканските войни",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е министър-председател на България по време на Първата световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Васил Радославов",
+                "isCorrect": true
+              },
+              {
+                "content": "Александър Стамболийски",
+                "isCorrect": false
+              },
+              {
+                "content": "Стефан Стамболов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какви са последиците от участието на България в Първата световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "България губи територии и претърпява икономически и политически кризи.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

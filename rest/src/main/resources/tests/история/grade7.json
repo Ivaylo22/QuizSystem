@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Средновековна Европа и България",
+    "grade": 7,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е първият български патриарх?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Патриарх Йоаким I",
+                "isCorrect": false
+              },
+              {
+                "content": "Патриарх Йосиф",
+                "isCorrect": false
+              },
+              {
+                "content": "Патриарх Евтимий",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кога е основана Първата българска държава?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "681 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1018 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1185 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни събития от управлението на цар Борис I:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Покръстване на българите",
+                "isCorrect": true
+              },
+              {
+                "content": "Преславски събор",
+                "isCorrect": true
+              },
+              {
+                "content": "Битката при Ахелой",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основателят на Второто българско царство?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Асен и Петър",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Калоян",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Самуил",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е значението на термина 'феодализъм'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Социална и икономическа система през Средновековието, базирана на земеделие и васална зависимост",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ренесансът и неговото влияние",
+    "grade": 7,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е основателят на Ренесанса в Италия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Леонардо да Винчи",
+                "isCorrect": false
+              },
+              {
+                "content": "Данте Алигиери",
+                "isCorrect": true
+              },
+              {
+                "content": "Микеланджело",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кога започва Ренесансът в Европа?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "14 век",
+                "isCorrect": true
+              },
+              {
+                "content": "10 век",
+                "isCorrect": false
+              },
+              {
+                "content": "16 век",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни фигури от периода на Ренесанса:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Микеланджело",
+                "isCorrect": true
+              },
+              {
+                "content": "Галилео Галилей",
+                "isCorrect": true
+              },
+              {
+                "content": "Александър Велики",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е основното постижение на Гутенберг през Ренесанса?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Изобретяване на печатната преса",
+                "isCorrect": true
+              },
+              {
+                "content": "Създаване на първия глобус",
+                "isCorrect": false
+              },
+              {
+                "content": "Откриване на Америка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво означава терминът 'хуманизъм' в контекста на Ренесанса?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Философско движение, което поставя човека в центъра на вселената и подчертава значението на индивидуалността и образованието",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

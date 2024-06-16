@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Първата българска държава",
+    "grade": 5,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е основателят на първата българска държава?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хан Аспарух",
+                "isCorrect": true
+              },
+              {
+                "content": "Хан Кубрат",
+                "isCorrect": false
+              },
+              {
+                "content": "Хан Крум",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя година е основана първата българска държава?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "681",
+                "isCorrect": true
+              },
+              {
+                "content": "681",
+                "isCorrect": true
+              },
+              {
+                "content": "700",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни ханове от първата българска държава:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хан Аспарух",
+                "isCorrect": true
+              },
+              {
+                "content": "Хан Тервел",
+                "isCorrect": true
+              },
+              {
+                "content": "Симеон Велики",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой хан е известен с приемането на първите писани закони?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Хан Крум",
+                "isCorrect": true
+              },
+              {
+                "content": "Хан Омуртаг",
+                "isCorrect": false
+              },
+              {
+                "content": "Хан Аспарух",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Италия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Зелено, бяло и червено",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Второто българско царство",
+    "grade": 5,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой цар е основател на Второто българско царство?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цар Иван Асен II",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Калоян",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Петър IV",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Коя година е основано Второто българско царство?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1185",
+                "isCorrect": true
+              },
+              {
+                "content": "1230",
+                "isCorrect": false
+              },
+              {
+                "content": "1396",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни царе от Второто българско царство:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цар Калоян",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Иван Асен II",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Борис I",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой цар побеждава латинците в битката при Одрин?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цар Калоян",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Иван Асен II",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Петър IV",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Франция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Синьо, бяло и червено",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

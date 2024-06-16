@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на компютърната графика",
+    "grade": 3,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя програма е най-подходяща за рисуване на компютър?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Microsoft Word",
+                "isCorrect": false
+              },
+              {
+                "content": "Paint",
+                "isCorrect": true
+              },
+              {
+                "content": "Excel",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв инструмент използваме за рисуване на линии в Paint?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гума",
+                "isCorrect": false
+              },
+              {
+                "content": "Молив",
+                "isCorrect": true
+              },
+              {
+                "content": "Четка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички формати за изображения:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "JPEG",
+                "isCorrect": true
+              },
+              {
+                "content": "PNG",
+                "isCorrect": true
+              },
+              {
+                "content": "DOCX",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво прави командата 'Undo' в графичен редактор?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Връща последното действие",
+                "isCorrect": true
+              },
+              {
+                "content": "Запазва изображението",
+                "isCorrect": false
+              },
+              {
+                "content": "Изтрива изображението",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв цвят е иконата на 'Save' бутона в повечето графични програми?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Основи на програмата PowerPoint",
+    "grade": 3,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 40,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя програма използваме за създаване на презентации?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Microsoft Word",
+                "isCorrect": false
+              },
+              {
+                "content": "Microsoft PowerPoint",
+                "isCorrect": true
+              },
+              {
+                "content": "Microsoft Excel",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво прави бутонът 'New Slide' в PowerPoint?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Добавя нов слайд",
+                "isCorrect": true
+              },
+              {
+                "content": "Запазва презентацията",
+                "isCorrect": false
+              },
+              {
+                "content": "Изтрива слайд",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички формати, в които може да запазите презентация:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "PPTX",
+                "isCorrect": true
+              },
+              {
+                "content": "PDF",
+                "isCorrect": true
+              },
+              {
+                "content": "MP3",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво прави командата 'Slide Show' в PowerPoint?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Започва презентацията",
+                "isCorrect": true
+              },
+              {
+                "content": "Запазва презентацията",
+                "isCorrect": false
+              },
+              {
+                "content": "Затваря програмата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв цвят е иконата на 'Slide Show' бутона в PowerPoint?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Червен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

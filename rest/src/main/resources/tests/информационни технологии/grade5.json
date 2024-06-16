@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на компютърната техника",
+    "grade": 5,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя част на компютъра отговаря за изпълнението на програмите?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мониторът",
+                "isCorrect": false
+              },
+              {
+                "content": "Процесорът",
+                "isCorrect": true
+              },
+              {
+                "content": "Клавиатурата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява RAM паметта?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Постоянна памет",
+                "isCorrect": false
+              },
+              {
+                "content": "Временна памет",
+                "isCorrect": true
+              },
+              {
+                "content": "Външна памет",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички входни устройства:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мишка",
+                "isCorrect": true
+              },
+              {
+                "content": "Монитор",
+                "isCorrect": false
+              },
+              {
+                "content": "Клавиатура",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кое устройство съхранява данни за дълъг период?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "RAM памет",
+                "isCorrect": false
+              },
+              {
+                "content": "Твърд диск",
+                "isCorrect": true
+              },
+              {
+                "content": "Видеокарта",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната функция на операционната система?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Операционната система управлява хардуера и софтуера на компютъра, позволявайки на потребителя да изпълнява програми.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Работа с текстообработващи програми",
+    "grade": 5,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво представлява текстообработващата програма?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Програма за създаване и редактиране на текстови документи",
+                "isCorrect": true
+              },
+              {
+                "content": "Програма за рисуване",
+                "isCorrect": false
+              },
+              {
+                "content": "Програма за създаване на музика",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Каква е основната функция на бутона 'Bold' в текстообработващите програми?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Подчертава текста",
+                "isCorrect": false
+              },
+              {
+                "content": "Направя текста удебелен",
+                "isCorrect": true
+              },
+              {
+                "content": "Накланя текста",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички примери за текстообработващи програми:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Microsoft Word",
+                "isCorrect": true
+              },
+              {
+                "content": "Google Docs",
+                "isCorrect": true
+              },
+              {
+                "content": "Adobe Photoshop",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява функцията 'Save'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Отваря нов документ",
+                "isCorrect": false
+              },
+              {
+                "content": "Запазва промените в документа",
+                "isCorrect": true
+              },
+              {
+                "content": "Печатане на документа",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е форматът на файловете, създадени с Microsoft Word?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Файловете, създадени с Microsoft Word, обикновено имат разширение .doc или .docx.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

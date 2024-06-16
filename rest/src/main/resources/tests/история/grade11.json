@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Индустриалната революция",
+    "grade": 11,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кога започва Индустриалната революция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "18-ти век",
+                "isCorrect": true
+              },
+              {
+                "content": "19-ти век",
+                "isCorrect": false
+              },
+              {
+                "content": "17-ти век",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя нова технология има значително влияние върху Индустриалната революция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Парната машина",
+                "isCorrect": true
+              },
+              {
+                "content": "Телеграфът",
+                "isCorrect": false
+              },
+              {
+                "content": "Електрическата крушка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни последствия от Индустриалната революция:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Урбанизация",
+                "isCorrect": true
+              },
+              {
+                "content": "Повишаване на грамотността",
+                "isCorrect": false
+              },
+              {
+                "content": "Развитие на фабричната система",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е известен като баща на Индустриалната революция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Джеймс Уат",
+                "isCorrect": true
+              },
+              {
+                "content": "Адам Смит",
+                "isCorrect": false
+              },
+              {
+                "content": "Исак Нютон",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на Индустриалната революция за развитието на съвременната индустрия.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Индустриалната революция поставя основите на съвременната индустриална икономика чрез внедряване на механизация и масово производство.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Националноосвободителни движения",
+    "grade": 11,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е лидерът на Гръцката война за независимост?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Александър Ипсиланти",
+                "isCorrect": true
+              },
+              {
+                "content": "Георги Раковски",
+                "isCorrect": false
+              },
+              {
+                "content": "Симон Боливар",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя година започва Балканската война за независимост?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1821 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1878 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1912 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички страни, участвали в Балканската война за независимост:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Гърция",
+                "isCorrect": true
+              },
+              {
+                "content": "България",
+                "isCorrect": true
+              },
+              {
+                "content": "Италия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е известен като Освободителят на Латинска Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Симон Боливар",
+                "isCorrect": true
+              },
+              {
+                "content": "Фидел Кастро",
+                "isCorrect": false
+              },
+              {
+                "content": "Че Гевара",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на националноосвободителните движения за съвременната история.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Националноосвободителните движения играят ключова роля за създаването на независими нации и оформянето на съвременната политическа карта на света.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

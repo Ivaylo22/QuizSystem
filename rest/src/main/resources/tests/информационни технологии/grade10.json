@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Компютърни мрежи и интернет",
+    "grade": 10,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е IP адрес?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Идентификатор на устройство в мрежата",
+                "isCorrect": true
+              },
+              {
+                "content": "Операционна система",
+                "isCorrect": false
+              },
+              {
+                "content": "Протокол за пренос на данни",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой протокол се използва за сигурна комуникация в интернет?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "HTTPS",
+                "isCorrect": true
+              },
+              {
+                "content": "FTP",
+                "isCorrect": false
+              },
+              {
+                "content": "HTTP",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички видове компютърни мрежи:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "LAN",
+                "isCorrect": true
+              },
+              {
+                "content": "WAN",
+                "isCorrect": true
+              },
+              {
+                "content": "PAN",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява рутерът?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Устройство, което свързва различни мрежи",
+                "isCorrect": true
+              },
+              {
+                "content": "Устройство за съхранение на данни",
+                "isCorrect": false
+              },
+              {
+                "content": "Програма за управление на операционна система",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Опишете основната функция на DNS.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "DNS (Domain Name System) превръща четими домейн имена в IP адреси, които компютрите използват за комуникация.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Сигурност и защита на данни",
+    "grade": 10,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 55,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е целта на криптирането на данни?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Защита на данните от неоторизиран достъп",
+                "isCorrect": true
+              },
+              {
+                "content": "Увеличаване на скоростта на интернет",
+                "isCorrect": false
+              },
+              {
+                "content": "Създаване на резервни копия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой от следните методи е най-ефективен за защита на пароли?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Използване на двуфакторна автентикация",
+                "isCorrect": true
+              },
+              {
+                "content": "Записване на паролите на лист хартия",
+                "isCorrect": false
+              },
+              {
+                "content": "Използване на същата парола за всички акаунти",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички мерки за сигурност на данните:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Редовно обновяване на софтуера",
+                "isCorrect": true
+              },
+              {
+                "content": "Използване на силни пароли",
+                "isCorrect": true
+              },
+              {
+                "content": "Споделяне на пароли с колеги",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е фишинг?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Метод за измама чрез имейли, с цел кражба на лични данни",
+                "isCorrect": true
+              },
+              {
+                "content": "Програма за защита от вируси",
+                "isCorrect": false
+              },
+              {
+                "content": "Техника за оптимизация на уеб сайтове",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на редовното обновяване на софтуера.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Редовното обновяване на софтуера помага за защита срещу новооткрити уязвимости и подобрява общата сигурност на системата.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

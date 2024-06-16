@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Програмиране с Python",
+    "grade": 9,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е Python?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Програмен език",
+                "isCorrect": true
+              },
+              {
+                "content": "Операционна система",
+                "isCorrect": false
+              },
+              {
+                "content": "Уеб браузър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Как се създава променлива в Python?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Използвайки оператор '='",
+                "isCorrect": true
+              },
+              {
+                "content": "Използвайки ключова дума 'var'",
+                "isCorrect": false
+              },
+              {
+                "content": "Използвайки ключова дума 'let'",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички структури от данни в Python:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Списък (list)",
+                "isCorrect": true
+              },
+              {
+                "content": "Кортеж (tuple)",
+                "isCorrect": true
+              },
+              {
+                "content": "Множество (set)",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво е функция в програмирането?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Блок от код, който изпълнява определена задача",
+                "isCorrect": true
+              },
+              {
+                "content": "Тип променлива",
+                "isCorrect": false
+              },
+              {
+                "content": "Условие за избор",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Напишете пример за цикъл 'for' в Python.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "for i in range(5): print(i)",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Основи на уеб разработка",
+    "grade": 9,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е HTML?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Език за маркиране на хипертекст",
+                "isCorrect": true
+              },
+              {
+                "content": "Програмен език",
+                "isCorrect": false
+              },
+              {
+                "content": "Операционна система",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Как се създава линк в HTML?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Използвайки таг 'a'",
+                "isCorrect": true
+              },
+              {
+                "content": "Използвайки таг 'link'",
+                "isCorrect": false
+              },
+              {
+                "content": "Използвайки таг 'href'",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички елементи на CSS:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Селектори",
+                "isCorrect": true
+              },
+              {
+                "content": "Свойства",
+                "isCorrect": true
+              },
+              {
+                "content": "Функции",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е JavaScript?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Програмен език за уеб разработки",
+                "isCorrect": true
+              },
+              {
+                "content": "Система за управление на база данни",
+                "isCorrect": false
+              },
+              {
+                "content": "Тип уеб сървър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво е DOM.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "DOM (Document Object Model) е интерфейс за програмиране, който представя HTML документа като дървовидна структура, позволявайки на програмистите да манипулират съдържанието и структурата на уеб страниците.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

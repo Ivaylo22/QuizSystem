@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на Историята",
+    "grade": 1,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е първият човек на Луната?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Нийл Армстронг",
+                "isCorrect": true
+              },
+              {
+                "content": "Юрий Гагарин",
+                "isCorrect": false
+              },
+              {
+                "content": "Алексей Леонов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя година започва Втората световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1939",
+                "isCorrect": true
+              },
+              {
+                "content": "1945",
+                "isCorrect": false
+              },
+              {
+                "content": "1914",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички древни цивилизации:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Египет",
+                "isCorrect": true
+              },
+              {
+                "content": "Месопотамия",
+                "isCorrect": true
+              },
+              {
+                "content": "САЩ",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е открил Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Христофор Колумб",
+                "isCorrect": true
+              },
+              {
+                "content": "Васко да Гама",
+                "isCorrect": false
+              },
+              {
+                "content": "Марко Поло",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на България?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бяло, зелено и червено",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Велики личности в историята",
+    "grade": 1,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е първият български хан?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Аспарух",
+                "isCorrect": true
+              },
+              {
+                "content": "Кубрат",
+                "isCorrect": false
+              },
+              {
+                "content": "Борис I",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя година е освободена България от османско владичество?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1878",
+                "isCorrect": true
+              },
+              {
+                "content": "1908",
+                "isCorrect": false
+              },
+              {
+                "content": "1912",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички велики български царе:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Симеон I",
+                "isCorrect": true
+              },
+              {
+                "content": "Калоян",
+                "isCorrect": true
+              },
+              {
+                "content": "Александър Батенберг",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основателят на Римската империя?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Ромул",
+                "isCorrect": true
+              },
+              {
+                "content": "Цезар",
+                "isCorrect": false
+              },
+              {
+                "content": "Октавиан Август",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Франция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Синьо, бяло и червено",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

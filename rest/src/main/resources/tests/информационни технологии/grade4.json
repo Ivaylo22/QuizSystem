@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Въведение в интернет",
+    "grade": 4,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е интернет?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Място за игри",
+                "isCorrect": false
+              },
+              {
+                "content": "Мрежа от свързани компютри",
+                "isCorrect": true
+              },
+              {
+                "content": "Програма за рисуване",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой уеб браузър се използва за достъп до интернет?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Microsoft Word",
+                "isCorrect": false
+              },
+              {
+                "content": "Google Chrome",
+                "isCorrect": true
+              },
+              {
+                "content": "Paint",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички уеб браузъри:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Mozilla Firefox",
+                "isCorrect": true
+              },
+              {
+                "content": "Safari",
+                "isCorrect": true
+              },
+              {
+                "content": "Microsoft Excel",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво прави командата 'Refresh' в уеб браузър?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Затваря уеб страницата",
+                "isCorrect": false
+              },
+              {
+                "content": "Обновява уеб страницата",
+                "isCorrect": true
+              },
+              {
+                "content": "Запазва уеб страницата",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв цвят е логото на Google Chrome?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Червен, жълт, зелен и син",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Безопасност в интернет",
+    "grade": 4,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 45,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво трябва да правим, за да сме безопасни в интернет?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Да споделяме лична информация",
+                "isCorrect": false
+              },
+              {
+                "content": "Да използваме силни пароли",
+                "isCorrect": true
+              },
+              {
+                "content": "Да кликваме на всички линкове",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя от следните пароли е най-сигурна?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "123456",
+                "isCorrect": false
+              },
+              {
+                "content": "P@ssw0rd!",
+                "isCorrect": true
+              },
+              {
+                "content": "password",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички действия, които подобряват интернет безопасността:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Използване на антивирусен софтуер",
+                "isCorrect": true
+              },
+              {
+                "content": "Споделяне на лична информация в социалните мрежи",
+                "isCorrect": false
+              },
+              {
+                "content": "Редовно обновяване на софтуера",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява 'фишинг' атака?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Атака с вируси",
+                "isCorrect": false
+              },
+              {
+                "content": "Опит за измама чрез имейл",
+                "isCorrect": true
+              },
+              {
+                "content": "Споделяне на снимки",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Как да разпознаем подозрителен имейл?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Подозрителните имейли често съдържат правописни грешки, изискват лична информация и предлагат нереалистични оферти.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

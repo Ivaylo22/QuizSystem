@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Основи на Историята",
+    "grade": 2,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя година е основана България?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "681",
+                "isCorrect": true
+              },
+              {
+                "content": "1018",
+                "isCorrect": false
+              },
+              {
+                "content": "1878",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е първият български хан?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Аспарух",
+                "isCorrect": true
+              },
+              {
+                "content": "Крум",
+                "isCorrect": false
+              },
+              {
+                "content": "Симеон",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни битки от Средновековието:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Битката при Плиска",
+                "isCorrect": true
+              },
+              {
+                "content": "Битката при Ватерло",
+                "isCorrect": false
+              },
+              {
+                "content": "Битката при Ахелой",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е създателят на славянската писменост?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Св. Кирил и Методий",
+                "isCorrect": true
+              },
+              {
+                "content": "Васил Левски",
+                "isCorrect": false
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Русия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бяло, синьо и червено",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Велики личности в историята",
+    "grade": 2,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой е авторът на 'История славянобългарска'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Паисий Хилендарски",
+                "isCorrect": true
+              },
+              {
+                "content": "Иван Вазов",
+                "isCorrect": false
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е първият цар на Обединена България?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Симеон I",
+                "isCorrect": true
+              },
+              {
+                "content": "Аспарух",
+                "isCorrect": false
+              },
+              {
+                "content": "Борис I",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички български революционери:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Васил Левски",
+                "isCorrect": true
+              },
+              {
+                "content": "Христо Ботев",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Борис III",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е открил Америка?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Христофор Колумб",
+                "isCorrect": true
+              },
+              {
+                "content": "Васко да Гама",
+                "isCorrect": false
+              },
+              {
+                "content": "Фернандо Магелан",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв е цветът на националното знаме на Германия?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Черно, червено и златно",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

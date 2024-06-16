@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Студената война",
+    "grade": 12,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя година започва Студената война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1947 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1950 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1961 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя организация е създадена като противовес на НАТО през Студената война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Варшавският договор",
+                "isCorrect": true
+              },
+              {
+                "content": "Обединените нации",
+                "isCorrect": false
+              },
+              {
+                "content": "Северноатлантическият съюз",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички събития, свързани със Студената война:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кубинската ракетна криза",
+                "isCorrect": true
+              },
+              {
+                "content": "Корейската война",
+                "isCorrect": true
+              },
+              {
+                "content": "Френската революция",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя стена е символ на разделението по време на Студената война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Берлинската стена",
+                "isCorrect": true
+              },
+              {
+                "content": "Великата китайска стена",
+                "isCorrect": false
+              },
+              {
+                "content": "Западната стена",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на разпадането на Съветския съюз за края на Студената война.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Разпадането на Съветския съюз през 1991 година бележи края на Студената война, като води до изчезването на едната от двете суперсили, които доминираха световната политика.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Глобализация и модернизация",
+    "grade": 12,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво представлява глобализацията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Процес на международна интеграция и обмен",
+                "isCorrect": true
+              },
+              {
+                "content": "Процес на национална изолация",
+                "isCorrect": false
+              },
+              {
+                "content": "Процес на индустриализация",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя организация играе ключова роля в глобализацията?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Световната търговска организация",
+                "isCorrect": true
+              },
+              {
+                "content": "ЮНЕСКО",
+                "isCorrect": false
+              },
+              {
+                "content": "Международният валутен фонд",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички аспекти на глобализацията:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Икономическа интеграция",
+                "isCorrect": true
+              },
+              {
+                "content": "Културен обмен",
+                "isCorrect": true
+              },
+              {
+                "content": "Политическа изолация",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя технология е от основно значение за модернизацията през 21-ви век?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Интернет",
+                "isCorrect": true
+              },
+              {
+                "content": "Печатната машина",
+                "isCorrect": false
+              },
+              {
+                "content": "Телеграфът",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете влиянието на глобализацията върху националните култури.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Глобализацията води до културен обмен и интеграция, но може да предизвика и загуба на национална идентичност и културно разнообразие.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

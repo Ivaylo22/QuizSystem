@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Втората световна война",
+    "grade": 10,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя година започва Втората световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1939 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1941 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1945 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основният лидер на нацистка Германия по време на Втората световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Адолф Хитлер",
+                "isCorrect": true
+              },
+              {
+                "content": "Йосиф Сталин",
+                "isCorrect": false
+              },
+              {
+                "content": "Уинстън Чърчил",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички съюзници на Съветския съюз във Втората световна война:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Съединените щати",
+                "isCorrect": true
+              },
+              {
+                "content": "Германия",
+                "isCorrect": false
+              },
+              {
+                "content": "Великобритания",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Каква е ролята на България по време на Втората световна война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "България се присъединява към Оста",
+                "isCorrect": true
+              },
+              {
+                "content": "България остава неутрална",
+                "isCorrect": false
+              },
+              {
+                "content": "България се присъединява към Съюзниците",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на битката при Сталинград във Втората световна война.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Битката при Сталинград е решителен момент във Втората световна война, която обръща хода на войната в полза на Съюзниците.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Студената война",
+    "grade": 10,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Коя година започва Студената война?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1947 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1950 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1961 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво представлява Желязната завеса?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Политическа и идеологическа граница между Източна и Западна Европа",
+                "isCorrect": true
+              },
+              {
+                "content": "Физическа стена между Германия и Полша",
+                "isCorrect": false
+              },
+              {
+                "content": "Морска граница между Съединените щати и Съветския съюз",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни събития по време на Студената война:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Кубинската ракетна криза",
+                "isCorrect": true
+              },
+              {
+                "content": "Изграждането на Берлинската стена",
+                "isCorrect": true
+              },
+              {
+                "content": "Падането на Третия райх",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е американският президент по време на Кубинската ракетна криза?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Джон Ф. Кенеди",
+                "isCorrect": true
+              },
+              {
+                "content": "Ричард Никсън",
+                "isCorrect": false
+              },
+              {
+                "content": "Хари Труман",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете значението на падането на Берлинската стена за края на Студената война.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Падането на Берлинската стена символизира краха на комунистическите режими в Източна Европа и край на Студената война.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

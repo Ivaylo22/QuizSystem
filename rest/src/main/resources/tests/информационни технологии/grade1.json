@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Въведение в компютрите",
+    "grade": 1,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е компютър?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Машина за броене",
+                "isCorrect": false
+              },
+              {
+                "content": "Електронно устройство",
+                "isCorrect": true
+              },
+              {
+                "content": "Играчка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой бутон включва компютъра?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Бутонът за захранване",
+                "isCorrect": true
+              },
+              {
+                "content": "Бутонът за рестарт",
+                "isCorrect": false
+              },
+              {
+                "content": "Бутонът за изключване на звука",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички устройства, които са периферни:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Мишка",
+                "isCorrect": true
+              },
+              {
+                "content": "Клавиатура",
+                "isCorrect": true
+              },
+              {
+                "content": "Процесор",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво прави мишката на компютъра?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Помага за въвеждане на текст",
+                "isCorrect": false
+              },
+              {
+                "content": "Позволява ни да кликваме и избираме",
+                "isCorrect": true
+              },
+              {
+                "content": "Увеличава звука",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв цвят е екранът на компютъра, когато е изключен?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Черен",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Основни компоненти на компютъра",
+    "grade": 1,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 30,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula1",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кое устройство използваме за писане на компютър?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Монитор",
+                "isCorrect": false
+              },
+              {
+                "content": "Клавиатура",
+                "isCorrect": true
+              },
+              {
+                "content": "Мишка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Къде съхраняваме информация в компютъра?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "В паметта",
+                "isCorrect": true
+              },
+              {
+                "content": "На екрана",
+                "isCorrect": false
+              },
+              {
+                "content": "В мишката",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички устройства, които се свързват към компютър:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Принтер",
+                "isCorrect": true
+              },
+              {
+                "content": "Монитор",
+                "isCorrect": true
+              },
+              {
+                "content": "Молив",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво използваме, за да гледаме видеоклипове на компютър?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Клавиатура",
+                "isCorrect": false
+              },
+              {
+                "content": "Монитор",
+                "isCorrect": true
+              },
+              {
+                "content": "Мишка",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какъв цвят е иконата на 'Recycle Bin' на повечето компютри?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Бяла",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

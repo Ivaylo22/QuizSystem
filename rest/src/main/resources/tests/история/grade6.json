@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Ранно Средновековие в България",
+    "grade": 6,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой владетел е първият български цар?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цар Симеон I",
+                "isCorrect": true
+              },
+              {
+                "content": "Хан Омуртаг",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Самуил",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кога е сключен мирният договор между България и Византия при Цар Симеон I?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "927 година",
+                "isCorrect": true
+              },
+              {
+                "content": "893 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1014 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни събития от управлението на Цар Симеон I:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Битката при Ахелой",
+                "isCorrect": true
+              },
+              {
+                "content": "Победа над маджарите",
+                "isCorrect": true
+              },
+              {
+                "content": "Сключване на мир с Русия",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е основателят на българската книжовна школа в Преслав?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цар Симеон I",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Борис I",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Петър",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво означава терминът 'Средновековие'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Период между древността и новото време",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Възход и падение на България през Средновековието",
+    "grade": 6,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кой български цар е победил византийците при битката при Ключ?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цар Самуил",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Калоян",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Иван Асен II",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя година България попада под османска власт?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1396 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1453 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1205 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички важни събития от управлението на Цар Иван Асен II:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Битката при Клокотница",
+                "isCorrect": true
+              },
+              {
+                "content": "Сключване на мир с Латинската империя",
+                "isCorrect": true
+              },
+              {
+                "content": "Битката при Ахелой",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кой е последният владетел на Второто българско царство?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Цар Иван Шишман",
+                "isCorrect": true
+              },
+              {
+                "content": "Цар Калоян",
+                "isCorrect": false
+              },
+              {
+                "content": "Цар Иван Асен II",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е значението на термина 'цар' в българската история?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Владетел със суверенна власт над България",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

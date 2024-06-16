@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Операционни системи и софтуер",
+    "grade": 8,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Каква е основната функция на операционната система?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Управление на хардуерни и софтуерни ресурси",
+                "isCorrect": true
+              },
+              {
+                "content": "Програмиране на приложения",
+                "isCorrect": false
+              },
+              {
+                "content": "Поддържане на мрежови връзки",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е файлова система?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Метод за организиране и съхраняване на файлове на устройство за съхранение",
+                "isCorrect": true
+              },
+              {
+                "content": "Тип операционна система",
+                "isCorrect": false
+              },
+              {
+                "content": "Приложение за редактиране на текст",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички примери за операционни системи:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Windows",
+                "isCorrect": true
+              },
+              {
+                "content": "Linux",
+                "isCorrect": true
+              },
+              {
+                "content": "Photoshop",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е софтуерен лиценз?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Право за използване на софтуер под определени условия",
+                "isCorrect": true
+              },
+              {
+                "content": "Документ за собственост на хардуер",
+                "isCorrect": false
+              },
+              {
+                "content": "Тип софтуерен продукт",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво е виртуална машина.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Виртуалната машина е софтуер, който имитира хардуерна среда, позволяваща работа на множество операционни системи на един физически компютър.",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Бази данни и SQL",
+    "grade": 8,
+    "subject": "Информационни технологии",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 50,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula3",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Какво е база данни?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Организирано съхранение на данни",
+                "isCorrect": true
+              },
+              {
+                "content": "Приложение за текстообработка",
+                "isCorrect": false
+              },
+              {
+                "content": "Интернет протокол",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво означава SQL?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Structured Query Language",
+                "isCorrect": true
+              },
+              {
+                "content": "System Quality Language",
+                "isCorrect": false
+              },
+              {
+                "content": "Standard Query List",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички видове SQL команди:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "SELECT",
+                "isCorrect": true
+              },
+              {
+                "content": "INSERT",
+                "isCorrect": true
+              },
+              {
+                "content": "FORMAT",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е първичен ключ в база данни?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Уникален идентификатор за всеки запис в таблица",
+                "isCorrect": true
+              },
+              {
+                "content": "Вторичен ключ, който се използва за връзки",
+                "isCorrect": false
+              },
+              {
+                "content": "Списък от колони",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Обяснете какво е релационна база данни.",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Релационната база данни е тип база данни, в която данните са организирани в таблици, свързани чрез връзки (релации).",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

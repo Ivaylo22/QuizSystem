@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Индустриалната революция",
+    "grade": 8,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кога започва Индустриалната революция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "18 век",
+                "isCorrect": true
+              },
+              {
+                "content": "16 век",
+                "isCorrect": false
+              },
+              {
+                "content": "20 век",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Кое изобретение се свързва с Джеймс Уат?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Парната машина",
+                "isCorrect": true
+              },
+              {
+                "content": "Телефонът",
+                "isCorrect": false
+              },
+              {
+                "content": "Автомобилът",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички ефекти от Индустриалната революция:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Урбанизация",
+                "isCorrect": true
+              },
+              {
+                "content": "Земеделска реформа",
+                "isCorrect": false
+              },
+              {
+                "content": "Повишаване на производителността",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой е авторът на 'Богатството на народите'?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Адам Смит",
+                "isCorrect": true
+              },
+              {
+                "content": "Карл Маркс",
+                "isCorrect": false
+              },
+              {
+                "content": "Дейвид Рикардо",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какви са основните промени в производствените процеси по време на Индустриалната революция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Машинизация и масово производство, замяна на ръчния труд с машини",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Френската революция",
+    "grade": 8,
+    "subject": "История",
+    "creatorEmail": "admin@abv.bg",
+    "minutesToSolve": 60,
+    "hasMixedQuestions": false,
+    "status": "PUBLIC",
+    "scoringFormula": "formula2",
+    "sections": [
+      {
+        "totalQuestionsCount": 5,
+        "usedQuestionsCount": 5,
+        "questions": [
+          {
+            "question": "Кога започва Френската революция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "1789 година",
+                "isCorrect": true
+              },
+              {
+                "content": "1776 година",
+                "isCorrect": false
+              },
+              {
+                "content": "1815 година",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Коя е причината за Френската революция?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Икономическа криза и социално неравенство",
+                "isCorrect": true
+              },
+              {
+                "content": "Колониални конфликти",
+                "isCorrect": false
+              },
+              {
+                "content": "Индустриална революция",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Изберете всички ключови събития по време на Френската революция:",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "MULTIPLE_ANSWER",
+            "answers": [
+              {
+                "content": "Щурмът на Бастилията",
+                "isCorrect": true
+              },
+              {
+                "content": "Обявяване на Наполеон за император",
+                "isCorrect": false
+              },
+              {
+                "content": "Декларацията за правата на човека и гражданина",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "question": "Кой води Френската революция в началните ѝ етапи?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "SINGLE_ANSWER",
+            "answers": [
+              {
+                "content": "Жорж Дантон",
+                "isCorrect": true
+              },
+              {
+                "content": "Робеспиер",
+                "isCorrect": false
+              },
+              {
+                "content": "Луи XVI",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "question": "Какво е значението на Декларацията за правата на човека и гражданина?",
+            "image": null,
+            "maximumPoints": 2,
+            "questionType": "OPEN",
+            "answers": [
+              {
+                "content": "Основа на новите демократични принципи във Франция, утвърждаващи правата и свободите на гражданите",
+                "isCorrect": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
