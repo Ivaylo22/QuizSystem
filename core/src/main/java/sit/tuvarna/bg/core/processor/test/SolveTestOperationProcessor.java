@@ -100,7 +100,13 @@ public class SolveTestOperationProcessor implements SolveTestOperation {
                 throw new IllegalArgumentException("Invalid formula.");
         }
 
-        return round(grade, 2);
+        grade = round(grade, 2);
+
+        if (grade < 2.00) {
+            grade = 2.00;
+        }
+
+        return grade;
     }
 
     private Double round(Double value, int places) {

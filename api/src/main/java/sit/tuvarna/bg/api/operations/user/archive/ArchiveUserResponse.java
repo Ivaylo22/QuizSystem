@@ -7,7 +7,7 @@ import sit.tuvarna.bg.api.base.ProcessorResponse;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class ArchiveUserResponse implements ProcessorResponse {
     private String email;
     private Boolean isArchived;

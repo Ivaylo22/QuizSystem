@@ -8,7 +8,7 @@ import sit.tuvarna.bg.api.model.UserModel;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class GetUserInfoResponse implements ProcessorResponse {
 
     private UserModel userInformation;

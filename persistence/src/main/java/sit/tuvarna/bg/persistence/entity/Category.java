@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter(AccessLevel.PRIVATE)

@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
