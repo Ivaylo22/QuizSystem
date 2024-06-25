@@ -114,7 +114,6 @@ public class QuizControllerTest {
     private static final String GET_ALL_FOR_USER = "/api/v1/quiz/get-all-for-user";
     private static final String GET_REQUESTED = "/api/v1/quiz/get-requested";
     private static final String GET_BY_ID = "/api/v1/quiz/get-by-id";
-    private static final String CREATE_QUIZ = "/api/v1/quiz/create";
     private static final String SOLVE_QUIZ = "/api/v1/quiz/solve";
     private static final String APPROVE_QUIZ = "/api/v1/quiz/approve";
     private static final String DECLINE_QUIZ = "/api/v1/quiz/decline";
