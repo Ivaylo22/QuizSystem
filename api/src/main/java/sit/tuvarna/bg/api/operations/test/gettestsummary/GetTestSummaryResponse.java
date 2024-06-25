@@ -8,7 +8,7 @@ import sit.tuvarna.bg.api.model.TestSummaryModel;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class GetTestSummaryResponse implements ProcessorResponse {
     private TestSummaryModel model;
 }

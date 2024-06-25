@@ -10,7 +10,7 @@ import java.util.List;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class ListEarnedAchievementsResponse implements ProcessorResponse {
 
     private List<AchievementModel> achievements;

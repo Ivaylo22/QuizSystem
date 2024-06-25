@@ -110,7 +110,6 @@
 			<version>8.0.4</version>
 			<type>pom</type>
 		</dependency>
-
 	</dependencies>
 
 	<build>

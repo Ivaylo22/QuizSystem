@@ -7,7 +7,7 @@ import sit.tuvarna.bg.api.base.ProcessorResponse;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class GetDailyQuizResponse implements ProcessorResponse {
     private String quizId;
     private String title;

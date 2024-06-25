@@ -10,7 +10,7 @@ import java.util.UUID;
 @Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class CreateTestResponse implements ProcessorResponse {
 
     private String id;
