@@ -170,7 +170,7 @@ public class SolveQuizOperationProcessor implements SolveQuizOperation {
         XPProgress xpProgress = new XPProgress(user.getExperience());
 
         if (user.getLevel() != xpProgress.getLevel()) {
-            notificationService.sendNotificationToUser(NotificationType.LEVEL_UP, xpProgress.getLevel(), user.getEmail());
+            notificationService.sendNotificationToUser(NotificationType.LEVEL_UP, user.getEmail(), xpProgress.getLevel());
         }
         user.setLevel(xpProgress.getLevel());
         userRepository.save(user);

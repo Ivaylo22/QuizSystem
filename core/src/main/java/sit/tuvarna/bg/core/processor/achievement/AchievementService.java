@@ -31,7 +31,7 @@ public class AchievementService {
                 earnedAchievements.add(achievement);
                 user.getAchievements().add(achievement);
                 user.setAchievementPoints(user.getAchievementPoints() + achievement.getPoints());
-                notificationService.sendNotificationToUser(NotificationType.ACHIEVEMENT_EARNED, achievement.getName(), user.getEmail());
+                notificationService.sendNotificationToUser(NotificationType.ACHIEVEMENT_EARNED, user.getEmail(), achievement.getName());
             }
         }
 

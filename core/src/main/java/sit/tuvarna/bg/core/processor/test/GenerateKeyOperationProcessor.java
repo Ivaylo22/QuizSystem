@@ -29,7 +29,7 @@ public class GenerateKeyOperationProcessor implements GenerateKeyOperation {
         test.setAccessKey(generatedKey);
         testRepository.save(test);
 
-        notificationService.sendNotificationToUser(NotificationType.ACCESS_KEY, generatedKey, test.getCreatorEmail());
+        notificationService.sendNotificationToUser(NotificationType.ACCESS_KEY, test.getCreatorEmail(), generatedKey);
 
         return GenerateKeyResponse.builder()
                 .accessKey(generatedKey)

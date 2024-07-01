@@ -3,6 +3,7 @@ package sit.tuvarna.bg.core.processor.test;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import sit.tuvarna.bg.api.enums.NotificationType;
 import sit.tuvarna.bg.api.exception.QuestionNotFoundException;
 import sit.tuvarna.bg.api.exception.TestNotFoundException;
 import sit.tuvarna.bg.api.exception.UserNotFoundException;
@@ -10,6 +11,7 @@ import sit.tuvarna.bg.api.exception.UserTestNotFoundException;
 import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsOperation;
 import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsRequest;
 import sit.tuvarna.bg.api.operations.test.updateattemptpoints.UpdateAttemptPointsResponse;
+import sit.tuvarna.bg.core.externalservices.NotificationService;
 import sit.tuvarna.bg.persistence.entity.*;
 import sit.tuvarna.bg.persistence.repository.*;
 
@@ -26,6 +28,7 @@ public class UpdateAttemptPointsOperationProcessor implements UpdateAttemptPoint
     private final QuestionAttemptRepository questionAttemptRepository;
     private final TestRepository testRepository;
     private final UserRepository userRepository;
+    private final NotificationService notificationService;
 
     @Override
     @Transactional
@@ -44,6 +47,7 @@ public class UpdateAttemptPointsOperationProcessor implements UpdateAttemptPoint
         usersTests.setTotalPoints(earnedPoints);
         usersTests.setFinalScore(finalScore);
         usersTestsRepository.save(usersTests);
+        notificationService.sendNotificationToUser(NotificationType.TEST_RETURN, request.getUserEmail(), test.getTitle(), finalScore);
         return UpdateAttemptPointsResponse.builder().build();
     }
 

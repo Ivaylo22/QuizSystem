@@ -28,7 +28,7 @@ public class NotificationService {
         messagingTemplate.convertAndSend("/topic/notifications", notification);
     }
 
-    public void sendNotificationToUser(NotificationType type, Object data, String email) {
+    public void sendNotificationToUser(NotificationType type, String email, Object... data) {
         String message = type.getMessage(data);
         Notification notification = Notification.builder()
                 .email(email)
