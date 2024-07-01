@@ -2,6 +2,7 @@ package sit.tuvarna.bg.persistence.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,9 +23,11 @@ public class Answer {
     private UUID id;
 
     @Column(nullable = false)
+    @JsonProperty("content")
     private String content;
 
     @Column(nullable = false)
+    @JsonProperty("isCorrect")
     private Boolean isCorrect;
 
     @ManyToOne

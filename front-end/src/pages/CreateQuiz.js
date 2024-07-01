@@ -47,7 +47,7 @@ const CreateQuiz = ({ email, token }) => {
         creatorEmail: email,
         questions: new Array(5).fill(null).map(() => ({
             question: '',
-            type: 'SINGLE_ANSWER',
+            questionType: 'SINGLE_ANSWER',
             answers: [{ content: '', isCorrect: false }],
             image: null,
             imageFile: null
@@ -106,9 +106,9 @@ const CreateQuiz = ({ email, token }) => {
         setQuiz({ ...quiz, category: value });
     };
 
-    const handleChange = (e, index, type, answerIndex = null) => {
+    const handleChange = (e, index, questionType, answerIndex = null) => {
         let updatedQuiz = { ...quiz };
-        switch (type) {
+        switch (questionType) {
             case 'title':
                 updatedQuiz.title = e.target.value;
                 break;
@@ -118,8 +118,8 @@ const CreateQuiz = ({ email, token }) => {
             case 'answer':
                 updatedQuiz.questions[index].answers[answerIndex].content = e.target.value;
                 break;
-            case 'type':
-                updatedQuiz.questions[index].type = e.target.value;
+            case 'questionType':
+                updatedQuiz.questions[index].questionType = e.target.value;
                 if (e.target.value === 'OPEN') {
                     updatedQuiz.questions[index].answers = [{ content: '', isCorrect: true }];
                 } else {
@@ -127,7 +127,7 @@ const CreateQuiz = ({ email, token }) => {
                 }
                 break;
             case 'toggleCorrect':
-                if (updatedQuiz.questions[index].type === 'SINGLE_ANSWER') {
+                if (updatedQuiz.questions[index].questionType === 'SINGLE_ANSWER') {
                     updatedQuiz.questions[index].answers = updatedQuiz.questions[index].answers.map((answer, i) => ({ ...answer, isCorrect: i === answerIndex }));
                 } else {
                     updatedQuiz.questions[index].answers[answerIndex].isCorrect = !updatedQuiz.questions[index].answers[answerIndex].isCorrect;
@@ -180,7 +180,7 @@ const CreateQuiz = ({ email, token }) => {
             ...prevQuiz,
             questions: prevQuiz.questions.concat({
                 question: '',
-                type: 'SINGLE_ANSWER',
+                questionType: 'SINGLE_ANSWER',
                 answers: [{ content: '', isCorrect: false }],
                 image: null
             })
@@ -213,11 +213,11 @@ const CreateQuiz = ({ email, token }) => {
             }
 
             const correctAnswers = question.answers.filter(a => a.isCorrect);
-            if (question.type !== 'OPEN' && correctAnswers.length === 0) {
+            if (question.questionType !== 'OPEN' && correctAnswers.length === 0) {
                 hasError = true;
             }
 
-            if (question.type === 'OPEN' && correctAnswers[0].content.trim() === '') {
+            if (question.questionType === 'OPEN' && correctAnswers[0].content.trim() === '') {
                 hasError = true;
             }
 
@@ -251,6 +251,7 @@ const CreateQuiz = ({ email, token }) => {
             const questionsWithoutImages = quiz.questions.map(({ image, ...rest }) => rest);
             const quizToSubmit = { ...quiz, questions: questionsWithoutImages };
 
+            console.log(quizToSubmit)
             const response = await fetch('http://localhost:8090/api/v1/quiz/create', {
                 method: 'POST',
                 headers: {
@@ -387,6 +388,7 @@ const CreateQuiz = ({ email, token }) => {
 
             const json = await response.json();
             setQuiz(json);
+            console.log(quiz)
         } catch (error) {
             console.error('Error uploading and converting file:', error);
             toast.error('Error uploading and converting file.');
@@ -449,8 +451,8 @@ const CreateQuiz = ({ email, token }) => {
                                 </div>
                             )}
                         </div>
-                        <select className="question-type-select" value={question.type}
-                                onChange={(e) => handleChange(e, qIndex, 'type')}>
+                        <select className="question-type-select" value={question.questionType}
+                                onChange={(e) => handleChange(e, qIndex, 'questionType')}>
                             <option value="SINGLE_ANSWER">Един верен отговор</option>
                             <option value="MULTIPLE_ANSWER">Няколко верни отговора</option>
                             <option value="OPEN">Отворен отговор</option>
@@ -478,7 +480,7 @@ const CreateQuiz = ({ email, token }) => {
                             </div>
                         ))}
                         <div className="buttons-container">
-                            {question.type !== 'OPEN' && (
+                            {question.questionType !== 'OPEN' && (
                                 <button type="button" className="add-answer-btn" onClick={() => addAnswer(qIndex)}>
                                     Добави отговор
                                 </button>

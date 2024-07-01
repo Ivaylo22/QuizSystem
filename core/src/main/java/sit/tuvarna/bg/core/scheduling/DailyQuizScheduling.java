@@ -13,29 +13,29 @@ import java.time.ZoneOffset;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
-
 public class DailyQuizScheduling {
     private final QuizRepository quizRepository;
 
     @Transactional
     public void updateDailyQuiz() {
-        List<Quiz> quizzes = quizRepository.findAll();
-        if (quizzes.isEmpty()) {
-            log.warn("No quizzes available to set as daily.");
+        List<Quiz> activeQuizzes = quizRepository.findAll().stream()
+                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
+                .toList();
+
+        if (activeQuizzes.isEmpty()) {
+            log.warn("No active quizzes available to set as daily.");
             return;
         }
 
         quizRepository.resetDailyQuiz();
 
         Random random = new Random();
-        Quiz dailyQuiz = quizzes.stream()
-                .filter(q -> q.getStatus() == QuizStatus.ACTIVE)
-                .toList()
-                .get(random.nextInt(quizzes.size()));
+        Quiz dailyQuiz = activeQuizzes.get(random.nextInt(activeQuizzes.size()));
         dailyQuiz.setIsDaily(true);
         dailyQuiz.setLastUpdated(LocalDateTime.now(ZoneOffset.UTC));
 

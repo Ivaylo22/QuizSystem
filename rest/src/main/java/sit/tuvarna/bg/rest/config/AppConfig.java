@@ -1,5 +1,6 @@
 package sit.tuvarna.bg.rest.config;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -7,7 +8,12 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.RequiredArgsConstructor;
+import sit.tuvarna.bg.api.operations.quiz.create.CreateQuizRequest;
+import sit.tuvarna.bg.core.deserializer.CreateQuizRequestDeserializer;
+import sit.tuvarna.bg.persistence.CategorySerializer;
+import sit.tuvarna.bg.persistence.deserializer.CategoryDeserializer;
 import sit.tuvarna.bg.persistence.deserializer.SubjectDeserializer;
+import sit.tuvarna.bg.persistence.entity.Category;
 import sit.tuvarna.bg.persistence.entity.Subject;
 import sit.tuvarna.bg.persistence.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
@@ -37,6 +43,12 @@ public class AppConfig {
         module.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(formatter));
         mapper.registerModule(module);
         mapper.registerModule(new SimpleModule().addDeserializer(Subject.class, new SubjectDeserializer()));
+        mapper.registerModule(new SimpleModule().addDeserializer(Category.class, new CategoryDeserializer()));
+        mapper.registerModule(new SimpleModule().addSerializer(Category.class, new CategorySerializer())); // Add this line
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        SimpleModule customModule = new SimpleModule();
+        customModule.addDeserializer(CreateQuizRequest.class, new CreateQuizRequestDeserializer());
+        mapper.registerModule(customModule);
         return mapper;
     }
 

@@ -1,6 +1,7 @@
 package sit.tuvarna.bg.persistence.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -23,7 +24,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "quizzes")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"title", "category", "userEmail", "questions"})
+@JsonPropertyOrder({"title", "category", "creatorEmail", "questions"})
 @JacksonXmlRootElement(localName = "quiz")
 public class Quiz {
     @Id
@@ -37,13 +38,17 @@ public class Quiz {
     private QuizStatus status;
 
     @Column(nullable = false)
+    @JsonProperty("creatorEmail")
     private String creatorEmail;
 
     @Column(nullable = false)
+    @JsonProperty("isDaily")
     private Boolean isDaily = false;
 
+    @JsonProperty("averageCorrectAnswers")
     private Double averageCorrectAnswers = 0.0;
 
+    @JsonProperty("averageSecondsNeeded")
     private Integer averageSecondsNeeded = 0;
 
     @CreationTimestamp

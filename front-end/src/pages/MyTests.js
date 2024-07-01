@@ -10,6 +10,8 @@ const MyTests = () => {
     const {setLoading} = useLoading();
     const navigate = useNavigate();
 
+    const [sortConfig, setSortConfig] = useState({key: 'createdAt', direction: 'asc'});
+
     const token = localStorage.getItem('token');
     const email = localStorage.getItem('email');
 
@@ -37,6 +39,24 @@ const MyTests = () => {
 
         fetchTests();
     }, [token, email, setLoading]);
+
+    const handleSort = (key) => {
+        let direction = 'asc';
+        if (sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
+        }
+        setSortConfig({key, direction});
+    };
+
+    const sortedTests = [...tests].sort((a, b) => {
+        if (a[sortConfig.key] < b[sortConfig.key]) {
+            return sortConfig.direction === 'asc' ? -1 : 1;
+        }
+        if (a[sortConfig.key] > b[sortConfig.key]) {
+            return sortConfig.direction === 'asc' ? 1 : -1;
+        }
+        return 0;
+    });
 
     const handleCloseModal = () => {
         setSelectedTest(null);
@@ -106,17 +126,17 @@ const MyTests = () => {
         <div className="container my-tests-container">
             <h2 className="text-center mt-4">Моите Тестове</h2>
             <div className="test-list-header mt-3">
-                <div className="header-item">Заглавие</div>
-                <div className="header-item">Клас</div>
-                <div className="header-item">Предмет</div>
-                <div className="header-item">Статус</div>
-                <div className="header-item">Брой Опити</div>
-                <div className="header-item">Дата на Създаване</div>
+                <div className="header-item" onClick={() => handleSort('title')}>Заглавие</div>
+                <div className="header-item" onClick={() => handleSort('grade')}>Клас</div>
+                <div className="header-item" onClick={() => handleSort('subject')}>Предмет</div>
+                <div className="header-item" onClick={() => handleSort('status')}>Статус</div>
+                <div className="header-item" onClick={() => handleSort('attemptsCount')}>Брой Опити</div>
+                <div className="header-item" onClick={() => handleSort('createdAt')}>Дата на Създаване</div>
             </div>
-            {tests.length === 0 ? (
+            {sortedTests.length === 0 ? (
                 <div className="no-tests">Нямате създадени тестове!</div>
             ) : (
-                tests.map(test => (
+                sortedTests.map(test => (
                     <div
                         className="test-card"
                         key={test.id}
@@ -184,3 +204,4 @@ const MyTests = () => {
 };
 
 export default MyTests;
+
