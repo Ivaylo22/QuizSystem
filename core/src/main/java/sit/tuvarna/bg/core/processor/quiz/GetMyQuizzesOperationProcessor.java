@@ -7,6 +7,7 @@ import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesOperation;
 import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesRequest;
 import sit.tuvarna.bg.api.operations.quiz.getmyquizzes.GetMyQuizzesResponse;
 import sit.tuvarna.bg.persistence.entity.Quiz;
+import sit.tuvarna.bg.persistence.enums.QuizStatus;
 import sit.tuvarna.bg.persistence.repository.QuizRepository;
 import sit.tuvarna.bg.persistence.repository.UsersQuizzesRepository;
 
@@ -21,7 +22,10 @@ public class GetMyQuizzesOperationProcessor implements GetMyQuizzesOperation {
 
     @Override
     public GetMyQuizzesResponse process(GetMyQuizzesRequest request) {
-        List<Quiz> quizzes = quizRepository.getAllByCreatorEmail(request.getEmail());
+        List<Quiz> quizzes = quizRepository.getAllByCreatorEmail(request.getEmail()).stream()
+                .filter(q -> q.getStatus() != QuizStatus.DECLINED)
+                .filter(q -> q.getStatus() != QuizStatus.ARCHIVED)
+                .toList();
 
         List<QuizModel> quizModels = quizzes.stream()
                 .map(q -> QuizModel.builder()
